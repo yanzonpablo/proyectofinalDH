@@ -1,0 +1,16 @@
+{
+  "name": "argentum",
+  "version": "1.0.0",
+  "description": "proyecto integrador de e-commerce",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "grupo-02",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "path": "^0.12.7"
+  }
+}
