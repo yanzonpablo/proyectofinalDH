@@ -1,0 +1,123 @@
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+main nav {
+    width: 60%;
+    background:#6bbbcd;
+    height: 50px;
+    margin: auto;
+}
+main nav ul {
+    display: flex;
+    margin-top: 50px;
+    list-style:none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main nav ul li {
+    padding: 18px;
+}
+main nav ul li a {
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 3px;
+    justify-content: center;
+}
+main nav ul li a:hover {
+    background: #858585;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+h2 {
+    margin: 30px;
+    text-align: center;
+}
+.tabla {
+    margin-left: 150px;
+}
+.borde {
+    margin-left: 60px;
+}
+.cabecera {
+    background-color: #6bbbcd;
+    text-align: center;
+}
+.items {
+    border: 1px solid gray;
+    width: 200px;
+    text-align: center;
+}
+.eleccion {
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+.eleccion-precio {
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+main {
+    position: relative;
+}
+main .producto {
+    width: 150px;
+    height: 100px;
+}
+main .menu-det-prod {
+    background: #858585;
+}
+main .caja-precio {
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(88, 88, 88);
+    line-height: 40px;
+    display: flex;
+    position: absolute;
+    top: 140px;
+    left: 1100px;
+    padding-top: 60px;
+}
+.column {
+    width: 180px;
+    color: rgb(73, 73, 73);
+}
+.column2 {
+    color: rgb(0, 0, 0);
+    text-align: right;
+}
+.bold {
+    font-weight: 700;
+}
+.linea-total {
+    border-top: 1px solid rgb(68, 68, 68);
+}
+main .borrar {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 5px;
+    border: 1px solid rgb(228, 69, 69);
+    background-color: rgb(228, 69, 69);
+    border-radius: 50%;
+    font-size: 18px;   
+}
+.btn-siguiente, .btn-cancela {
+    position: relative;
+    top: 300px;
+    left: 620px;
+    font-size: 16px;
+    padding: 10px 50px;
+    background-color: #6bbbcd;
+    border: none;
+    border-radius: 5px;
+}
+.btn-cancela {
+    margin-left: 20px;
+}
+.btn-siguiente:hover, .btn-cancela:hover {
+    background-color: rgb(68, 68, 68);
+    color: white;
+    cursor: pointer;
+}
