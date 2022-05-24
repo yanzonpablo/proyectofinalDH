@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrate</title>
+    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <main>
+      <form class="form" action="/" method="POST">
+        <h1 class="titulo">
+          Completá el formulario para formar parte de nuestra comunidad
+        </h1>
+
+        <div>
+          <label name="nombreUsuario" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Nombre y Apellido"
+            required
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <label for="email" class=""></label>
+          <input
+            class="cajas"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+            maxlength="50"
+          />
+        </div>
+
+        <div>
+          <label for="DNI" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="DNI"
+            name="DNI"
+            placeholder="DNI"
+            required
+            maxlength="8"
+          />
+        </div>
+
+        <div class="">
+          <label for="birthdate" class=""></label>
+          <input
+            class="cajas"
+            id="birthdate"
+            type="date"
+            name="birthdate"
+            placeholder="Fecha de Nacimiento"
+          />
+        </div>
+
+        <div>
+          <label for="domicilio" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="domicilio"
+            name="domicilio"
+            placeholder="Domicilio"
+            required
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <label for="ciudad" class=""></label>
+          <select name="ciudad" class="cajas" id="ciudad">
+            <option value="CABA">C.A.B.A.</option>
+            <option value="GBA">G.B.A.</option>
+            <option value="Rosario">Rosario</option>
+          </select>
+        </div>
+
+        <div>
+          <label name="telefono" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="telefono"
+            name="telefono"
+            placeholder="Teléfono celular"
+            required
+            maxlength="15"
+          />
+        </div>
+
+        <div class="">
+          <label name="gender"></label>
+          <div class="cajas genero">
+            <input
+              class="p-0"
+              type="radio"
+              name="gender"
+              id="gender-male"
+              value="male"
+            />
+            <label class="p-0">Masculino</label>
+            <input
+              class="p-0"
+              type="radio"
+              name="gender"
+              id="gender-fem"
+              value="fem"
+            />
+            <label class="p-0">Femenino</label>
+          </div>
+        </div>
+
+        <div>
+          <input
+            class="cajas"
+            type="password"
+            placeholder="Contraseña"
+            required
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <input
+            class="cajas"
+            type="confirmPassword"
+            placeholder="Confirmar Contraseña"
+            required
+            maxlength="30"
+          />
+        </div>
+
+        <div class="termino1">
+          <input type="checkbox" /> Quiero recibir vía e-mail ofertas y
+          novedades
+        </div>
+
+        <div class="termino1">
+          <input type="checkbox" /> Al registrarme acepto los<a
+            class="termino2"
+            href=""
+            >Terminos y Condiciones</a
+          >
+        </div>
+
+        <input type="submit" class="btn" value="REGISTRATE" />
+
+        <div class="tengo-cuenta">
+          <a href="http://localhost:3001/login" class="tengo-cuenta"
+            >Ya tengo cuenta</a
+          >
+        </div>
+      </form>
+    </main>
+    <footer class="bg-gris-oscuro">
+      <!-- Comienzo footer -->
+      <section class="w-100">
+          <div class="bg-blanco">
+            <div class="fx fx-wrap w-100 bg-blanco">
+              <div class="w-20">
+                <img
+                  class="w-60 logo-rotate"
+                  src="/images/Logo_Argentum_Sin_Texto.png"
+                  alt="Logo Argentum"
+                />
+              </div>
+              <div
+                class="fx fx-wrap w-80 fx-justify-a fx-align-center font-responsive"
+              >
+                <div class="w-25 mt-8">
+                  <p class="mb-2 heading-footer-nav">Menu Principal</p>
+                  <p class="mb-2"><a href="/">Inicio</a></p>
+                  <p class="mb-2"><a href="#about-us">Nosotros</a></p>
+                  <p class="mb-2"><a href="/">Tienda</a></p>
+                  <p class="mb-2"><a href="#help">Ayuda</a></p>
+                </div>
+                <div class="w-25 mt-8">
+                  <p class="mb-2 heading-footer-nav">Encuentranos</p>
+                  <p class="mb-2">
+                    <a href="https://www.facebook.com">Facebook</a>
+                  </p>
+                  <p class="mb-2">
+                    <a href="https://www.instagram.com">Instagram</a>
+                  </p>
+                  <p class="mb-2">
+                    <a href="https://www.twitter.com">Twitter</a>
+                  </p>
+                  <p class="mb-2">
+                    <a href="https://www.linkedin.com">Linkedin</a>
+                  </p>
+                </div>
+                <div class="w-40 mt-8 text-center">
+                  <div>
+                    <p class="w-100 mb-5 heading-footer-nav">
+                      Recibí nuestras promociones
+                    </p>
+                    <form action="">
+                      <input
+                        class="mb-5 w-90 font-s8 input-news"
+                        type="email"
+                        name="news"
+                        placeholder="Ingresa tu mail"
+                      />
+                      <button
+                        class="mb-3 font-s8 button-news w-90"
+                        type="submit"
+                      >
+                        Subscribirme
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="font-s6 mt-10 p-8 fx fx-wrap fx-justify-a w-100 style-copyright"
+              >
+                <div class="w-100 text-center">
+                  <p>
+                    Argentum 20222. Todos los Derechos Reservados.
+                    <a style="color: white" href="#"
+                      >Ver Términos y Condiciones.</a
+                    >
+                  </p>
+                </div>
+                <div class="w-100 text-center">
+                  <p>contacto: soporte@argentum.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
