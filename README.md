@@ -100,9 +100,6 @@ https://www.mercadolibre.com/
 
 --- 
 
-[^1]: Avenida, Acoyte 555.
-
-[^2]: Calle, Cordoba 888.
 
 
 Enlace al tablero de trabajo: https://trello.com/b/kgWiDBjj/sprint-2
