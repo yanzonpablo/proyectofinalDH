@@ -40,6 +40,9 @@
 .font-s10 {
   font-size: 10px;
 }
+.font-s12 {
+  font-size: 12px;
+}
 .text-center {
   text-align: center;
 }
@@ -79,18 +82,19 @@
   width: 20%;
 }
 /* Styles */
+/* 
 .heading-footer-nav {
-  font-size: 1.4vw;
+ font-size: 1.4vw;
 }
 .heading-footer {
   font-size: 1.6vw;
 }
 .about-us-text {
-  font-size: 1.3vw;
-}
+ font-size: 1.3vw
+} */
 .input-news {
   padding: 1px;
-  font-size: 1.4vw;
+  /* font-size: 1.4vw; */
 }
 .button-news {
   background-color: #d93175;
@@ -98,15 +102,15 @@
   border-radius: 3px;
   color: white;
   padding: 3px;
-  font-size: 1.4vw;
+  /* font-size: 1.4vw; */
 }
 .style-copyright {
   background-color: rgba(56, 51, 49, 1);
   color: white;
-  font-size: 0.8vw;
+  /* font-size: 0.8vw; */
 }
 .font-responsive {
-  font-size: 1.3vw;
+  /* font-size: 1.3vw; */
 }
 a:link,
 a:visited,
@@ -117,13 +121,16 @@ a:active {
   background-color: #d93175;
   color: white;
   border-radius: 2px;
-  font-size: 1.6vw;
+  /* font-size: 1.6vw; */
 }
 /* MEDIA QUERY TABLETS */
 @media (min-width: 480px) {
+  .font-s12-tablet {
+    font-size: 12px;
+  }
   /* About Us */
   .about-us-text {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   /* Utilidades */
