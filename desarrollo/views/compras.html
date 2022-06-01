@@ -2,77 +2,248 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/compras.css">
-    <title>Carrito de compras</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Roboto+Flex:opsz@8..144&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/compras.css">
+  <title>Carrito de compras</title>
 </head>
+
 <body>
   <header>
+    <!-- REALIZADO -->
   </header>
   <main>
-    <nav>
-      <ul>
-        <li><a href="#" class="menu-det-prod">1. Detalle de producto</a></li>
-        <li><a href="#">2. Pago</a></li>
-        <li><a href="#">3. Detalle de envio</a></li>
-      </ul>
-    </nav>
-    <h2>Detalle de compra</h2>
-    <div>
-      <div class="borde">
-        <table class="tabla">
-          <tr class="cabecera">
-            <td class="items">Producto</td>
-            <td class="items">Precio por unidad</td>
-            <td class="items">Unidades</td>
-            <td class="items">Total</td>
-          </tr>
-          <tr>
-            <td class="eleccion"><a href=""><img src="/images/cafetera.jpg" alt="algo" class="producto"></a></td>
-            <td class="eleccion">$ 10000.00</td>
-            <td class="eleccion contenedor-cant"><select name="cantidad" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="0">0</option>
-              </select></td>
-            <td class="eleccion-precio">$ 10000.00</td>
-            <td><a href="#" class="borrar">Borrar</a></td>
-          </tr>
-          <tr>
-            <td class="eleccion"><a href=""><img src="/images/monitor.jpeg" alt="algo" class="producto"></a></td>
-            <td class="eleccion">$ 5000.00</td>
-            <td class="eleccion contenedor-cant"><select name="cantidad" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="0">0</option>
-              </select></td>
-            <td class="eleccion-precio">$ 20000.00</td>
-            <td><a href="#" class="borrar">Borrar</a></td>
-          </tr>
-          <div>
-            <a href=""><button class="btn-siguiente">Siguiente</button></a>
-            <a href=""><button class="btn-cancela">Cancelar</button></a>
-          </div>
+    <div class="cabecera cabecera-mobile mt-20">
+      <div class="cabecera-tablet ds-flex fx-wrap bk-ground-bar-title text-align-center mt-20px br-radius">
+        <div class="det-product text-center"><a href="#" class="text-deco mis-compras ft-color-title">Mis
+            Compras</a>
+        </div>
+        <div class="det-pagos text-center"><a href="#" class="text-deco ft-color-title">Pagos</a></div>
+        <div class="det-envios text-center"><a href="#" class="text-deco ft-color-title ">Envios</a></div>
       </div>
     </div>
+    <div class="carrito-mobile ml-20 mt-20 ft-col-gray ft-weight-300">
+      <div>Detalle de mi carrito</div>
+    </div>
+    <div class="line-borde-bot"></div>
+    <div class="ds-flex js-cont-around mt-10 title-product">
+      <div class="w-25">
+        <div class="font-tablet font-desktop ft-bold">PRODUCTO</div>
+      </div>
+      <div class="w-25">
+        <div class="font-tablet font-desktop ft-bold mb-10">DESCRIPCION</div>
+      </div>
+    </div>
+    </div>
+    <article>
+      <div class="contenedor-total ds-flex js-cont-between resumen-w-mobile">
+        <div class="contenedor-carrito carrito-tablet border-shadow">
+          <div class="align-items-center ds-flex list-style article-bk-ground">
+            <div class="align-self-center">
+              <div class="text-align-center img-tablet img-mobile img-desktop">
+                <a href="#"><img src="/images/cafetera.jpg" alt="cafetera" class="w-100"></a>
+              </div>
+            </div>
+            <div>
+              <div class="descripcion-mobile text-align-left">
+                <p class="font-desktop font-tablet font-mobile">La cafetera de filtro
+                  DAEWOO CM6316B presenta una
+                  capacidad de 1,25 litros.
+                  A su vez, dispone de interruptor luminoso e indicador del nivel de agua.</p>
+              </div>
+    </article>
+    </div>
+    </div>
+    </div>
+    <div class="ds-flex fx-wrap mt-10 js-cont-around align-items-center">
+      <div class="">
+        <div class="ds-flex align-items-center">
+          <p class="font-desktop font-tablet font-mobile ft-bold">Unidades</p>
+          <div class="ml-10 ">
+            <select name="cantidad" id="" class="font-desktop font-tablet font-mobile">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="0">0</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="ds-flex align-items-center mb-10">
+          <p class="font-desktop font-tablet font-mobile mr-10">Precio:</p>
+          <p class="font-desktop font-tablet font-mobile ft-bold">$5000.00</p>
+          <i class="basurero color-tacho ml-30 ft-size-15 ft-color-red fas fa-trash-alt"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+    <article>
+      <div class="contenedor-total ds-flex js-cont-between resumen-w-mobile">
+        <div class="contenedor-carrito carrito-tablet border-shadow">
+          <div class="align-items-center ds-flex list-style article-bk-ground">
+            <div class="align-self-center">
+              <div class="text-align-center img-tablet img-mobile img-desktop">
+                <a href="#"><img src="/images/monitor.jpeg" alt="Monitor-acer" class="w-100"></a>
+              </div>
+            </div>
+            <div>
+              <div class="descripcion-mobile text-align-left">
+                <p class="font-desktop font-tablet font-mobile">Tamaño de Pantalla 21,5" - Resolución máx. (Full HD)1920
+                  x 1080@60 Hz - Tiempo de Respuesta 5 ms - Retroiluminación LED - Ángulos de visión 90°
+                  Horizontal 65° Vertical - VGA Entrada de DVI - Peso (Aproximado) 2,70 kg 3,10 kg (con soporte)
+                </p>
+              </div>
+    </article>
+    </div>
+    </div>
+    </div>
+    <div class="ds-flex fx-wrap mt-10 js-cont-around align-items-center">
+      <div class="">
+        <div class="ds-flex align-items-center">
+          <p class="font-desktop font-tablet font-mobile ft-bold">Unidades</p>
+          <div class="ml-10 ">
+            <select name="cantidad" id="" class="font-desktop font-tablet font-mobile">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="0">0</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="ds-flex align-items-center mb-10">
+          <p class="font-desktop font-tablet font-mobile mr-10">Precio:</p>
+          <p class="font-desktop font-tablet font-mobile ft-bold">$25000.00</p>
+          <i class="basurero color-tacho ml-30 ft-size-15 ft-color-red fas fa-trash-alt"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- RESUMEN INICIA -->
+    <div
+      class="resumen-mobile resumen-tablet resumen-desktop fx-dir-col fx-wrap entrelinea bk-ground-bar-resumen br-radius mobile">
+      <div class="text-align-center">
+        <p class="ft-bold font-desktop font-tablet font-mobile">RESUMEN</p>
+      </div>
+      <div>
+        <div class="fx-dir-col text-align-center">
+          <label for="descuento" class="font-desktop font-tablet font-mobile">Ingrese código de
+            descuento</label>
+          <div>
+            <input type="text" name="descuento" placeholder="Cod. descuento"
+              class="font-desktop font-tablet font-mobile text-center w-50">
+          </div>
+        </div>
+        <div class="ds-flex js-cont-between mr-10 ml-10 font-desktop font-tablet font-mobile">
+          <div>
+            <div>
+              <p>SUBTOTAL</p>
+            </div>
+            <div>
+              <p>ENVIO</p>
+            </div>
+            <div>
+              <p>IMPUESTOS</p>
+            </div>
+            <div>
+              <p class="ft-bold line-borde-top">TOTAL</p>
+            </div>
+          </div>
+          <div class="ml-20">
+            <div>
+              <p>$30000</p>
+            </div>
+            <div>
+              <p>Free</p>
+            </div>
+            <div>
+              <p>$6200</p>
+            </div>
+            <div>
+              <p class="ft-bold">$36200</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="boton-mobile boton-tablet boton-desktop ds-flex fx-wrap">
+          <a href=""><button class="botones-a font-desktop font-tablet font-mobile ">Aceptar</button></a>
+          <a href=""><button class="botones-c font-desktop font-tablet font-mobile">Cancelar</button></a>
+        </div>
+      </div>
+    </div>
+    <!-- RESUMEN FINALIZA -->
+    </div>
   </main>
-  <footer>
+  <link rel="stylesheet" href="css/compras.css">
+  <footer class="bg-gris-oscuro">
+    <!-- Comienzo footer -->
+    <section>
+      <div class="bg-blanco">
+        <div class="fx fx-wrap w-100 bg-blanco">
+          <div class="w-20">
+            <img class="w-60 logo-rotate" src="/images/Logo_Argentum_Sin_Texto.png" alt="Logo Argentum">
+          </div>
+          <div class="fx fx-wrap w-80 fx-justify-a fx-align-center font-responsive ">
+            <div class="w-25 mt-8 ">
+              <p class="mb-2 heading-footer-nav">Menu Principal</p>
+              <p class="mb-2"><a href="/">Inicio</a></p>
+              <p class="mb-2"><a href="#about-us">Nosotros</a></p>
+              <p class="mb-2"><a href="/">Tienda</a></p>
+              <p class="mb-2"><a href="#help">Ayuda</a></p>
+            </div>
+            <div class="w-25 mt-8">
+              <p class="mb-2 heading-footer-nav">Encuentranos</p>
+              <p class="mb-2"><a href="https://www.facebook.com">Facebook</a></p>
+              <p class="mb-2"><a href="https://www.instagram.com">Instagram</a></p>
+              <p class="mb-2"><a href="https://www.twitter.com">Twitter</a></p>
+              <p class="mb-2"><a href="https://www.linkedin.com">Linkedin</a></p>
+            </div>
+            <div class="w-40 mt-8 text-center">
+              <div>
+                <p class="w-100 mb-5 heading-footer-nav">Recibí nuestras promociones</p>
+                <form action="">
+                  <input class="mb-5 w-90 font-s8 input-news" type="email" name="news" placeholder="Ingresa tu mail">
+                  <button class="mb-3 font-s8 button-news w-90" type="submit">Subscribirme</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="font-s6 mt-10 p-8 fx fx-wrap fx-justify-a w-100 style-copyright">
+            <div class="w-100 text-center">
+              <p>Argentum 20222. Todos los Derechos Reservados. <a style="color: white;" href="#">Ver Términos
+                  y Condiciones.</a></p>
+            </div>
+            <div class="w-100 text-center">
+              <p>contacto: soporte@argentum.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
   </footer>
-  </body>
+</body>
+
 </html>
