@@ -1,9 +1,12 @@
 const path = require("path");
 const express = require("express");
+const productos = require("../productos");
 
 module.exports = {
   home: (req, res) => {
-    res.render("index");
+    res.render("index", {
+      productos: productos,
+    });
   },
   login: (req, res) => {
     res.sendFile(path.join(__dirname, "../views/login.html"));
