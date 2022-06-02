@@ -3,7 +3,7 @@ const express = require("express");
 
 module.exports = {
   home: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/index.html"));
+    res.render("index");
   },
   login: (req, res) => {
     res.sendFile(path.join(__dirname, "../views/login.html"));

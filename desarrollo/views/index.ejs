@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Argentum</title>
-    <link rel="shortcut icon" href="./images/Argentum_ico.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./images/Argentum_ico.ico"
+      type="image/x-icon"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
@@ -14,18 +18,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/footer.css">  
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/styles-index.css" />
-    <link rel="stylesheet" href="/css/styles-index-tablets.css" />
-    <link rel="stylesheet" href="/css/styles-index-desktop.css" />
   </head>
   <body class="bg-gris-oscuro">
     <!-- Inicio Header importado -->
-    <header>
-      <div class="fx fx-wrap">
-        <iframe class="iframe-import" src="nav.html" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </header>
+    <header><%- include('./partials/header') %></header>
     <main>
       <!-- Main banner -->
       <img
@@ -73,22 +72,22 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Notebook Lenovo de 14" HD
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 70.000</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 70.000
+                  </p>
                 </div>
               </article>
             </div>
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
               <article class="product b-1">
-                <img
-                  class="w-100"
-                  src="/images/ps5.jpg"
-                  alt="Smart TV 32"
-                />
+                <img class="w-100" src="/images/ps5.jpg" alt="Smart TV 32" />
                 <div class="fx fx-wrap bg-blanco bt-2">
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Playstation 5
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 64.000</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 64.000
+                  </p>
                 </div>
               </article>
             </div>
@@ -103,27 +102,31 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Smart TV PHILIPS 43 pulgadas
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 78.000</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 78.000
+                  </p>
                 </div>
               </article>
             </div>
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
               <article class="product b-1">
-                  <div class="w-100">
-                    <img
-                      class="w-100"
-                      src="/images/test-s22.jpg"
-                      alt="Samsung A-52"
-                    />
-                  </div>
-                  <div class="fx fx-wrap bg-blanco bt-2">
-                    <p class="ms-5 mt-5 product-tittle text-center">
-                      Celular Samsung S22
-                    </p>
-                    <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 58.000</p>
-                  </div>
-                </article>
-              </div>
+                <div class="w-100">
+                  <img
+                    class="w-100"
+                    src="/images/test-s22.jpg"
+                    alt="Samsung A-52"
+                  />
+                </div>
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Celular Samsung S22
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 58.000
+                  </p>
+                </div>
+              </article>
+            </div>
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
               <article class="product b-1">
                 <img
@@ -135,7 +138,9 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Impresora Epson multifunción
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 19.990</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 19.990
+                  </p>
                 </div>
               </article>
             </div>
@@ -150,7 +155,9 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Notebook Lenovo IDEAPAD 5
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 114.000</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 114.000
+                  </p>
                 </div>
               </article>
             </div>
@@ -165,7 +172,9 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Smart TV Phillips 70"
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 196.370</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 196.370
+                  </p>
                 </div>
               </article>
             </div>
@@ -180,7 +189,9 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Heladera Samsung no frost
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 169.999</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 169.999
+                  </p>
                 </div>
               </article>
             </div>
@@ -195,7 +206,9 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Notebook Dell JH94XWH
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 86.999</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 86.999
+                  </p>
                 </div>
               </article>
             </div>
@@ -210,7 +223,9 @@
                   <p class="ms-5 mt-5 product-tittle text-center">
                     Cafetera EXPRESS DE LONGHI
                   </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">$ 118.000</p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 118.000
+                  </p>
                 </div>
               </article>
             </div>
@@ -244,15 +259,13 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5"
-                >
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
                   <p class="ms-5 mb-5 m-center w-100 heading-offers">
                     Tablet Samsung A8
                   </p>
                   <p class="ms-5 mb-5 offers-tittle">
-                    Tablet de 10.5" TFT WUXGA (1920 x 1200). Procesador Octa Core
-                    (CPU speed 2 GHz).
+                    Tablet de 10.5" TFT WUXGA (1920 x 1200). Procesador Octa
+                    Core (CPU speed 2 GHz).
                   </p>
                   <div
                     class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers"
@@ -263,9 +276,7 @@
                       >
                         $ 61.750
                       </p>
-                      <p
-                        class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after"
-                      >
+                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
                         $ 47.500
                       </p>
                     </div>
@@ -285,9 +296,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5"
-                >
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
                   <p class="ms-5 mb-5 m-center w-100 heading-offers">
                     Notebook PCBOX PCB
                   </p>
@@ -303,9 +312,7 @@
                       >
                         $ 48.000
                       </p>
-                      <p
-                        class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after"
-                      >
+                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
                         $ 38.500
                       </p>
                     </div>
@@ -325,9 +332,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5"
-                >
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
                   <p class="ms-5 mb-5 m-center w-100 heading-offers">
                     Lavarropas Dream Concept
                   </p>
@@ -343,9 +348,7 @@
                       >
                         $ 45.760
                       </p>
-                      <p
-                        class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after"
-                      >
+                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
                         $ 35.200
                       </p>
                     </div>
@@ -365,9 +368,7 @@
                     />
                   </div>
                 </div>
-                <div
-                  class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5"
-                >
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
                   <p class="ms-5 mb-5 m-center w-100 heading-offers">
                     Tablet Lenovo Smart Tab
                   </p>
@@ -384,9 +385,7 @@
                       >
                         $ 23.475
                       </p>
-                      <p
-                        class="ms-5 mb-5 mt-5 w-20 price-offers w-100 after"
-                      >
+                      <p class="ms-5 mb-5 mt-5 w-20 price-offers w-100 after">
                         $ 18.780
                       </p>
                     </div>
@@ -399,58 +398,21 @@
         </section>
         <section>
           <div class="p-8 m-10 bg-blanco">
-            <div class="discount w-90 m-center mb-5 heading-aboutus"><h4 id="about-us" class="text-center">Acerca de nosotros</h4></div>
-            <p class="text-center m-10">Es una empresa Argentina, de comercio electronico, fundada en el año 2010, que cuenta actualmente con dos sucursales. Una en la ciudad de Rosario y otra en la Ciudad Autonoma de Buenos Aires.
-              Nos dedicamos a la venta de productos electonicos y contamos con gran variedad de productos. Si existe, lo tenemos.</p>
+            <div class="discount w-90 m-center mb-5 heading-aboutus">
+              <h4 id="about-us" class="text-center">Acerca de nosotros</h4>
+            </div>
+            <p class="text-center m-10">
+              Es una empresa Argentina, de comercio electronico, fundada en el
+              año 2010, que cuenta actualmente con dos sucursales. Una en la
+              ciudad de Rosario y otra en la Ciudad Autonoma de Buenos Aires.
+              Nos dedicamos a la venta de productos electonicos y contamos con
+              gran variedad de productos. Si existe, lo tenemos.
+            </p>
           </div>
         </section>
-      </div>  
+      </div>
     </main>
     <!-- Comienzo footer -->
-    <footer class="bg-gris-oscuro">
-      <section>
-        <div class="bg-blanco">
-          <div class="fx fx-wrap w-100 bg-blanco fx-align-center">
-            <div class="w-20">
-              <img class="ml-5 w-60 tablet-w-40 desktop-w-30 logo-rotate" src="/images/Logo_Argentum_Sin_Texto.png" alt="Logo Argentum">
-            </div>
-            <div class="fx fx-wrap w-80 fx-justify-a fx-align-center">
-              <div class="w-25 mt-8">
-                <p class="mb-2">Menu Principal</p>
-                <p class="mb-2"><a href="/">Inicio</a></p>
-                <p class="mb-2"><a href="#about-us">Nosotros</a></p>
-                <p class="mb-2"><a href="/">Tienda</a></p>
-                <p class="mb-2"><a href="#help">Ayuda</a></p>
-              </div>
-              <div class="w-25 mt-8">
-                <p class="mb-2">Encuentranos</p>
-                <p class="mb-2"><a href="https://www.facebook.com">Facebook</a></p>
-                <p class="mb-2"><a href="https://www.instagram.com">Instagram</a></p>
-                <p class="mb-2"><a href="https://www.twitter.com">Twitter</a></p>
-                <p class="mb-2"><a href="https://www.linkedin.com">Linkedin</a></p>
-              </div>
-              <div class="w-40 mt-8 text-center mobile-hide-subs">
-                <div>
-                  <p class="w-100 mb-5">Recibí nuestras promociones</p>
-                    <form action="">
-                      <input class="mb-5 w-90 tablet-w-70 desktop-w-50 input-news" type="email" name="news" placeholder="Ingresa tu mail">
-                      <button class="mb-3 button-news w-90 tablet-w-70 desktop-w-50" type="submit">Subscribirme</button>
-                    </form>
-                </div>
-              </div>  
-            </div>
-              <div class="font-s12 mt-10 p-8 fx fx-wrap fx-justify-a w-100 style-copyright">
-                  <div class="w-100 text-center">
-                    <p>Argentum 20222. Todos los Derechos Reservados. <a style="color: white;" href="#">Ver Términos y Condiciones.</a></p>
-                  </div>
-                  <div class="w-100 text-center">
-                    <p>contacto: soporte@argentum.com</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </footer>
+    <footer><%- include ('./partials/footer') %></footer>
   </body>
 </html>
