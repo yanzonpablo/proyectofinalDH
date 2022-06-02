@@ -15,6 +15,6 @@ module.exports = {
     res.sendFile(path.join(__dirname, "../views/producto.html"));
   },
   cart: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/compras.html"));
+    res.render("compras");
   },
 };
