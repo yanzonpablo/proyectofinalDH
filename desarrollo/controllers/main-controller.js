@@ -9,10 +9,10 @@ module.exports = {
     });
   },
   login: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/login.html"));
+    res.render("login");
   },
   register: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/register.html"));
+    res.render("register");
   },
   product: (req, res) => {
     res.sendFile(path.join(__dirname, "../views/producto.html"));

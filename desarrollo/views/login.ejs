@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="shortcut icon" href="./images/Argentum_ico.ico" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link href="/css/styles-reg-log.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header') %>
+  </header>
+  <main>
+    <form class="form" action="/" method="POST">
+      <h1 class="titulo-login">Iniciar sesión</h1>
+
+      <div class="foto-perfil">
+        <img src="/images/perfil2.jpg" alt="perfil" width="100%" />
+      </div>
+
+      <div>
+        <label for="email" class=""></label>
+        <input class="cajas" type="email" id="email" name="email" placeholder="Email" required maxlength="50" />
+      </div>
+
+      <div>
+        <input class="cajas" type="password" placeholder="Contraseña" required maxlength="30" />
+      </div>
+
+      <div class="remember"><input type="checkbox" /> Recordarme</div>
+
+      <input type="submit" class="btn" value="Ingresar" />
+
+      <div class="forget">
+        <a href="">¿Olvidaste tu Contraseña?</a>
+      </div>
+
+      <div class="tengo-cuenta">
+        <a href="/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
+      </div>
+    </form>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer') %>
+  </footer>
+</body>
+
+</html>
