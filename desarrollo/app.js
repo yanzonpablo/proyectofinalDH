@@ -10,12 +10,3 @@ app.listen(3010, () => {
 });
 
 app.use("/", mainRouter);
-// app.get("/nav", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/nav.html"));
-// });
-// app.get("/cart", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/compras.html"));
-// });
-// app.get("/product", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/producto.html"));
-// });

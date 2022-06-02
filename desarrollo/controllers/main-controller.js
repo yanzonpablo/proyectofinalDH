@@ -11,4 +11,10 @@ module.exports = {
   register: (req, res) => {
     res.sendFile(path.join(__dirname, "../views/register.html"));
   },
+  product: (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/producto.html"));
+  },
+  cart: (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/compras.html"));
+  },
 };
