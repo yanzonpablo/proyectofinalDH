@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %> 
+    <title>Argentum</title>
+    <link rel="stylesheet" href="/css/styles-index.css" />
+  </head>
+  <body class="bg-gris-oscuro">
+    <!-- Inicio Header importado -->
+    <header><%- include('./partials/header') %></header>
+    <main>
+      <!-- Main banner -->
+      <img
+        class="w-100"
+        src="/images/test-banner-2.jpg"
+        alt="banner-principal"
+      />
+      <!-- Buscador -->
+      <div class="w-80 p-8 search-div m-center mt-8 p-12">
+        <p class="w-100 p-search">QUE ESTAS BUSCANDO?</p>
+        <form class="">
+          <div class="fx fx-justify-b">
+            <div class="w-40 div-search-inputs">
+              <input
+                class="w-90 search-input"
+                type="text"
+                name="search"
+                placeholder="Encontra tu producto"
+              />
+              <button class="search-icon w-10">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <button type="submit" class="w-35 search-button br-5">
+              Buscar
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Comienzo de section // Productos destacados -->
+      <div class="div-margin">
+        <section class="fx fx-wrap w-100">
+          <div class="bg-blanco p-8 m-10 fx fx-wrap">
+            <h2 class="w-100 m-10 text-center heading-style">
+              Productos destacados
+            </h2>
+            <!-- Productos destacados con plantilla dinamica-->
+            <% productos.forEach(producto => { %>
+              <% if (producto.destacado == true) { %>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/<%=producto.imagen%>"
+                  alt="Notebook Lenovo"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    <%=producto.nombre%>
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ <%=producto.precio%>
+                  </p>
+                </div>
+              </article>
+            </div>
+            <% } %>
+            <% }) %>
+            <!-- Productos destacados sin plantilla dinamica
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/test-product-note.jpg"
+                  alt="Notebook Lenovo"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Notebook Lenovo de 14" HD
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 70.000
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img class="w-100" src="/images/ps5.jpg" alt="Smart TV 32" />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Playstation 5
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 64.000
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/test-product-tv.jpg"
+                  alt="Smart TV 43 Phillips"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Smart TV PHILIPS 43 pulgadas
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 78.000
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <div class="w-100">
+                  <img
+                    class="w-100"
+                    src="/images/test-s22.jpg"
+                    alt="Samsung A-52"
+                  />
+                </div>
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Celular Samsung S22
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 58.000
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/impresora-epson-multifuncion.jpg"
+                  alt="Impresora Epson multifunción"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Impresora Epson multifunción
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 19.990
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/notebook-lenovo-ideapad5.jpg"
+                  alt="Notebook lenovo ideapad 5"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Notebook Lenovo IDEAPAD 5
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 114.000
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/tv-smart-tv-70-pulgadas.jpg"
+                  alt="Smart TV 70 Pulgadas Phillips"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Smart TV Phillips 70"
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 196.370
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/heladera-samsung-nofrost.png"
+                  alt="HELADERA NO FROST SAMSUNG"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Heladera Samsung no frost
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 169.999
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/notebook-dell-jh94xwh.jpg"
+                  alt="Notebook Dell JH94XWH"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Notebook Dell JH94XWH
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 86.999
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <article class="product b-1">
+                <img
+                  class="w-100"
+                  src="/images/cafetera-express-de-longhi.jpg"
+                  alt="CAFETERA EXPRESS DE LONGHI"
+                />
+                <div class="fx fx-wrap bg-blanco bt-2">
+                  <p class="ms-5 mt-5 product-tittle text-center">
+                    Cafetera EXPRESS DE LONGHI
+                  </p>
+                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                    $ 118.000
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div> -->
+        </section>
+        <!-- Banners -->
+        <section class="fx fx-wrap p-8">
+          <img
+            class="w-50 padding-banner-1"
+            src="/images/test-banner-small.jpg"
+            alt="Banner ofertas 2"
+          />
+          <img
+            class="w-50 padding-banner-2"
+            src="/images/banner-small.jpg"
+            alt="Banner ofertas 1"
+          />
+        </section>
+        <!-- Comienzo de section // Ofertas con plantilla dinamica-->
+        <section class="fx fx-wrap w-100" id="ofertas">
+          <div class="bg-blanco p-8 m-10 fx fx-wrap">
+            <h2 class="w-100 m-10 text-center heading-style">Ofertas</h2>
+            <% productos.forEach(producto => { %> 
+            <% if (producto.oferta == true) { %>
+            <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+              <article class="product b-1 fx fx-wrap">
+                <div class="fx fx-wrap fx-align-center w-30">
+                  <div class="w-100">
+                    <img
+                      class="w-100"
+                      src="/images/<%=producto.imagen%>"
+                      alt="<%=producto.nombre%>"
+                    />
+                  </div>
+                </div>
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
+                  <p class="ms-5 mb-5 m-center w-100 heading-offers">
+                    <%= producto.nombre %> 
+                  </p>
+                  <p class="ms-5 mb-5 offers-tittle">
+                    <%= producto.descripcion %> 
+                  </p>
+                  <div
+                    class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers"
+                  >
+                    <div>
+                      <p
+                        class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before"
+                      >
+                        $ <%= producto.precioantes %> 
+                      </p>
+                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
+                        $ <%= producto.precio %> 
+                      </p>
+                    </div>
+                    <p class="ms-5 mb-5 mt-5 w-30 discount"><%= producto.descuento %>% OFF</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <% } %>
+            <% }) %>
+            <!-- Ofertas sin plantilla dinamica           
+            <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+              <article class="product b-1 fx fx-wrap">
+                <div class="fx fx-wrap fx-align-center w-30">
+                  <div class="w-100">
+                    <img
+                      class="w-100"
+                      src="/images/notebook-pcbox-celeron.jpg"
+                      alt="NOTEBOOK PCBOX PCB FIRE- PCB"
+                    />
+                  </div>
+                </div>
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
+                  <p class="ms-5 mb-5 m-center w-100 heading-offers">
+                    Notebook PCBOX PCB
+                  </p>
+                  <p class="ms-5 mb-5 offers-tittle">
+                    Notebook - Cloubook. Pantalla 14" FHD (1920x1080 Px)
+                  </p>
+                  <div
+                    class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers"
+                  >
+                    <div>
+                      <p
+                        class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before"
+                      >
+                        $ 48.000
+                      </p>
+                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
+                        $ 38.500
+                      </p>
+                    </div>
+                    <p class="ms-5 mb-5 mt-5 w-30 discount">25% OFF</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+              <article class="product b-1 fx fx-wrap">
+                <div class="fx fx-align-center w-30">
+                  <div class="w-100">
+                    <img
+                      class="w-100"
+                      src="/images/lavarropas-automatico-dream.jpg"
+                      alt="LAVARROPAS AUTOMATICO DREAN"
+                    />
+                  </div>
+                </div>
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
+                  <p class="ms-5 mb-5 m-center w-100 heading-offers">
+                    Lavarropas Dream Concept
+                  </p>
+                  <p class="ms-5 mb-5 offers-tittle">
+                    Panel electronico. CDA (control digital de agitacion)
+                  </p>
+                  <div
+                    class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers"
+                  >
+                    <div>
+                      <p
+                        class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before"
+                      >
+                        $ 45.760
+                      </p>
+                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
+                        $ 35.200
+                      </p>
+                    </div>
+                    <p class="ms-5 mb-5 mt-5 w-30 discount">30% OFF</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+              <article class="product b-1 fx fx-wrap">
+                <div class="fx fx-align-center w-30">
+                  <div class="w-100">
+                    <img
+                      class="w-100"
+                      src="/images/tablet-lenovo-8505fs.jpg"
+                      alt="NOTEBOOK PCBOX PCB FIRE- PCB"
+                    />
+                  </div>
+                </div>
+                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
+                  <p class="ms-5 mb-5 m-center w-100 heading-offers">
+                    Tablet Lenovo Smart Tab
+                  </p>
+                  <p class="ms-5 mb-5 offers-tittle">
+                    La portabilidad de una gran tablet para el entretenimiento y
+                    la comodidad
+                  </p>
+                  <div
+                    class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers"
+                  >
+                    <div>
+                      <p
+                        class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before"
+                      >
+                        $ 23.475
+                      </p>
+                      <p class="ms-5 mb-5 mt-5 w-20 price-offers w-100 after">
+                        $ 18.780
+                      </p>
+                    </div>
+                    <p class="ms-5 mb-5 mt-5 w-30 discount">25% OFF</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div> -->
+        </section>
+        <!-- About us Section -->
+        <section>
+          <div class="p-8 m-10 bg-blanco">
+            <div class="discount w-90 m-center mb-5 heading-aboutus">
+              <h4 id="about-us" class="text-center">Acerca de nosotros</h4>
+            </div>
+            <p class="text-center m-10">
+              Es una empresa Argentina, de comercio electronico, fundada en el
+              año 2010, que cuenta actualmente con dos sucursales. Una en la
+              ciudad de Rosario y otra en la Ciudad Autonoma de Buenos Aires.
+              Nos dedicamos a la venta de productos electonicos y contamos con
+              gran variedad de productos. Si existe, lo tenemos.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Comienzo footer -->
+    <footer><%- include ('./partials/footer') %></footer>
+  </body>
+</html>

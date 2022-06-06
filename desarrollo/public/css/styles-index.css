@@ -24,8 +24,13 @@
 }
 /* Font */
 body {
+<<<<<<< HEAD
     font-family: "Roboto", sans-serif;
     font-size: 12px;
+=======
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 .font-s6 {
     font-size: 6px;
@@ -106,6 +111,9 @@ body {
 .p-8 {
     padding: 8px;
 }
+.p-12 {
+  padding: 12px;
+}
 /* MARGIN */
 .m-center {
     margin: auto;
@@ -136,6 +144,9 @@ body {
 }
 .mt-10 {
     margin-top: 10px;
+}
+.ml-5 {
+  margin-left: 5px;
 }
 .ml-22 {
     margin-left: 22px;
@@ -172,15 +183,23 @@ body {
 }
 /* HEAD STYLES */
 .heading-style {
+<<<<<<< HEAD
     background-color: #d93175;
     color: white;
     border-radius: 2px;
     font-size: 3vw;
+=======
+  background-color: #d93175;
+  color: white;
+  border-radius: 2px;
+  font-size: 18px;
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 /* STYLES ARTICLES */
 .product {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
+<<<<<<< HEAD
 .product-description {
     display: none;
 }
@@ -191,6 +210,13 @@ body {
 .product-tittle {
     width: 100%;
     font-size: 1.5vw;
+=======
+.product-price {
+  font-weight: 600;
+}
+.product-tittle {
+  width: 100%;
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 .article-dest-5,
 .article-dest-6 {
@@ -203,6 +229,7 @@ body {
     border-color: #383331;
 }
 .div-search-inputs {
+<<<<<<< HEAD
     display: flex;
     background-color: white;
     border-radius: 5px;
@@ -215,6 +242,19 @@ body {
     border: none;
     width: 100%;
     font-size: 1.3vw;
+=======
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  padding: 3px;
+  margin-right: 6px;
+}
+.search-input {
+  background-color: white;
+  border: none;
+  width: 100%;
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 .search-icon {
     border: none;
@@ -222,6 +262,7 @@ body {
     margin-left: 2px;
 }
 .search-button {
+<<<<<<< HEAD
     background-color: rgba(56, 51, 49, 1);
     color: white;
     font-size: 1.5vw;
@@ -230,6 +271,14 @@ body {
     display: none;
     color: rgba(50, 50, 50, 1);
     font-size: 9px;
+=======
+  background-color: rgba(56, 51, 49, 1);
+  color: white;
+}
+.p-search {
+  display: none;
+  color: rgba(50, 50, 50, 1);
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 /* STYLES BANNERS */
 .padding-banner-1 {
@@ -246,6 +295,7 @@ body {
 }
 /* STYLES OFFER SECTION */
 .heading-offers {
+<<<<<<< HEAD
     font-size: 12px;
     font-weight: 600;
     font-size: 2vw;
@@ -256,12 +306,20 @@ body {
 .price-offers {
     font-weight: 700;
     font-size: 1.6vw;
+=======
+  font-size: 17px;
+  font-weight: 600;
+}
+.price-offers {
+  font-weight: 700;
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 .div-offers {
     border-top: 2px solid rgba(234, 234, 234, 0.703);
     border-bottom: 2px solid rgba(234, 234, 234, 0.703);
 }
 .discount {
+<<<<<<< HEAD
     /* color: rgb(90, 64, 174); */
     background-color: #d93175;
     color: white;
@@ -297,11 +355,36 @@ body {
     background-color: rgba(56, 51, 49, 1);
     color: white;
     font-size: 0.8vw;
+=======
+  /* color: rgb(90, 64, 174); */
+  background-color: #d93175;
+  color: white;
+  border-radius: 2px;
+}
+.heading-aboutus {
+  font-size: 18px;
+}
+/* FOOTER STYLES */
+.input-news {
+  padding: 1px;
+}
+.button-news {
+  background-color: #d93175;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 3px;
+}
+.style-copyright {
+  background-color: rgba(56, 51, 49, 1);
+  color: white;
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
 }
 /* Anchor */
 a {
     text-decoration: none;
 }
+<<<<<<< HEAD
 /* Import NAV-BAR */
 .iframe-import {
     width: 100%;
@@ -379,7 +462,147 @@ a {
         display: block;
     }
     /* .product:hover .before {
+=======
+/* MEDIA QUERY TABLETS */
+@media (min-width: 480px) {
+  /* Cambios en font-size */
+  .heading-style {
+    font-size: 24px;
+  }
+  .product-price {
+    font-size: 19px;
+  }
+  .product-tittle {
+    font-size: 18px;
+  }
+  .heading-offers {
+    font-size: 19px;
+  }
+  .offers-tittle {
+    font-size: 18px;
+  }
+  .price-offers {
+    font-size: 19px;
+  }
+  /* Cambios en buscador */
+  .p-search {
+    display: block;
+    margin: 5px;
+    padding: 8px;
+    font-size: 11px;
+  }
+  .search-div {
+    width: 70%;
+  }
+  .search-input {
+    padding: 8px;
+  }
+  .div-search-inputs {
+    width: 80%;
+    padding: 8px;
+  }
+  .search-button {
+    padding: 0px;
+    font-size: 14px;
+  }
+  .search-icon {
+    padding: 0px;
+  }
+  /* Cambios en contenedor principal */
+  .div-margin {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  /* Cambios en productos */
+  .article-dest-5,
+  .article-dest-6 {
+    display: block;
+  }
+  /* About Us */
+  .about-us-text {
+    width: 80%;
+    margin: auto;
+  }
+  /* Utilidades */
+  .tablet-w-33 {
+    width: 33%;
+  }
+  .tablet-w-40 {
+    width: 40%;
+  }
+  .tablet-w-50 {
+    width: 50%;
+  }
+  .tablet-w-70 {
+    width: 70%;
+  }
+  .tablet-w-100 {
+    width: 100%;
+  }
+}
+/* QUERY DESKTOP */
+@media (min-width: 900px) {
+  /* Cambios en font-size */
+  .heading-style {
+    font-size: 26px;
+  }
+  /* Cambios en buscador */
+  .search-div {
+    width: 50%;
+  }
+  .search-button {
+    width: 20%;
+  }
+  .search-input {
+    padding: 12px;
+  }
+  /* Cambios en contenedor principal */
+  .div-margin {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+  /* Box-Shadow producto + animaciones */
+  .product {
+    box-shadow: none;
+  }
+  .product:hover {
+    transition: box-shadow 1000ms;
+    box-shadow: 0px 0px 10px #3c3b3b;
+  }
+  .logo-rotate {
+    transition: transform 1500ms;
+  }
+  .logo-rotate:hover {
+    transform: rotate(360deg);
+  }
+  .button-news:hover {
+    transition: 1000ms;
+    background-color: #a22a5a;
+  }
+  .after {
+    display: none;
+  }
+  .product:hover .after {
+    transition-duration: 1000ms;
+    transition-property: block;
+    display: block;
+  }
+  /* .product:hover .before {
+>>>>>>> c320fa157fbb5fdeb362f9aa6aa0523e1c5cac50
     transition-duration: 1400ms;
     display: none;
   } */
+  /* Utilidades */
+  .desktop-w-20 {
+    width: 20%;
+  }
+  .desktop-w-25 {
+    width: 25%;
+  }
+  .desktop-w-30 {
+    width: 30%;
+  }
+  .desktop-w-50 {
+    width: 50%;
+  }
 }
