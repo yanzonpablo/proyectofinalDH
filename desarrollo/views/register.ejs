@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('./partials/head') %>
+    <title>Registrate</title>
+    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header') %>
+  </header>
+  <main>
+    <form class="form" action="/" method="POST">
+      <h1 class="titulo">
+        Completá el formulario para formar parte de nuestra comunidad
+      </h1>
+
+      <div>
+        <label name="nombreUsuario" class=""></label>
+        <input class="cajas" type="text" id="fullname" name="fullname" placeholder="Nombre y Apellido" required
+          maxlength="30" />
+      </div>
+
+      <div>
+        <label for="email" class=""></label>
+        <input class="cajas" type="email" id="email" name="email" placeholder="Email" required maxlength="50" />
+      </div>
+
+      <div>
+        <label for="DNI" class=""></label>
+        <input class="cajas" type="text" id="DNI" name="DNI" placeholder="DNI" required maxlength="8" />
+      </div>
+
+      <div class="">
+        <label for="birthdate" class=""></label>
+        <input class="cajas" id="birthdate" type="date" name="birthdate" placeholder="Fecha de Nacimiento" />
+      </div>
+
+      <div>
+        <label for="domicilio" class=""></label>
+        <input class="cajas" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required
+          maxlength="30" />
+      </div>
+
+      <div>
+        <label for="ciudad" class=""></label>
+        <select name="ciudad" class="cajas" id="ciudad">
+          <option value="CABA">C.A.B.A.</option>
+          <option value="GBA">G.B.A.</option>
+          <option value="Rosario">Rosario</option>
+        </select>
+      </div>
+
+      <div>
+        <label name="telefono" class=""></label>
+        <input class="cajas" type="text" id="telefono" name="telefono" placeholder="Teléfono celular" required
+          maxlength="15" />
+      </div>
+
+      <div class="">
+        <label name="gender"></label>
+        <div class="cajas genero">
+          <input class="p-0" type="radio" name="gender" id="gender-male" value="male" />
+          <label class="p-0">Masculino</label>
+          <input class="p-0" type="radio" name="gender" id="gender-fem" value="fem" />
+          <label class="p-0">Femenino</label>
+        </div>
+      </div>
+
+      <div>
+        <input class="cajas" type="password" placeholder="Contraseña" required maxlength="30" />
+      </div>
+
+      <div>
+        <input class="cajas" type="confirmPassword" placeholder="Confirmar Contraseña" required maxlength="30" />
+      </div>
+
+      <div class="termino1">
+        <input type="checkbox" /> Quiero recibir vía e-mail ofertas y
+        novedades
+      </div>
+
+      <div class="termino1">
+        <input type="checkbox" /> Al registrarme acepto los<a class="termino2" href="">Terminos y Condiciones</a>
+      </div>
+
+      <input type="submit" class="btn" value="REGISTRATE" />
+
+      <div class="tengo-cuenta">
+        <a href="/login" class="tengo-cuenta">Ya tengo cuenta</a>
+      </div>
+    </form>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer') %>
+  </footer>
+</body>
+
+</html>

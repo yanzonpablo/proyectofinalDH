@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./partials/head') %> 
     <title>Argentum</title>
-    <link
-      rel="shortcut icon"
-      href="./images/Argentum_ico.ico"
-      type="image/x-icon"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/styles-index.css" />
   </head>
   <body class="bg-gris-oscuro">
@@ -83,8 +66,8 @@
             </div>
             <% } %>
             <% }) %>
-            <!-- Productos destacados sin plantilla dinamica -->
-            <!-- <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+            <!-- Productos destacados sin plantilla dinamica
+            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
               <article class="product b-1">
                 <img
                   class="w-100"
@@ -280,7 +263,7 @@
                     <img
                       class="w-100"
                       src="/images/<%=producto.imagen%>"
-                      alt="Tablet Samsung A8"
+                      alt="<%=producto.nombre%>"
                     />
                   </div>
                 </div>
@@ -423,6 +406,7 @@
             </div>
           </div> -->
         </section>
+        <!-- About us Section -->
         <section>
           <div class="p-8 m-10 bg-blanco">
             <div class="discount w-90 m-center mb-5 heading-aboutus">
