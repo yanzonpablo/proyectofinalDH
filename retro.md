@@ -1,4 +1,6 @@
-﻿Desde un comienzo como grupo tratamos de conocernos e identificar las fortalezas y debilidades de cada uno, que nos ayudarían a poder integrarnos y avanzar con el proyecto.
+**Sprint 2.**
+
+Desde un comienzo como grupo tratamos de conocernos e identificar las fortalezas y debilidades de cada uno, que nos ayudarían a poder integrarnos y avanzar con el proyecto.
 
 Comenzamos investigando distintos e-commerce para poder entender cómo están conformados en relación a las distintas secciones, información y estética. Esta investigación nos ayudo a entender qué tipo de temática queríamos encarar para el proyecto. Elegimos un e-commerce de venta de electrodomésticos.
 
