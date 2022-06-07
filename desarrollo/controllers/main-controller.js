@@ -18,9 +18,11 @@ module.exports = {
     res.sendFile(path.join(__dirname, "../views/producto.html"));
   },
   cart: (req, res) => {
-    res.render("compras");
-  },
-  testing: (req, res) => {
-    res.render("form");
+    const busqueda = productos.find((art) => {
+      return art.id == 14;
+    });
+    res.render("compras", {
+      art: busqueda,
+    });
   },
 };
