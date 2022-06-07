@@ -166,7 +166,7 @@ const productos = [
     precio: 23475,
     precioantes: 18780,
     id: 14,
-    imagen: "./public/images/tablet-lenovo-8505fs.jpg",
+    imagen: "tablet-lenovo-8505fs.jpg",
     categoria: "Tablets",
     destacado: false,
     oferta: true,
