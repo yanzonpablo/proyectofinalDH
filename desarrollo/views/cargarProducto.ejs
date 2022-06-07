@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Adhesion de producto</title>
+    <link rel="stylesheet" href="/css/styles-reg-log.css" />
+  </head>
+  <body>
+    <main>
+      <form class="form" action="/" method="POST">
+        <h1 class="titulo">AGREGA UN PRODUCTO COMPLETANDO EL FORMULARIO</h1>
+
+        <div>
+          <label name="nombre" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="nombre_producto"
+            name="nombre"
+            placeholder="Nombre de producto"
+            required
+            maxlength="30"
+          />
+        </div>
+        <div>
+          <label for="descripcion" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="descripcion_producto"
+            name="descripcion"
+            placeholder="Descripcion del producto"
+            required
+            maxlength="100"
+          />
+        </div>
+        <div>
+          <label for="precio" class=""></label>
+          <input
+            class="cajas"
+            id="precio_producto"
+            type="text"
+            name="precio"
+            placeholder="Precio de producto"
+            required
+          />
+        </div>
+        <div>
+          <label for="id" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="id_producto"
+            name="id"
+            placeholder="ID del producto"
+            required
+          />
+        </div>
+        <div>
+          <input
+            class="cajas"
+            type="file"
+            name="imagen"
+            id="imagen_producto"
+            required
+          />
+        </div>
+        <div>
+          <label for="categoria" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="categoria_producto"
+            name="categoria"
+            placeholder="Categoria del producto"
+            required
+          />
+        </div>
+        <div>
+          <label for="destacado" class=""></label>
+          <select
+            class="cajas"
+            id="destacado_producto"
+            name="destacado"
+            placeholder="¿El producto responde a la sección de destacados?"
+            required
+          >
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
+        </div>
+        <div>
+          <label for="oferta" class=""></label>
+          <select
+            class="cajas"
+            id="oferta_producto"
+            name="oferta"
+            placeholder="¿El producto responde a la sección de ofertas?"
+            required
+          >
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
+        </div>
+        <div>
+          <label for="descuento" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="descuento_producto"
+            name="descuento"
+            placeholder="% de descuento para aplicar al producto"
+            required
+          />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

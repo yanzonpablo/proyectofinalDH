@@ -20,4 +20,7 @@ module.exports = {
   cart: (req, res) => {
     res.render("compras");
   },
+  testing: (req, res) => {
+    res.render("form");
+  },
 };

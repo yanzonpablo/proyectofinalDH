@@ -160,7 +160,7 @@ const productos = [
     descuento: 30,
   },
   {
-    nombre: "Lavarropas Dream Concept",
+    nombre: "Tablet Lenovo 8505",
     descripcion:
       "La portabilidad de una gran tablet para el entretenimiento y la comodidad",
     precio: 23475,

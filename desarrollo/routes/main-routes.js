@@ -9,5 +9,6 @@ router.get("/login", mainController.login);
 router.get("/register", mainController.register);
 router.get("/cart", mainController.cart);
 router.get("/product", mainController.product);
+router.get("/testing", mainController.form);
 
 module.exports = router;
