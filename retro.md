@@ -12,10 +12,10 @@ Todo esto lo fuimos realizando en conjunto y juntandonos una vez por semana o m�
 
 El equipo trabajo mucho, y las tareas estan muy bien explicadas y desarrolladas en Trello.
 
-El dia de ayer, 07/06, estaban todas las tareas hechas, quedando el retro.md, y product.ejs.
+Por cuestiones laborales, no podemos reunirnos con regularidad, pero en cada ceremonia, con la comunicacion en equipo se resolvieron todas las dificultades que surgieron.
 
-Yo era el encargado de subirlo, Lema E.A., y realice un push de product.html y css con algunas modificaciones que realice, sin haber hecho pull primero, con lo cual se hizo un merge entre archivos ejs y html, destruyendo las paginas.
+Punto a favor, el compañerismo y la solidaridad del grupo, si alguien no entiende algo, o no logra desarrollarlo, enseguida surge la colaboracion, y el trabajo en conjunto.
 
-Intentaremos solucionarlo, o volver a un commit anterior.
+Tuvimos un conflicto con el push, que "rompio" la aplicacion, en la cual se subio una version anterior, creando un merge entre diferentes archivos html y ejs, pero se logro solucionar con el esfuerzo de mis compañeros, antes de la entrega.
 
 Quitando esta falla, el resto del equipo hizo todo en tiempo y forma.
