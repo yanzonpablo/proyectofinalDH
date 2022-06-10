@@ -47,32 +47,7 @@
           <!-- Inicio articulo -->
           <tr class="bk-tabla line-bottom">
             <td class="text-align">
-              <img class="height-width-img" src="/cafetera.jpg" alt="cafetera">
-            </td>
-            <td>
-              <p class="ft-size-text text-left pb-10 ft-weight articulo">Cafetera Moulinex</p>
-              <span class="descripcion ft-size-text">Lorem ipsum dolor sit amet sdfg dfghconsectetur</span>
-            </td>
-            <td>
-              <p class=" ft-size-text text-align">$10000</p>
-            </td>
-            <td>
-              <div class="ds-flex js-cont-center align-items">
-                <a href="#" class="mas-menos"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
-                <p class="ft-size-text pr-10 pl-10 ft-weight">1</p>
-                <a href="#" class="mas-menos"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
-              </div>
-            </td>
-            <td class="text-align basurero">
-              <a href="" class="basurero"><i class="fas fa-trash-alt"></i></a>
-            </td>
-          </tr>
-        </article> <!-- Fin articulo -->
-        <article>
-          <!-- Inicio articulo -->
-          <tr class="bk-tabla line-bottom">
-            <td class="text-align">
-              <img class="height-width-img" src="<%= art.imagen %>" alt="<%= art.nombre %>">
+              <img class="height-width-img" src="/images/<%= art.imagen %>" alt="<%= art.nombre %>">
             </td>
             <td>
               <p class="ft-size-text text-left pb-10 ft-weight articulo"><%= art.nombre %></p>
@@ -106,7 +81,7 @@
           </div>
           <tr>
             <td class="pl-10">SUBTOTAL</td>
-            <td class="pr-10 text-right">$10000</td>
+            <td class="pr-10 text-right">$<%= art.precio %></td>
           </tr>
           <tr>
             <td class="pl-10">ENVIO</td>
@@ -114,11 +89,11 @@
           </tr>
           <tr>
             <td class="pl-10 line-total">IMPUESTOS</td>
-            <td class="pr-10 line-total text-right">21%</td>
+            <td class="pr-10 line-total text-right">$<%= art.precio * (21 / 100)%></td>
           </tr>
           <tr>
             <td class="pl-10 ft-weight">TOTAL</td>
-            <td class="pr-10 ft-weight text text-right">$840</td>
+            <td class="pr-10 ft-weight text text-right">$<%= art.precio + art.precio * (21 / 100)%></td>
           </tr>
         </table>
         <div class="text-align botones w-100">
