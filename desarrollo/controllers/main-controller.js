@@ -15,7 +15,7 @@ module.exports = {
     res.render("register");
   },
   product: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/producto.html"));
+    res.sendFile(path.join(__dirname, "../views/product.html"));
   },
   cart: (req, res) => {
     const busqueda = productos.find((art) => {
