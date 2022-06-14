@@ -249,6 +249,10 @@ body {
   font-size: 17px;
   font-weight: 600;
 }
+.offers-tittle {
+  color: grey;
+  font-size: 14px;
+}
 .price-offers {
   font-weight: 700;
 }
@@ -300,7 +304,7 @@ a {
     font-size: 19px;
   }
   .offers-tittle {
-    font-size: 18px;
+    font-size: 14px;
   }
   .price-offers {
     font-size: 19px;
