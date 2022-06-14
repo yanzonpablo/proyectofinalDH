@@ -1,47 +1,29 @@
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid bk-color logo">
-            <a class="navbar-brand logo" href="#"><img width="150" src="Logo_Argentum.png" alt="logo-argentum"></a>
-            <button class="navbar-toggler burger" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class=" collapse navbar-collapse font-weight font-type" id="navbarNavDropdown">
-                <ul class="navbar-nav table desktop ">
-                    <li class="p-10 nav-item boton iconos text-center">
-                        <span><i class="icon fas fa-home"></i></span>
-                        <a class="nav-link active font-color" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="p-10 nav-item boton iconos text-center">
-                        <span><i class="icon far fa-grin-tongue"></i></span>
-                        <a class="tablet nav-link font-color" href="#">Ofertas</a>
-                    </li>
-                    <li class="p-10 nav-item boton iconos text-center">
-                        <span><i class="icon fas fa-shopping-basket"></i></span>
-                        <a class="nav-link font-color" href="#">Como comprar</a>
-                    </li>
-                    <li class="p-10 nav-item boton iconos text-center">
-                        <span><i class="icon fas fa-user-plus"></i></span>
-                        <a class="nav-link font-color" href="#">Registrate</a>
-                    </li>
-                    <li class="p-10 nav-item boton iconos text-center">
-                        <span><i class="icon fas fa-shopping-cart"></i></span>
-                        <a class="nav-link font-color" href="#">Mi carrito</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li class="li"><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+    </span>
+    <a href="#" class="logo"><img src="/images/Logo_Argentum.png" width="200px" alt="logo-Argentum"></a>
+    <ul class="main-nav" id="js-menu">
+        <li>
+            <a href="/" class="nav-links"><i class="icon fas fa-home"></i> Inicio</a>
+        </li>
+        <li>
+            <a href="#ofertas" class="nav-links"><i class="icon far fa-grin-tongue"></i> Ofertas</a>
+        </li>
+        <li>
+            <a href="/register" class="nav-links"><i class="icon fas fa-user-plus"></i> Registrate</a>
+        </li>
+        <li>
+            <a href="/cart" class="nav-links"><i class="icon fas fa-shopping-cart"></i> Mi carrito</a>
+        </li>
+    </ul>
+</nav>
+<script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
+</script>
 </header>

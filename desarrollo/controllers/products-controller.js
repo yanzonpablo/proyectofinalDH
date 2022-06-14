@@ -1,7 +1,6 @@
 const path = require("path");
 const express = require("express");
 const productos = require("../productos");
-const { search } = require("../routes/main-routes");
 
 module.exports = {
   create: (req, res) => {
