@@ -1,135 +1,135 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open sans";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    color: #3b3b3b;
-    background-color: rgba(238, 238, 238, 1);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #3b3b3b;
+  background-color: rgba(238, 238, 238, 1);
 }
 
 .form {
-    width: 450px;
-    padding: 40px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    background-color: white;
-    border-radius: 5px;
+  width: 450px;
+  padding: 40px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .titulo {
-    color: black;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 13px;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 13px;
 }
 
 .titulo-login {
-    color: black;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .cajas {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    border: 1.5px solid;
-    border-color: #d93175;
-    border-left: 10px solid rgba(244, 56, 52, 0.4);
-    transition: all 0.5s ease;
-    background-color: white;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  border: 1.5px solid;
+  border-color: #d93175;
+  border-left: 10px solid rgba(244, 56, 52, 0.4);
+  transition: all 0.5s ease;
+  background-color: white;
 }
 
 .cajas:hover,
 .cajas:focus {
-    border-left: 10px solid rgba(244, 56, 52, 0.2);
+  border-left: 10px solid rgba(244, 56, 52, 0.2);
 }
 
 .foto-perfil {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0px auto;
-    margin-bottom: 10px;
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
 }
 
 .genero {
-    box-sizing: border-box;
-    font-size: 15px;
-    display: flex;
-    justify-content: space-around;
+  box-sizing: border-box;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .termino1 {
-    text-align: center;
-    color: #d93175;
-    padding: 8px;
+  text-align: center;
+  color: #d93175;
+  padding: 8px;
 }
 
 .termino2 {
-    color: #d93175;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px;
+  color: #d93175;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px;
 }
 
 .remember {
-    text-align: center;
-    color: #d93175;
-    padding: 8px;
+  text-align: center;
+  color: #d93175;
+  padding: 8px;
 }
 
 .forget {
-    text-align: center;
-    color: #d93175;
-    padding: 8px;
+  text-align: center;
+  color: #d93175;
+  padding: 8px;
 }
 
 .forget a {
-    text-decoration: underline;
-    color: #d93175;
+  text-decoration: underline;
+  color: #d93175;
 }
 
 .termino2:hover {
-    color: rgba(244, 56, 52, 0.4);
+  color: rgba(244, 56, 52, 0.4);
 }
 
 .btn {
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    margin: 20px 0;
-    font-size: 15px;
-    /* background: rgba(244, 56, 52, 0.9); */
-    background: #d93175;
-    color: white;
-    cursor: pointer;
-    transition: all 150ms;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 20px 0;
+  font-size: 15px;
+  /* background: rgba(244, 56, 52, 0.9); */
+  background: #d93175;
+  color: white;
+  cursor: pointer;
+  transition: all 150ms;
 }
 
 .btn:hover {
-    background: rgba(244, 56, 52, 0.4);
+  background: rgba(244, 56, 52, 0.4);
 }
 
 .tengo-cuenta {
-    text-align: center;
-    color: #d93175;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 20px;
+  text-align: center;
+  color: #d93175;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
 }
 
 .tengo-cuenta:hover {
-    color: rgba(244, 56, 52, 0.4);
+  color: rgba(244, 56, 52, 0.4);
 }
