@@ -245,15 +245,10 @@ td {
     border: 1px solid gray;
     border-radius: 5px;
     }
-
-
-
-
 }
-@media(max-width: 480px) {
+@media(max-width: 580px) {
     main {
     margin: 0px;
-
     font-size: 12px;
     }
    .descripcion {
@@ -295,6 +290,9 @@ td {
     .bk-resume {
     border: 1px solid gray;
     border-radius: 5px;
+    }
+    .height-width-img {
+        width: 80%;
     }
  
 }

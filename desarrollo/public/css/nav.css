@@ -33,12 +33,13 @@ body {
 }
 .navbar-toggle {
     position: absolute;
-    top: 40px;
+    top: 32px;
     right: 20px;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 28px;
+    color: #d93175;
+    font-size: 32px;
     flex-wrap: wrap;
+    margin-top: 11px;
 }
 .active {
   display: block;
