@@ -3,18 +3,26 @@
   <head>
     <%- include('./partials/head') %> 
     <title>Argentum</title>
-    <link rel="stylesheet" href="/css/styles-index.css" />
+    <link rel="stylesheet" href="/css/styles-index.css"/>
   </head>
   <body class="bg-gris-oscuro">
     <!-- Inicio Header importado -->
     <header><%- include('./partials/header') %></header>
     <main>
-      <!-- Main banner -->
-      <img
-        class="w-100"
-        src="/images/test-banner-2.jpg"
-        alt="banner-principal"
-      />
+      <!-- Main banners en carrousel -->
+          <!-- <img
+            class="w-100"
+            src="/images/test-banner-2.jpg"
+            alt="banner-principal"
+          /> -->
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="/images/test-banner-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="/images/test-banner-1.jpg" style="width:100%">
+            </div>
+          </div>  
       <!-- Buscador -->
       <div class="w-80 p-8 search-div m-center mt-8 p-12">
         <p class="w-100 p-search">QUE ESTAS BUSCANDO?</p>
@@ -425,5 +433,20 @@
     </main>
     <!-- Comienzo footer -->
     <footer><%- include ('./partials/footer') %></footer>
+    <script>
+      let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
   </body>
 </html>

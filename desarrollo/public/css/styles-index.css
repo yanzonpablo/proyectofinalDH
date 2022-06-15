@@ -288,6 +288,27 @@ body {
 a {
   text-decoration: none;
 }
+/* Slide-Banner Style */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+}
+.mySlides {
+  display: none;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* MEDIA QUERY TABLETS */
 @media (min-width: 480px) {
   /* Cambios en font-size */
