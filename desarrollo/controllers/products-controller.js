@@ -7,7 +7,7 @@ module.exports = {
     res.render("cargarProducto");
   },
   details: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/product.html"));
+    res.render("product");
   },
   // RESTA HACER DINAMICO EL PRODUCT.HTML
   store: (req, res) => {
