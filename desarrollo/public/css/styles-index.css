@@ -109,6 +109,12 @@ body {
 .p-12 {
   padding: 12px;
 }
+.p-30 {
+  padding-top: 30px;
+}
+.pb-30 {
+  padding-bottom: 30px;
+}
 /* MARGIN */
 .m-center {
   margin: auto;
@@ -236,10 +242,9 @@ body {
 }
 /* STYLES CATEGORIAS */
 .category {
-  background-color: rgb(213, 200, 200);
+  background-color: rgba(238, 238, 238, 1);
   height: 100px;
-  max-width: 400px;
-  margin: 1px;
+  max-width: 350px;
   text-align: center;
   border: 2px solid black;
 }
