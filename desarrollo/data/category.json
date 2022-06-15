@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Telefonía móvil",
+    "descripcion": "Celulares y accesorios",
+    "estado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Computación",
+    "descripcion": "Computadoras, notebooks, periféricos y accesorios.",
+    "estado": true
+  },
+  {
+    "id": 3,
+    "nombre": "Electrónica, audio y video",
+    "descripcion": "Dispositivos smart para el hogar, equipos de musica, SmartTv.",
+    "estado": true
+  },
+  {
+    "id": 4,
+    "nombre": "Electrodomésticos y Aires Acondicionado",
+    "descripcion": "Lavadoras, secadoras, lavavajillas, hornos, microondas, neveras, congeladores y refrigeración en general, campanas extractoras, pequeños electrodomesticos, etc.",
+    "estado": true
+  },
+  {
+    "id": 5,
+    "nombre": "Consolas y videojuegos",
+    "descripcion": "Dispositivos electrónicos para el entretenimiento.",
+    "estado": true
+  },
+  {
+    "id": 6,
+    "nombre": "Belleza y cuidado personal",
+    "descripcion": "Todo lo relacionado al cuidado de la belleza, cosmética y cuidado personal.",
+    "estado": true
+  },
+  {
+    "id": 7,
+    "nombre": "Apple",
+    "descripcion": "Dispositivos y accesorios propios de la marca.",
+    "estado": false
+  },
+  {
+    "id": 8,
+    "nombre": "Cámaras y accesorios",
+    "descripcion": "Equipos fotográficos de video y accesorios.",
+    "estado": true
+  }
+]

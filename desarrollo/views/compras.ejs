@@ -32,8 +32,8 @@
       </div>
       <!-- FINALIZA BARRA CARRITO -->
       <h2 class="product-carrito mb-30">Productos seleccionados:</h2>
-      <div class="desktop fx-wrap">
-        <table class="border-collapse pb-10">
+      <div class="desktop fx-wrap fondo-carro">
+        <table class="border-collapse pb-10 ds-block product-selec">
           <tr
             class="bk-title ft-color-title ft-weight ft-size-title text-align ft-mobile"
           >
@@ -87,10 +87,11 @@
             </tr>
           </article>
           <!-- Fin articulo -->
+          
         </table>
         <!-- Inicio resumen -->
         <div class="bk-resume mt-40">
-          <table class="resumen line-height ft-size-text">
+          <table class="resumen line-height ft-size-text ">
             <h3 class="title text-align pl-10 pb-10 pt-10">RESUMEN:</h3>
             <div class="title ft-weight text-align pb-10">
               <label for="descuento">Ingrese código de descuento:</label>
@@ -99,21 +100,21 @@
               <input type="text" class="desc" name="descuento" id="descuento" />
             </div>
             <tr>
-              <td class="pl-10">SUBTOTAL</td>
+              <td class="">SUBTOTAL</td>
               <td class="pr-10 text-right">$<%= art.precio %></td>
             </tr>
             <tr>
-              <td class="pl-10">ENVIO</td>
+              <td class="">ENVIO</td>
               <td class="pr-10 text-right">Gratis</td>
             </tr>
             <tr>
-              <td class="pl-10 line-total">IMPUESTOS</td>
+              <td class=" line-total">IMPUESTOS</td>
               <td class="pr-10 line-total text-right">
                 $<%= art.precio * (21 / 100)%>
               </td>
             </tr>
             <tr>
-              <td class="pl-10 ft-weight">TOTAL</td>
+              <td class="ft-weight">TOTAL</td>
               <td class="pr-10 ft-weight text text-right">
                 $<%= art.precio + art.precio * (21 / 100)%>
               </td>
