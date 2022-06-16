@@ -246,7 +246,8 @@ body {
   height: 100px;
   max-width: 350px;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #d93175;
+  margin-bottom: 2px;
 }
 .caterogy-text {
   font-size: 14px;
@@ -480,5 +481,10 @@ a {
   }
   .desktop-w-50 {
     width: 50%;
+  }
+  @media (min-width: 1200px) {
+    .desktop-w-16 {
+      width: 16%;
+    }
   }
 }
