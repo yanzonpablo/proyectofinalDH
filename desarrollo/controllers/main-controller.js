@@ -26,6 +26,6 @@ module.exports = {
     });
   },
   envio: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/detalle-envios.html"));
+    res.render("detalle-envios");
   }
 };
