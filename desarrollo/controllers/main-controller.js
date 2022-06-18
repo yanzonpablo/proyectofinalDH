@@ -29,6 +29,6 @@ module.exports = {
     res.render("detalle-envios");
   },
   pago: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/detalle-pagos.html"));
+    res.render("detalle-pagos");
   },
 };

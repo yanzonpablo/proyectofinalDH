@@ -9,19 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/detalle-pagos.css">
     <title>Document</title>
 </head>
 
 <body>
+    <header>
+        <%- include("./partials/header.ejs") %>
+    </header>
     <main>
         <!-- INICIA BARRA CARRITO -->
         <div class="main">
             <div class="ubica-barra">
                 <div class="navegador">
-                    <div class=""><a href="#" class="mis-compras">Mis Compras</a></div>
-                    <div class=""><a href="#" class="pagos">Pagos</a></div>
-                    <div class=""><a href="#" class="envios">Envíos</a></div>
+                    <div class=""><a href="/cart" class="mis-compras">Mis Compras</a></div>
+                    <div class=""><a href="/pago" class="pagos">Pagos</a></div>
+                    <div class=""><a href="/envio" class="envios">Envíos</a></div>
                 </div>
             </div>
             <!-- FINALIZA BARRA CARRITO -->
@@ -79,7 +84,7 @@
                                 <!-- Inicio articulo -->
                                 <tr class="bk-tabla line-bottom">
                                     <td class="text-align">
-                                        <img class="height-width-img" src="/097977656effe12235ee80f2a2ce.jpg" alt="" />
+                                        <img class="height-width-img" src="../images/aire.jpg" alt="" />
                                     </td>
                                     <td>
                                         <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -95,7 +100,7 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="/097977656effe12235ee80f2a2ce.jpg" alt="" />
+                                    <img class="height-width-img" src="../images/cafetera.jpg" alt="" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -167,6 +172,8 @@
             </div>
         </div>
     </main>
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
-
 </html>
