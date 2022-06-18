@@ -25,4 +25,7 @@ module.exports = {
       art: busqueda,
     });
   },
+  envio: (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/detalle-envios.html"));
+  }
 };

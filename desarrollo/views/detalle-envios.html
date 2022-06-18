@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/detalle-envios.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <!-- INICIA BARRA CARRITO -->
+        <div class="main">
+            <div class="ubica-barra">
+                <div class="navegador">
+                    <div class=""><a href="#" class="mis-compras">Mis Compras</a></div>
+                    <div class=""><a href="#" class="pagos">Pagos</a></div>
+                    <div class=""><a href="#" class="envios">Envíos</a></div>
+                </div>
+            </div>
+            <!-- FINALIZA BARRA CARRITO -->
+            <h2 class="product-carrito mb-20 pt-20 ml-20">Detalle de envío:</h2>
+            <div class="container">
+                <form class="mobile ml-20">
+                    <div class="entre-linea">
+                        <input type="text" name="nombre"
+                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde" placeholder="Nombre">
+                        <input type="text" name="apellido" class="p-lateral height-25 sinborde border-radius "
+                            placeholder="Apellido">
+                    </div>
+                    <div class="entre-linea ">
+                        <input type="number" name="dni"
+                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde" placeholder="D.N.I.">
+                        <input type="number" name="telefono" class="p-lateral border-radius height-25 sinborde "
+                            placeholder="Numero de teléfono ">
+                    </div>
+                    <div class="entre-linea">
+                        <input type="text" name="direccion"
+                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde"
+                            placeholder="Dirección">
+                        <input type="text" name="direccion2" class="p-lateral border-radius height-25 sinborde "
+                            placeholder="Segunda Dirección">
+                    </div>
+                    <div class="entre-linea">
+                        <input type="text" name="ciudad"
+                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde" placeholder="Ciudad">
+                        <input type="number" name="cod-postal" class=" p-lateral height-25 sinborde border-radius"
+                            placeholder="Código Postal">
+                    </div>
+                    <select name="provincia" id="provincia" class="sinborde height-25 border-radius mt-15">
+                        <option value="" name="provincia">Seleccione una Provincia...
+                    </select>
+                    <div class="entre-linea">
+                        <label for="observa" class="ds-block">Observaciones:</label>
+                        <textarea class="sinborde" name="observa" id="observa" cols="40" rows="5"></textarea>
+                    </div>
+                    <div class="boton-tablet ds-flex js-cont-b mt-15 mb-50 ">
+                        <div class="boton-border-check p-10">
+                        <label for="free">Envío gratis
+                        <input type="radio" id="free" name="free" class="" value="1" checked>
+                        </div>
+                        <div class="boton-border-check p-10">
+                        </label>
+                        <label for="prioridad">Envío prioritario
+                        <input type="radio" id="prioridad" name="prioridad" class="" value="2">
+                        </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="desktop fx-wrap fondo-carro">
+                    <!--este llevar a la derecha-->
+                    <div class="fx-dir-col">
+                        <table class="border-collapse pb-10 product-selec">
+                            <tr class="bk-title ft-color-title ft-weight ft-size-title text-align ft-mobile">
+                                <!-- INICIO TITULOS -->
+                                <td class="imagen-column align-self">Imagen</td>
+                                <td class="producto">Producto</td>
+                                <td class="precio ma-auto ">Precio</td>
+                            </tr><!-- finaliza titulos -->
+                            <article>
+                                <!-- Inicio articulo -->
+                                <tr class="bk-tabla line-bottom">
+                                    <td class="text-align">
+                                        <img class="height-width-img" src="../images/afeitadora.jpg" alt="" />
+                                    </td>
+                                    <td>
+                                        <p class="ft-size-text text-left pb-10 ft-weight articulo">
+                                            Plancha ATMA
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="ft-size-text ma-auto precio fx-wrap">$10218
+                                        </p>
+                                    </td>
+                                </tr>
+                            </article><!-- Fin articulo -->
+                            <!-- Inicio articulo -->
+                            <tr class="bk-tabla line-bottom">
+                                <td class="text-align">
+                                    <img class="height-width-img" src="../images/aire.jpg" alt="" />
+                                </td>
+                                <td>
+                                    <p class="ft-size-text text-left pb-10 ft-weight articulo">
+                                        Plancha ATMA
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="ft-size-text ma-auto precio fx-wrap">$10218
+                                    </p>
+                                </td>
+                            </tr>
+                            </article><!-- Fin articulo -->
+                            <!-- Inicio articulo -->
+                            <tr class="bk-tabla line-bottom">
+                                <td class="text-align">
+                                    <img class="height-width-img" src="/images/auriculares.jpg" alt="" />
+                                </td>
+                                <td>
+                                    <p class="ft-size-text text-left pb-10 ft-weight articulo">
+                                        Plancha ATMA
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="ft-size-text ma-auto precio fx-wrap">$10218
+                                    </p>
+                                </td>
+                            </tr>
+                            </article><!-- Fin articulo -->
+                        </table>
+                        <!-- Inicio resumen -->
+                        <div class="bk-resume">
+                            <table class="resumen line-height ft-size-text ma-auto">
+                                <h3 class="title text-align pl-10 pb-10 pt-10">RESUMEN:</h3>
+                                <div class="title ft-weight text-align pb-10">
+                                    <label for="descuento">Ingrese código de descuento:</label>
+                                </div>
+                                <div class="cod-desc text-align pb-10">
+                                    <input type="text" class="desc" name="descuento" id="descuento" />
+                                </div>
+                                <tr>
+                                    <td class="">SUBTOTAL</td>
+                                    <td class="pr-10 text-right">$12345
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="">ENVIO</td>
+                                    <td class="pr-10 text-right">Gratis</td>
+                                </tr>
+                                <tr>
+                                    <td class=" line-total">IMPUESTOS</td>
+                                    <td class="pr-10 line-total text-right">
+                                        $1234
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ft-weight">TOTAL</td>
+                                    <td class="pr-10 ft-weight text text-right">
+                                        123422
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="text-align botones w-100 mb-20">
+                                <a href="#"><button class="btn-acepta">Aceptar</button></a>
+                                <a href="#"><button class="btn-cancela">Cancelar</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
