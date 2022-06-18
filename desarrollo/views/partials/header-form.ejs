@@ -1,0 +1,27 @@
+<header>
+  <link rel="stylesheet" href="/css/nav.css" />
+  <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+    <a href="/" class="logo"
+      ><img src="/images/Logo_Argentum.png" width="200px" alt="logo-Argentum"
+    /></a>
+    <ul class="main-nav" id="js-menu">
+      </li>
+      <li>
+        <a href="/login" class="nav-links"
+          ><i class="fas fa-sign-in-alt"></i> ¿Ya tienes cuenta? Ingresa
+          ahora</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <script>
+    let mainNav = document.getElementById("js-menu");
+    let navBarToggle = document.getElementById("js-navbar-toggle");
+    navBarToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("active");
+    });
+  </script>
+</header>
