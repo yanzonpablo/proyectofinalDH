@@ -257,8 +257,10 @@ main {
     color: black
 }
 .boton-border-check:hover {
-    border-color: #000000;;
+    border-color: #000000;
+    box-shadow: none;
 }
+
 /* FINALIZA BARRA CARRITO */
 
 /* INICIA RESUMEN */
@@ -290,6 +292,7 @@ td {
     margin-left: 10px;
     }
 /* FINALIZA RESUMEN */
+
 .btn-acepta {
     background-color:rgb(9, 9, 200);
     color: white;

@@ -3,10 +3,11 @@
 
 <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/detalle-pagos.css">
-    <title>Detalle de pago</title>
+        <link rel="stylesheet" href="/css/nav.css" />
+        <link rel="stylesheet" href="/css/detalle-pagos.css">
+        <title>Detalle de pago</title>
 </head>
+
 <body>
     <header>
         <%- include("./partials/header.ejs") %>
@@ -25,42 +26,62 @@
             <h2 class="product-carrito mb-20 pt-20 ml-20">Detalle de pagos:</h2>
 
             <div class="container">
-                
+
                 <form class="mobile ml-20 ">
-                    <div class="form-tarjeta" >
-                        <p class="ml-20 pt-10 mb-10">Tarjeta de crédito:</p>
-                    <div class="entre-linea text-align">
-                        <input type="nombre" name="nombre"
-                            class="media-mobile p-lateral mr-20 border-radius height-25 titular-tarj sinborde" placeholder="Nombre">
-                        <input type="Apellido" name="apellido" class="titular-tarj media-mobile p-lateral  border-radius height-25 sinborde" placeholder="Apellido">
-                    </div>
-                    <div class="entre-linea text-align">
-                        <input type="date" name="date-venc"
-                            class="date-venc media-mobile  border-radius mb-25 mr-20 height-25 sinborde">
-                        
-                        <input type="number" name="cod-seguridad" class="number-credit  border-radius height-25 sinborde text-align mb-20"
-                            placeholder="123" maxlength="3"oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-                    </div>
+                    <div class="bk-tarjeta">
+                        <div class="form-tarjeta">
+                            <p class="ml-20 pt-10 mb-10">Tarjeta de crédito:</p>
+                            <div class="entre-linea ">
+                                <div class="ds-flex fx-wrap js-cont-a">
+                                    <input type="nombre" name="nombre"
+                                        class="titular media-mobile espacio-mobile p-lateral border-radius height-25 titular-tarj sinborde"
+                                        placeholder="Nombre">
+                                    <input type="Apellido" name="apellido"
+                                        class="titular titular-tarj media-mobile p-lateral  border-radius height-25 sinborde mb-20"
+                                        placeholder="Apellido">
+                                </div>
+                            </div>
 
-                    <div class="entre-linea ds-flex fx-wrap js-cont-center">
-                        <input type="number" name="number1"
-                            class="mr-20 text-align number-credit media-mobile border-radius height-25 sinborde"
-                            placeholder="8866" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-                        <input type="number" name="number2" class="mr-20 text-align number-credit media-mobile border-radius height-25 sinborde"
-                            placeholder="8866" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-                        <input type="number" name="number3" class="mr-20 text-align number-credit media-mobile border-radius height-25 sinborde"
-                            placeholder="8866" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-                        <input type="number" name="number4" class="mr-20 mb-10 text-align number-credit media-mobile border-radius height-25 sinborde"
-                            placeholder="8866" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-                    </div>
-</div>
+                            <div class="entre-linea ds-flex fx-wrap js-cont-a">
+                                <input type="number" name="number1"
+                                    class=" text-align number-credit media-mobile espacio-mobile border-radius height-25 sinborde"
+                                    placeholder="0000" maxlength="4"
+                                    oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
 
-                    <div class="boton-tablet ds-flex js-cont-a mt-15 mb-50 ">
-                        <div class="boton-border-check p-10">
-                        <label for="paypal">Paypal
-                        <input type="radio" id="free" name="paypal" class="" value="1">
+                                <input type="number" name="number2"
+                                    class=" espacio-mobile text-align number-credit media-mobile border-radius height-25 sinborde"
+                                    placeholder="0000" maxlength="4"
+                                    oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+
+                                <input type="number" name="number3"
+                                    class=" text-align number-credit media-mobile border-radius height-25 sinborde"
+                                    placeholder="0000" maxlength="4"
+                                    oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+
+                                <input type="number" name="number4"
+                                    class=" mb-10 text-align number-credit media-mobile border-radius height-25 sinborde"
+                                    placeholder="000" maxlength="4"
+                                    oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+                            </div>
+                            
+                                <div class="entre-linea ds-flex text-align js-cont-a mt-15">
+                                    <input type="date" name="date-venc" min="2018-01-01"
+                                        class="date-venc media-mobile border-radius mb-25 height-25 sinborde">
+                            
+                                    <input type="number" name="cod-seguridad"
+                                        class="number-credit  border-radius height-25 sinborde text-align mb-20" placeholder="123" maxlength="3"
+                                        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+                                </div>
+                         
                         </div>
                     </div>
+                    <div class="boton-paypal ds-flex ds-inline p-10 mt-15 mb-50 ">
+                        <label for="paypal">
+                            <input type="radio" name="paypal" id="paypal" value="paypal" class="">
+                            <img src="../images/paypal.png" alt="" width="20%">
+                        </label>
+                    </div>
+
                 </form>
                 <div class="desktop fx-wrap fondo-carro">
                     <!--este llevar a la derecha-->
@@ -168,4 +189,5 @@
         <%- include("./partials/footer") %>
     </footer>
 </body>
+
 </html>
