@@ -17,7 +17,7 @@ module.exports = {
     res.render("editarProducto");
   },
   update: (req, res) => {
-    res.redirect("/");
+    res.redirect("req.body");
   },
   // delete: (req, res) => {
   //   const busqueda = productos.find((search) => {
