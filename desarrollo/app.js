@@ -8,6 +8,7 @@ const mainRouter = require("./routes/main-routes");
 const productsRouter = require("./routes/products-routes");
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({extended: false}))
 
 app.listen(3010, () => {
   console.log("Servidor corriendo en puerto 3010");
