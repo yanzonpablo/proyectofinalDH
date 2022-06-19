@@ -173,8 +173,8 @@
     "descripcion": "La cocina Escorial está totalmente enlozada en polvo electroestático y cuenta con puerta de horno con visor",
     "precio": 32999,
     "precioantes": 34000,
-    "imagen": "cocinaesco.jpg",
-    "categoria": "/images/Electrodomésticos y Aires Acondicionado",
+    "imagen": "/images/cocinaesco.jpg",
+    "categoria": "Electrodomésticos y Aires Acondicionado",
     "destacado": false,
     "oferta": true,
     "descuento": 10
@@ -245,8 +245,8 @@
     "descripcion": "La planchita de pelo GA.MA Elegance Bella Tourmaline cuenta con un diseño ultra plano, mango de fácil agarre y traba para mantener cerrada",
     "precio": 5100,
     "precioantes": 6500,
-    "imagen": "BECHS0000002114-2.jpg",
-    "categoria": "/images/Belleza y cuidado personal",
+    "imagen": "/images/plancha_atma.jpg",
+    "categoria": "Belleza y cuidado personal",
     "destacado": false,
     "oferta": true,
     "descuento": 30

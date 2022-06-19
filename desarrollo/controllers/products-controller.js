@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 // const productos = require("../productos");
-const db = require("../data/db");
+const db = require("../data/db-products");
 const allProducts = db.getAll();
 
 module.exports = {
