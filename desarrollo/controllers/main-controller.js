@@ -1,11 +1,13 @@
 const path = require("path");
 const express = require("express");
-const productos = require("../productos");
+// const productos = require("../productos");
+const db = require("../data/db");
+const allProducts = db.getAll();
 
 module.exports = {
   home: (req, res) => {
     res.render("index", {
-      productos: productos,
+      productos: allProducts,
     });
   },
   login: (req, res) => {
