@@ -19,7 +19,7 @@ module.exports = {
     res.render("product");
   },
   cart: (req, res) => {
-    const busqueda = productos.find((art) => {
+    const busqueda = allProducts.find((art) => {
       return art.id == 14;
     });
     res.render("compras", {
