@@ -64,21 +64,25 @@
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
                             </div>
                             
-                                <div class="entre-linea ds-flex text-align js-cont-a mt-15">
-                                    <input type="date" name="date-venc" min="2018-01-01"
-                                        class="date-venc media-mobile border-radius mb-25 height-25 sinborde">
-                            
+                                <div class="entre-linea ds-flex js-cont-a mt-15">
+                                    
+                                    <div class="ds-block">
+                                    <input type="number" name="date-venc" id="mesvence" class="text-align date-venc media-mobile border-radius mb-20 height-25 sinborde" placeholder="MES">
+                                <input type="number" name="date-venc" id="aniovence" class="text-align date-venc media-mobile border-radius mb-20 height-25 sinborde" placeholder="AÑO">
+                                    </div>
+                                    <div class="ds-block">
                                     <input type="number" name="cod-seguridad"
-                                        class="number-credit  border-radius height-25 sinborde text-align mb-20" placeholder="123" maxlength="3"
+                                        class="number-credit border-radius height-25 sinborde text-align mb-20" placeholder="123" maxlength="3"
                                         oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+                                     </div>   
                                 </div>
-                         
                         </div>
                     </div>
-                    <div class="boton-paypal ds-flex ds-inline p-10 mt-15 mb-50 ">
-                        <label for="paypal">
-                            <input type="radio" name="paypal" id="paypal" value="paypal" class="">
-                            <img src="../images/paypal.png" alt="" width="20%">
+
+                    <div>
+                        <label for="paypal" class="boton-paypal p-10 mt-15 mb-50 ds-flex">
+                            <input type="radio" name="paypal" id="paypal" value="paypal" class="input-radio">
+                            <img src="../images/paypal.png" alt="paypal" width="30%" class="img-paypal">
                         </label>
                     </div>
 
@@ -101,11 +105,11 @@
                                     </td>
                                     <td>
                                         <p class="ft-size-text text-left pb-10 ft-weight articulo">
-                                            Plancha ATMA
+                                            Aire acondicionado Federer
                                         </p>
                                     </td>
                                     <td>
-                                        <p class="ft-size-text ma-auto precio fx-wrap">$10218
+                                        <p class="ft-size-text ma-auto precio fx-wrap">$100218
                                         </p>
                                     </td>
                                 </tr>
@@ -113,11 +117,11 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="../images/cafetera.jpg" alt="" />
+                                    <img class="height-width-img" src="../images/test-product-note.jpg" alt="notebook" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
-                                        Plancha ATMA
+                                        Notebook HP
                                     </p>
                                 </td>
                                 <td>
@@ -129,15 +133,15 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="/097977656effe12235ee80f2a2ce.jpg" alt="" />
+                                    <img class="height-width-img" src="/images/5dc494aa5972bebeaba40b61993a.jpg" alt="" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
-                                        Plancha ATMA
+                                        Mini Pimmer Phillips
                                     </p>
                                 </td>
                                 <td>
-                                    <p class="ft-size-text ma-auto precio fx-wrap">$10218
+                                    <p class="ft-size-text ma-auto precio fx-wrap">$17280
                                     </p>
                                 </td>
                             </tr>

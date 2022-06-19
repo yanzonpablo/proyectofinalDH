@@ -161,6 +161,9 @@ background: linear-gradient(175deg, rgba(193,193,193,1) 12%, rgba(126,126,126,0.
 .ml-20{
     margin-left: 20px;
 }
+.ml-40{
+    margin-left: 40px;
+}
 .mb-10 {
     margin-bottom: 10px;
 }
@@ -253,11 +256,9 @@ input[type=number]::-webkit-outer-spin-button {
     width: 80px;
 }
 .date-venc {
-    width: 120px;
+    width: 50px;
     text-transform: uppercase;
     padding: 0px;
-
-
 }
 .titular-tarj {
     width: 180px;    
@@ -292,14 +293,21 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: rgb(193, 192, 192);
     border-radius: 3px;
     box-shadow: 2px 2px rgba(0,0,0,0.5);
-    color: black
+    color: black;
+    align-items: center;
+
 }
 .boton-paypal:hover {
     border-color: #000000;
     box-shadow: none;
 }
-circle-blank */
-/* FINALIZA BARRA CARRITO */
+.input-radio {
+    align-items: center;
+}
+.img-paypal {
+    display: block;
+    margin-left: 30px;
+}
 
 /* INICIA RESUMEN */
 .line-total {
@@ -328,7 +336,7 @@ td {
 .product-selec{
     justify-content: center;
     margin-left: 10px;
-    }
+}
 /* FINALIZA RESUMEN */
 .btn-acepta {
     background-color:rgb(9, 9, 200);
@@ -339,6 +347,9 @@ td {
     font-size: 14px;
     cursor: pointer;
     margin-top: 20px;
+}
+.btn-acepta:hover {
+    background-color: #000000;
 }
 .btn-cancela {
     background-color:rgb(9, 9, 200);
@@ -351,7 +362,12 @@ td {
     margin-top: 20px;
     margin-left: 20px;
 }
-
+.btn-cancela:hover {
+    background-color: #000000;
+}
+.btn-cancela:hover {
+    background-color: #000000;
+}
 @media(max-width: 1004px) {
 .espacio-mobile {
     margin-bottom: 5px;
