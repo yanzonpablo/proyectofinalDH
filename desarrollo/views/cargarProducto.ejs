@@ -10,6 +10,17 @@
       <form class="form" action="/product/create" method="POST">
         <h1 class="titulo">AGREGA UN PRODUCTO COMPLETANDO EL FORMULARIO</h1>
         <div>
+          <label for="id" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="id_producto"
+            name="id"
+            placeholder="ID del producto"
+            required
+          />
+        </div>
+        <div>
           <label name="nombre" class=""></label>
           <input
             class="cajas"
@@ -41,17 +52,6 @@
             type="text"
             name="precio"
             placeholder="Precio de producto"
-            required
-          />
-        </div>
-        <div>
-          <label for="id" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="id_producto"
-            name="id"
-            placeholder="ID del producto"
             required
           />
         </div>
@@ -111,7 +111,7 @@
           />
         </div>
         <div>
-          <input type="submit" class="cajas" value="Guardar" />
+          <input type="submit" class="cajas" value="Crear nuevo producto" />
         </div>
       </form>
     </main>

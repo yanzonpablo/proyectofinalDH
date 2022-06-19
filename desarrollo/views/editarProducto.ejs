@@ -10,6 +10,16 @@
       <form class="form" action="/product/:id/edit?_method=PUT" method="POST">
         <h1 class="titulo">EDITA UN PRODUCTO EXISTENTE</h1>
         <div>
+          <label for="id" class=""></label>
+          <input
+            class="cajas"
+            type="text"
+            id="id_producto"
+            name="id"
+            placeholder="ID del producto"
+          />
+        </div>
+        <div>
           <label name="nombre" class=""></label>
           <input
             class="cajas"
@@ -17,7 +27,6 @@
             id="nombre_producto"
             name="nombre"
             placeholder="Nombre de producto"
-            required
             maxlength="30"
           />
         </div>
@@ -29,7 +38,6 @@
             id="descripcion_producto"
             name="descripcion"
             placeholder="Descripcion del producto"
-            required
             maxlength="100"
           />
         </div>
@@ -41,28 +49,10 @@
             type="text"
             name="precio"
             placeholder="Precio de producto"
-            required
           />
         </div>
         <div>
-          <label for="id" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="id_producto"
-            name="id"
-            placeholder="ID del producto"
-            required
-          />
-        </div>
-        <div>
-          <input
-            class="cajas"
-            type="file"
-            name="imagen"
-            id="imagen_producto"
-            required
-          />
+          <input class="cajas" type="file" name="imagen" id="imagen_producto" />
         </div>
         <div>
           <label for="categoria" class=""></label>
@@ -72,7 +62,6 @@
             id="categoria_producto"
             name="categoria"
             placeholder="Categoria del producto"
-            required
           />
         </div>
         <div>
@@ -82,7 +71,6 @@
             id="destacado_producto"
             name="destacado"
             placeholder="¿El producto responde a la sección de destacados?"
-            required
           >
             <option value="true">Corresponde a un producto destacado</option>
             <option value="false">
