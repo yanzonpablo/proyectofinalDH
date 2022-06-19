@@ -52,7 +52,7 @@ body {
     align-items: center;
   }
   .main-nav {
-    width: 80%;
+    width: 100%;
     display: flex;
     margin-right: 30px;
     flex-direction: row;
