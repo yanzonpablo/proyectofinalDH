@@ -244,17 +244,18 @@ body {
 .category {
   /* background-color: rgba(238, 238, 238, 1); */
   background-color: white;
-  height: 100px;
-  max-width: 350px;
   text-align: center;
-  border: 2px solid #d93175;
   margin-bottom: 2px;
-  border-radius: 5%;
+  background-size: 110px 110px;
+  background-position: center;
+  border-radius: 50%;
+  background-repeat: no-repeat;
 }
 .caterogy-text {
   font-size: 14px;
   color: black;
 }
+
 .b-color {
   border: 1px solid #d93175;
   border-radius: 10px;
