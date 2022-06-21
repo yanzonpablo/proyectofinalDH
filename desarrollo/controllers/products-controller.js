@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const express = require("express");
 const db = require("../data/db");
-const productsFilePath = path.join(__dirname, "../data/products.json");
+// const productsFilePath = path.join(__dirname, "../data/products.json");
 const allProducts = db.getAll();
 
 module.exports = {
@@ -11,14 +11,14 @@ module.exports = {
       productos: allProducts,
     });
   },
-  create: (req, res) => {
-    res.render("cargarProducto");
-  },
   details: (req, res) => {
     // RESTA HACER DINAMICO EL product.ejs
     res.render("product", {
       producto: db.findOne(req.params.id),
     });
+  },
+  create: (req, res) => {
+    res.render("cargarProducto");
   },
   store: (req, res) => {
     const newProduct = req.body;
@@ -38,15 +38,15 @@ module.exports = {
     res.render("editarProducto", { productToEdit: productToEdit });
   },
   update: (req, res) => {
-    const productIndex = db.findIndex((p) => p.id == req.params.id);
-    const product = products[productIndex];
+    const productIndex = allProducts.findIndex((p) => p.id == req.params.id);
+    const product = allProducts[productIndex];
     product.nombre = req.body.nombre;
     product.precio = req.body.precio;
     product.descripcion = req.body.descripcion;
     product.categoria = req.body.categoria;
     product.seccion = req.body.seccion;
     product.descuento = req.body.descuento;
-    db.saveAll(products);
+    db.saveAll(allProducts);
     res.redirect("/products");
   },
 };

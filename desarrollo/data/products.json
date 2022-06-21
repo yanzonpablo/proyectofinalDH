@@ -3,11 +3,11 @@
     "id": 1,
     "nombre": "Notebook Lenovo de 14 HD",
     "descripcion": "",
-    "precio": 70000,
+    "precio": "70000",
     "imagen": "test-product-note.jpg",
     "categoria": "Computación",
     "seccion": "destacado",
-    "descuento": 0
+    "descuento": "0"
   },
   {
     "id": 2,
