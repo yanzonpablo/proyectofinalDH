@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const products = require("../data/db-products");
+const productsFilePath = path.join(__dirname, "../data/products.json");
 const allProducts = products.getAll();
 
 module.exports = {
