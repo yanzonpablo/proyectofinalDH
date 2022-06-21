@@ -15,7 +15,7 @@ module.exports = {
     res.render("cargarProducto");
   },
   details: (req, res) => {
-    // RESTA HACER DINAMICO EL PRODUCT.HTML
+    // RESTA HACER DINAMICO EL product.ejs
     res.render("product");
     // Comentario para renderizar producto en base a su ID
     /* res.render("product", {
@@ -32,7 +32,7 @@ module.exports = {
     }
     allProducts.push(newProduct);
     db.saveAll(allProducts);
-    res.redirect("/");
+    res.redirect("/products");
   },
   edit: (req, res) => {
     let id = req.params.id;
@@ -49,6 +49,6 @@ module.exports = {
     product.seccion = req.body.seccion;
     product.descuento = req.body.descuento;
     db.saveAll(products);
-    res.redirect("/");
+    res.redirect("/products");
   },
 };

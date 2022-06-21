@@ -16,9 +16,6 @@ module.exports = {
   register: (req, res) => {
     res.render("register");
   },
-  product: (req, res) => {
-    res.render("product");
-  },
   cart: (req, res) => {
     const busqueda = allProducts.find((art) => {
       return art.id == 14;
