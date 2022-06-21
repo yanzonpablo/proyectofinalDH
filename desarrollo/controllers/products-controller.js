@@ -36,12 +36,4 @@ module.exports = {
   update: (req, res) => {
     res.redirect("req.body");
   },
-  // delete: (req, res) => {
-  //   const busqueda = productos.find((search) => {
-  //     return search.id == req.params.id;
-  //   });
-  // },
-  // if(busqueda) {
-  //   res.render("/:id/delete", { productos: productos });
-  // },
 };

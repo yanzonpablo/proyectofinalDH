@@ -236,6 +236,9 @@ td {
     cursor: pointer;
     margin-top: 20px;
 }
+.btn-acepta:hover {
+  background-color: #d93175;
+}
 .btn-cancela {
     background-color:rgb(9, 9, 200);
     color: white;
@@ -246,6 +249,9 @@ td {
     cursor: pointer;
     margin-top: 20px;
     margin-left: 20px;
+}
+.btn-cancela:hover {
+  background-color: #d93175;
 }
 
 @media(max-width: 680px) {

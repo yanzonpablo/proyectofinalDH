@@ -5,8 +5,8 @@
   font-family: "Roboto", sans-serif;
 }
 main {
-  margin-right: 120px;
-  margin-left: 120px;
+  margin-right: 100px;
+  margin-left: 100px;
   background-color: rgb(233, 233, 233);
 }
 .basurero {
@@ -304,7 +304,7 @@ td {
   margin-top: 20px;
 }
 .btn-acepta:hover {
-  background-color: #000000;
+  background-color: #d93175;
 }
 .btn-cancela {
   background-color: rgb(9, 9, 200);
@@ -318,7 +318,7 @@ td {
   margin-left: 20px;
 }
 .btn-cancela:hover {
-  background-color: #000000;
+  background-color: #d93175;
 }
 .boton-tablet {
   text-align: center;
@@ -338,7 +338,7 @@ td {
     text-align: center;
   }
   .container {
-    justify-items: center;
+    justify-content: space-around;
   }
   .bk-resume {
     border: 1px solid gray;
