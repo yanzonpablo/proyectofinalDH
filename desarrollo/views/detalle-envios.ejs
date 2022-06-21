@@ -3,15 +3,15 @@
 
 <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/detalle-envios.css">
-    <title>Detalle de envio</title>
+        <link rel="stylesheet" href="/css/nav.css" />
+        <link rel="stylesheet" href="/css/detalle-envios.css">
+        <title>Detalle de envio</title>
 </head>
 
 <body>
-        <header>
-            <%- include("./partials/header.ejs") %>
-        </header>
+    <header>
+        <%- include("./partials/header.ejs") %>
+    </header>
     <main>
         <!-- INICIA BARRA CARRITO -->
         <div class="main">
@@ -25,43 +25,71 @@
             <!-- FINALIZA BARRA CARRITO -->
             <h2 class="product-carrito mb-20 pt-20 ml-20">Detalle de envío:</h2>
             <div class="container">
-                <form class="mobile ml-20 ">
-                    <div class="entre-linea">
-                        <input type="text" name="nombre"
-                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde" placeholder="Nombre">
-                        <input type="text" name="apellido" class="p-lateral height-25 sinborde border-radius "
-                            placeholder="Apellido">
+                <form class="mobile ml-20">
+                    <div>
+                        <div class="entre-linea ds-flex js-cont-b fx-wrap">
+                            <div>
+                                <input type="text" name="nombre"
+                                    class="media-mobile p-lateral  border-radius height-25 sinborde"
+                                    placeholder="Nombre">
+                            </div>
+                            <div>
+                                <input type="text" name="apellido" class="p-lateral height-25 sinborde border-radius "
+                                    placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="entre-linea ds-flex js-cont-b fx-wrap">
+                            <div>
+                                <input type="number" name="dni"
+                                    class="media-mobile p-lateral  border-radius height-25 sinborde"
+                                    placeholder="D.N.I.">
+                            </div>
+                            <div>
+                                <input type="number" name="telefono" class="p-lateral border-radius height-25 sinborde "
+                                    placeholder="Numero de teléfono">
+                            </div>
+                        </div>
+                        <div class="entre-linea ds-flex js-cont-b fx-wrap">
+                            <div>
+                                <input type="text" name="direccion"
+                                    class="media-mobile p-lateral border-radius height-25 sinborde"
+                                    placeholder="Dirección">
+                            </div>
+                            <div>
+                                <input type="text" name="direccion2" class="p-lateral border-radius height-25 sinborde "
+                                    placeholder="Segunda Dirección">
+                            </div>
+                        </div>
+                        <div class="entre-linea ds-flex js-cont-b fx-wrap">
+                            <div>
+                                <input type="text" name="ciudad"
+                                    class="media-mobile p-lateral  border-radius height-25 sinborde"
+                                    placeholder="Ciudad">
+                            </div>
+                            <div>
+                                <input type="number" name="cod-postal"
+                                    class=" p-lateral height-25 sinborde border-radius" placeholder="Código Postal">
+                            </div>
+                        </div>
+                        <div class="entre-linea text-align">
+                            <select name="provincia" id="provincia" class="sinborde height-25 border-radius mt-15">
+                                <option value="" name="provincia">Seleccione una Provincia...
+                                <option value="" name="provincia">Buenos Aires
+                                <option value="" name="provincia">Córdoba
+                                <option value="" name="provincia">Santa Fe
+                            </select>
+                        </div>
+
                     </div>
-                    <div class="entre-linea ">
-                        <input type="number" name="dni"
-                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde" placeholder="D.N.I.">
-                        <input type="number" name="telefono" class="p-lateral border-radius height-25 sinborde "
-                            placeholder="Numero de teléfono ">
-                    </div>
-                    <div class="entre-linea">
-                        <input type="text" name="direccion"
-                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde"
-                            placeholder="Dirección">
-                        <input type="text" name="direccion2" class="p-lateral border-radius height-25 sinborde "
-                            placeholder="Segunda Dirección">
-                    </div>
-                    <div class="entre-linea">
-                        <input type="text" name="ciudad"
-                            class="media-mobile p-lateral mr-20 border-radius height-25 sinborde" placeholder="Ciudad">
-                        <input type="number" name="cod-postal" class=" p-lateral height-25 sinborde border-radius"
-                            placeholder="Código Postal">
-                    </div>
-                    <select name="provincia" id="provincia" class="sinborde height-25 border-radius mt-15">
-                        <option value="" name="provincia">Seleccione una Provincia...
-                    </select>
                     <div class="entre-linea">
                         <label for="observa" class="ds-block">Observaciones:</label>
                         <textarea class="sinborde" name="observa" id="observa" cols="40" rows="5"></textarea>
                     </div>
                     <!-- Botones tipo de envio -->
                     <div class="boton-tablet ds-flex js-cont-b mt-15 mb-50">
-                        <div class="boton-border-check mr-10 p-10  ds-flex fx-wrap fx-align-center text-align" style="height:60px; width: 200px; background-color: white;">
-                            <input type="radio" id="free" name="opcion-envio"  value="1" checked style="width:20%">
+                        <div class="boton-border-check mr-10 p-10  ds-flex fx-wrap fx-align-center text-align"
+                            style="height:60px; width: 200px; background-color: white;">
+                            <input type="radio" id="free" name="opcion-envio" value="1" checked style="width:20%">
                             <div style="width: 80%;">
                                 <div>
                                     <label for="free">Envío gratis</label>
@@ -70,9 +98,10 @@
                                     <p class="text-envio">Entre 2 - 5 días hábiles</p>
                                 </div>
                             </div>
-                        </div>   
-                        <div class="boton-border-check p-10 ds-flex fx-wrap fx-align-center text-align" style="height:60px; width: 200px; background-color: white;">
-                            <input type="radio" id="prioridad" name="opcion-envio"  value="2" style="width: 20%;">
+                        </div>
+                        <div class="boton-border-check p-10 ds-flex fx-wrap fx-align-center text-align"
+                            style="height:60px; width: 200px; background-color: white;">
+                            <input type="radio" id="prioridad" name="opcion-envio" value="2" style="width: 20%;">
                             <div style="width: 80%;">
                                 <div>
                                     <label for="prioridad">Envío prioritario</label>
@@ -101,7 +130,7 @@
                                         <img class="height-width-img" src="/images/auriculares.jpg" alt="auriculares" />
                                     </td>
                                     <td>
-                                        <p class="ft-size-text text-left pb-10 ft-weight articulo">
+                                        <p class="ft-size-text text-left pb-10 ft-weight articulo">Auriculares Xiaomi
                                         </p>
                                     </td>
                                     <td>
@@ -117,11 +146,11 @@
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
-                                        Plancha ATMA
+                                        Aire Acondicionado LG
                                     </p>
                                 </td>
                                 <td>
-                                    <p class="ft-size-text ma-auto precio fx-wrap">$10218
+                                    <p class="ft-size-text ma-auto precio fx-wrap">$100218
                                     </p>
                                 </td>
                             </tr>
@@ -129,7 +158,7 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="/images/auriculares.jpg" alt="" />
+                                    <img class="height-width-img" src="/images/plancha_atma.jpg" alt="" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -185,9 +214,9 @@
             </div>
         </div>
     </main>
-        <footer>
-            <%- include("./partials/footer") %>
-        </footer>
+    <footer>
+        <%- include("./partials/footer") %>
+    </footer>
 </body>
 
 </html>

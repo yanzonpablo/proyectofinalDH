@@ -362,11 +362,11 @@ td {
     margin-top: 20px;
     margin-left: 20px;
 }
-.btn-cancela:hover {
-    background-color: #000000;
+.btn-acepta:hover {
+    background-color: #d93175;
 }
 .btn-cancela:hover {
-    background-color: #000000;
+    background-color: #d93175;
 }
 @media(max-width: 1004px) {
 .espacio-mobile {

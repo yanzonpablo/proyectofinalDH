@@ -10,7 +10,6 @@ module.exports = {
   details: (req, res) => {
     res.render("product");
   },
-  // RESTA HACER DINAMICO EL PRODUCT.HTML
   store: (req, res) => {
     res.redirect("/");
   },
@@ -20,12 +19,4 @@ module.exports = {
   update: (req, res) => {
     res.redirect("req.body");
   },
-  // delete: (req, res) => {
-  //   const busqueda = productos.find((search) => {
-  //     return search.id == req.params.id;
-  //   });
-  // },
-  // if(busqueda) {
-  //   res.render("/:id/delete", { productos: productos });
-  // },
 };
