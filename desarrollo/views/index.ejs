@@ -49,12 +49,12 @@
             </h2>
             <!-- Productos destacados con plantilla dinamica-->
             <% productos.forEach(producto => { %>
-              <% if (producto.destacado == true) { %>
+              <% if (producto.seccion == "destacado") { %>
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
               <article class="product b-1">
                 <img
                   class="w-100"
-                  src="<%=producto.imagen%>"
+                  src="/images/<%=producto.imagen%>"
                   alt="Notebook Lenovo"
                 />
                 <div class="fx fx-wrap bg-blanco bt-2">
@@ -282,14 +282,14 @@
           <div class="bg-blanco p-8 m-10 fx fx-wrap b-color">
             <h2 class="w-100 m-10 text-center heading-style">OFERTAS</h2>
             <% productos.forEach(producto => { %> 
-            <% if (producto.oferta == true) { %>
+            <% if (producto.seccion == "oferta") { %>
             <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
               <article class="product b-1 fx fx-wrap">
                 <div class="fx fx-wrap fx-align-center w-30">
                   <div class="w-100">
                     <img
                       class="w-100"
-                      src="<%=producto.imagen%>"
+                      src="/images/<%=producto.imagen%>"
                       alt="<%=producto.nombre%>"
                     />
                   </div>

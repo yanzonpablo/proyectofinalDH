@@ -4,10 +4,9 @@
     "nombre": "Notebook Lenovo de 14 HD",
     "descripcion": "",
     "precio": 70000,
-    "imagen": "/images/test-product-note.jpg",
+    "imagen": "test-product-note.jpg",
     "categoria": "Computación",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -15,10 +14,9 @@
     "nombre": "Playstation 5",
     "descripcion": "",
     "precio": 64000,
-    "imagen": "/images/ps5.jpg",
+    "imagen": "ps5.jpg",
     "categoria": "Consolas y video juegos",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -26,10 +24,9 @@
     "nombre": "Smart TV PHILIPS 43 pulgadas",
     "descripcion": "",
     "precio": 78000,
-    "imagen": "/images/test-product-tv.jpg",
+    "imagen": "test-product-tv.jpg",
     "categoria": "Electrónica, audio y video",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -37,10 +34,9 @@
     "nombre": "Celular Samsung S22",
     "descripcion": "",
     "precio": 58000,
-    "imagen": "/images/test-s22.jpg",
+    "imagen": "test-s22.jpg",
     "categoria": "Telefonía móvil",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -48,10 +44,9 @@
     "nombre": "Impresora Epson multifunción",
     "descripcion": "",
     "precio": 19990,
-    "imagen": "/images/impresora-epson-multifuncion.jpg",
+    "imagen": "impresora-epson-multifuncion.jpg",
     "categoria": "Computación",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -59,10 +54,9 @@
     "nombre": "Notebook Lenovo IDEAPAD 5",
     "descripcion": "",
     "precio": 114000,
-    "imagen": "/images/notebook-lenovo-ideapad5.jpg",
+    "imagen": "notebook-lenovo-ideapad5.jpg",
     "categoria": "Computación",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -70,10 +64,9 @@
     "nombre": "Smart TV Phillips 70",
     "descripcion": "",
     "precio": 196370,
-    "imagen": "/images/tv-smart-tv-70-pulgadas.jpg",
+    "imagen": "tv-smart-tv-70-pulgadas.jpg",
     "categoria": "Electrónica, audio y video",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -81,10 +74,9 @@
     "nombre": "Heladera Samsung no frost",
     "descripcion": "",
     "precio": 169999,
-    "imagen": "/images/heladera-samsung-nofrost.png",
+    "imagen": "heladera-samsung-nofrost.png",
     "categoria": "Electrodoméstico y hogar",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -92,10 +84,9 @@
     "nombre": "Notebook Dell JH94XWH",
     "descripcion": "",
     "precio": 86999,
-    "imagen": "/images/notebook-dell-jh94xwh.jpg",
+    "imagen": "notebook-dell-jh94xwh.jpg",
     "categoria": "Computación",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -103,10 +94,9 @@
     "nombre": "Cafetera EXPRESS DE LONGHI",
     "descripcion": "",
     "precio": 118000,
-    "imagen": "/images/cafetera-express-de-longhi.jpg",
+    "imagen": "cafetera-express-de-longhi.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": true,
-    "oferta": false,
+    "seccion": "destacado",
     "descuento": 0
   },
   {
@@ -114,10 +104,9 @@
     "nombre": "Tablet Samsung A8",
     "descripcion": "Tablet de 10.5\" TFT WUXGA (1920 x 1200). Procesador Octa Core (CPU speed 2 GHz)",
     "precio": 61750,
-    "imagen": "/images/tablet-samsung-a8.jpg",
+    "imagen": "tablet-samsung-a8.jpg",
     "categoria": "Computación",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 30
   },
   {
@@ -125,10 +114,9 @@
     "nombre": "Notebook PCBOX PCB",
     "descripcion": "Notebook - Cloubook. Pantalla 14\" FHD (1920x1080 Px)",
     "precio": 48000,
-    "imagen": "/images/notebook-pcbox-celeron.jpg",
+    "imagen": "notebook-pcbox-celeron.jpg",
     "categoria": "Computación",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 25
   },
   {
@@ -136,10 +124,9 @@
     "nombre": "Lavarropas Dream Concept",
     "descripcion": "Panel electronico. CDA (control digital de agitacion)",
     "precio": 45760,
-    "imagen": "/images/lavarropas-automatico-dream.jpg",
+    "imagen": "lavarropas-automatico-dream.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 30
   },
   {
@@ -147,10 +134,9 @@
     "nombre": "Tablet Lenovo 8505",
     "descripcion": "La portabilidad de una gran tablet para el entretenimiento y la comodidad",
     "precio": 23475,
-    "imagen": "/images/tablet-lenovo-8505fs.jpg",
+    "imagen": "tablet-lenovo-8505fs.jpg",
     "categoria": "Computación",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 25
   },
   {
@@ -158,10 +144,9 @@
     "nombre": "Cocina Escorial Candor S2",
     "descripcion": "La cocina Escorial está totalmente enlozada en polvo electroestático y cuenta con puerta de horno con visor",
     "precio": 34000,
-    "imagen": "/images/cocinaesco.jpg",
+    "imagen": "cocinaesco.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 10
   },
   {
@@ -169,10 +154,9 @@
     "nombre": "Procesadora Philips 600W 1,3Lts",
     "descripcion": "Su motor tiene una potencia de 600 watts, dos niveles de velocidad y un pulsador para un mayor control de los procesos.",
     "precio": 12000,
-    "imagen": "/images/PRO7630PHI_2.jpg",
+    "imagen": "PRO7630PHI_2.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 12
   },
   {
@@ -180,10 +164,9 @@
     "nombre": "Mixer Atma 600w 500 ml LM8527AP",
     "descripcion": "Moderno diseño en color blanco con el que vas a poder licuar, mezclar y emulsionar los ingredientes que quieras.",
     "precio": 12000,
-    "imagen": "/images/5dc494aa5972bebeaba40b61993a.jpg",
+    "imagen": "5dc494aa5972bebeaba40b61993a.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 80
   },
   {
@@ -191,10 +174,9 @@
     "nombre": "Calefactor Eléctrico Tivoli TPC-2007BN",
     "descripcion": "Cuenta con una potencia máxima de 2000 watts, y 2 niveles de potencia (1200W - 2000W)",
     "precio": 13500,
-    "imagen": "/images/ba04c4eb2de1900b0bccd68ac7ec.jpg",
+    "imagen": "ba04c4eb2de1900b0bccd68ac7ec.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 60
   },
   {
@@ -202,10 +184,9 @@
     "nombre": "Ventilador 3 en 1 Tivoli VPO-313",
     "descripcion": "El ventilador Tivoli VPO-313 es 3 en 1, es decir, podrás utilizarlo como ventilador de pie, de piso o de pared.",
     "precio": 12199,
-    "imagen": "/images/D_NQ_NP_888981-MLA49040495612_022022-O.jpg",
+    "imagen": "D_NQ_NP_888981-MLA49040495612_022022-O.jpg",
     "categoria": "Electrodomésticos y Aires Acondicionado",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 10
   },
   {
@@ -213,10 +194,9 @@
     "nombre": "Impresora Multifunción HP Deskjet 2775",
     "descripcion": "Con la impresora multifunción HP Deskjet vas a poder imprimir, escanear y copiar, documentos y fotos en forma rápida con colores vibrantes y textos nítidos.",
     "precio": 15000,
-    "imagen": "/images/impresora.jpg",
+    "imagen": "impresora.jpg",
     "categoria": "Computación",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 5
   },
   {
@@ -224,10 +204,9 @@
     "nombre": "Planchita de Pelo GA.MA Elegance Bella Tourmaline",
     "descripcion": "La planchita de pelo GA.MA Elegance Bella Tourmaline cuenta con un diseño ultra plano, mango de fácil agarre y traba para mantener cerrada",
     "precio": 6500,
-    "imagen": "/images/plancha_atma.jpg",
+    "imagen": "plancha_atma.jpg",
     "categoria": "Belleza y cuidado personal",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 30
   },
   {
@@ -235,10 +214,9 @@
     "nombre": "Afeitadora Philips S1121/41",
     "descripcion": "Este cabezal es lavable, lo que garantiza una limpieza profunda de las cuchillas; por otro lado, su mango de goma antideslizante facilita el agarre y la precisión de la afeitadora. afeitadora Philips",
     "precio": 5100,
-    "imagen": "/images/afeitadora.jpg",
+    "imagen": "afeitadora.jpg",
     "categoria": "Belleza y cuidado personal",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 20
   },
   {
@@ -246,10 +224,9 @@
     "nombre": "Celular Samsung Galaxy S21 FE 5G 128 GB Blanco",
     "descripcion": "El Samsung s21 FE con 5G llegó a Frávega, y al mejor precio. Conocé el último modelo de Samsung en Argentina y sus novedosas características",
     "precio": 102200,
-    "imagen": "/images/samsungcelular.jpg",
+    "imagen": "samsungcelular.jpg",
     "categoria": "Telefonía móvil",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 1
   },
   {
@@ -257,10 +234,9 @@
     "nombre": "Mini Proyector Portátil Led Hd Videobeamer Home Theater Wifi",
     "descripcion": "Brillo de la imagen: 40 lm Tamaño de la imagen: 40 - 120 - Con Wi-Fi: Sí Conexiones de entrada: HDMI,USB Fuentes de luz: 1000:1 Es mini: Sí Descripción Acerca de este producto",
     "precio": 18500,
-    "imagen": "/images/71goLxuYp9L._AC_SL1500_.jpg",
+    "imagen": "71goLxuYp9L._AC_SL1500_.jpg",
     "categoria": "Electrónica, audio y video",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 15
   },
   {
@@ -268,10 +244,9 @@
     "nombre": "Auriculares Xiaomi Mi True Eardbuds Basic 2 Negro",
     "descripcion": "Capacidad de la batería (auriculares): 40mAh - Capacidad de la batería (estuche de carga): 3.7V 300mAh",
     "precio": 5400,
-    "imagen": "/images/auriculares.jpg",
+    "imagen": "auriculares.jpg",
     "categoria": "Electrónica, audio y video",
-    "destacado": false,
-    "oferta": true,
+    "seccion": "oferta",
     "descuento": 2
   }
 ]
