@@ -244,31 +244,23 @@
         <section class="p-8 pb-30 bg-gris-oscuro m-10">
           <h2 class="heading-style text-center m-10">CATEGORIAS</h2>
           <div class="fx fx-wrap fx-justify-a m-10">
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16">
-              <i class="fas fa-mobile-alt fa-3x m-5 w-100"></i>
-              <p class="caterogy-text w-100">Telefonía móvil</p>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/celular-a52.jpg')">
+              <!-- <p class="caterogy-text w-100">Telefonía móvil</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16">
-              <i class="fas fa-laptop fa-3x m-5 w-100"></i>
-              <p class="caterogy-text w-100">Computación</p>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/notebook-dell-jh94xwh.jpg')">
+              <!-- <p class="caterogy-text w-100">Computación</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16">
-              <div class="text-center w-100">
-              <img src="/images/fridge_icon.png" alt="" width="55px">
-              </div>
-              <p class="caterogy-text w-100">Electrodomésticos</p>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/cafetera-express-de-longhi.jpg')">
+              <!-- <p class="caterogy-text w-100">Electrodomésticos</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16">
-              <i class="fas fa-gamepad fa-3x m-5 w-100"></i>
-              <p class="caterogy-text w-100">Consolas y videojuegos</p>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/ps5.jpg')">
+              <!-- <p class="caterogy-text w-100">Consolas y videojuegos</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16">
-              <i class="fas fa-tv fa-3x m-5 w-100"></i>
-              <p class="caterogy-text w-100">Electrónica, audio y video</p>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/smart-tv-32.jpg')">
+              <!-- <p class="caterogy-text w-100">Electrónica, audio y video</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16">
-              <i class="fas fa-heartbeat fa-3x m-5 w-100"></i>
-              <p class="caterogy-text w-100">Salud y belleza</p>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/afeitadora.jpg')">
+              <!-- <p class="caterogy-text w-100">Salud y belleza</p> -->
             </div>
           </div>
         </section>
@@ -316,10 +308,10 @@
                       <p
                         class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before"
                       >
-                        $ <%= producto.precioantes %> 
+                        $ <%= producto.precio %> 
                       </p>
                       <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
-                        $ <%= producto.precio %> 
+                        $ <%= producto.precio * ((100 - producto.descuento)/100) %> 
                       </p>
                     </div>
                     <p class="ms-5 mb-5 mt-5 w-30 discount"><%= producto.descuento %>% OFF</p>

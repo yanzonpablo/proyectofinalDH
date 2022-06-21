@@ -11,7 +11,8 @@ module.exports = {
     res.render("product");
   },
   store: (req, res) => {
-    res.redirect("/");
+    res.send(req.body);
+    // res.redirect("/");
   },
   edit: (req, res) => {
     res.render("editarProducto");

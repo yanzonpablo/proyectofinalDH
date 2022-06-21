@@ -1,119 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <%- include('./partials/head') %>
-    <title>Creación de producto</title>
+
+<head>
+  <%- include('./partials/head') %>
+    <title>Crear de producto</title>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="/css/styles-reg-log.css" />
-  </head>
-  <body>
-    <main>
-      <form class="form" action="/product/create" method="POST">
-        <h1 class="titulo">AGREGA UN PRODUCTO COMPLETANDO EL FORMULARIO</h1>
-        <div>
-          <label for="id" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="id_producto"
-            name="id"
-            placeholder="ID del producto"
-            required
-          />
+</head>
+
+<body>
+  <header>
+    <%- include('./partials/header') %>
+  
+      <title>Cargar nuevo producto</title>
+  </header>
+  <main>
+    <div class="container products-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="titulo-crear">
+            Agregá un producto completando el formulario:
+          </h1>
         </div>
-        <div>
-          <label name="nombre" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="nombre_producto"
-            name="nombre"
-            placeholder="Nombre de producto"
-            required
-            maxlength="30"
-          />
-        </div>
-        <div>
-          <label for="descripcion" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="descripcion_producto"
-            name="descripcion"
-            placeholder="Descripcion del producto"
-            required
-            maxlength="100"
-          />
-        </div>
-        <div>
-          <label for="precio" class=""></label>
-          <input
-            class="cajas"
-            id="precio_producto"
-            type="text"
-            name="precio"
-            placeholder="Precio de producto"
-            required
-          />
-        </div>
-        <div>
-          <input class="cajas" type="file" name="imagen" id="imagen_producto" />
-        </div>
-        <div>
-          <label for="categoria" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="categoria_producto"
-            name="categoria"
-            placeholder="Categoria del producto"
-            required
-          />
-        </div>
-        <div>
-          <label for="destacado" class=""></label>
-          <select
-            class="cajas"
-            id="destacado_producto"
-            name="destacado"
-            placeholder="¿El producto responde a la sección de destacados?"
-            required
-          >
-            <option value="true">Corresponde a un producto destacado</option>
-            <option value="false">
-              No corresponde a un producto destacado
-            </option>
-          </select>
-        </div>
-        <div>
-          <label for="oferta" class=""></label>
-          <select
-            class="cajas"
-            id="oferta_producto"
-            name="oferta"
-            placeholder="¿El producto responde a la sección de ofertas?"
-            required
-          >
-            <option value="true">Corresponde a un producto en oferta</option>
-            <option value="false">
-              No corresponde a un producto en oferta
-            </option>
-          </select>
-        </div>
-        <div>
-          <label for="descuento" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="descuento_producto"
-            name="descuento"
-            placeholder="% de descuento para aplicar al producto"
-            required
-          />
-        </div>
-        <div>
-          <input type="submit" class="btn" value="Crear nuevo producto" />
-        </div>
-      </form>
-    </main>
-  </body>
+      </div>
+      <div class="col-12">
+        <form action="/product" method="POST">
+          <div class="row product-detail">
+            <div class="col-12 col-md-6">
+              <label for="name" class="form-label">Nombre del producto:</label>
+              <input type="text" id="name" name="name" placeholder="Playstation 5" class="form-input" required
+                maxlength="30" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="price" class="form-label">Precio del producto:</label>
+              <input type="text" id="price" name="price" placeholder="10000" class="form-input" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="category" class="form-label">Categoría:</label>
+              <input type="text" id="category" name="category" placeholder="Videojuegos" class="form-input" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="section" class="form-label">Sección:</label>
+              <select name="section" id="section" class="form-input">
+                <option value="in-sale">En oferta</option>
+                <option value="featured">
+                  Destacados
+                </option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="discount" class="form-label">Descuento:</label>
+              <input type="text" id="discount" name="discount" placeholder="10" class="form-input" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="imagen" class="form-label">Adjuntar imágenes:</label>
+              <input type="file" name="imagen" id="imagen_producto" class="form-input upload" />
+            </div>
+            <div class="col-12">
+              <label for="description" class="form-label">Descripción:</label>
+              <textarea name="description" id="description" class="form-input"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn">
+                Crear nuevo producto
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+    <footer>
+      <%- include("./partials/footer") %>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+
 </html>
