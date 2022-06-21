@@ -6,6 +6,11 @@ const productsFilePath = path.join(__dirname, "../data/products.json");
 const allProducts = db.getAll();
 
 module.exports = {
+  index: (req, res) => {
+    res.render("products-list", {
+      productos: allProducts,
+    });
+  },
   create: (req, res) => {
     res.render("cargarProducto");
   },
