@@ -16,11 +16,9 @@ module.exports = {
   },
   details: (req, res) => {
     // RESTA HACER DINAMICO EL product.ejs
-    res.render("product");
-    // Comentario para renderizar producto en base a su ID
-    /* res.render("product", {
-      product: products.findOne(req.params.id);
-    })*/
+    res.render("product", {
+      producto: db.findOne(req.params.id),
+    });
   },
   store: (req, res) => {
     const newProduct = req.body;
