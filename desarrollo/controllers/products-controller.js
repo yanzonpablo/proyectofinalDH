@@ -1,9 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 const express = require("express");
-const products = require("../data/db-products");
+const db = require("../data/db");
 const productsFilePath = path.join(__dirname, "../data/products.json");
-const allProducts = products.getAll();
+const allProducts = db.getAll();
 
 module.exports = {
   create: (req, res) => {
@@ -14,7 +14,7 @@ module.exports = {
     res.render("product");
     // Comentario para renderizar producto en base a su ID
     /* res.render("product", {
-      product: allProducts.find(p) => p.id == req.params.id
+      product: products.findOne(req.params.id);
     })*/
   },
   store: (req, res) => {
@@ -26,14 +26,24 @@ module.exports = {
       newProduct.id = 1;
     }
     allProducts.push(newProduct);
-    const fileTxt = JSON.stringify(allProducts, null, 4);
-    fs.writeFileSync(productsFilePath, fileTxt);
+    db.saveAll(allProducts);
     res.redirect("/");
   },
   edit: (req, res) => {
-    res.render("editarProducto");
+    let id = req.params.id;
+    let productToEdit = allProducts.find((product) => product.id == id);
+    res.render("editarProducto", { productToEdit: productToEdit });
   },
   update: (req, res) => {
-    res.redirect("req.body");
+    const productIndex = db.findIndex((p) => p.id == req.params.id);
+    const product = products[productIndex];
+    product.nombre = req.body.nombre;
+    product.precio = req.body.precio;
+    product.descripcion = req.body.descripcion;
+    product.categoria = req.body.categoria;
+    product.seccion = req.body.seccion;
+    product.descuento = req.body.descuento;
+    db.saveAll(products);
+    res.redirect("/");
   },
 };

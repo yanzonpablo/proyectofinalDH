@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const router = express.Router();
 
+const productsRouter = require("./products-routes");
 const mainController = require("../controllers/main-controller");
 
 router.get("/", mainController.home);

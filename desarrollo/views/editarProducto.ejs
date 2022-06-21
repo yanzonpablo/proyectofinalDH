@@ -7,18 +7,12 @@
   </head>
   <body>
     <main>
-      <form class="form" action="/product/:id?_method=PUT" method="POST">
+      <form
+        class="form"
+        action="/product/edit/<%=productToEdit.id%>?_method=PUT"
+        method="POST"
+      >
         <h1 class="titulo">EDITA UN PRODUCTO EXISTENTE</h1>
-        <div>
-          <label for="id" class=""></label>
-          <input
-            class="cajas"
-            type="text"
-            id="id_producto"
-            name="id"
-            placeholder="ID del producto"
-          />
-        </div>
         <div>
           <label name="nombre" class=""></label>
           <input
@@ -26,6 +20,7 @@
             type="text"
             id="nombre_producto"
             name="nombre"
+            value="<%=productToEdit.nombre%>"
             placeholder="Nombre de producto"
             maxlength="30"
           />
@@ -37,6 +32,7 @@
             type="text"
             id="descripcion_producto"
             name="descripcion"
+            value="<%=productToEdit.descripcion%>"
             placeholder="Descripcion del producto"
             maxlength="100"
           />
@@ -48,49 +44,26 @@
             id="precio_producto"
             type="text"
             name="precio"
+            value="<%=productToEdit.precio%>"
             placeholder="Precio de producto"
           />
-        </div>
-        <div>
-          <input class="cajas" type="file" name="imagen" id="imagen_producto" />
         </div>
         <div>
           <label for="categoria" class=""></label>
           <input
             class="cajas"
             type="text"
-            id="categoria_producto"
+            id="categoria"
             name="categoria"
+            value="<%=productToEdit.categoria%>"
             placeholder="Categoria del producto"
           />
         </div>
         <div>
-          <label for="destacado" class=""></label>
-          <select
-            class="cajas"
-            id="destacado_producto"
-            name="destacado"
-            placeholder="¿El producto responde a la sección de destacados?"
-          >
-            <option value="true">Corresponde a un producto destacado</option>
-            <option value="false">
-              No corresponde a un producto destacado
-            </option>
-          </select>
-        </div>
-        <div>
-          <label for="oferta" class=""></label>
-          <select
-            class="cajas"
-            id="oferta_producto"
-            name="oferta"
-            placeholder="¿El producto responde a la sección de ofertas?"
-            required
-          >
-            <option value="true">Corresponde a un producto en oferta</option>
-            <option value="false">
-              No corresponde a un producto en oferta
-            </option>
+          <label for="seccion" class="">Sección:</label>
+          <select name="seccion" id="seccion" class="cajas">
+            <option value="oferta">En oferta</option>
+            <option value="destacado">Destacados</option>
           </select>
         </div>
         <div>
@@ -100,6 +73,7 @@
             type="text"
             id="descuento_producto"
             name="descuento"
+            value="<%=productToEdit.descuento%>"
             placeholder="% de descuento para aplicar al producto"
             required
           />
