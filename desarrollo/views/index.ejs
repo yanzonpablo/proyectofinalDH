@@ -49,6 +49,7 @@
             <% productos.forEach(producto => { %>
               <% if (producto.seccion == "destacado") { %>
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <a href="/products/<%=productos.id%>">
               <article class="product b-1">
                 <img
                   class="w-100"
@@ -63,7 +64,7 @@
                     $ <%=producto.precio%>
                   </p>
                 </div>
-              </article>
+              </article></a>
             </div>
             <% } %>
             <% }) %>
@@ -282,6 +283,7 @@
             <% productos.forEach(producto => { %> 
             <% if (producto.seccion == "oferta") { %>
             <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+              <a href="/products/<%=producto.id%>">
               <article class="product b-1 fx fx-wrap">
                 <div class="fx fx-wrap fx-align-center w-30">
                   <div class="w-100">
@@ -315,7 +317,7 @@
                     <p class="ms-5 mb-5 mt-5 w-30 discount"><%= producto.descuento %>% OFF</p>
                   </div>
                 </div>
-              </article>
+              </article></a>
             </div>
             <% } %>
             <% }) %>
