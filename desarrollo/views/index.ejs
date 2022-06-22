@@ -49,10 +49,11 @@
             <% productos.forEach(producto => { %>
               <% if (producto.seccion == "destacado") { %>
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+              <a href="/products/<%=producto.id%>">
               <article class="product b-1">
                 <img
                   class="w-100"
-                  src="/images/<%=producto.imagen%>"
+                  src="/images/products/<%=producto.imagen%>"
                   alt="Notebook Lenovo"
                 />
                 <div class="fx fx-wrap bg-blanco bt-2">
@@ -63,7 +64,7 @@
                     $ <%=producto.precio%>
                   </p>
                 </div>
-              </article>
+              </article></a>
             </div>
             <% } %>
             <% }) %>
@@ -242,22 +243,22 @@
         <section class="p-8 pb-30 bg-gris-oscuro m-10">
           <h2 class="heading-style text-center m-10">CATEGORIAS</h2>
           <div class="fx fx-wrap fx-justify-a m-10">
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/celular-a52.jpg')">
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/celular-a52.jpg')">
               <!-- <p class="caterogy-text w-100">Telefonía móvil</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/notebook-dell-jh94xwh.jpg')">
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/notebook-dell-jh94xwh.jpg')">
               <!-- <p class="caterogy-text w-100">Computación</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/cafetera-express-de-longhi.jpg')">
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/cafetera-express-de-longhi.jpg')">
               <!-- <p class="caterogy-text w-100">Electrodomésticos</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/ps5.jpg')">
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/ps5.jpg')">
               <!-- <p class="caterogy-text w-100">Consolas y videojuegos</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/smart-tv-32.jpg')">
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/smart-tv-32.jpg')">
               <!-- <p class="caterogy-text w-100">Electrónica, audio y video</p> -->
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/afeitadora.jpg')">
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/afeitadora.jpg')">
               <!-- <p class="caterogy-text w-100">Salud y belleza</p> -->
             </div>
           </div>
@@ -282,12 +283,13 @@
             <% productos.forEach(producto => { %> 
             <% if (producto.seccion == "oferta") { %>
             <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+              <a href="/products/<%=producto.id%>">
               <article class="product b-1 fx fx-wrap">
                 <div class="fx fx-wrap fx-align-center w-30">
                   <div class="w-100">
                     <img
                       class="w-100"
-                      src="/images/<%=producto.imagen%>"
+                      src="/images/products/<%=producto.imagen%>"
                       alt="<%=producto.nombre%>"
                     />
                   </div>
@@ -315,7 +317,7 @@
                     <p class="ms-5 mb-5 mt-5 w-30 discount"><%= producto.descuento %>% OFF</p>
                   </div>
                 </div>
-              </article>
+              </article></a>
             </div>
             <% } %>
             <% }) %>
@@ -431,7 +433,7 @@
             </div>
           </div> -->
         </section>
-        <!-- About us Section -->
+        <!-- About us Section
         <section class="pb-30">
           <div class="p-8 m-10 bg-blanco b-color">
             <div class="discount w-90 m-center mb-5 heading-aboutus">
@@ -445,7 +447,7 @@
               gran variedad de productos. Si existe, lo tenemos.
             </p>
           </div>
-        </section>
+        </section> -->
       </div>
     </main>
     <!-- Comienzo footer -->

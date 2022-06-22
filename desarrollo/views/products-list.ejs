@@ -1,7 +1,7 @@
 <head>
     <%- include('./partials/head') %> 
     <title>Argentum</title>
-    <link rel="stylesheet" href="/css/styles-index.css"/>
+    <link rel="stylesheet" href="/css/styles-productsList.css"/>
   </head>
   <body class="bg-gris-oscuro">
     <!-- Inicio Header importado -->
@@ -17,9 +17,10 @@
                 <% productos.forEach(producto => { %>
                 <div class="w-50 p-8 tablet-w-33 desktop-w-20">
                 <article class="product b-1">
+                    <a href="/products/edit/<%=producto.id%>">
                     <img
                     class="w-100"
-                    src="/images/<%=producto.imagen%>"
+                    src="/images/products/<%=producto.imagen%>"
                     alt="Notebook Lenovo"
                     />
                     <div class="fx fx-wrap bg-blanco bt-2">
@@ -30,7 +31,7 @@
                         $ <%=producto.precio%>
                     </p>
                     </div>
-                </article>
+                </article></a>
                 </div>
                 <% }) %>
             </section>

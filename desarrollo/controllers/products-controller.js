@@ -44,6 +44,7 @@ module.exports = {
   update: (req, res) => {
     const productIndex = allProducts.findIndex((p) => p.id == req.params.id);
     const product = allProducts[productIndex];
+    const image = req.file ? req.file.filename : product.imagen;
     product.nombre = req.body.nombre;
     product.precio = req.body.precio;
     product.descripcion = req.body.descripcion;

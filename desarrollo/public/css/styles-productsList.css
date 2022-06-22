@@ -46,9 +46,6 @@ body {
 .text-center {
   text-align: center;
 }
-.line-through {
-  text-decoration: line-through;
-}
 /* Width */
 .w-10 {
   width: 10%;
@@ -204,141 +201,10 @@ body {
   color: grey;
   font-size: 14px;
 }
-.article-dest-5,
-.article-dest-6 {
-  display: none;
-}
-/* STYLES SEARCH BAR */
-.search-div {
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  border-color: #383331;
-}
-.div-search-inputs {
-  display: flex;
-  background-color: white;
-  border-radius: 5px;
-  width: 100%;
-  padding: 3px;
-  margin-right: 6px;
-}
-.search-input {
-  background-color: white;
-  border: none;
-  width: 100%;
-}
-.search-icon {
-  border: none;
-  background-color: white;
-  margin-left: 2px;
-}
-.search-button {
-  background-color: rgba(56, 51, 49, 1);
-  color: white;
-}
-.p-search {
-  display: none;
-  color: rgba(50, 50, 50, 1);
-}
-/* STYLES CATEGORIAS */
-.category {
-  /* background-color: rgba(238, 238, 238, 1); */
-  background-color: white;
-  text-align: center;
-  margin-bottom: 2px;
-  background-size: 110px 110px;
-  background-position: center;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-}
-.caterogy-text {
-  font-size: 14px;
-  color: black;
-}
-.b-color {
-  border: 2px solid #e0ccd2c6;
-}
-/* STYLES BANNERS */
-.padding-banner-1 {
-  padding-left: 8px;
-  padding-right: 0px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.padding-banner-2 {
-  padding-left: 0px;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-/* STYLES OFFER SECTION */
-.heading-offers {
-  font-size: 17px;
-  font-weight: 600;
-}
-.offers-tittle {
-  color: grey;
-  font-size: 14px;
-}
-.price-offers {
-  font-weight: 700;
-}
-.div-offers {
-  border-top: 2px solid rgba(234, 234, 234, 0.703);
-  border-bottom: 2px solid rgba(234, 234, 234, 0.703);
-}
-.discount {
-  /* color: rgb(90, 64, 174); */
-  background-color: #d93175;
-  color: white;
-  border-radius: 2px;
-}
-.heading-aboutus {
-  font-size: 18px;
-}
-/* FOOTER STYLES */
-.input-news {
-  padding: 1px;
-}
-.button-news {
-  background-color: #d93175;
-  border: none;
-  border-radius: 3px;
-  color: white;
-  padding: 3px;
-}
-.style-copyright {
-  background-color: rgba(56, 51, 49, 1);
-  color: white;
-}
 /* Anchor */
 a {
   text-decoration: none;
   color: black;
-}
-/* Slide-Banner Style */
-.slideshow-container {
-  width: 100%;
-  position: relative;
-}
-.mySlides {
-  display: none;
-}
-.img-bannerC {
-  width: 100%;
-}
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 /* MEDIA QUERY TABLETS */
 @media (min-width: 480px) {
@@ -352,53 +218,13 @@ a {
   .product-tittle {
     font-size: 18px;
   }
-  .heading-offers {
-    font-size: 19px;
-  }
-  .offers-tittle {
-    font-size: 14px;
-  }
   .price-offers {
     font-size: 19px;
-  }
-  /* Cambios en buscador */
-  .p-search {
-    display: block;
-    margin: 5px;
-    padding: 8px;
-    font-size: 11px;
-  }
-  .search-div {
-    width: 70%;
-  }
-  .search-input {
-    padding: 8px;
-  }
-  .div-search-inputs {
-    width: 80%;
-    padding: 8px;
-  }
-  .search-button {
-    padding: 0px;
-    font-size: 14px;
-  }
-  .search-icon {
-    padding: 0px;
   }
   /* Cambios en contenedor principal */
   .div-margin {
     margin-right: 30px;
     margin-left: 30px;
-  }
-  /* Cambios en productos */
-  .article-dest-5,
-  .article-dest-6 {
-    display: block;
-  }
-  /* About Us */
-  .about-us-text {
-    width: 80%;
-    margin: auto;
   }
   /* Utilidades */
   .tablet-w-33 {
@@ -423,19 +249,6 @@ a {
   .heading-style {
     font-size: 26px;
   }
-  /* Cambios en buscador */
-  .search-div {
-    width: 50%;
-  }
-  .search-button {
-    width: 20%;
-  }
-  .search-input {
-    padding: 12px;
-  }
-  .product-tittle {
-    display: none;
-  }
   /* Cambios en contenedor principal */
   .div-margin {
     margin-right: 80px;
@@ -449,32 +262,6 @@ a {
     transition: box-shadow 1000ms;
     box-shadow: 0px 0px 10px #3c3b3b;
   }
-  .product:hover .product-tittle {
-    display: block;
-    font-size: 14px;
-  }
-  .logo-rotate {
-    transition: transform 1500ms;
-  }
-  .logo-rotate:hover {
-    transform: rotate(360deg);
-  }
-  .button-news:hover {
-    transition: 1000ms;
-    background-color: #a22a5a;
-  }
-  .after {
-    display: none;
-  }
-  .product:hover .after {
-    transition-duration: 1000ms;
-    transition-property: block;
-    display: block;
-  }
-  /* .product:hover .before {
-    transition-duration: 1400ms;
-    display: none;
-  } */
   /* Utilidades */
   .desktop-w-20 {
     width: 20%;

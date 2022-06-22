@@ -213,11 +213,11 @@
     "id": 22,
     "nombre": "Afeitadora Philips S1121/41",
     "descripcion": "Este cabezal es lavable, lo que garantiza una limpieza profunda de las cuchillas; por otro lado, su mango de goma antideslizante facilita el agarre y la precisión de la afeitadora. afeitadora Philips",
-    "precio": 5100,
+    "precio": "5100",
     "imagen": "afeitadora.jpg",
     "categoria": "Belleza y cuidado personal",
     "seccion": "oferta",
-    "descuento": 20
+    "descuento": "20"
   },
   {
     "id": 23,

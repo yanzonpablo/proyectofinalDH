@@ -48,6 +48,20 @@
             placeholder="Precio de producto"
           />
         </div>
+        <div style="text-align: center">
+          <img
+            src="/images/products/<%=productToEdit.imagen%> "
+            alt=""
+            style="width: 50%"
+          />
+          <label for="imagen" class=""></label>
+          <input
+            class="cajas"
+            type="file"
+            id="imagen_producto"
+            name="imagen"
+          />
+        </div>
         <div>
           <label for="categoria" class=""></label>
           <input
@@ -62,8 +76,8 @@
         <div>
           <label for="seccion" class="">Sección:</label>
           <select name="seccion" id="seccion" class="cajas">
-            <option value="oferta">En oferta</option>
-            <option value="destacado">Destacados</option>
+            <option value="oferta" <%=productToEdit.seccion == "oferta" ? 'selected' : ''%>>En oferta</option>
+            <option value="destacado" <%= productToEdit.seccion == "destacado" ? 'selected' : ''%>>Destacados</option>
           </select>
         </div>
         <div>
