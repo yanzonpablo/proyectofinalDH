@@ -17,7 +17,6 @@ body {
   padding: 40px;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 100px;
   background-color: white;
   border-radius: 5px;
 }
@@ -186,10 +185,17 @@ textarea.form-input {
   padding: 15px;
 }
 
-
 .upload {
   border: 1px solid #ccc;
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
+}
+.form-delete {
+  width: 450px;
+  padding: 40px;
+  margin: auto;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 5px;
 }
