@@ -255,10 +255,8 @@ body {
   font-size: 14px;
   color: black;
 }
-
 .b-color {
-  border: 1px solid #d93175;
-  border-radius: 10px;
+  border: 2px solid #e0ccd2c6;
 }
 /* STYLES BANNERS */
 .padding-banner-1 {
