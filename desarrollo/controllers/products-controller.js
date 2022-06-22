@@ -4,6 +4,7 @@ const express = require("express");
 const db = require("../data/db");
 // const productsFilePath = path.join(__dirname, "../data/products.json");
 const allProducts = db.getAll();
+// const deleteProduct = db.saveAll();
 
 module.exports = {
   index: (req, res) => {
@@ -35,7 +36,10 @@ module.exports = {
   edit: (req, res) => {
     let id = req.params.id;
     let productToEdit = allProducts.find((product) => product.id == id);
-    res.render("editarProducto", { productToEdit: productToEdit });
+    res.render(
+      "editarProducto",
+      { productToEdit: productToEdit }
+    );
   },
   update: (req, res) => {
     const productIndex = allProducts.findIndex((p) => p.id == req.params.id);
@@ -47,6 +51,13 @@ module.exports = {
     product.seccion = req.body.seccion;
     product.descuento = req.body.descuento;
     db.saveAll(allProducts);
+    res.redirect("/products");
+  },
+  destroy: (req, res) => {
+    const filteredProducts = allProducts.filter((p) => {
+      return p.id != req.params.id;
+    });
+    db.saveAll(filteredProducts);
     res.redirect("/products");
   },
 };
