@@ -76,8 +76,8 @@
         <div>
           <label for="seccion" class="">Sección:</label>
           <select name="seccion" id="seccion" class="cajas">
-            <option value="oferta">En oferta</option>
-            <option value="destacado">Destacados</option>
+            <option value="oferta" <%=productToEdit.seccion == "oferta" ? 'selected' : ''%>>En oferta</option>
+            <option value="destacado" <%= productToEdit.seccion == "destacado" ? 'selected' : ''%>>Destacados</option>
           </select>
         </div>
         <div>
