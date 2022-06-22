@@ -96,12 +96,12 @@
         <div>
           <input type="submit" class="btn" value="Editar" />
         </div>
+      </form>
         <!-- ELIMINAR -->
-        <form action="/products/<%= productToEdit.id %>?_method=delete" method="POST">
+        <form class="form" action="/products/<%=productToEdit.id%>?_method=DELETE" method="POST">
           <input type="submit" class="btn" value="Eliminar">
         </form>
         <!-- FIN ELIMINAR -->
-      </form>
     </main>
   </body>
 </html>

@@ -12,9 +12,9 @@ router.post("/", productsController.store); //POST de creacion de producto
 //EDIT
 router.get("/edit/:id", productsController.edit); //Vista de edicion de producto
 router.put("/:id", productsController.update); //PUT de edicion de producto
+//DELETE
+router.delete("/:id", productsController.destroy); //DELETE de producto
 //DETAILS
 router.get("/:id/", productsController.details); //Vista detalle de producto
-//DELETE
-router.delete("/:id", productsController.destroy);//DELETE de producto
 
 module.exports = router;

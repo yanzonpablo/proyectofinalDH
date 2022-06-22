@@ -4,7 +4,6 @@ const express = require("express");
 const db = require("../data/db");
 // const productsFilePath = path.join(__dirname, "../data/products.json");
 const allProducts = db.getAll();
-// const deleteProduct = db.saveAll();
 
 module.exports = {
   index: (req, res) => {
@@ -36,10 +35,7 @@ module.exports = {
   edit: (req, res) => {
     let id = req.params.id;
     let productToEdit = allProducts.find((product) => product.id == id);
-    res.render(
-      "editarProducto",
-      { productToEdit: productToEdit }
-    );
+    res.render("editarProducto", { productToEdit: productToEdit });
   },
   update: (req, res) => {
     const product =
