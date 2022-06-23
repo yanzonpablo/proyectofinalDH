@@ -10,57 +10,58 @@
 <body>
   <main>
     <div>
-      <form class="form" action="/products/<%=productToEdit.id%>?_method=PUT" method="POST">
-        <h1 class="titulo">EDITA UN PRODUCTO EXISTENTE</h1>
-        <div>
-          <label name="nombre" class=""></label>
-          <input class="cajas" type="text" id="nombre_producto" name="nombre" value="<%=productToEdit.nombre%>"
-            placeholder="Nombre de producto" maxlength="30" />
-        </div>
-        <div>
-          <label for="descripcion" class=""></label>
-          <input class="cajas" type="text" id="descripcion_producto" name="descripcion"
-            value="<%=productToEdit.descripcion%>" placeholder="Descripcion del producto" maxlength="100" />
-        </div>
-        <div>
-          <label for="precio" class=""></label>
-          <input class="cajas" id="precio_producto" type="text" name="precio" value="<%=productToEdit.precio%>"
-            placeholder="Precio de producto" />
-        </div>
-        <div style="text-align: center">
-          <img src="/images/products/<%=productToEdit.imagen%> " alt="" style="width: 50%" />
-          <label for="imagen" class=""></label>
-          <input class="cajas" type="file" id="imagen_producto" name="imagen" accept="image/*" />
-        </div>
-        <div>
-          <label for="categoria" class=""></label>
-          <input class="cajas" type="text" id="categoria" name="categoria" value="<%=productToEdit.categoria%>"
-            placeholder="Categoria del producto" />
-        </div>
-        <div>
-          <label for="seccion" class="">Sección:</label>
-          <select name="seccion" id="seccion" class="cajas">
-            <option value="oferta" <%=productToEdit.seccion=="oferta" ? 'selected' : '' %>>En oferta</option>
-            <option value="destacado" <%=productToEdit.seccion=="destacado" ? 'selected' : '' %>>Destacados</option>
-          </select>
-        </div>
-        <div>
-          <label for="descuento" class=""></label>
-          <input class="cajas" type="text" id="descuento_producto" name="descuento" value="<%=productToEdit.descuento%>"
-            placeholder="% de descuento para aplicar al producto" required />
-        </div>
-        <div>
+        <form class="form" action="/products/<%=productToEdit.id%>?_method=PUT" method="POST">
+          <h1 class="titulo">EDITA UN PRODUCTO EXISTENTE</h1>
           <div>
-            <input type="submit" class="btn" value="Editar" />
+            <label name="nombre" class=""></label>
+            <input class="cajas" type="text" id="nombre_producto" name="nombre" value="<%=productToEdit.nombre%>"
+              placeholder="Nombre de producto" maxlength="30" />
           </div>
-      </form>
-      <!-- ELIMINAR -->
-      <form class="form-delete" action="/products/<%=productToEdit.id%>?_method=DELETE" method="POST">
-        <input type="submit" class="btn" value="Eliminar">
-      </form>
-      <!-- FIN ELIMINAR -->
-    </div>
-    </div>
+          <div>
+            <label for="descripcion" class=""></label>
+            <input class="cajas" type="text" id="descripcion_producto" name="descripcion"
+              value="<%=productToEdit.descripcion%>" placeholder="Descripcion del producto" maxlength="100" />
+          </div>
+          <div>
+            <label for="precio" class=""></label>
+            <input class="cajas" id="precio_producto" type="text" name="precio" value="<%=productToEdit.precio%>"
+              placeholder="Precio de producto" />
+          </div>
+          <div style="text-align: center">
+            <img src="/images/products/<%=productToEdit.imagen%> " alt="" style="width: 50%" />
+            <label for="imagen" class=""></label>
+            <input class="cajas" type="file" id="imagen_producto" name="imagen" accept="image/*" />
+          </div>
+          <div>
+            <label for="categoria" class=""></label>
+            <input class="cajas" type="text" id="categoria" name="categoria" value="<%=productToEdit.categoria%>"
+              placeholder="Categoria del producto" />
+          </div>
+          <div>
+            <label for="seccion" class="">Sección:</label>
+            <select name="seccion" id="seccion" class="cajas">
+              <option value="oferta" <%=productToEdit.seccion=="oferta" ? 'selected' : '' %>>En oferta</option>
+              <option value="destacado" <%=productToEdit.seccion=="destacado" ? 'selected' : '' %>>Destacados</option>
+            </select>
+          </div>
+
+            <div>
+              <label for="descuento" class=""></label>
+              <input class="cajas" type="text" id="descuento_producto" name="descuento" value="<%=productToEdit.descuento%>"
+                placeholder="% de descuento para aplicar al producto" required />
+            </div>
+            <div>
+              <input type="submit" class="btn" value="Editar" />
+            </div>
+        </form>
+
+        <!-- ELIMINAR -->
+        <form class="form-delete" action="/products/<%=productToEdit.id%>?_method=DELETE" method="POST">
+          <input type="submit" class="btn" value="Eliminar">
+        </form>
+        <!-- FIN ELIMINAR -->
+      </div>
+
   </main>
 </body>
 

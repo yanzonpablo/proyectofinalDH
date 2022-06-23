@@ -19,6 +19,17 @@ body {
   margin-top: 100px;
   background-color: white;
   border-radius: 5px;
+  position: relative;
+}
+
+.form-delete {
+  width: 450px;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  bottom: 50px;
+  padding: 15px 40px 30px 40px;
 }
 
 .titulo {
@@ -127,6 +138,7 @@ body {
   background: rgba(244, 56, 52, 0.4);
 }
 
+
 .tengo-cuenta {
   text-align: center;
   color: #d93175;
@@ -190,12 +202,4 @@ textarea.form-input {
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
-}
-.form-delete {
-  width: 450px;
-  padding: 40px;
-  margin: auto;
-  margin-bottom: 100px;
-  background-color: white;
-  border-radius: 5px;
 }
