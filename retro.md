@@ -19,3 +19,13 @@ Punto a favor, el compañerismo y la solidaridad del grupo, si alguien no entien
 Tuvimos un conflicto con el push, que "rompio" la aplicacion, en la cual se subio una version anterior, creando un merge entre diferentes archivos html y ejs, pero se logro solucionar con el esfuerzo de mis compañeros, antes de la entrega.
 
 Quitando esta falla, el resto del equipo hizo todo en tiempo y forma.
+
+**Sprint 4.**
+
+En este sprint NO se realizaron reuniones, fue muy difícil coordinar las tareas y tiempos de trabajo dentro del equipo.
+
+Hubo poca participación de los integrantes del equipo. Los que participaron, tuvieron que realizar todas las tareas que estaban enumeradas en el sprint para poder completarlo.
+
+Además se tuvo que trabajar en tareas pendientes, no terminadas, correspondientes al sprint anterior (reflejadas en el tablero trello), ya que estas eran necesarias para la implementación de las nuevas prácticas en este Sprint. 
+
+También se realizaron algunas correcciones correspondientes a observaciones realizadas por los profesores en el "Feedback Proyecto Integrador" según Sprint 3.
