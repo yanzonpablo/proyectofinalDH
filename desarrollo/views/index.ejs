@@ -238,13 +238,19 @@
       <section class="p-8 pb-30 bg-gris-oscuro m-10">
         <h2 class="heading-style text-center m-10">CATEGORIAS</h2>
         <div class="fx fx-wrap fx-justify-a m-10">
-          <div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
-              style="height: 150px; width: 150px; background-image: url('/images/products/celular-a52.jpg')">
-            </div>
-            <p class="caterogy-text w-100 ">Telefonía móvil</p>
-          </div>
-          <!-- <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+          <% categorias.forEach(categoria=> { %>
+            <% if (categoria.estado==true ) { %>
+              <div>
+                <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+                  style="height: 150px; width: 150px; background-image: url('<%=categoria.imagen%>')">
+                </div>
+                <p class="caterogy-text w-100 ">
+                  <%=categoria.nombre%>
+                </p>
+              </div>
+              <% } %>
+                <% }) %>
+                  <!-- <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
             style="height: 150px; width: 150px; background-image: url('/images/products/notebook-dell-jh94xwh.jpg')">
              <p class="caterogy-text w-100">Computación</p> 
           </div>

@@ -10,7 +10,7 @@ module.exports = {
   home: (req, res) => {
     res.render("index", {
       productos: allProducts,
-      categories: allCategories,
+      categorias: allCategories,
     });
   },
   login: (req, res) => {
