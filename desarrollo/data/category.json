@@ -3,48 +3,56 @@
     "id": 1,
     "nombre": "Telefonía móvil",
     "descripcion": "Celulares y accesorios",
-    "estado": true
+    "estado": true,
+    "imagen": "/images/products/celular-a52.jpg"
   },
   {
     "id": 2,
     "nombre": "Computación",
     "descripcion": "Computadoras, notebooks, periféricos y accesorios.",
-    "estado": true
+    "estado": true,
+    "imagen": "/images/products/notebook-dell-jh94xwh.jpg"
   },
   {
     "id": 3,
     "nombre": "Electrónica, audio y video",
     "descripcion": "Dispositivos smart para el hogar, equipos de musica, SmartTv.",
-    "estado": true
+    "estado": true,
+    "imagen": "/images/products/smart-tv-32.jpg"
   },
   {
     "id": 4,
-    "nombre": "Electrodomésticos y Aires Acondicionado",
+    "nombre": "Electrodomésticos",
     "descripcion": "Lavadoras, secadoras, lavavajillas, hornos, microondas, neveras, congeladores y refrigeración en general, campanas extractoras, pequeños electrodomesticos, etc.",
-    "estado": true
+    "estado": true,
+    "imagen": "/images/products/cafetera-express-de-longhi.jpg"
   },
   {
     "id": 5,
     "nombre": "Consolas y videojuegos",
     "descripcion": "Dispositivos electrónicos para el entretenimiento.",
-    "estado": true
+    "estado": true,
+    "imagen": "/images/products/ps5.jpg"
   },
   {
     "id": 6,
     "nombre": "Belleza y cuidado personal",
     "descripcion": "Todo lo relacionado al cuidado de la belleza, cosmética y cuidado personal.",
-    "estado": true
+    "estado": true,
+    "imagen": "/images/products/afeitadora.jpg"
   },
   {
     "id": 7,
     "nombre": "Apple",
     "descripcion": "Dispositivos y accesorios propios de la marca.",
-    "estado": false
+    "estado": false,
+    "imagen": "/images/products/notebook-dell-jh94xwh.jpg"
   },
   {
     "id": 8,
     "nombre": "Cámaras y accesorios",
     "descripcion": "Equipos fotográficos de video y accesorios.",
-    "estado": true
+    "estado": false,
+    "imagen": "/images/products/notebook-dell-jh94xwh.jpg"
   }
 ]

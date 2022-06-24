@@ -254,6 +254,7 @@ body {
 .caterogy-text {
   font-size: 14px;
   color: black;
+  text-align: center;
 }
 .b-color {
   border: 2px solid #e0ccd2c6;

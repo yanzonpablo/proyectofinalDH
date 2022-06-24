@@ -13,11 +13,11 @@
         "id": 2,
         "nombre": "Playstation 5",
         "descripcion": "",
-        "precio": 64000,
+        "precio": "64000",
         "imagen": "ps5.jpg",
         "categoria": "Consolas y video juegos",
         "seccion": "destacado",
-        "descuento": 0
+        "descuento": "0"
     },
     {
         "id": 3,

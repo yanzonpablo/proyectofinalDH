@@ -1,15 +1,15 @@
 const fs = require("fs");
 const path = require("path");
+const db = require("../models/db");
 
 const productsFilePath = path.join(__dirname, "./products.json");
 
 module.exports = {
   getAll: function () {
-    return JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    return db.readJsonDB(productsFilePath);
   },
   saveAll: function (allProducts) {
-    const fileTxt = JSON.stringify(allProducts, null, 4);
-    fs.writeFileSync(productsFilePath, fileTxt);
+    db.writeJsonDB(productsFilePath, allProducts);
   },
   findOne: function (id) {
     return this.getAll().find((p) => p.id == id);

@@ -1,75 +1,70 @@
-  <head>
-    <%- include('./partials/head') %> 
+<head>
+  <%- include('./partials/head') %>
     <title>Argentum</title>
-    <link rel="stylesheet" href="/css/styles-index.css"/>
-  </head>
-  <body class="bg-gris-oscuro">
-    <!-- Inicio Header importado -->
-    <header><%- include('./partials/header') %></header>
-    <main>
-      <!-- Main banners en carrousel -->
-          <div class="slideshow-container">
-            <div class="mySlides fade">
-              <img src="/images/test-banner-2.jpg" class="img-bannerC">
-            </div>
-            <div class="mySlides fade">
-              <img src="/images/test-banner-1.jpg" class="img-bannerC">
-            </div>
-          </div>  
-      <!-- Buscador -->
-      <div class="w-80 p-8 search-div m-center mt-8 p-12">
-        <p class="w-100 p-search">QUE ESTAS BUSCANDO?</p>
-        <form class="">
-          <div class="fx fx-justify-b">
-            <div class="w-40 div-search-inputs">
-              <input
-                class="w-90 search-input"
-                type="text"
-                name="search"
-                placeholder="Encontra tu producto"
-              />
-              <button class="search-icon w-10">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-            <button type="submit" class="w-35 search-button br-5">
-              Buscar
+    <link rel="stylesheet" href="/css/styles-index.css" />
+</head>
+
+<body class="bg-gris-oscuro">
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header') %>
+  </header>
+  <main>
+    <!-- Main banners en carrousel -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="/images/test-banner-2.jpg" class="img-bannerC">
+      </div>
+      <div class="mySlides fade">
+        <img src="/images/test-banner-1.jpg" class="img-bannerC">
+      </div>
+    </div>
+    <!-- Buscador -->
+    <div class="w-80 p-8 search-div m-center mt-8 p-12">
+      <p class="w-100 p-search">QUE ESTAS BUSCANDO?</p>
+      <form class="">
+        <div class="fx fx-justify-b">
+          <div class="w-40 div-search-inputs">
+            <input class="w-90 search-input" type="text" name="search" placeholder="Encontra tu producto" />
+            <button class="search-icon w-10">
+              <i class="fas fa-search"></i>
             </button>
           </div>
-        </form>
-      </div>
-      <!-- Comienzo de section // Productos destacados -->
-      <div class="div-margin p-30">
-        <section class="fx fx-wrap w-100 pb-30">
-          <div class="bg-blanco m-10 fx fx-wrap b-color">
-            <h2 class="w-100 m-10 text-center heading-style">
-              PRODUCTOS DESTACADOS
-            </h2>
-            <!-- Productos destacados con plantilla dinamica-->
-            <% productos.forEach(producto => { %>
-              <% if (producto.seccion == "destacado") { %>
-            <div class="w-50 p-8 tablet-w-33 desktop-w-20">
-              <a href="/products/<%=producto.id%>">
-              <article class="product b-1">
-                <img
-                  class="w-100"
-                  src="/images/products/<%=producto.imagen%>"
-                  alt="Notebook Lenovo"
-                />
-                <div class="fx fx-wrap bg-blanco bt-2">
-                  <p class="ms-5 mt-5 product-tittle text-center">
-                    <%=producto.nombre%>
-                  </p>
-                  <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
-                    $ <%=producto.precio%>
-                  </p>
-                </div>
-              </article></a>
-            </div>
-            <% } %>
-            <% }) %>
-          </section>
-            <!-- Productos destacados sin plantilla dinamica
+          <button type="submit" class="w-35 search-button br-5">
+            Buscar
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Comienzo de section // Productos destacados -->
+    <div class="div-margin p-30">
+      <section class="fx fx-wrap w-100 pb-30">
+        <div class="bg-blanco m-10 fx fx-wrap b-color">
+          <h2 class="w-100 m-10 text-center heading-style">
+            PRODUCTOS DESTACADOS
+          </h2>
+          <!-- Productos destacados con plantilla dinamica-->
+          <% productos.forEach(producto=> { %>
+            <% if (producto.seccion=="destacado" ) { %>
+              <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+                <a href="/products/<%=producto.id%>">
+                  <article class="product b-1">
+                    <img class="w-100" src="/images/products/<%=producto.imagen%>" alt="Notebook Lenovo" />
+                    <div class="fx fx-wrap bg-blanco bt-2">
+                      <p class="ms-5 mt-5 product-tittle text-center">
+                        <%=producto.nombre%>
+                      </p>
+                      <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                        $ <%=producto.precio%>
+                      </p>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <% } %>
+                <% }) %>
+      </section>
+      <!-- Productos destacados sin plantilla dinamica
             <div class="w-50 p-8 tablet-w-33 desktop-w-20">
               <article class="product b-1">
                 <img
@@ -239,89 +234,84 @@
               </article>
             </div>
           </div> -->
-        <!-- Inicio cuadro con categorias -->
-        <section class="p-8 pb-30 bg-gris-oscuro m-10">
-          <h2 class="heading-style text-center m-10">CATEGORIAS</h2>
-          <div class="fx fx-wrap fx-justify-a m-10">
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/celular-a52.jpg')">
-              <!-- <p class="caterogy-text w-100">Telefonía móvil</p> -->
+      <!-- Inicio cuadro con categorias -->
+      <section class="p-8 pb-30 bg-gris-oscuro m-10">
+        <h2 class="heading-style text-center m-10">CATEGORIAS</h2>
+        <div class="fx fx-wrap fx-justify-a m-10">
+          <div>
+            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+              style="height: 150px; width: 150px; background-image: url('/images/products/celular-a52.jpg')">
             </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/notebook-dell-jh94xwh.jpg')">
-              <!-- <p class="caterogy-text w-100">Computación</p> -->
-            </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/cafetera-express-de-longhi.jpg')">
-              <!-- <p class="caterogy-text w-100">Electrodomésticos</p> -->
-            </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/ps5.jpg')">
-              <!-- <p class="caterogy-text w-100">Consolas y videojuegos</p> -->
-            </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/smart-tv-32.jpg')">
-              <!-- <p class="caterogy-text w-100">Electrónica, audio y video</p> -->
-            </div>
-            <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16" style="height: 150px; width: 150px; background-image: url('/images/products/afeitadora.jpg')">
-              <!-- <p class="caterogy-text w-100">Salud y belleza</p> -->
-            </div>
+            <p class="caterogy-text w-100 ">Telefonía móvil</p>
           </div>
-        </section>
-        <!-- Banners -->
-        <section class="fx fx-wrap p-8">
-          <img
-            class="w-50 padding-banner-1"
-            src="/images/test-banner-small.jpg"
-            alt="Banner ofertas 2"
-          />
-          <img
-            class="w-50 padding-banner-2"
-            src="/images/banner-small.jpg"
-            alt="Banner ofertas 1"
-          />
-        </section>
-        <!-- Comienzo de section // Ofertas con plantilla dinamica-->
-        <section class="fx fx-wrap w-100 p-8 pb-30" id="ofertas">
-          <div class="bg-blanco p-8 m-10 fx fx-wrap b-color">
-            <h2 class="w-100 m-10 text-center heading-style">OFERTAS</h2>
-            <% productos.forEach(producto => { %> 
-            <% if (producto.seccion == "oferta") { %>
-            <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
-              <a href="/products/<%=producto.id%>">
-              <article class="product b-1 fx fx-wrap">
-                <div class="fx fx-wrap fx-align-center w-30">
-                  <div class="w-100">
-                    <img
-                      class="w-100"
-                      src="/images/products/<%=producto.imagen%>"
-                      alt="<%=producto.nombre%>"
-                    />
-                  </div>
-                </div>
-                <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
-                  <p class="ms-5 mb-5 m-center w-100 heading-offers">
-                    <%= producto.nombre %> 
-                  </p>
-                  <p class="ms-5 mb-5 offers-tittle">
-                    <%= producto.descripcion %> 
-                  </p>
-                  <div
-                    class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers"
-                  >
-                    <div>
-                      <p
-                        class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before"
-                      >
-                        $ <%= producto.precio %> 
-                      </p>
-                      <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
-                        $ <%= producto.precio * ((100 - producto.descuento)/100) %> 
-                      </p>
+          <!-- <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+            style="height: 150px; width: 150px; background-image: url('/images/products/notebook-dell-jh94xwh.jpg')">
+             <p class="caterogy-text w-100">Computación</p> 
+          </div>
+          <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+            style="height: 150px; width: 150px; background-image: url('/images/products/smart-tv-32.jpg')">
+             <p class="caterogy-text w-100">Electrónica, audio y video</p> 
+          </div>
+          <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+            style="height: 150px; width: 150px; background-image: url('/images/products/cafetera-express-de-longhi.jpg')">
+             <p class="caterogy-text w-100">Electrodomésticos</p>
+          </div>
+          <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+            style="height: 150px; width: 150px; background-image: url('/images/products/ps5.jpg')">
+             <p class="caterogy-text w-100">Consolas y videojuegos</p> 
+          </div>
+          <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
+            style="height: 150px; width: 150px; background-image: url('/images/products/afeitadora.jpg')">
+             <p class="caterogy-text w-100">Salud y belleza</p>
+          </div> -->
+        </div>
+      </section>
+      <!-- Banners -->
+      <section class="fx fx-wrap p-8">
+        <img class="w-50 padding-banner-1" src="/images/test-banner-small.jpg" alt="Banner ofertas 2" />
+        <img class="w-50 padding-banner-2" src="/images/banner-small.jpg" alt="Banner ofertas 1" />
+      </section>
+      <!-- Comienzo de section // Ofertas con plantilla dinamica-->
+      <section class="fx fx-wrap w-100 p-8 pb-30" id="ofertas">
+        <div class="bg-blanco p-8 m-10 fx fx-wrap b-color">
+          <h2 class="w-100 m-10 text-center heading-style">OFERTAS</h2>
+          <% productos.forEach(producto=> { %>
+            <% if (producto.seccion=="oferta" ) { %>
+              <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
+                <a href="/products/<%=producto.id%>">
+                  <article class="product b-1 fx fx-wrap">
+                    <div class="fx fx-wrap fx-align-center w-30">
+                      <div class="w-100">
+                        <img class="w-100" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>" />
+                      </div>
                     </div>
-                    <p class="ms-5 mb-5 mt-5 w-30 discount"><%= producto.descuento %>% OFF</p>
-                  </div>
-                </div>
-              </article></a>
-            </div>
-            <% } %>
-            <% }) %>
-            <!-- Ofertas sin plantilla dinamica           
+                    <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
+                      <p class="ms-5 mb-5 m-center w-100 heading-offers">
+                        <%= producto.nombre %>
+                      </p>
+                      <p class="ms-5 mb-5 offers-tittle">
+                        <%= producto.descripcion %>
+                      </p>
+                      <div class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers">
+                        <div>
+                          <p class="ms-5 mb-5 mt-5 w-20 price-offers line-through w-100 before">
+                            $ <%= producto.precio %>
+                          </p>
+                          <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
+                            $ <%= producto.precio * ((100 - producto.descuento)/100) %>
+                          </p>
+                        </div>
+                        <p class="ms-5 mb-5 mt-5 w-30 discount">
+                          <%= producto.descuento %>% OFF
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <% } %>
+                <% }) %>
+                  <!-- Ofertas sin plantilla dinamica           
             <div class="fx fx-wrap p-8 tablet-w-50 desktop-w-25">
               <article class="product b-1 fx fx-wrap">
                 <div class="fx fx-wrap fx-align-center w-30">
@@ -432,8 +422,8 @@
               </article>
             </div>
           </div> -->
-        </section>
-        <!-- About us Section
+      </section>
+      <!-- About us Section
         <section class="pb-30">
           <div class="p-8 m-10 bg-blanco b-color">
             <div class="discount w-90 m-center mb-5 heading-aboutus">
@@ -448,24 +438,27 @@
             </p>
           </div>
         </section> -->
-      </div>
-    </main>
-    <!-- Comienzo footer -->
-    <footer><%- include ('./partials/footer') %></footer>
-    <script>
-      let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
-          slides[slideIndex-1].style.display = "block";
-          setTimeout(showSlides, 5000); // Change image every 2 seconds
-        }
-    </script>
-  </body>
+    </div>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer') %>
+  </footer>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
 </html>
