@@ -60,7 +60,7 @@
 
                                 <input type="number" name="number4"
                                     class=" mb-10 text-align number-credit media-mobile border-radius height-25 sinborde"
-                                    placeholder="000" maxlength="4"
+                                    placeholder="0000" maxlength="4"
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
                             </div>
                             
@@ -79,12 +79,21 @@
                         </div>
                     </div>
 
-                    <div>
-                        <label for="paypal" class="boton-paypal p-10 mt-15 mb-50 ds-flex">
-                            <input type="radio" name="paypal" id="paypal" value="paypal" class="input-radio">
-                            <img src="../images/paypal.png" alt="paypal" width="30%" class="img-paypal">
+
+<div class="botones-pagos ds-flex mb-50 mt-15">
+                    
+                        <label for="paypal" class="boton-paypal p-5 ds-flex">
+                            <input type="radio" name="paypal" id="paypal" value="paypal" class="img-paypal">
+                            <img src="/images/paypal.png" alt="paypal" width="20%" class="img-paypal">
                         </label>
-                    </div>
+                 
+                        <label for="mercadopago" class="boton-paypal p-5  ds-flex">
+                            <input type="radio" name="mercadopago" id="mercadopago" value="mercadopago" class="img-paypal">
+                            <img src="/images/cropped.png" alt="mercadopago" width="60%" class="img-paypal">
+                        </label>
+                    
+</div>
+
 
                 </form>
                 <div class="desktop fx-wrap fondo-carro">
@@ -101,7 +110,7 @@
                                 <!-- Inicio articulo -->
                                 <tr class="bk-tabla line-bottom">
                                     <td class="text-align">
-                                        <img class="height-width-img" src="../images/aire.jpg" alt="" />
+                                        <img class="height-width-img" src="/images/products/aire.jpg" alt="" />
                                     </td>
                                     <td>
                                         <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -117,7 +126,7 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="../images/test-product-note.jpg" alt="notebook" />
+                                    <img class="height-width-img" src="/images/products/test-product-note.jpg" alt="notebook" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -133,7 +142,7 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="/images/5dc494aa5972bebeaba40b61993a.jpg" alt="" />
+                                    <img class="height-width-img" src="/images/products/5dc494aa5972bebeaba40b61993a.jpg" alt="MiniPimmer" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
