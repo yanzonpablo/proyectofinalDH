@@ -332,6 +332,20 @@ a {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
 .trunc-text-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -440,9 +454,6 @@ a {
   .search-input {
     padding: 12px;
   }
-  .product-tittle {
-    display: none;
-  }
   /* Cambios en contenedor principal */
   .div-margin {
     margin-right: 80px;
@@ -458,7 +469,6 @@ a {
   }
   .product:hover .product-tittle {
     display: block;
-    font-size: 14px;
   }
   .category {
     box-shadow: none;
@@ -477,10 +487,10 @@ a {
     transition: 1000ms;
     background-color: #a22a5a;
   }
-  .after {
+  .before {
     display: none;
   }
-  .product:hover .after {
+  .product:hover .before {
     transition-duration: 1000ms;
     transition-property: block;
     display: block;
