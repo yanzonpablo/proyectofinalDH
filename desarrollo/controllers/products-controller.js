@@ -21,7 +21,7 @@ module.exports = {
     });
   },
   create: (req, res) => {
-    res.render("cargarProducto");
+    res.render("cargarProducto", { categories: allCategories });
   },
   store: (req, res) => {
     const newProduct = req.body;

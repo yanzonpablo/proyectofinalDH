@@ -114,7 +114,7 @@
                             $ <%= producto.precio %>
                           </p>
                           <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
-                            $ <%= producto.precio * ((100 - producto.descuento)/100) %>
+                            $ <%= Math.trunc(producto.precio * ((100 - producto.descuento)/100))%>
                           </p>
                         </div>
                         <p class="ms-5 mb-5 mt-5 w-30 discount">
