@@ -32,8 +32,8 @@
           </div>
         </div>
         <!-- FINALIZA BARRA CARRITO -->
-        <h2 class="product-carrito mb-20 pt-20 pl-10">Productos seleccionados:</h2>
-        <div class="desktop fx-wrap fondo-carro ds-block">
+        <h3 class="product-carrito mb-20 pt-20 pl-10">Productos seleccionados:</h3>
+        <div class="desktop fx-wrap ds-block ">
           <table class="border-collapse pb-10 ds-block product-selec">
             <tr class="bk-title ft-color-title ft-weight ft-size-title text-align ft-mobile">
               <!-- INICIO TITULOS -->
@@ -51,21 +51,18 @@
                   <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
                 </td>
                 <td>
-                  <p class="ft-size-text text-left pb-10 ft-weight articulo">
+                  <p class="ft-size-text text-center ft-weight articulo">
                     <%= art.nombre %>
                   </p>
-                  <span class="descripcion ft-size-text">
-                    <%= art.descripcion %>
-                  </span>
                 </td>
                 <td>
-                  <p class="ft-size-text text-align precio">$<%= art.precio %>
+                  <p class="ft-size-text text-center precio">$<%= art.precio %>
                   </p>
                 </td>
                 <td>
                   <div class="ds-flex js-cont-center align-items">
                     <a href="#" class="mas-menos"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
-                    <p class="ft-size-text pr-10 pl-10 ft-weight numero">1</p>
+                    <p class="ft-size-number pr-10 pl-10 ft-weight numero">1</p>
                     <a href="#" class="mas-menos"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
                   </div>
                 </td>
@@ -74,40 +71,11 @@
                 </td>
               </tr>
             </article>
-            <!-- Fin articulo -->
-
-            <!-- Inicio articulo -->
-            <tr class="bk-tabla line-bottom">
-              <td class="text-align">
-                <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
-              </td>
-              <td>
-                <p class="ft-size-text text-left pb-10 ft-weight articulo">
-                  <%= art.nombre %>
-                </p>
-                <span class="descripcion ft-size-text">
-                  <%= art.descripcion %>
-                </span>
-              </td>
-              <td>
-                <p class="ft-size-text text-align precio">$<%= art.precio %>
-                </p>
-              </td>
-              <td>
-                <div class="ds-flex js-cont-center align-items">
-                  <a href="#" class="mas-menos"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
-                  <p class="ft-size-text pr-10 pl-10 ft-weight numero">1</p>
-                  <a href="#" class="mas-menos"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
-                </div>
-              </td>
-              <td class="text-align basurero">
-                <a href="" class="basurero"><i class="fas fa-trash-alt"></i></a>
-              </td>
-            </tr>
-            </article>
-            <!-- Fin articulo -->
-
           </table>
+            <!-- Fin articulo -->
+
+          
+
           <!-- Inicio resumen -->
           <div class="bk-resume ">
             <table class="resumen line-height ft-size-text ">

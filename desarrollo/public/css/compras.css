@@ -80,16 +80,16 @@ main {
     color: rgb(255, 255, 255);
 }
 .ft-size-text {
-    font-size: 16px;
+    font-size: 12px;
 }
 .ft-size-title {
-    font-size: 20px;
+    font-size: 14px;
 }
 .ft-size-less {
-    font-size: 22px;
+    font-size: 20px;
 }
 .ft-size-more {
-    font-size: 22px;
+    font-size: 18px;
 }
 .ft-weight {
     font-weight: 600;
@@ -132,8 +132,8 @@ main {
     padding-top: 20px;
 }
 .height-width-img{
-    height: 130px;
-    width: 100px;
+    height: 90px;
+    width: 70px;
 }
 .mb-20 {
     margin-bottom: 20px;
@@ -143,16 +143,19 @@ main {
     width: 180px;
 }
 .producto {
-    width: 400px;
+    width: 200px;
 }
 .precio {
-    width: 100px;
+    width: 80px;
 }
 .unidades {
     width: 100px;
 }
 .basurero {
-    width: 80px;
+    width: 40px;
+}
+.ft-size-number {
+    font-size: 14px;
 }
 /* INICIA BARRA CARRITO */
 .ubica-barra {
@@ -223,7 +226,7 @@ td {
 }
     .product-selec{
     justify-content: center;
-    margin-left: 10px;
+
     }
 /* FINALIZA RESUMEN */
 .btn-acepta {
@@ -279,7 +282,7 @@ td {
     display: none;
     }
     .product-carrito{
-    margin-top: 30px;
+    margin-top: 20px;
     }
     .precio {
     display: flex;

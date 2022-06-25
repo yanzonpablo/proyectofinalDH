@@ -110,7 +110,7 @@ background: linear-gradient(175deg, rgba(193,193,193,1) 12%, rgba(126,126,126,0.
     color: rgb(255, 255, 255);
 }
 .ft-size-text {
-    font-size: 16px;
+    font-size: 12px;
 }
 .ft-size-title {
     font-size: 20px;
@@ -228,7 +228,7 @@ background: linear-gradient(175deg, rgba(193,193,193,1) 12%, rgba(126,126,126,0.
 .navegador {
     display: flex;
     justify-content: space-around;
-    font-size: 24px;
+    font-size: 20px;
     background-color: #d93175;
     height: auto;
     align-items: center;
@@ -296,17 +296,15 @@ input[type=number]::-webkit-outer-spin-button {
     color: black;
     align-items: center;
 
+
 }
 .boton-paypal:hover {
     border-color: #000000;
     box-shadow: none;
 }
-.input-radio {
-    align-items: center;
-}
 .img-paypal {
     display: block;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 /* INICIA RESUMEN */
@@ -339,28 +337,29 @@ td {
 }
 /* FINALIZA RESUMEN */
 .btn-acepta {
-    background-color:rgb(9, 9, 200);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 20px;
+  background-color: rgb(9, 9, 200);
+  color: white;
+  border: none;
+  width: 60%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 .btn-acepta:hover {
     background-color: #000000;
 }
 .btn-cancela {
-    background-color:rgb(9, 9, 200);
-    color: white;
-    border: none;
-    padding: 5px 7px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-left: 20px;
+  background-color: rgb(9, 9, 200);
+  color: white;
+  border: none;
+  width: 60%;
+  padding: 5px 7px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 .btn-acepta:hover {
     background-color: #d93175;
@@ -368,21 +367,18 @@ td {
 .btn-cancela:hover {
     background-color: #d93175;
 }
-@media(max-width: 1004px) {
-.espacio-mobile {
-    margin-bottom: 5px;
-}
-}
+
 @media(max-width: 730px) {
+.mobile {
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+}
 .espacio-mobile {
     margin-bottom: 5px;
 }
 .titular {
     width: 40%;
-}
-.mobile {
-    text-align: center;
-    margin-left: 0px;
 }
 h2 {
     text-align: center;
@@ -408,7 +404,7 @@ main {
 .articulo {
     text-align: center;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
 }
 .navegador {
     display: none;
@@ -421,11 +417,11 @@ main {
 }
 .precio {
     display: flex;
-    font-size: 14px;
+    font-size: 12px;
     width: 50%;
 }
 .ft-mobile{
-    font-size: 14px;
+    font-size: 12px;
 }
 .desktop {
     width: 95%;
@@ -478,5 +474,8 @@ main {
 }
 .espacio-mobile {
     margin-bottom: 5px;
+}
+.ft-size-text {
+    font-size: 12px;
 }
 }
