@@ -79,27 +79,28 @@
                                 <option value="" name="provincia">Santa Fe
                             </select>
                         </div>
+                    </div>
 
+                    <div class="entre-linea textarea ml-20">
+                        <label for="observa" class="ds-block fx-wrap">Observaciones:</label>
+                        <textarea class="sinborde fx-wrap" name="observa" id="observa" cols="40" rows="5"></textarea>
                     </div>
-                    <div class="entre-linea">
-                        <label for="observa" class="ds-block">Observaciones:</label>
-                        <textarea class="sinborde" name="observa" id="observa" cols="40" rows="5"></textarea>
-                    </div>
+
                     <!-- Botones tipo de envio -->
-                    <div class="boton-tablet ds-flex js-cont-b mt-15 mb-50">
-                        <div class="boton-border-check mr-10 p-10  ds-flex fx-wrap fx-align-center text-align"
-                            style="height:60px; width: 200px; background-color: white;">
+                    <div class="boton-tablet ds-flex js-cont-b mb-20">
+                        <div class="boton-border-check botones-envio mr-10 envio-gratis p-10 ds-flex fx-wrap fx-align-center text-align"
+                        style="height:60px; width: 200px; background-color: white;">
                             <input type="radio" id="free" name="opcion-envio" value="1" checked style="width:20%">
                             <div style="width: 80%;">
                                 <div>
                                     <label for="free">Envío gratis</label>
                                 </div>
                                 <div>
-                                    <p class="text-envio">Entre 2 - 5 días hábiles</p>
+                                    <p class="text-envio ">De 2 - 5 días hábiles</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="boton-border-check p-10 ds-flex fx-wrap fx-align-center text-align"
+                        <div class="boton-border-check envio-priori p-10 ds-flex botones-envio fx-wrap fx-align-center text-align"
                             style="height:60px; width: 200px; background-color: white;">
                             <input type="radio" id="prioridad" name="opcion-envio" value="2" style="width: 20%;">
                             <div style="width: 80%;">
@@ -107,10 +108,11 @@
                                     <label for="prioridad">Envío prioritario</label>
                                 </div>
                                 <div>
-                                    <p class="text-envio">24 horas desde checkout</p>
+                                    <p class="text-envio">24 hs. desde checkout</p>
                                 </div>
                             </div>
                         </div>
+                  
                     </div>
                 </form>
                 <div class="desktop fx-wrap fondo-carro">
@@ -127,7 +129,7 @@
                                 <!-- Inicio articulo -->
                                 <tr class="bk-tabla line-bottom">
                                     <td class="text-align">
-                                        <img class="height-width-img" src="/images/auriculares.jpg" alt="auriculares" />
+                                        <img class="height-width-img" src="/images/products/auriculares.jpg" alt="auriculares" />
                                     </td>
                                     <td>
                                         <p class="ft-size-text text-left pb-10 ft-weight articulo">Auriculares Xiaomi
@@ -142,7 +144,7 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="../images/aire.jpg" alt="" />
+                                    <img class="height-width-img" src="/images/products/aire.jpg" alt="" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -158,7 +160,7 @@
                             <!-- Inicio articulo -->
                             <tr class="bk-tabla line-bottom">
                                 <td class="text-align">
-                                    <img class="height-width-img" src="/images/plancha_atma.jpg" alt="" />
+                                    <img class="height-width-img" src="/images/products/plancha_atma.jpg" alt="" />
                                 </td>
                                 <td>
                                     <p class="ft-size-text text-left pb-10 ft-weight articulo">
@@ -173,8 +175,8 @@
                             </article><!-- Fin articulo -->
                         </table>
                         <!-- Inicio resumen -->
-                        <div class="bk-resume">
-                            <table class="resumen line-height ft-size-text ma-auto">
+                        <div class="bk-resume mt-15">
+                            <table class="resumen line-height ft-size-text ma-auto ">
                                 <h3 class="title text-align pl-10 pb-10 pt-10">RESUMEN:</h3>
                                 <div class="title ft-weight text-align pb-10">
                                     <label for="descuento">Ingrese código de descuento:</label>
@@ -184,30 +186,26 @@
                                 </div>
                                 <tr>
                                     <td class="">SUBTOTAL</td>
-                                    <td class="pr-10 text-right">$12345
+                                    <td class="text-right">$12345
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="">ENVIO</td>
-                                    <td class="pr-10 text-right">Gratis</td>
-                                </tr>
-                                <tr>
-                                    <td class=" line-total">IMPUESTOS</td>
-                                    <td class="pr-10 line-total text-right">
-                                        $1234
-                                    </td>
+                                    <td class="line-total">ENVIO</td>
+                                    <td class="line-total text-right">Gratis</td>
                                 </tr>
                                 <tr>
                                     <td class="ft-weight">TOTAL</td>
-                                    <td class="pr-10 ft-weight text text-right">
+                                    <td class="ft-weight text text-right">
                                         123422
                                     </td>
                                 </tr>
                             </table>
-                            <div class="text-align botones w-100 mb-20">
+
+                            <div class="text-align fx-dir-col ds-block botones mb-20">
                                 <a href="#"><button class="btn-acepta">Aceptar</button></a>
                                 <a href="#"><button class="btn-cancela">Cancelar</button></a>
                             </div>
+
                         </div>
                     </div>
                 </div>
