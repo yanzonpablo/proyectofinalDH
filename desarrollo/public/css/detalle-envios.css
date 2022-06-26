@@ -368,7 +368,7 @@ td {
   .articulo {
     text-align: center;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
   }
   .navegador {
     display: none;
@@ -381,11 +381,11 @@ td {
   }
   .precio {
     display: flex;
-    font-size: 14px;
+    font-size: 12px;
     width: 50%;
   }
   .ft-mobile {
-    font-size: 14px;
+    font-size: 12px;
   }
   .desktop {
     width: 95%;
@@ -433,7 +433,7 @@ td {
     height: 50%;
   }
   .textarea{
-    margin: auto;
+    width: 90%;
   }
   .boton-tablet {
     flex-direction: column;
