@@ -557,9 +557,8 @@ a {
     .offer-container {
       width: 25%;
     }
-    .offer-container .img-size {
-      min-height: 105px !important;
-      min-width: 72px !important;
+    .offer-container .img-size img {
+      object-fit: scale-down;
     }
   }
 }
