@@ -1,121 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <%- include('./partials/head') %>
-    <script
-      src="https://kit.fontawesome.com/609c07c1d3.js"
-      crossorigin="anonymous"
-    ></script>
+
+<head>
+  <%- include('./partials/head') %>
+    <script src="https://kit.fontawesome.com/609c07c1d3.js" crossorigin="anonymous"></script>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/compras.css" />
     <title>Carrito de compras</title>
-  </head>
+</head>
 
-  <body>
-    <header><%- include("./partials/header.ejs") %></header>
-    <main>
-      <!-- INICIA BARRA CARRITO -->
-      <div class="main">
-        <div class="ubica-barra">
-          <div class="navegador">
-            <div class=""><a href="/cart" class="mis-compras">Mis Compras</a></div>
-            <div class=""><a href="/envio" class="envios">Envíos</a></div>
-            <div class=""><a href="/pago" class="pagos">Pagos</a></div>
-          </div>
-        </div>
-        <!-- FINALIZA BARRA CARRITO -->
-        <h3 class="product-carrito mb-20 pt-20 pl-10">Productos seleccionados:</h3>
-        <div class="desktop fx-wrap ds-block ">
-          <table class="border-collapse pb-10 ds-block product-selec">
-            <tr class="bk-title ft-color-title ft-weight ft-size-title text-align ft-mobile">
-              <!-- INICIO TITULOS -->
-              <td class="imagen-column align-self">Imagen</td>
-              <td class="producto">Producto</td>
-              <td class="precio">Precio</td>
-              <td class="unidades">Unidades</td>
-              <td class="basurero"></td>
-            </tr>
-            <!-- finaliza titulos -->
-            <article>
-              <!-- Inicio articulo -->
-              <tr class="bk-tabla line-bottom">
-                <td class="text-align">
-                  <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
-                </td>
-                <td>
-                  <p class="ft-size-text text-center ft-weight articulo">
-                    <%= art.nombre %>
-                  </p>
-                </td>
-                <td>
-                  <p class="ft-size-text text-center precio">$<%= art.precio %>
-                  </p>
-                </td>
-                <td>
-                  <div class="ds-flex js-cont-center align-items">
-                    <a href="#" class="mas-menos"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
-                    <p class="ft-size-number pr-10 pl-10 ft-weight numero">1</p>
-                    <a href="#" class="mas-menos"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
-                  </div>
-                </td>
-                <td class="text-align basurero">
-                  <a href="" class="basurero"><i class="fas fa-trash-alt"></i></a>
-                </td>
-              </tr>
-            </article>
-          </table>
-            <!-- Fin articulo -->
+<body>
+  <header>
+    <%- include("./partials/header.ejs") %>
+  </header>
+  <main>
+    <!-- INICIA BARRA CARRITO -->
 
-          
-
-          <!-- Inicio resumen -->
-          <div class="bk-resume ">
-            <table class="resumen line-height ft-size-text ">
-              <h3 class="title text-align pl-10 pb-10 pt-10">RESUMEN:</h3>
-              <div class="title ft-weight text-align pb-10">
-                <label for="descuento">Ingrese código de descuento:</label>
-              </div>
-              <div class="cod-desc text-align pb-10">
-                <input type="text" class="desc" name="descuento" id="descuento" />
-              </div>
-              <tr>
-                <td class="">SUBTOTAL</td>
-                <td class="pr-10 text-right">$<%= art.precio %>
-                </td>
-              </tr>
-              <tr>
-                <td class="">ENVIO</td>
-                <td class="pr-10 text-right">Gratis</td>
-              </tr>
-              <tr>
-                <td class=" line-total">IMPUESTOS</td>
-                <td class="pr-10 line-total text-right">
-                  $<%= art.precio * (21 / 100)%>
-                </td>
-              </tr>
-              <tr>
-                <td class="ft-weight">TOTAL</td>
-                <td class="pr-10 ft-weight text text-right">
-                  $<%= art.precio + art.precio * (21 / 100)%>
-                </td>
-              </tr>
-            </table>
-            <div class="text-align botones w-100 mb-50">
-              <a href="#"><button class="btn-acepta">Aceptar</button></a>
-              <a href="#"><button class="btn-cancela">Cancelar</button></a>
-            </div>
-          </div>
-        </div>
+    <div class="ubica-barra">
+      <div class="navegador">
+        <div class=""><a href="/cart" class="mis-compras">Mis Compras</a></div>
+        <div class=""><a href="/envio" class="envios">Envíos</a></div>
+        <div class=""><a href="/pago" class="pagos">Pagos</a></div>
       </div>
-    </main>
-    <footer><%- include("./partials/footer") %></footer>
-  </body>
+    </div>
+    <!-- FINALIZA BARRA CARRITO -->
+    <h3 class="mb-20 pt-20 ml-20">Productos seleccionados:</h3>
+    <!-- Inicio contenedor -->
+    <div class="contenedor ">
+      <div class="contenedor1">
+        <!-- Inicio articulo -->
+        <article>
+          <table class="table-articulo pb-10 w-80 border-collapse text-center">
+            <tr class="bk-tabla line-bottom ">
+              <td class="td-imagen">
+                <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
+              </td>
+              <td class="td-producto">
+                <p class=" text-center ft-weight articulo">
+                  <%= art.nombre %>
+                </p>
+              </td>
+              <td class="td-precio">
+                <p class=" text-center precio">$<%= art.precio %>
+                </p>
+              </td>
+              <td class="td-cantidad">
+                <div class="ds-flex js-cont-center align-items">
+                  <a href="#"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
+                  <p class="ft-size-number pr-10 pl-10 ft-weight numero">1</p>
+                  <a href="#"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
+                </div>
+              </td>
+              <td class="td-basura text-align">
+                <a href="" class="basurero"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+          </table>
+        </article>
+        <article>
+          <table class="table-articulo pb-10 w-80 border-collapse text-center">
+            <tr class="bk-tabla line-bottom">
+              <td class="text-align td-imagen">
+                <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
+              </td>
+              <td class="td-producto">
+                <p class=" text-center ft-weight articulo">
+                  <%= art.nombre %>
+                </p>
+              </td>
+              <td class="td-precio">
+                <p class=" text-center precio">$<%= art.precio %>
+                </p>
+              </td>
+              <td class="td-cantidad">
+                <div class="ds-flex js-cont-center align-items">
+                  <a href="#"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
+                  <p class="ft-size-number pr-10 pl-10 ft-weight numero">1</p>
+                  <a href="#"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
+                </div>
+              </td>
+              <td class="td-basura text-align">
+                <a href="" class=" basurero"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+          </table>
+        </article>
+      </div>
+      <!-- Inicio resumen -->
+      <div class="contenedor2 text-center">
+        <table class="resumen line-height ft-size-text">
+          <h4 class="text-align pb-10">RESUMEN:</h3>
+            <div class="ft-weight text-center text-align pb-10">
+              <label for="descuento">Ingrese código de descuento:</label>
+            </div>
+            <div class="pb-10 text-center">
+              <input type="text" class="desc" name="descuento" id="descuento" />
+            </div>
+            <div>
+              <tr>
+                <td class="w-100 text-left">SUBTOTAL</td>
+                <td class="text-right">$<%= art.precio %>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-left line-total">ENVIO</td>
+                <td class="text-right line-total">Gratis</td>
+              </tr>
+              <tr>
+                <td class="ft-weight text-left">TOTAL</td>
+                <td class="ft-weight text-right">
+                  $<%= art.precio %>
+                </td>
+              </tr>
+            </div>
+        </table>
+        <div class="text-align mb-20">
+          <a href="/envio"><button class="btn-acepta">Aceptar</button></a>
+          <a href="#"><button class="btn-cancela mb-10">Cancelar</button></a>
+        </div>
+        <!-- Fin resumen -->
+      </div>
+
+  </main>
+  <footer>
+    <%- include("./partials/footer") %>
+  </footer>
+</body>
+
 </html>

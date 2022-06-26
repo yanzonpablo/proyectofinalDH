@@ -185,6 +185,9 @@ background: linear-gradient(175deg, rgba(193,193,193,1) 12%, rgba(126,126,126,0.
 .mt-40 {
     margin-top: 40px;
 }
+.w-50 {
+    width: 50%;
+}
 .w-100 {
     width: 100%;
 }
@@ -261,12 +264,14 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 0px;
 }
 .titular-tarj {
-    width: 180px;    
+    width: 45%;    
 }
 .form-tarjeta {
     border: 1px gray solid;
     border-radius: 5px;
-        box-shadow: 2px 2px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px rgba(0,0,0,0.5);
+    margin: auto;
+    width: 80%;
 }
 .envios {
     color: black;
@@ -295,8 +300,6 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 2px 2px rgba(0,0,0,0.5);
     color: black;
     align-items: center;
-
-
 }
 .boton-paypal:hover {
     border-color: #000000;
@@ -348,7 +351,7 @@ td {
   margin-top: 20px;
 }
 .btn-acepta:hover {
-    background-color: #000000;
+    background-color: #d93175;
 }
 .btn-cancela {
   background-color: rgb(9, 9, 200);
@@ -361,14 +364,24 @@ td {
   cursor: pointer;
   margin-top: 20px;
 }
-.btn-acepta:hover {
-    background-color: #d93175;
-}
 .btn-cancela:hover {
     background-color: #d93175;
 }
 
-@media(max-width: 730px) {
+@media(max-width: 680px) {
+main {
+    margin: 0px;
+}
+.form-tarjeta {
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0,0,0,0.5);
+    width: 400px;
+    margin: auto;
+}
+.btn-pago {
+    width: 55%;
+}
 .mobile {
     width: 100%;
     text-align: center;
@@ -456,8 +469,24 @@ main {
     display: grid;
     grid-template-columns: 100%;
     }
+.bk-resume {
+    margin-top: 20px;
+}
 }
 @media(max-width: 480px) {
+main {
+    margin: 0px;
+}
+.form-tarjeta {
+    border: 1px gray solid;
+    border-radius: 5px;
+    width: 95%;
+    margin: auto;
+}
+.btn-pago {
+    width: 90%;
+    margin-bottom: 20px;
+}
 .mobile {
     text-align: center;
     margin-left: 0px;
@@ -477,5 +506,8 @@ main {
 }
 .ft-size-text {
     font-size: 12px;
+}
+.bk-resume {
+    margin-top: 20px;
 }
 }
