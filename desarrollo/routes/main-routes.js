@@ -8,11 +8,11 @@ const usersRouter = require("../controllers/users-controller");
 
 router.get("/", mainController.home);
 router.get("/login", mainController.login);
-// router.get("/register", mainController.register);
+router.get("/register", mainController.register);
 router.get("/cart", mainController.cart);
 router.get("/envio", mainController.envio);
 router.get("/pago", mainController.pago);
 
 router.use("/products", productsRouter);
-router.use("/register", usersRouter);
+// router.use("/register", usersRouter);
 module.exports = router;
