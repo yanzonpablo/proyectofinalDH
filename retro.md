@@ -29,3 +29,6 @@ Hubo poca participación de los integrantes del equipo. Los que participaron, tu
 Además se tuvo que trabajar en tareas pendientes, no terminadas, correspondientes al sprint anterior (reflejadas en el tablero trello), ya que estas eran necesarias para la implementación de las nuevas prácticas en este Sprint. 
 
 También se realizaron algunas correcciones correspondientes a observaciones realizadas por los profesores en el "Feedback Proyecto Integrador" según Sprint 3.
+
+
+**Sprint 5.**

@@ -23,17 +23,37 @@ module.exports = {
   create: (req, res) => {
     res.render("cargarProducto", { categories: allCategories });
   },
+  // ES EL ORIGINAL
+  // store: (req, res) => {
+  //   const newProduct = req.body;
+  //   // Crear id en base al ultimo
+  //   if (allProducts.length) {
+  //     newProduct.id = allProducts[allProducts.length - 1].id + 1;
+  //   } else {
+  //     newProduct.id = 1;
+  //   }
+  //   allProducts.push(newProduct);
+  //   productsFS.saveAll(allProducts);
+  //   res.redirect("/products");
+  // },
+
+  // version multer, ya funciona, carga todos los datos en json, no se visualiza imagen en products
   store: (req, res) => {
     const newProduct = req.body;
     // Crear id en base al ultimo
-    if (allProducts.length) {
-      newProduct.id = allProducts[allProducts.length - 1].id + 1;
+    if (req.file) {
+      newProduct.image = req.file.filename;
+      if (allProducts.length) {
+        newProduct.id = allProducts[allProducts.length - 1].id + 1;
+      } else {
+        newProduct.id = 1;
+      }
+      allProducts.push(newProduct);
+      productsFS.saveAll(allProducts);
+      res.redirect("/products");
     } else {
-      newProduct.id = 1;
-    }
-    allProducts.push(newProduct);
-    productsFS.saveAll(allProducts);
-    res.redirect("/products");
+          res.render("cargarProducto", { categories: allCategories });
+    };
   },
   edit: (req, res) => {
     let id = req.params.id;
