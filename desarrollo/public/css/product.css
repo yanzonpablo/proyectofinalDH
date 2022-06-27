@@ -56,14 +56,23 @@
     height: auto;
 }
 
-.box_imagen,
-.box_details {
+.box_imagen {
     width: 100%;
     height: auto;
+    position: relative;
 }
 
-.box_imagen {
-    position: relative;
+.box_details,
+.box_details_02 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: White;
 }
 
 .img_product {
@@ -92,16 +101,6 @@
     color: White;
 }
 
-.box_details {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: left;
-    align-items: center;
-    padding: 10px;
-    background-color: White;
-}
-
 .box_individual,
 .box_comments {
     width: 100%;
@@ -112,6 +111,19 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
+    margin: 5px; /* =============================================================================== */
+}
+
+.box_cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
 }
 
 .box_star {
@@ -143,19 +155,17 @@
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 400;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: auto; /* =============================================================================== */
     color: Black;
-    margin: 0;
 }
 
 .h2_title {
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 400;
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -166,6 +176,13 @@
 .fa-star-half {
     color: rgb(200, 170, 80);
     font-size: 20px;
+}
+
+.cards {
+    display: block;
+    width: 10%;
+    max-width: 50px;
+    margin: 0px 10px;
 }
 
 .fa-angle-double-left,
@@ -215,6 +232,7 @@
     font-weight: 400;
     margin: 5px 0px;
     text-align: left;
+    border-bottom: 1px solid Grey;
 }
 
 .p_user {
@@ -225,7 +243,7 @@
 
 .p_others {
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 400;
     margin: 10px;
 }
 
@@ -344,6 +362,11 @@
     .none_01 {
         display: inline-block;
     }
+
+    .box_imagen,
+    .box_details {
+        width: 50%;
+    }
 }
 
 @media all and (min-width: 1201px) {
@@ -375,5 +398,14 @@
     .none_01,
     .none_02 {
         display: inline-block;
+    }
+
+    .box_imagen {
+        width: 70%;
+    }
+
+    .box_details {
+        width: 30%;
+        justify-content: right;
     }
 }
