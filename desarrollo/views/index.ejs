@@ -42,11 +42,11 @@
       <div class="fx fx-wrap fx-justify-a m-10">
         <% categorias.forEach(categoria=> { %>
           <% if (categoria.estado==true ) { %>
-            <div>
-              <div class="w-50 tablet-w-33 category fx fx-wrap fx-align-center desktop-w-16"
-                style="height: 150px; width: 150px; background-image: url('<%=categoria.imagen%>')">
+            <div class="w-50 tablet-w-33 category-w desktop-w-16 fx fx-wrap fx-align-center fx-justify-a mb-5">
+              <div class="category fx fx-wrap fx-align-center desktop-w-16"
+                style="height: 100px; width: 100px; background-image: url('<%=categoria.imagen%>')">
               </div>
-              <p class="caterogy-text w-100 ">
+              <p class="caterogy-text w-100">
                 <%=categoria.nombre%>
               </p>
             </div>
