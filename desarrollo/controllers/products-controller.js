@@ -37,6 +37,7 @@ module.exports = {
   //   res.redirect("/products");
   // },
 
+  // version multer, ya funciona, carga todos los datos en json, no se visualiza imagen en products
   store: (req, res) => {
     const newProduct = req.body;
     // Crear id en base al ultimo
@@ -52,8 +53,7 @@ module.exports = {
       res.redirect("/products");
     } else {
           res.render("cargarProducto", { categories: allCategories });
-    }
-
+    };
   },
   edit: (req, res) => {
     let id = req.params.id;
