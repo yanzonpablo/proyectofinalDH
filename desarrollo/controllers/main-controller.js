@@ -3,8 +3,10 @@ const express = require("express");
 const db = require("../models/db");
 const productsFilePath = path.join(__dirname, "../data/products.json"); //Path productos
 const categoriesFilePath = path.join(__dirname, "../data/category.json"); //Path categorias
+const provinciasFilePath = path.join(__dirname, "../data/provincias.json"); // Path provincias para formularios
 const allProducts = db.readJsonDB(productsFilePath);
 const allCategories = db.readJsonDB(categoriesFilePath);
+const allProvincias = db.readJsonDB(provinciasFilePath);
 
 module.exports = {
   home: (req, res) => {
@@ -17,7 +19,9 @@ module.exports = {
     res.render("login");
   },
   register: (req, res) => {
-    res.render("register");
+    res.render("register", {
+    provincias: allProvincias,
+    });
   },
   cart: (req, res) => {
     const busqueda = allProducts.find((art) => {

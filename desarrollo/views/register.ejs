@@ -78,9 +78,12 @@
       </div>
       <div>
         <label for="provincia" class=""></label>
+        <% provincias.forEach( provincia => { %>
+
         <select name="provincia" class="cajas" id="provincia">
-          <option value="bs-as">Buenos aires</option>
-          <option value="sta_fe">Santa Fe</option>
+          <option value="<% provincia.nombre %>"><%= provincia.nombre %></option>
+          <% }) %>
+
         </select>
       </div>
 

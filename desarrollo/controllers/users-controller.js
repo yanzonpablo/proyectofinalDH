@@ -1,8 +1,16 @@
+const path = require("path");
+const express = require("express");
+const db = require("../models/db");
+const provinciasFilePath = path.join(__dirname, "../data/provincias.json"); // Path provincias para formularios
+const allProvincias = db.readJsonDB(provinciasFilePath);
+
 module.exports = {
     
-index: (req, res) => { // Muestra todos los usuarios
-
-},
+index: (req, res) => {
+    res.render("register", {
+    provincias: allProvincias
+    });
+  },
 details: (req, res) => { // muestra datos usuario registrados
 
 },
