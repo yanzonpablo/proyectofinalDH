@@ -23,43 +23,43 @@
                 </div>
             </div>
             <!-- FINALIZA BARRA CARRITO -->
-            <h2 class="product-carrito mb-20 pt-20 ml-20">Detalle de pagos:</h2>
+            <h3 class="product-carrito mb-20 pt-20 ml-20">Detalle de pagos:</h3>
 
             <div class="container">
 
                 <form class="mobile ml-20 ">
-                    <div class="bk-tarjeta">
-                        <div class="form-tarjeta">
+                    <div>
+                        <div class="form-tarjeta bk-tarjeta">
                             <p class="ml-20 pt-10 mb-10">Tarjeta de crédito:</p>
-                            <div class="entre-linea ">
-                                <div class="ds-flex fx-wrap js-cont-a">
+                            <div class="entre-linea fx-wrap">
+                                <div class="ds-flex js-cont-a">
                                     <input type="nombre" name="nombre"
-                                        class="titular media-mobile espacio-mobile p-lateral border-radius height-25 titular-tarj sinborde"
+                                        class="titular media-mobile espacio-mobile p-lateral border-radius height-25 titular-tarj sinborde mb-10"
                                         placeholder="Nombre">
                                     <input type="Apellido" name="apellido"
-                                        class="titular titular-tarj media-mobile p-lateral  border-radius height-25 sinborde mb-20"
+                                        class="titular titular-tarj media-mobile p-lateral  border-radius height-25 sinborde mb-10"
                                         placeholder="Apellido">
                                 </div>
                             </div>
 
                             <div class="entre-linea ds-flex fx-wrap js-cont-a">
                                 <input type="number" name="number1"
-                                    class=" text-align number-credit media-mobile espacio-mobile border-radius height-25 sinborde"
+                                    class="text-align number-credit media-mobile espacio-mobile border-radius height-25 sinborde mb-10"
                                     placeholder="0000" maxlength="4"
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
 
                                 <input type="number" name="number2"
-                                    class=" espacio-mobile text-align number-credit media-mobile border-radius height-25 sinborde"
+                                    class="text-align number-credit media-mobile espacio-mobile border-radius height-25 sinborde"
                                     placeholder="0000" maxlength="4"
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
 
                                 <input type="number" name="number3"
-                                    class=" text-align number-credit media-mobile border-radius height-25 sinborde"
+                                    class="text-align number-credit media-mobile espacio-mobile border-radius height-25 sinborde"
                                     placeholder="0000" maxlength="4"
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
 
                                 <input type="number" name="number4"
-                                    class=" mb-10 text-align number-credit media-mobile border-radius height-25 sinborde"
+                                    class="text-align number-credit media-mobile espacio-mobile border-radius height-25 sinborde"
                                     placeholder="0000" maxlength="4"
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
                             </div>
@@ -80,17 +80,18 @@
                     </div>
 
 
-<div class="botones-pagos ds-flex mb-50 mt-15">
+<div class="btn-pago ds-flex mt-15 text-center w-80 js-cont-b">
                     
-                        <label for="paypal" class="boton-paypal p-5 ds-flex">
+                        <label for="paypal" class="boton-paypal ds-flex">
                             <input type="radio" name="paypal" id="paypal" value="paypal" class="img-paypal">
-                            <img src="/images/paypal.png" alt="paypal" width="20%" class="img-paypal">
+                            <img src="/images/paypal.png" alt="paypal" width="50%" class="img-paypal ">
                         </label>
                  
-                        <label for="mercadopago" class="boton-paypal p-5  ds-flex">
+                        <label for="mercadopago" class="boton-paypal ds-flex">
                             <input type="radio" name="mercadopago" id="mercadopago" value="mercadopago" class="img-paypal">
                             <img src="/images/cropped.png" alt="mercadopago" width="60%" class="img-paypal">
                         </label>
+                        
                     
 </div>
 
@@ -172,14 +173,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="">ENVIO</td>
-                                    <td class="pr-10 text-right">Gratis</td>
-                                </tr>
-                                <tr>
-                                    <td class=" line-total">IMPUESTOS</td>
-                                    <td class="pr-10 line-total text-right">
-                                        $26820
-                                    </td>
+                                    <td class="line-total">ENVIO</td>
+                                    <td class="pr-10 text-right line-total">Gratis</td>
                                 </tr>
                                 <tr>
                                     <td class="ft-weight">TOTAL</td>
@@ -188,9 +183,9 @@
                                     </td>
                                 </tr>
                             </table>
-                            <div class="text-align botones w-100 mb-20">
+                            <div class="botones text-align  w-100 mb-20">
                                 <a href="#"><button class="btn-acepta">Aceptar</button></a>
-                                <a href="#"><button class="btn-cancela">Cancelar</button></a>
+                                <a href="#"><button class="btn-cancela mb-20">Cancelar</button></a>
                             </div>
                         </div>
                     </div>
