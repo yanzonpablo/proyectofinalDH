@@ -19,7 +19,7 @@ const upload = multer({ storage: storage });
 router.get("/", productsController.index); //Listado de productos
 //CREATE
 router.get("/create/", productsController.create); //Vista formulario de creacion
-router.post("/", upload.single("image_prod"), productsController.store); //POST de creacion de producto
+router.post("/", upload.single("imagen_producto"), productsController.store); //POST de creacion de producto
 //EDIT
 router.get("/edit/:id", productsController.edit); //Vista de edicion de producto
 router.put("/:id", productsController.update); //PUT de edicion de producto

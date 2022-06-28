@@ -246,7 +246,17 @@
         "seccion": "destacado",
         "descuento": "50",
         "descripcion": "Cafetera chota",
-        "image": "product-1656301674208.jpg",
+        "imagen": "product-1656301674208.jpg",
         "id": 25
+    },
+    {
+        "nombre": "sarten",
+        "precio": "2",
+        "categoria": "Electrodomésticos",
+        "seccion": "destacado",
+        "descuento": "2",
+        "descripcion": "",
+        "imagen": "product-1656384214224.jpg",
+        "id": 26
     }
 ]

@@ -42,7 +42,7 @@ module.exports = {
     const newProduct = req.body;
     // Crear id en base al ultimo
     if (req.file) {
-      newProduct.image = req.file.filename;
+      newProduct.imagen = req.file.filename;
       if (allProducts.length) {
         newProduct.id = allProducts[allProducts.length - 1].id + 1;
       } else {
