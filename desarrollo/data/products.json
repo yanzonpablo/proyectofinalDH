@@ -258,5 +258,15 @@
         "descripcion": "",
         "imagen": "product-1656384214224.jpg",
         "id": 26
+    },
+    {
+        "nombre": "Zapatos",
+        "precio": "3104",
+        "categoria": "Belleza y cuidado personal",
+        "seccion": "destacado",
+        "descuento": "10",
+        "descripcion": "Hermosos PEPESSSS!!!!",
+        "imagen": "product-1656451956689.jpg",
+        "id": 27
     }
 ]
