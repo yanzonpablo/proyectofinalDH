@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Colours */
+.bg-blanco {
+  background-color: white;
+}
+.bg-gris-oscuro {
+  background-color: rgba(238, 238, 238, 1);
+}
+.bg-gris-claro {
+  background-color: #eeeeee;
+}
+.color-rojo-logo {
+  background-color: #f43834;
+}
+.color-celeste-logo {
+  background-color: #5cbeff;
+}
+.bg-amarillo {
+  background-color: #eac926;
+}
+/* Font */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+.font-s6 {
+  font-size: 6px;
+}
+.font-s8 {
+  font-size: 8px;
+}
+.font-s10 {
+  font-size: 10px;
+}
+.font-s12 {
+  font-size: 12px;
+}
+.font-s14 {
+  font-size: 14px;
+}
+/* Text */
+.text-center {
+  text-align: center;
+}
+/* Width */
+.w-10 {
+  width: 10%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-35 {
+  width: 35%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-100 {
+  width: 100%;
+}
+/* Border */
+.b-1 {
+  border: solid 1px rgb(212, 212, 212);
+}
+.bt-2 {
+  border-top: solid 2px rgba(234, 234, 234, 0.703);
+}
+.bl-2 {
+  border-left: solid 2px rgba(234, 234, 234, 0.703);
+}
+.br-5 {
+  border-radius: 5px;
+}
+/* PADDING */
+.p-8 {
+  padding: 8px;
+}
+.p-12 {
+  padding: 12px;
+}
+.p-30 {
+  padding-top: 30px;
+}
+.pb-30 {
+  padding-bottom: 30px;
+}
+/* MARGIN */
+.m-center {
+  margin: auto;
+}
+.mb-0 {
+  margin-bottom: 0px;
+}
+.mb-2 {
+  margin-bottom: 2px;
+}
+.mb-3 {
+  margin-bottom: 3px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mt-0 {
+  margin-top: 0px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-22 {
+  margin-left: 22px;
+}
+.ms-5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.ms-10 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.m-5 {
+  margin: 5px;
+}
+.m-10 {
+  margin: 10px;
+}
+/* FLEX */
+.fx {
+  display: flex;
+}
+.fx-wrap {
+  flex-wrap: wrap;
+}
+.fx-align-center {
+  align-items: center;
+}
+.fx-justify-a {
+  justify-content: space-around;
+}
+.fx-justify-b {
+  justify-content: space-between;
+}
+.fx-grow {
+  flex-grow: 90%;
+}
+/* HEAD STYLES */
+.heading-style {
+  background-color: #d93175;
+  color: white;
+  border-radius: 2px;
+  font-size: 18px;
+}
+/* STYLES ARTICLES */
+.product {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.product-price {
+  font-weight: 600;
+}
+.product-tittle {
+  width: 100%;
+  color: grey;
+  font-size: 14px;
+}
+/* Anchor */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* Trunc text */
+.trunc-text-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.art-size img {
+  min-width: 145px;
+  min-height: 145px;
+  max-width: 175px;
+  max-height: 175px;
+  object-fit: contain;
+}
+/* MEDIA QUERY TABLETS */
+@media (min-width: 480px) {
+  .art-size img {
+    min-width: 115px;
+    min-height: 115px;
+    max-width: 217px;
+    max-height: 217px;
+    object-fit: contain;
+  }
+  /* Cambios en font-size */
+  .heading-style {
+    font-size: 24px;
+  }
+  .product-price {
+    font-size: 19px;
+  }
+  .product-tittle {
+    font-size: 18px;
+  }
+  .price-offers {
+    font-size: 19px;
+  }
+  /* Cambios en contenedor principal */
+  .div-margin {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  /* Utilidades */
+  .tablet-w-33 {
+    width: 33%;
+  }
+  .tablet-w-40 {
+    width: 40%;
+  }
+  .tablet-w-50 {
+    width: 50%;
+  }
+  .tablet-w-70 {
+    width: 70%;
+  }
+  .tablet-w-100 {
+    width: 100%;
+  }
+}
+/* QUERY DESKTOP */
+@media (min-width: 900px) {
+  .art-size img {
+    max-width: 188px;
+    max-height: 188px;
+    object-fit: cover;
+  }
+  /* Cambios en font-size */
+  .heading-style {
+    font-size: 26px;
+  }
+  /* Cambios en contenedor principal */
+  .div-margin {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+  /* Box-Shadow producto + animaciones */
+  .product {
+    box-shadow: none;
+  }
+  .product:hover {
+    transition: box-shadow 1000ms;
+    box-shadow: 0px 0px 10px #3c3b3b;
+  }
+  /* Utilidades */
+  .desktop-w-20 {
+    width: 20%;
+  }
+  .desktop-w-25 {
+    width: 25%;
+  }
+  .desktop-w-30 {
+    width: 30%;
+  }
+  .desktop-w-50 {
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    .desktop-w-16 {
+      width: 16%;
+    }
+  }
+}
