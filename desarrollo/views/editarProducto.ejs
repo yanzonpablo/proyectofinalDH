@@ -34,7 +34,7 @@
             <div class="col-12 col-md-6">
               <label for="precio" class="form-label">Precio del producto:</label>
               <input class="cajas" id="precio_producto" type="text" name="precio" value="<%=productToEdit.precio%>"
-              placeholder="Precio de producto" />
+                placeholder="Precio de producto" />
             </div>
             <div class="col-12 col-md-6">
               <label for="categoria" class="form-label">Categoría:</label>
@@ -44,28 +44,28 @@
                     <%=categoria.nombre%>
                   </option>
                   <% }) %>
-                </select>
-              </div>
-              <div class="col-12 col-md-6">
-                <label for="seccion" class="form-label">Sección:</label>
-                <select name="seccion" id="seccion" class="cajas">
-                  <option value="oferta" <%=productToEdit.seccion=="oferta" ? 'selected' : '' %>>En oferta</option>
-                  <option value="destacado" <%=productToEdit.seccion=="destacado" ? 'selected' : '' %>>Destacados</option>
-                </select>
-              </div>
-              
-              <div class="col-12 col-md-6">
-                <label for="descuento" class="form-label">Descuento:</label>
-                <input class="cajas" type="text" id="descuento_producto" name="descuento"
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="seccion" class="form-label">Sección:</label>
+              <select name="seccion" id="seccion" class="cajas">
+                <option value="oferta" <%=productToEdit.seccion=="oferta" ? 'selected' : '' %>>En oferta</option>
+                <option value="destacado" <%=productToEdit.seccion=="destacado" ? 'selected' : '' %>>Destacados</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="descuento" class="form-label">Descuento:</label>
+              <input class="cajas" type="text" id="descuento_producto" name="descuento"
                 value="<%=productToEdit.descuento%>" placeholder="% de descuento para aplicar al producto" required />
-              </div>
-              <div class="col-12 col-md-6">
-                <label for="descripcion" class="form-label">Descripción:</label>
-                <input class="cajas" type="text" id="descripcion_producto" name="descripcion"
-                  value="<%=productToEdit.descripcion%>" placeholder="Descripcion del producto" maxlength="100" />
-              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="descripcion" class="form-label">Descripción:</label>
+              <input class="cajas" type="text" id="descripcion_producto" name="descripcion"
+                value="<%=productToEdit.descripcion%>" placeholder="Descripcion del producto" maxlength="100" />
+            </div>
             <div class="col-12" style="text-align: center">
-              <img src="/images/products/<%=productToEdit.imagen%> " alt="" style="width: 20%"  />
+              <img src="/images/products/<%=productToEdit.imagen%>" alt="" style="width: 20%" />
               <label for="imagen" class=""></label>
               <input class="cajas" type="file" id="imagen_producto" name="imagen" accept="image/*" />
             </div>
@@ -74,9 +74,7 @@
             <input type="submit" class="btn" value="Editar" />
           </div>
       </div>
-
-
-
+      </form>
       <!-- ELIMINAR -->
       <div class="col-12">
         <form class="form-delete" action="/products/<%=productToEdit.id%>?_method=DELETE" method="POST">
@@ -84,8 +82,6 @@
         </form>
       </div>
       <!-- FIN ELIMINAR -->
-
-      </form>
     </div>
 
   </main>
