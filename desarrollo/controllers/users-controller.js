@@ -4,6 +4,8 @@ const db = require("../models/db");
 
 const provinciasFilePath = path.join(__dirname, "../data/provincias.json"); // Path provincias para formularios
 const allProvincias = db.readJsonDB(provinciasFilePath); // Metodo para leer JSON
+const usuariosFilePath = path.join(__dirname, "../data/users.json"); // Path provincias para formularios
+const allUsers = db.readJsonDB(usuariosFilePath);
 
 module.exports = {
   login: (req, res) => {
@@ -11,13 +13,16 @@ module.exports = {
     res.render("login");
   },
   ingresar: (req, res) => {
-    res.render("index")
+    res.render("index");
   },
   profile: (req, res) => {
     // muestra datos al usuario de su perfil
   },
   list: (req, res) => {
     // Muestra lista de usuarios registrados
+    res.render("users-list", {
+      usuarios: allUsers,
+    });
   },
   details: (req, res) => {
     // Muestra datos usuario registrado

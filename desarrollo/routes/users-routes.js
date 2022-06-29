@@ -4,8 +4,8 @@ const router = express.Router();
 const usersController = require("../controllers/users-controller");
 
 // Login
-router.get("/login", usersController.login) // Vista formulario Login
-router.post("/login", usersController.ingresar) // POST ingreso a sesion usuario
+router.get("/login", usersController.login); // Vista formulario Login
+router.post("/login", usersController.ingresar); // POST ingreso a sesion usuario
 
 //Crear usuario
 router.get("/register", usersController.register); // Vista formulario de registro
@@ -26,6 +26,5 @@ router.get("/profile/:userid", usersController.profile);
 
 //Elimina usuario
 router.delete("/:id", usersController.destroy); // Elimina usuario
-
 
 module.exports = router;
