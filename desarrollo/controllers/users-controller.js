@@ -10,6 +10,9 @@ module.exports = {
     // formulario login
     res.render("login");
   },
+  ingresar: (req, res) => {
+    res.render("index")
+  },
   profile: (req, res) => {
     // muestra datos al usuario de su perfil
   },

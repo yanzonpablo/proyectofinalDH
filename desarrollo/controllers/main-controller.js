@@ -16,14 +16,6 @@ module.exports = {
       categorias: allCategories,
     });
   },
-  // login: (req, res) => {
-  //   res.render("login");
-  // },
-  // register: (req, res) => {
-  //   res.render("register", {
-  //   provincias: allProvincias,
-  //   });
-  // },
   cart: (req, res) => {
     const busqueda = allProducts.find((art) => {
       return art.id == 14;
