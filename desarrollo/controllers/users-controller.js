@@ -1,34 +1,40 @@
 const path = require("path");
 const express = require("express");
 const db = require("../models/db");
+
 const provinciasFilePath = path.join(__dirname, "../data/provincias.json"); // Path provincias para formularios
-const allProvincias = db.readJsonDB(provinciasFilePath);
+const allProvincias = db.readJsonDB(provinciasFilePath); // Metodo para leer JSON
 
 module.exports = {
-  list: (req, res) => {
-    // mustra lista de usuarios registrados
+  login: (req, res) => {
+    // formulario login
+    res.render("login");
   },
-  index: (req, res) => {
+  profile: (req, res) => {
+    // muestra datos al usuario de su perfil
+  },
+  list: (req, res) => {
+    // Muestra lista de usuarios registrados
+  },
+  details: (req, res) => {
+    // Muestra datos usuario registrado
+  },
+  register: (req, res) => {
+    // Formulario registro de usuario
     res.render("register", {
       provincias: allProvincias,
     });
   },
-  details: (req, res) => {
-    // muestra datos usuario registrados
-  },
-  create: (req, res) => {
-    // direcciona form crear usuarios
-  },
   store: (req, res) => {
-    //guarda datos del form usuarios
+    // Guarda datos del form crear usuario
   },
   edit: (req, res) => {
-    // edita datos de usuarios
+    // Edita datos de usuario
   },
   update: (req, res) => {
-    // actualiza datos de usuarios
+    // Actualiza datos de usuario
   },
   destroy: (req, res) => {
-    // borra usuarios
+    // Borra usuario
   },
 };

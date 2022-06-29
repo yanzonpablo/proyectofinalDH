@@ -3,22 +3,25 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/users-controller");
 
-//LIST
-router.get("/", usersController.list);
+//Lista de usuarios
+router.get("/list", usersController.list);
 
-//DETAILS
-router.get("/:id/", usersController.details); //Vista detalle de usuarios
+//Detalle de usuario
+router.get("/:id/", usersController.details); //Vista detalle de usuario
 
-//CREATE
-router.get("/create/", usersController.index); // Vista formulario de creacionde usuarios
-router.post("/", usersController.store); // POST de creacion de usuario
+//Crear usuario
+router.get("/", usersController.register); // Vista formulario de registro
+router.post("/:id", usersController.store); // POST de creacion de usuario
 
-//EDIT
-router.get("/edit/:id", usersController.edit); // Vista de edicion de usuarios
-router.put("/:id", usersController.update); // PUT de edicion de usuarios
+//Edicion de usuario
+router.get("/edit/:id", usersController.edit); // Vista de edicion de usuario
+router.put("/:id", usersController.update); // PUT de edicion de usuario
 
-//DELETE
-router.delete("/:id", usersController.destroy); // elimina usuarios
+//Muestra al usuarios datos de su perfil
+router.get("/profile/:userid", usersController.profile);
+
+//Elimina usuario
+router.delete("/:id", usersController.destroy); // Elimina usuario
 
 
 module.exports = router;
