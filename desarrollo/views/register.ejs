@@ -4,6 +4,7 @@
 <head>
   <%- include('./partials/head') %>
     <title>Registrate</title>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
     <link href="/css/styles-reg-log.css" rel="stylesheet" />
 </head>
 
@@ -13,12 +14,62 @@
     <%- include('./partials/header-form') %>
   </header>
   <main>
-    <form class="form" action="/user/create" method="POST">
-      <h1 class="titulo">
-        Completá el formulario para formar parte de nuestra comunidad
+    <form class="container" action="/user/create" method="POST">
+      <h1 class="form-label">
+        Completá el formulario para formar parte de nuestra comunidad:
       </h1>
+      <div class="row product-detail">
+        <div class="col-12 col-md-6">
+          <label for="nombre" class="form-label">Nombre y Apellido:</label>
+          <input type="text" id="nombre" name="nombre" class="cajas" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" name="email" class="cajas" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="domicilio" class="form-label">Domicilio:</label>
+          <input class="cajas" type="text" id="domicilio" name="domicilio" required maxlength="30" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="ciudad" class="form-label">Ciudad:</label>
+          <select name="ciudad" class="cajas" id="ciudad">
+            <option value="CABA">C.A.B.A.</option>
+            <option value="GBA">G.B.A.</option>
+            <option value="Rosario">Rosario</option>
+          </select>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Imagen de perfil:</label>
+            <input type="file" name="imagen" class="cajas">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="password" class="form-label">Contraseña:</label>
+          <input type="password" id="password" name="password" class="cajas" required maxlength="30"/>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="rePassword" class="form-label">Confirmar Contraseña:</label>
+          <input type="password" id="rePassword" name="rePassword" class="cajas" required maxlength="30"/>
+        </div>
+        <div class="col-12 col-md-6 termino1">
+          <input type="checkbox" /> Quiero recibir vía e-mail ofertas y
+          novedades
+        </div>
+        <div class="col-12 col-md-6 termino1">
+          <input type="checkbox" /> Al registrarme acepto los<a class="termino2" href="">Terminos y Condiciones</a>
+        </div>
+        <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="REGISTRATE" />
+      </div>
+    </form>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer-form') %>
+  </footer>
+</body>
 
-      <div>
+</html>
+<!-- <div>
         <label name="nombreUsuario" class=""></label>
         <input class="cajas" type="text" id="nombre" name="nombre" placeholder="Nombre" required maxlength="30" />
       </div>
@@ -54,35 +105,13 @@
 
       <div>
         <label for="domicilio" class=""></label>
-        <input class="cajas" type="text" id="domicilio" name="domicilio" placeholder="Calle" required maxlength="30" />
-      </div>
-      <div>
-        <label for="domicilio" class=""></label>
         <input class="cajas" type="number" id="domicilio" name="domicilio" placeholder="Número" required
           maxlength="30" />
       </div>
 
       <div>
-        <label for="ciudad" class=""></label>
-        <select name="ciudad" class="cajas" id="ciudad">
-          <option value="CABA">C.A.B.A.</option>
-          <option value="GBA">G.B.A.</option>
-          <option value="Rosario">Rosario</option>
-        </select>
-      </div>
-      <div>
         <label for="cod-postal" class=""></label>
         <input class="cajas" type="text" id="cod-postal" name="cod-postal" placeholder="Código Postal" />
-      </div>
-      <div>
-        <label for="provincia" class=""></label>
-        <select name="provincia" class="cajas" id="provincia">
-          <% provincias.forEach((provincia)=> { %>
-            <option value="<%=provincia.nombre%>">
-              <%= provincia.nombre %>
-            </option>
-            <% }) %>
-        </select>
       </div>
 
       <div>
@@ -96,28 +125,8 @@
 
       <div>
         <input class="cajas" type="confirmPassword" placeholder="Confirmar Contraseña" required maxlength="30" />
-      </div>
+      </div> 
 
-      <div class="termino1">
-        <input type="checkbox" /> Quiero recibir vía e-mail ofertas y
-        novedades
-      </div>
-
-      <div class="termino1">
-        <input type="checkbox" /> Al registrarme acepto los<a class="termino2" href="">Terminos y Condiciones</a>
-      </div>
-
-      <input type="submit" class="btn" value="REGISTRATE" />
-
-      <!-- <div class="tengo-cuenta">
+        <div class="tengo-cuenta">
           <a href="/login" class="tengo-cuenta">Ya tengo cuenta</a>
         </div> -->
-    </form>
-  </main>
-  <!-- Comienzo footer -->
-  <footer>
-    <%- include ('./partials/footer-form') %>
-  </footer>
-</body>
-
-</html>

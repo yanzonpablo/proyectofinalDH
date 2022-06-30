@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <%- include('./partials/head') %>
+
+<head>
+  <%- include('./partials/head') %>
     <title>Login</title>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
     <link href="/css/styles-reg-log.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body>
-    <!-- Inicio Header importado -->
-    <header>
-      <%- include('./partials/header-logo') %>
-    </header>
-    <main>
-      <form class="form" action="/user/login" method="POST">
-        <h1 class="titulo-login">Iniciar sesión</h1>
+<body>
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header-logo') %>
+  </header>
+  <% if (locals.error) { %>
+    <div style="background-color: red">Tus credenciales están mal</div>
+    <% } %>
+      <main>
+        <form class="container col-md-6" style="margin-top: 20px;" action="/user/login" method="POST">
+          <div class="row product-detail" style="text-align: center">
+            <div class="form-label" style="margin-left: 20px;">Iniciar sesión</div>
 
-        <div class="foto-perfil">
-          <img src="/images/perfil2.jpg" alt="perfil" width="100%" />
-        </div>
+            <!-- <div class="foto-perfil">
+            <img src="/images/perfil2.jpg" alt="perfil" width="100%" />
+            </div> -->
 
-        <div>
-          <label for="email" class=""></label>
-          <input
-            class="cajas"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-            maxlength="50"
-          />
-        </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email:</label>
+              <input class="cajas" type="email" id="email" name="email" placeholder="Email" required maxlength="50" />
+            </div>
 
-        <div>
-          <input
-            class="cajas"
-            type="password"
-            placeholder="Contraseña"
-            required
-            maxlength="30"
-          />
-        </div>
+            <div class="col-12">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input class="cajas" type="password" placeholder="Contraseña" required maxlength="30" />
+            </div>
 
-        <div class="remember"><input type="checkbox" /> Recordarme</div>
+            <div class="col-12 remember"><input type="checkbox" /> Recordarme</div>
 
-        <input type="submit" class="btn" value="Ingresar" />
+            <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="Ingresar" />
 
-        <div class="forget">
-          <a href="">¿Olvidaste tu Contraseña?</a>
-        </div>
+            <div class="col-12 tengo-cuenta">
+              <a href="/user/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
+            </div>
+            <!-- <div class="col-12 forget">
+              <a href="">¿Olvidaste tu Contraseña?</a>
+            </div> -->
 
-        <div class="tengo-cuenta">
-          <a href="/register" class="tengo-cuenta"
-            >¿No tenés cuenta? ¡Creá una!</a
-          >
-        </div>
-      </form>
-    </main>
-    <!-- Comienzo footer -->
-    <footer><%- include ('./partials/footer-form') %></footer>
-  </body>
+          </div>
+        </form>
+      </main>
+      <!-- Comienzo footer -->
+      <footer>
+        <%- include ('./partials/footer-form') %>
+      </footer>
+</body>
+
 </html>
