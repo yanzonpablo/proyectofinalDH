@@ -5,7 +5,7 @@ const usersController = require("../controllers/users-controller");
 
 // Login
 router.get("/login", usersController.login); // Vista formulario Login
-router.post("/login", usersController.ingresar); // POST ingreso a sesion usuario
+router.post("/login", usersController.entry); // POST ingreso a sesion usuario
 
 //Crear usuario
 router.get("/register", usersController.register); // Vista formulario de registro

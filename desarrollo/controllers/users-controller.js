@@ -12,7 +12,7 @@ module.exports = {
     // formulario login
     res.render("login");
   },
-  ingresar: (req, res) => {
+  entry: (req, res) => {
     res.render("index");
   },
   profile: (req, res) => {
@@ -29,9 +29,7 @@ module.exports = {
   },
   register: (req, res) => {
     // Formulario registro de usuario
-    res.render("register", {
-      provincias: allProvincias,
-    });
+    res.render("register")
   },
   store: (req, res) => {
     // Guarda datos del form crear usuario
