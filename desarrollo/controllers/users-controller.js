@@ -29,13 +29,16 @@ module.exports = {
   },
   register: (req, res) => {
     // Formulario registro de usuario
-    res.render("register")
+    res.render("register", {
+      provincias: allProvincias,
+    });
   },
   store: (req, res) => {
     // Guarda datos del form crear usuario
   },
   edit: (req, res) => {
     // Edita datos de usuario
+    res.render("edit-user")
   },
   update: (req, res) => {
     // Actualiza datos de usuario
