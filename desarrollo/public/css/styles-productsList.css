@@ -213,21 +213,17 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.art-size {
+  text-align: center;
+}
 .art-size img {
-  min-width: 145px;
-  min-height: 145px;
-  max-width: 175px;
-  max-height: 175px;
-  object-fit: contain;
+  height: 150px;
+  object-fit: scale-down;
 }
 /* MEDIA QUERY TABLETS */
 @media (min-width: 480px) {
   .art-size img {
-    min-width: 115px;
-    min-height: 115px;
-    max-width: 217px;
-    max-height: 217px;
-    object-fit: contain;
+    height: 180px;
   }
   /* Cambios en font-size */
   .heading-style {
@@ -267,9 +263,8 @@ a {
 /* QUERY DESKTOP */
 @media (min-width: 900px) {
   .art-size img {
-    max-width: 188px;
-    max-height: 188px;
-    object-fit: contain;
+    height: 230px;
+    object-fit: scale-down;
   }
   /* Cambios en font-size */
   .heading-style {
