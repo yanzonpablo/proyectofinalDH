@@ -14,7 +14,7 @@
     <%- include('./partials/header-form') %>
   </header>
   <main>
-    <form class="container" action="/user/create" method="POST">
+    <form class="container" action="/user/create" method="POST" enctype="multipart/form-data">
       <h1 class="form-label">
         Completá el formulario para formar parte de nuestra comunidad:
       </h1>
@@ -29,11 +29,11 @@
         </div>
         <div class="col-12 col-md-6">
           <label for="domicilio" class="form-label">Domicilio:</label>
-          <input class="cajas" type="text" id="domicilio" name="domicilio" required maxlength="30" />
+          <input class="cajas" type="text" id="domicilio" name="domicilio"  maxlength="30" />
         </div>
         <div class="col-12 col-md-6">
           <label for="ciudad" class="form-label">Ciudad:</label>
-          <input class="cajas" type="text" id="ciudad" name="ciudad" required maxlength="30" />
+          <input class="cajas" type="text" id="ciudad" name="ciudad"  maxlength="30" />
         </div>
         <div class="col-12">
             <label class="form-label">Imagen de perfil:</label>
@@ -41,11 +41,11 @@
         </div>
         <div class="col-12 col-md-6">
           <label for="password" class="form-label">Contraseña:</label>
-          <input type="password" id="password" name="password" class="cajas" required maxlength="30"/>
+          <input type="password" id="password" name="password" class="cajas"  maxlength="30"/>
         </div>
         <div class="col-12 col-md-6">
           <label for="rePassword" class="form-label">Confirmar Contraseña:</label>
-          <input type="password" id="rePassword" name="rePassword" class="cajas" required maxlength="30"/>
+          <input type="password" id="rePassword" name="rePassword" class="cajas"  maxlength="30"/>
         </div>
         <div class="col-12 col-md-6 termino1">
           <input type="checkbox" /> Quiero recibir vía e-mail ofertas y

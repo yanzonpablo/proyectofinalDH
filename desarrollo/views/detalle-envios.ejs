@@ -72,11 +72,17 @@
                             </div>
                         </div>
                         <div class="entre-linea text-align">
-                            <select name="provincia" id="provincia" class="sinborde height-25 border-radius mt-15">
-                                <option value="" name="provincia">Seleccione una Provincia...
-                                <option value="" name="provincia">Buenos Aires
-                                <option value="" name="provincia">Córdoba
-                                <option value="" name="provincia">Santa Fe
+                            <select name="provincias" class="sinborde height-25 border-radius mt-15">
+                                <option value="">Seleccione una Provincia...</option>
+
+                                    <% 
+                                    const provincias = ['Buenos Aires', 'Ciudad Autónoma de Buenos Aires', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán'] 
+                                    %> 
+
+                                    <% for (const pcia of provincias){ %> 
+
+                                    <option value="<%= pcia %>"><%= pcia %></option>
+                                    <% } %> 
                             </select>
                         </div>
                     </div>
