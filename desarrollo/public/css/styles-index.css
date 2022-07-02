@@ -467,6 +467,15 @@ a {
 }
 /* QUERY DESKTOP */
 @media (min-width: 900px) {
+  .product-dest img {
+    height: 126px;
+  }
+  .product {
+    height: 120px;
+  }
+  .product img {
+    height: 94px;
+  }
   .offer-container {
     width: 50%;
   }
@@ -554,6 +563,12 @@ a {
       width: 25%;
     }
     .offer-container .img-size img {
+      object-fit: scale-down;
+    }
+  }
+  @media (min-width: 1200px) {
+    .product-dest img {
+      height: 190px;
       object-fit: scale-down;
     }
   }
