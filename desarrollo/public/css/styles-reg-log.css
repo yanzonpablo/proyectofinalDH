@@ -23,13 +23,11 @@ body {
 }
 
 .form-delete {
-  width: 450px;
+  width: 97%;
   margin: auto;
-  background-color: white;
+  background-color: #eeeeee;
   border-radius: 5px;
   position: relative;
-  bottom: 50px;
-  padding: 15px 40px 30px 40px;
 }
 
 .titulo {

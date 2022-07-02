@@ -33,7 +33,7 @@ module.exports = {
       }
       if (req.file) {
         newProduct.imagen = req.file.filename;
-      } else {newProduct.image = "prod-default.jpg"}
+      } else {newProduct.imagen = "prod-default.jpg"}
 
       allProducts.push(newProduct);
       productsFS.saveAll(allProducts);
