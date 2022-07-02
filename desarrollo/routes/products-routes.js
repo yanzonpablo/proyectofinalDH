@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const productsController = require("../controllers/products-controller");
+const validateProductId = require("../middlewares/validate-product-id");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -26,6 +27,6 @@ router.put("/:id", productsController.update); //PUT de edicion de producto
 //DELETE
 router.delete("/:id", productsController.destroy); //DELETE de producto
 //DETAILS
-router.get("/:id/", productsController.details); //Vista detalle de producto
+router.get("/:id/", validateProductId, productsController.details); //Vista detalle de producto
 
 module.exports = router;
