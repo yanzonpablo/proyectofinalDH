@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const db = require("../models/db");
+const user = require('../models/user');
 
 const usuariosFilePath = path.join(__dirname, "../data/users.json"); // Path usuarios para formularios
 const allUsers = db.readJsonDB(usuariosFilePath);
@@ -31,6 +32,8 @@ module.exports = {
   },
   store: (req, res) => {
     // Guarda datos del form crear usuario
+    user.create(req.body);
+    return res.send('se guardo el usuario')
   },
   edit: (req, res) => {
     // Edita datos de usuario

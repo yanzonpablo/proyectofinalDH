@@ -1,7 +1,7 @@
 const fs = require ('fs');
 
 const user = {
-  filename: "../data/users.json",
+  filename: "./data/users.json",
 
   getData: function () {
     return JSON.parse(fs.readFileSync(this.filename, "utf-8"));
@@ -36,7 +36,7 @@ const user = {
     }
     allUsers.push(newUser);
     fs.writeFileSync(this.filename, JSON.stringify(allUsers, null,  ' '));
-    return true;
+    return newUser;
   },
   delete: function (id) {
     const allUsers = this.findAll();
