@@ -23,7 +23,7 @@ router.get("/create/", productsController.create); //Vista formulario de creacio
 router.post("/", upload.single("imagen_producto"), productsController.store); //POST de creacion de producto
 //EDIT
 router.get("/edit/:id", productsController.edit); //Vista de edicion de producto
-router.put("/:id", productsController.update); //PUT de edicion de producto
+router.put("/:id", upload.single("imagen_producto"), productsController.update); //PUT de edicion de producto
 //DELETE
 router.delete("/:id", productsController.destroy); //DELETE de producto
 //DETAILS
