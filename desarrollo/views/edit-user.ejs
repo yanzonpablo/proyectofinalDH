@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('./partials/head') %>
+    <title>Registrate</title>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
+    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header-form') %>
+  </header>
+  <main>
+    <form class="container" action="/user/create" method="POST">
+      <h1 class="form-label">
+        Completá el formulario para formar parte de nuestra comunidad:
+      </h1>
+      <div class="row product-detail">
+        <div class="col-12 col-md-6">
+          <label for="nombre" class="form-label">Nombre y Apellido:</label>
+          <input type="text" id="nombre" name="nombre" class="cajas" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" name="email" class="cajas" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="domicilio" class="form-label">Domicilio:</label>
+          <input class="cajas" type="text" id="domicilio" name="domicilio" required maxlength="30" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="ciudad" class="form-label">Ciudad:</label>
+          <input class="cajas" type="text" id="ciudad" name="ciudad" required maxlength="30" />
+        </div>
+        <div class="col-12">
+          <label class="form-label">Imagen de perfil:</label>
+          <input type="file" name="imagen" class="cajas">
+        </div>
+        <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="EDITAR" />
+      </div>
+    </form>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer-form') %>
+  </footer>
+</body>
+
+</html>

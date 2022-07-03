@@ -1,10 +1,9 @@
 const path = require("path");
 const express = require("express");
 const db = require("../models/db");
+const user = require('../models/user');
 
-const provinciasFilePath = path.join(__dirname, "../data/provincias.json"); // Path provincias para formularios
-const allProvincias = db.readJsonDB(provinciasFilePath); // Metodo para leer JSON
-const usuariosFilePath = path.join(__dirname, "../data/users.json"); // Path provincias para formularios
+const usuariosFilePath = path.join(__dirname, "../data/users.json"); // Path usuarios para formularios
 const allUsers = db.readJsonDB(usuariosFilePath);
 
 module.exports = {
@@ -12,7 +11,7 @@ module.exports = {
     // formulario login
     res.render("login");
   },
-  ingresar: (req, res) => {
+  entry: (req, res) => {
     res.render("index");
   },
   profile: (req, res) => {
@@ -29,12 +28,12 @@ module.exports = {
   },
   register: (req, res) => {
     // Formulario registro de usuario
-    res.render("register", {
-      provincias: allProvincias,
-    });
+    res.render("register");
   },
   store: (req, res) => {
     // Guarda datos del form crear usuario
+    user.create(req.body);
+    return res.send('se guardo el usuario')
   },
   edit: (req, res) => {
     // Edita datos de usuario
