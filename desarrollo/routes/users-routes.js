@@ -4,7 +4,7 @@ const router = express.Router();
 const usersController = require("../controllers/users-controller");
 
 // Middlewares
-const upload = require("../models/multer");
+const upload = require("../middlewares/multer");
 
 // Login
 router.get("/login", usersController.login); // Vista formulario Login
@@ -12,7 +12,11 @@ router.post("/login", usersController.entry); // POST ingreso a sesion usuario
 
 //Crear usuario
 router.get("/register", usersController.register); // Vista formulario de registro
-router.post("/register", upload.single("imagen_producto"), usersController.store); // POST de creacion de usuario
+router.post(
+  "/register",
+  upload.single("imagen_producto"),
+  usersController.store
+); // POST de creacion de usuario
 
 //Lista de usuarios
 router.get("/list", usersController.list);
@@ -22,7 +26,7 @@ router.get("/:id/", usersController.details); //Vista detalle de usuario
 
 //Edicion de usuario
 router.get("/edit/:id", usersController.edit); // Vista de edicion de usuario
-router.put("/:id", usersController.update); // PUT de edicion de usuario
+router.put("/:id", upload.single("imagen_producto"), usersController.update); // PUT de edicion de usuario
 
 //Muestra al usuarios datos de su perfil
 router.get("/profile/:userid", usersController.profile);
