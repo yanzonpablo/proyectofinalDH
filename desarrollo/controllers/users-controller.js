@@ -10,15 +10,21 @@ const allUsers = db.readJsonDB(usuariosFilePath);
 const allCategories = db.readJsonDB(categoriesFilePath);
 
 module.exports = {
-  login: (req, res) => {
+  showLogin: (req, res) => {
     // formulario login
     res.render("login");
   },
-  entry: (req, res) => {
+  login: (req, res) => {
     res.render("index");
   },
-  profile: (req, res) => {
-    // muestra datos al usuario de su perfil
+  showRegister: (req, res) => {
+    // Formulario registro de usuario
+    res.render("register");
+  },
+  register: (req, res) => {
+    // Guarda datos del form crear usuario
+    user.create(req.body);
+    return res.send("se guardo el usuario");
   },
   list: (req, res) => {
     // Muestra lista de usuarios registrados
@@ -28,15 +34,7 @@ module.exports = {
   },
   details: (req, res) => {
     // Muestra datos usuario registrado
-  },
-  register: (req, res) => {
-    // Formulario registro de usuario
-    res.render("register");
-  },
-  store: (req, res) => {
-    // Guarda datos del form crear usuario
-    user.create(req.body);
-    return res.send("se guardo el usuario");
+    res.send("Vista en proceso: user-profile");
   },
   edit: (req, res) => {
     let id = req.params.id;
