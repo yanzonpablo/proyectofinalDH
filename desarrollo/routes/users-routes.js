@@ -3,13 +3,16 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/users-controller");
 
+// Middlewares
+const upload = require("../models/multer");
+
 // Login
 router.get("/login", usersController.login); // Vista formulario Login
 router.post("/login", usersController.entry); // POST ingreso a sesion usuario
 
 //Crear usuario
 router.get("/register", usersController.register); // Vista formulario de registro
-router.post("/:id", usersController.store); // POST de creacion de usuario
+router.post("/register", upload.single("imagen_producto"), usersController.store); // POST de creacion de usuario
 
 //Lista de usuarios
 router.get("/list", usersController.list);

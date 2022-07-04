@@ -36,6 +36,7 @@ module.exports = {
     return res.send('se guardo el usuario')
   },
   edit: (req, res) => {
+    res.render("edit-user");
     // Edita datos de usuario
   },
   update: (req, res) => {
