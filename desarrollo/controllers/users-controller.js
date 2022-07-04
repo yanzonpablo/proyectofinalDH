@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const db = require("../models/db");
 const user = require("../models/user");
+const usersFS = require("../models/db-users");
 const { all } = require("../routes/products-routes");
 
 const usuariosFilePath = path.join(__dirname, "../data/users.json"); // Path usuarios para formularios
@@ -40,13 +41,29 @@ module.exports = {
     let id = req.params.id;
     let userToEdit = allUsers.find((usuario) => usuario.id == id);
     res.render("edit-user", {
-      usuarios: userToEdit,
+      usuario: userToEdit,
       categorias: allCategories,
     });
     // Edita datos de usuario
   },
   update: (req, res) => {
     // Actualiza datos de usuario
+    const user = allUsers[allUsers.findIndex((u) => u.id == req.params.id)];
+
+    user.nombre_apellido = req.body.nombre_apellido;
+    user.email = req.body.email;
+    user.password = req.body.password;
+    user.domicilio = req.body.domicilio;
+    user.ciudad = req.body.ciudad;
+    user.categoria = req.body.categoria;
+
+    if (req.file) {
+      const pathAbsolute = path.join(__dirname, "../public", user.imagen);
+      fs.unlinkSync(pathAbsolute);
+      user.imagen = req.file.filename;
+    }
+    usersFS.saveAll(allUsers);
+    res.redirect("/details");
   },
   destroy: (req, res) => {
     // Borra usuario

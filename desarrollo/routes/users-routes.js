@@ -12,11 +12,7 @@ router.post("/login", usersController.login); // POST ingreso a sesion usuario
 
 //Crear usuario
 router.get("/register", usersController.showRegister); // Vista formulario de registro
-router.post(
-  "/register",
-  upload.single("imagen_producto"),
-  usersController.register
-); // POST de creacion de usuario
+router.post("/register", upload.single("imagen"), usersController.register); // POST de creacion de usuario
 
 //Lista de usuarios
 router.get("/list", usersController.list);
@@ -26,7 +22,7 @@ router.get("/:id/", usersController.details); //Vista detalle de usuario
 
 //Edicion de usuario
 router.get("/edit/:id", usersController.edit); // Vista de edicion de usuario
-router.put("/:id", upload.single("imagen_producto"), usersController.update); // PUT de edicion de usuario
+router.put("/:id", upload.single("imagen"), usersController.update); // PUT de edicion de usuario
 
 //Elimina usuario
 router.delete("/:id", usersController.destroy); // Elimina usuario
