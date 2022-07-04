@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <%- include('./partials/header') %>
+    <%- include('./partials/header-logo') %>
 
       <title>Editar producto</title>
   </header>
@@ -77,7 +77,7 @@
       </form>
       <!-- ELIMINAR -->
       <div class="col-12">
-        <form action="/products/<%=productToEdit.id%>?_method=DELETE" method="POST" class="form-delete" >
+        <form action="/products/<%=productToEdit.id%>?_method=DELETE" method="POST" class="form-delete">
           <input type="submit" class="btn" value="Eliminar">
         </form>
       </div>

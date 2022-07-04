@@ -3,7 +3,7 @@
 
 <head>
   <%- include('./partials/head') %>
-    <title>Registrate</title>
+    <title>Editar usuario</title>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
     <link href="/css/styles-reg-log.css" rel="stylesheet" />
 </head>
@@ -11,54 +11,58 @@
 <body>
   <!-- Inicio Header importado -->
   <header>
-    <%- include('./partials/header-form') %>
+    <%- include('./partials/header-logo') %>
   </header>
   <main>
     <form class="container" action="/user/create" method="POST">
       <h1 class="form-label">
-        Completá el formulario para formar parte de nuestra comunidad:
+        Editar el usuario existente id <%= usuarios.id %>
       </h1>
       <div class="row product-detail">
         <div class="col-12 col-md-6">
           <label for="nombre" class="form-label">Nombre y Apellido:</label>
-          <input type="text" id="nombre" name="nombre_apellido" class="cajas" />
+          <input type="text" id="nombre" name="nombre_apellido" class="cajas" value="<%= usuarios.nombre_apellido %>" />
         </div>
         <div class="col-12 col-md-6">
           <label for="email" class="form-label">Email:</label>
-          <input type="email" id="email" name="email" class="cajas" />
+          <input type="email" id="email" name="email" class="cajas" value="<%= usuarios.email%>" />
         </div>
         <div class="col-12 col-md-6">
           <label for="domicilio" class="form-label">Domicilio:</label>
-          <input class="cajas" type="text" id="domicilio" name="domicilio" required maxlength="30" />
+          <input class="cajas" type="text" id="domicilio" name="domicilio" required maxlength="30"
+            value="<%= usuarios.domicilio%>" />
         </div>
         <div class="col-12 col-md-6">
           <label for="ciudad" class="form-label">Ciudad:</label>
-          <input class="cajas" type="text" id="ciudad" name="ciudad" required maxlength="30" />
+          <input class="cajas" type="text" id="ciudad" name="ciudad" required maxlength="30"
+            value="<%=usuarios.ciudad%>" />
         </div>
         <div class="col-12">
-          <label class="form-label">Imagen de perfil:</label>
-          <input type="file" name="imagen" class="cajas">
+          <label for="imagen" class="form-label">Imagen de perfil:</label>
+          <img src="<%=usuarios.imagen%>" alt="" style="width: 20%; text-align: center;">
+          <input type="file" name="imagen" class="cajas" accept="image/*">
         </div>
         <div class="col-12 col-md-6">
           <label for="contrasena" class="form-label">Contraseña:</label>
-          <input class="cajas" type="text" id="contrasena" name="contrasena" required maxlength="30" />
+          <input class="cajas" type="text" id="password" name="password" required maxlength="30" />
         </div>
         <div class="col-12 col-md-6">
           <label for="rep-contrasena" class="form-label">Repetir contraseña:</label>
-          <input class="cajas" type="text" id="contrasena" name="contrasena" required maxlength="30" />
+          <input class="cajas" type="text" id="rePassword" name="rePassword" required maxlength="30" />
         </div>
         <div class="col-12 col-md-6">
           <label for="categoria" class="form-label">Categoría:</label>
           <select class="cajas" id="categoria" name="categoria">
-            <option value="elige" focus>Seleccione una categoría</option>
-            <option value="suscriptor">Suscriptor</option>
-            <option value="administrador">Administrador</option>
-          </div>
+            <% categorias.forEach(categoria=> {%>
+              <option value="<%=categoria.nombre%>">
+                <%=categoria.nombre%>
+              </option>
+              <%}) %>
         </div>
         <div>
-        <input type="submit" class="col-md-12 btn" value="EDITAR" />
+          <input type="submit" class="col-md-12 btn" value="EDITAR" />
         </div>
-      </form>
+    </form>
   </main>
   <!-- Comienzo footer -->
   <footer>
