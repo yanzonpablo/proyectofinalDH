@@ -6,6 +6,8 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
+const session = require("express-session");
+
 
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
@@ -14,6 +16,13 @@ const mainRouter = require("./routes/main-routes");
 app.listen(3010, () => {
   console.log("Port: 3010");
 });
+
+app.use(
+  session({
+      secret: process.env.SESSION_SECRET || "tremendo proyecto integrador",
+  })
+);
+
 
 app.set("view engine", "ejs"); // Template engine
 
