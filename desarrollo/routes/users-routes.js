@@ -4,7 +4,7 @@ const router = express.Router();
 const usersController = require("../controllers/users-controller");
 
 // Middlewares
-const upload = require("../middlewares/multer");
+const upload = require("../middlewares/multer"); // SE ENCUENTRA CON MALA UBICACION DE ARCHIVOS Y NOMBRE
 
 // Login
 router.get("/login", usersController.showLogin); // Vista formulario Login

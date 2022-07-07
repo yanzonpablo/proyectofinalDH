@@ -17,13 +17,6 @@ app.listen(3010, () => {
   console.log("Port: 3010");
 });
 
-app.use(
-  session({
-      secret: process.env.SESSION_SECRET || "tremendo proyecto integrador",
-  })
-);
-
-
 app.set("view engine", "ejs"); // Template engine
 
 app.use("/", mainRouter); // Routeo principal
