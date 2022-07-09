@@ -14,18 +14,28 @@
     <%- include('./partials/header-form') %>
   </header>
   <main>
-    <form class="container" action="/user/create" method="POST" enctype="multipart/form-data">
+    <form class="container" action="/register" method="POST" enctype="multipart/form-data">
       <h1 class="form-label">
         Completá el formulario para formar parte de nuestra comunidad:
       </h1>
       <div class="row product-detail">
         <div class="col-12 col-md-6">
-          <label for="nombre" class="form-label">Nombre y Apellido:</label>
-          <input type="text" name="nombre_apellido" class="cajas" required />
+          <label for="nombre_apellido" class="form-label">Nombre y Apellido:</label>
+          <input type="text" name="nombre_apellido" class="cajas"/>
+            <% if (locals.errors && errors.nombre_apellido) { %>
+            <div class="error">
+              <p><%= errors.nombre_apellido.msg %> </p>
+            </div>
+            <% } %>
         </div>
         <div class="col-12 col-md-6">
           <label for="email" class="form-label">Email:</label>
           <input type="email" name="email" class="cajas" />
+          <% if (locals.errors && errors.email) { %>
+            <div class="error">
+              <p><%= errors.email.msg %> </p>
+            </div>
+            <% } %>
         </div>
         <div class="col-12 col-md-6">
           <label for="domicilio" class="form-label">Domicilio:</label>
@@ -42,10 +52,20 @@
         <div class="col-12 col-md-6">
           <label for="password" class="form-label">Contraseña:</label>
           <input type="password" name="password" class="cajas" maxlength="30" />
+          <% if (locals.errors && errors.password) { %>
+            <div class="error">
+              <p><%= errors.password.msg %> </p>
+            </div>
+            <% } %>
         </div>
         <div class="col-12 col-md-6">
           <label for="rePassword" class="form-label">Confirmar Contraseña:</label>
           <input type="password" name="rePassword" class="cajas" maxlength="30" />
+          <% if (locals.errors && errors.rePassword) { %>
+            <div class="error">
+              <p><%= errors.rePassword.msg %> </p>
+            </div>
+            <% } %>
         </div>
         <div class="col-12 col-md-6 termino1">
           <input type="checkbox" /> Quiero recibir vía e-mail ofertas y

@@ -1,9 +1,8 @@
 const path = require("path");
-const express = require("express");
 const db = require("../models/db");
 const user = require("../models/user");
 const usersFS = require("../models/db-users");
-const { all } = require("../routes/products-routes");
+const { validationResult } = require("express-validator");
 
 const usuariosFilePath = path.join(__dirname, "../data/users.json"); // Path usuarios para formularios
 const categoriesFilePath = path.join(__dirname, "../data/users-category.json"); //Path categorias de usuarios
@@ -11,22 +10,29 @@ const allUsers = db.readJsonDB(usuariosFilePath);
 const allCategories = db.readJsonDB(categoriesFilePath);
 
 module.exports = {
-  showLogin: (req, res) => {
-    // formulario login
-    res.render("login");
-  },
-  login: (req, res) => {
-    res.render("index");
-  },
-  showRegister: (req, res) => {
-    // Formulario registro de usuario
-    res.render("register");
-  },
-  register: (req, res) => {
-    // Guarda datos del form crear usuario
-    user.create(req.body);
-    return res.send("se guardo el usuario");
-  },
+  // showLogin: (req, res) => {
+  //   // formulario login
+  //   res.render("login");
+  // },
+  // login: (req, res) => {
+  //   res.render("index");
+  // },
+  // showRegister: (req, res) => {
+  //   // Formulario registro de usuario
+  //   res.render("register");
+  // },
+  // register: (req, res) => {
+  //   // Guarda datos del form crear usuario
+  //   const errors = validationResult(req);
+  //   if (!errors.isEmpty()) {
+  //       res.render("register", {
+  //           errors: errors.mapped(),
+  //       });
+  //       return;
+  //   }
+  //   user.create(req.body);
+  //   return res.send("se guardo el usuario");
+  // },
   list: (req, res) => {
     // Muestra lista de usuarios registrados
     res.render("users-list", {

@@ -1,6 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-const express = require("express");
 const db = require("../models/db");
 const productsFS = require("../models/db-products");
 const productsFilePath = path.join(__dirname, "../data/products.json"); //Path productos

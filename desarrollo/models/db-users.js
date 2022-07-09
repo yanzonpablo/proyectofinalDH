@@ -1,17 +1,23 @@
-const fs = require("fs");
 const path = require("path");
 const db = require("./db");
 
-const usersPath = path.join(__dirname, "../data/users.json");
+const usersFilePath = path.join(__dirname, "../data/users.json");
 
 module.exports = {
   getAll: function () {
-    return db.readJsonDB(usersPath);
+      return db.readJsonDB(usersFilePath);
   },
-  saveAll: function (allUsers) {
-    db.writeJsonDB(usersPath, allUsers);
+  saveAll: function (users) {
+      db.writeJsonDB(usersFilePath, users);
   },
-  findOne: function (id) {
-    return this.getAll().find((p) => p.id == id);
+  getOne: function (id) {
+      return this.getAll().find((p) => p.id == id);
+  },
+  getNewId: function () {
+      const users = this.getAll();
+      return users.length > 0 ? users[users.length - 1].id + 1 : 1;
+  },
+  findByEmail: function (email) {
+      return this.getAll().find((p) => p.email == email);
   },
 };

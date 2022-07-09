@@ -8,9 +8,17 @@ const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
 
-
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
+const userAuth = require("./middlewares/user-auth");
+
+
+app.use(
+  session({
+      secret: process.env.SESSION_SECRET || "Tremendo proyecto integrador",
+  })
+);
+
 
 // Conexion al puerto 3010 "localhost"
 app.listen(3010, () => {
@@ -18,6 +26,8 @@ app.listen(3010, () => {
 });
 
 app.set("view engine", "ejs"); // Template engine
+
+app.use(userAuth);
 
 app.use("/", mainRouter); // Routeo principal
 

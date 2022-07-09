@@ -17,7 +17,7 @@
     <div style="background-color: red">Tus credenciales están mal</div>
     <% } %>
       <main>
-        <form class="container col-md-6" style="margin-top: 20px;" action="/user/login" method="POST">
+        <form class="container col-md-6" style="margin-top: 20px;" action="/login" method="POST">
           <div class="row product-detail" style="text-align: center">
             <div class="form-label" style="margin-left: 20px;">Iniciar sesión</div>
 
@@ -32,7 +32,7 @@
 
             <div class="col-12">
               <label for="password" class="form-label">Contraseña:</label>
-              <input class="cajas" type="password" placeholder="Contraseña" required maxlength="30" />
+              <input class="cajas" type="password" name="password" placeholder="Contraseña" required maxlength="30" />
             </div>
 
             <div class="col-12 remember"><input type="checkbox" /> Recordarme</div>
@@ -40,7 +40,7 @@
             <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="Ingresar" />
 
             <div class="col-12 tengo-cuenta">
-              <a href="/user/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
+              <a href="/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
             </div>
             <!-- <div class="col-12 forget">
               <a href="">¿Olvidaste tu Contraseña?</a>
