@@ -240,7 +240,7 @@
         "descuento": "15"
     },
     {
-        "nombre": "Cafetera",
+        "nombre": "Cafeteras",
         "precio": "12500",
         "categoria": "Telefonía móvil",
         "seccion": "destacado",
@@ -248,16 +248,6 @@
         "descripcion": "Cafetera chota",
         "imagen": "product-1656301674208.jpg",
         "id": 25
-    },
-    {
-        "nombre": "sarten",
-        "precio": "2",
-        "categoria": "Electrodomésticos",
-        "seccion": "destacado",
-        "descuento": "2",
-        "descripcion": "",
-        "imagen": "product-1656384214224.jpg",
-        "id": 26
     },
     {
         "nombre": "Zapatos",

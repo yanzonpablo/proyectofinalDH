@@ -45,6 +45,10 @@ const user = {
     return true;
   }
 };
+// console.log (user.delete({name: "paasdf", email: "asd@asd.com"})) // crear usuario
+// console.log(user.delete(26)); // delete
+// console.log(user.findAll()); // buscar todo
+// console.log(user.findById(23)); // buscar por ID
 
 module.exports = user;
 

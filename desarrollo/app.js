@@ -29,11 +29,12 @@ app.set("view engine", "ejs"); // Template engine
 
 app.use(userAuth);
 
-app.use("/", mainRouter); // Routeo principal
-
 app.use(express.static(path.join(__dirname, "public"))); // Uso de archivo de carpeta 'public'
 app.use(express.urlencoded({ extended: false })); // Obtencion de datos de form
 app.use(methodOverride("_method")); // Uso de PUT and DELETE
+
+app.use("/", mainRouter); // Routeo principal
+
 
 // Implementacion Error 404
 app.use((req, res, next) => {
