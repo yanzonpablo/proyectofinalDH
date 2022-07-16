@@ -1,252 +1,252 @@
 [
-  {
-    "id": 1,
-    "nombre_apellido": "Nicolas Quartero",
-    "email": "nicoquartero@gmail.com",
-    "password": "quartero1234",
-    "domicilio": "laprida",
-    "ciudad": "Rosario",
-    "categoria": "administrador",
-    "imagen": "/images/users/user05.jpg"
-  },
-  {
-    "id": 2,
-    "nombre_apellido": "Julieta Novoa",
-    "email": "julinovoa@gmail.com",
-    "password": "Julietanovo",
-    "domicilio": "San Martin",
-    "ciudad": "Rosario",
-    "categoria": "administrador",
-    "imagen": "/images/users/user01.jpg"
-  },
-  {
-    "id": 3,
-    "nombre_apellido": "Michele Mazzinghi",
-    "email": "mmazzinghi@gmail.com",
-    "password": "Mazzinghi123",
-    "domicilio": "Pje Alfredo Palacios",
-    "ciudad": "Rosario",
-    "categoria": "administrador",
-    "imagen": "/images/users/user20.jpg"
-  },
-  {
-    "id": 4,
-    "nombre_apellido": "Enrique Lema",
-    "email": "elema@gmail.com",
-    "password": "W05hff",
-    "domicilio": "Suipacha",
-    "ciudad": "Rosario",
-    "categoria": "administrador",
-    "imagen": "/images/users/user07.jpg"
-  },
-  {
-    "id": 5,
-    "nombre_apellido": "Pablo Yanzon",
-    "email": "yanzonpablo@gmail.com",
-    "password": "6eXx9h6TyOh",
-    "domicilio": "tucuman",
-    "ciudad": "Rosario",
-    "categoria": "administrador",
-    "imagen": "/images/users/user08.jpg"
-  },
-  {
-    "id": 6,
-    "nombre_apellido": "Ignacio Turmall",
-    "email": "iturmall5@amr.org.ar",
-    "password": "LKTQgSoVnz0",
-    "domicilio": "Pte Peron",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user09.jpg"
-  },
-  {
-    "id": 7,
-    "nombre_apellido": "Evangelina Mccaull",
-    "email": "emccaull6@hotmail.com",
-    "password": "MKNhH9x",
-    "domicilio": "La Paz",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user02.jpg"
-  },
-  {
-    "id": 8,
-    "nombre_apellido": "Ana Kerwick",
-    "email": "Anakerwick7@gmail.com",
-    "password": "LD20nMqo",
-    "domicilio": "Rioja",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user03.jpg"
-  },
-  {
-    "id": 9,
-    "nombre_apellido": "Daianna Sadat",
-    "email": "daisadat2022@hotmail.com",
-    "password": "KMGd4NVkS",
-    "domicilio": "Tucuman",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user04.jpg"
-  },
-  {
-    "id": 10,
-    "nombre_apellido": "Alejandro Puz",
-    "email": "raucarep@gmail.com",
-    "password": "tbvGoTl88ab",
-    "domicilio": "San Juan",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user10.jpg"
-  },
-  {
-    "id": 11,
-    "nombre_apellido": "Gladys Jaegar",
-    "email": "gjaegar@yahoo.es",
-    "password": "faRP9Fiq13n",
-    "domicilio": "J. de Rosas",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user12.jpg"
-  },
-  {
-    "id": 12,
-    "nombre_apellido": "Jose Bangiard",
-    "email": "josebangiard@hotmail.com",
-    "password": "T4YUGzw5o6jx",
-    "domicilio": "Laprida",
-    "ciudad": "Santa fe",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user11.jpg"
-  },
-  {
-    "id": 13,
-    "nombre_apellido": "Anabella Carriso",
-    "email": "acarriso@yahoo.com.ar",
-    "password": "Sw4cVs",
-    "domicilio": "Cordoba",
-    "ciudad": "Santa fe",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user15.jpg"
-  },
-  {
-    "id": 14,
-    "nombre_apellido": "Karen Ojeda",
-    "email": "kojeda@faatra.org.ar",
-    "password": "yeEephZqSW",
-    "domicilio": "Salta",
-    "ciudad": "Santa fe",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user17.jpg"
-  },
-  {
-    "id": 15,
-    "nombre_apellido": "Matias Roseman",
-    "email": "mroseman@faatra.org.ar",
-    "password": "1VpfcK",
-    "domicilio": "Pueyrredón",
-    "ciudad": "Santa Fe",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user13.jpg"
-  },
-  {
-    "id": 16,
-    "nombre_apellido": "Patricia Maidana",
-    "email": "pmaidana@gmail.com",
-    "password": "mHS1llTW13MH",
-    "domicilio": "Bustamante",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user19.jpg"
-  },
-  {
-    "id": 17,
-    "nombre_apellido": "Gonzalo Inwinkelried",
-    "email": "inwinkelriedelectro@gmail.com",
-    "password": "lugSgOtljzmt",
-    "domicilio": "Entre Rios",
-    "ciudad": "San Carlos",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user14.jpg"
-  },
-  {
-    "id": 18,
-    "nombre_apellido": "Norberto Massimino",
-    "email": "eldinamotor@gmail.com",
-    "password": "FcqLzBVAM",
-    "domicilio": "Ecuador",
-    "ciudad": "Santa Lucia",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user16.jpg"
-  },
-  {
-    "id": 19,
-    "nombre_apellido": "Elisabet Cano",
-    "email": "prensaydifusion@faatra.org.ar",
-    "password": "HRSTPegvw3",
-    "domicilio": "Viamonte",
-    "ciudad": "San Juan",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user18.jpg"
-  },
-  {
-    "id": 20,
-    "nombre_apellido": "Pablo Zuber",
-    "email": "zuber.pablo@gmail.com",
-    "password": "HRrtyegvw3",
-    "domicilio": "Alemania",
-    "ciudad": "Rosario",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user06.jpg"
-  },
-  {
-    "id": 21,
-    "nombre_apellido": "Juana Deginno",
-    "email": "jdeginno2000@gmail.com",
-    "password": "FYxBoOp",
-    "domicilio": "Mitre",
-    "ciudad": "San Juan",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user21.jpg"
-  },
-  {
-    "id": 22,
-    "nombre_apellido": "Mariela Oviedo",
-    "email": "marielaoviedo@gmail.com",
-    "password": "TsdPHDJ6zR",
-    "domicilio": "Sarmiento",
-    "ciudad": "San Juan",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user24.jpg"
-  },
-  {
-    "id": 23,
-    "nombre_apellido": "Miguel Milla",
-    "email": "gallegomilla21@gmail.com",
-    "password": "t516bJJEC",
-    "domicilio": "Buenos aires",
-    "ciudad": "San Juan",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user22.jpg"
-  },
-  {
-    "id": 24,
-    "nombre_apellido": "Fabian Raimondi",
-    "email": "raimondifabian@gmail.com",
-    "password": "DaDjD8vOqnV",
-    "domicilio": "Paraguay",
-    "ciudad": "San Juan",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user23.jpg"
-  },
-  {
-    "id": 25,
-    "nombre_apellido": "Nahuel Victor",
-    "email": "victornahuel782@gmail.com",
-    "password": "DaDjD8vOqnV",
-    "domicilio": "San Lorenzo",
-    "ciudad": "San Juan",
-    "categoria": "suscriptor",
-    "imagen": "/images/users/user25.jpg"
- }
+    {
+        "id": 1,
+        "nombre_apellido": "Nicolas Quartero",
+        "email": "nicoquartero@gmail.com",
+        "password": "quartero1234",
+        "domicilio": "laprida",
+        "ciudad": "Rosario",
+        "categoria": "administrador",
+        "imagen": "/images/users/user05.jpg"
+    },
+    {
+        "id": 2,
+        "nombre_apellido": "Julieta Novoa",
+        "email": "julinovoa@gmail.com",
+        "password": "Julietanovo",
+        "domicilio": "San Martin",
+        "ciudad": "Rosario",
+        "categoria": "administrador",
+        "imagen": "/images/users/user01.jpg"
+    },
+    {
+        "id": 3,
+        "nombre_apellido": "Michele Mazzinghi",
+        "email": "mmazzinghi@gmail.com",
+        "password": "Mazzinghi123",
+        "domicilio": "Pje Alfredo Palacios",
+        "ciudad": "Rosario",
+        "categoria": "administrador",
+        "imagen": "/images/users/user20.jpg"
+    },
+    {
+        "id": 4,
+        "nombre_apellido": "Enrique Lema",
+        "email": "elema@gmail.com",
+        "password": "W05hff",
+        "domicilio": "Suipacha",
+        "ciudad": "Rosario",
+        "categoria": "administrador",
+        "imagen": "/images/users/user07.jpg"
+    },
+    {
+        "id": 5,
+        "nombre_apellido": "Pablo Yanzon",
+        "email": "yanzonpablo@gmail.com",
+        "password": "6eXx9h6TyOh",
+        "domicilio": "tucuman",
+        "ciudad": "Rosario",
+        "categoria": "administrador",
+        "imagen": "/images/users/user08.jpg"
+    },
+    {
+        "id": 6,
+        "nombre_apellido": "Ignacio Turmall",
+        "email": "iturmall5@amr.org.ar",
+        "password": "LKTQgSoVnz0",
+        "domicilio": "Pte Peron",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user09.jpg"
+    },
+    {
+        "id": 7,
+        "nombre_apellido": "Evangelina Mccaull",
+        "email": "emccaull6@hotmail.com",
+        "password": "MKNhH9x",
+        "domicilio": "La Paz",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user02.jpg"
+    },
+    {
+        "id": 8,
+        "nombre_apellido": "Ana Kerwick",
+        "email": "Anakerwick7@gmail.com",
+        "password": "LD20nMqo",
+        "domicilio": "Rioja",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user03.jpg"
+    },
+    {
+        "id": 9,
+        "nombre_apellido": "Daianna Sadat",
+        "email": "daisadat2022@hotmail.com",
+        "password": "KMGd4NVkS",
+        "domicilio": "Tucuman",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user04.jpg"
+    },
+    {
+        "id": 10,
+        "nombre_apellido": "Alejandro Puz",
+        "email": "raucarep@gmail.com",
+        "password": "tbvGoTl88ab",
+        "domicilio": "San Juan",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user10.jpg"
+    },
+    {
+        "id": 11,
+        "nombre_apellido": "Gladys Jaegar",
+        "email": "gjaegar@yahoo.es",
+        "password": "faRP9Fiq13n",
+        "domicilio": "J. de Rosas",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user12.jpg"
+    },
+    {
+        "id": 12,
+        "nombre_apellido": "Jose Bangiard",
+        "email": "josebangiard@hotmail.com",
+        "password": "T4YUGzw5o6jx",
+        "domicilio": "Laprida",
+        "ciudad": "Santa fe",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user11.jpg"
+    },
+    {
+        "id": 13,
+        "nombre_apellido": "Anabella Carriso",
+        "email": "acarriso@yahoo.com.ar",
+        "password": "Sw4cVs",
+        "domicilio": "Cordoba",
+        "ciudad": "Santa fe",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user15.jpg"
+    },
+    {
+        "id": 14,
+        "nombre_apellido": "Karen Ojeda",
+        "email": "kojeda@faatra.org.ar",
+        "password": "yeEephZqSW",
+        "domicilio": "Salta",
+        "ciudad": "Santa fe",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user17.jpg"
+    },
+    {
+        "id": 15,
+        "nombre_apellido": "Matias Roseman",
+        "email": "mroseman@faatra.org.ar",
+        "password": "1VpfcK",
+        "domicilio": "Pueyrredón",
+        "ciudad": "Santa Fe",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user13.jpg"
+    },
+    {
+        "id": 16,
+        "nombre_apellido": "Patricia Maidana",
+        "email": "pmaidana@gmail.com",
+        "password": "mHS1llTW13MH",
+        "domicilio": "Bustamante",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user19.jpg"
+    },
+    {
+        "id": 17,
+        "nombre_apellido": "Gonzalo Inwinkelried",
+        "email": "inwinkelriedelectro@gmail.com",
+        "password": "lugSgOtljzmt",
+        "domicilio": "Entre Rios",
+        "ciudad": "San Carlos",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user14.jpg"
+    },
+    {
+        "id": 18,
+        "nombre_apellido": "Norberto Massimino",
+        "email": "eldinamotor@gmail.com",
+        "password": "FcqLzBVAM",
+        "domicilio": "Ecuador",
+        "ciudad": "Santa Lucia",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user16.jpg"
+    },
+    {
+        "id": 19,
+        "nombre_apellido": "Elisabet Cano",
+        "email": "prensaydifusion@faatra.org.ar",
+        "password": "HRSTPegvw3",
+        "domicilio": "Viamonte",
+        "ciudad": "San Juan",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user18.jpg"
+    },
+    {
+        "id": 20,
+        "nombre_apellido": "Pablo Zuber",
+        "email": "zuber.pablo@gmail.com",
+        "password": "HRrtyegvw3",
+        "domicilio": "Alemania",
+        "ciudad": "Rosario",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user06.jpg"
+    },
+    {
+        "id": 21,
+        "nombre_apellido": "Juana Deginno",
+        "email": "jdeginno2000@gmail.com",
+        "password": "FYxBoOp",
+        "domicilio": "Mitre",
+        "ciudad": "San Juan",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user21.jpg"
+    },
+    {
+        "id": 22,
+        "nombre_apellido": "Mariela Oviedo",
+        "email": "marielaoviedo@gmail.com",
+        "password": "TsdPHDJ6zR",
+        "domicilio": "Sarmiento",
+        "ciudad": "San Juan",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user24.jpg"
+    },
+    {
+        "id": 23,
+        "nombre_apellido": "Miguel Milla",
+        "email": "gallegomilla21@gmail.com",
+        "password": "t516bJJEC",
+        "domicilio": "Buenos aires",
+        "ciudad": "San Juan",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user22.jpg"
+    },
+    {
+        "id": 24,
+        "nombre_apellido": "Fabian Raimondi",
+        "email": "raimondifabian@gmail.com",
+        "password": "DaDjD8vOqnV",
+        "domicilio": "Paraguay",
+        "ciudad": "San Juan",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user23.jpg"
+    },
+    {
+        "id": 25,
+        "nombre_apellido": "Nahuel Victor",
+        "email": "victornahuel782@gmail.com",
+        "password": "DaDjD8vOqnV",
+        "domicilio": "San Lorenzo",
+        "ciudad": "San Juan",
+        "categoria": "suscriptor",
+        "imagen": "/images/users/user25.jpg"
+    }
 ]
