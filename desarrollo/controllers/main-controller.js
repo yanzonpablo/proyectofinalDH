@@ -1,5 +1,4 @@
 const path = require("path");
-const express = require("express");
 const db = require("../models/db");
 const productsFilePath = path.join(__dirname, "../data/products.json"); //Path productos
 const categoriesFilePath = path.join(__dirname, "../data/category.json"); //Path categorias

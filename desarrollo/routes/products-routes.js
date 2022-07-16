@@ -1,4 +1,3 @@
-const path = require("path");
 const express = require("express");
 const router = express.Router();
 const productsController = require("../controllers/products-controller");
@@ -6,9 +5,6 @@ const productsController = require("../controllers/products-controller");
 // Middlewares
 const upload = require("../middlewares/multer");
 const validateProductId = require("../middlewares/validate-product-id");
-
-
-
 
 //LIST
 router.get("/", productsController.index); //Listado de productos

@@ -1,5 +1,4 @@
 /* Modulos Nativos. */
-const fs = require("fs");
 const path = require("path");
 
 /* Modulos Instalados. */
