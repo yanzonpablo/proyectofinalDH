@@ -289,6 +289,7 @@ body {
 }
 .price-offers {
   font-weight: 700;
+  color: rgb(71, 67, 67);
 }
 .div-offers {
   border-top: 2px solid rgba(234, 234, 234, 0.703);

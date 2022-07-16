@@ -2,10 +2,11 @@ const path = require("path");
 const express = require("express");
 const router = express.Router();
 const productsController = require("../controllers/products-controller");
-const validateProductId = require("../middlewares/validate-product-id");
 
 // Middlewares
 const upload = require("../middlewares/multer");
+const validateProductId = require("../middlewares/validate-product-id");
+
 
 
 

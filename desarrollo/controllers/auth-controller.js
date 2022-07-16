@@ -10,27 +10,21 @@ module.exports = {
         res.render("login");
     },
     login: (req, res) => {
-        // const { email, password } = req.body;
-        const email = req.body.email;
-        const password = req.body.password;
-
+        const { email, password } = req.body;
         const user = usersDB.findByEmail(email);
-
         if (user && (password == user.password)) {
             req.session.loggedUser = user;
-
+            
             res.redirect("/");
-
             return;
         }
-
         res.render("login", {
             error: true,
         });
     },
     register: (req, res) => {
         const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
+        if (!resultValidation.isEmpty()) {
             return res.render("register", {
                 errors: resultValidation.mapped(),
             });
