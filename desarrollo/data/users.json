@@ -248,5 +248,13 @@
         "ciudad": "San Juan",
         "categoria": "suscriptor",
         "imagen": "/images/users/user25.jpg"
+    },
+    {
+        "nombre_apellido": "Tomas",
+        "email": "tomas@gmail.com",
+        "domicilio": "",
+        "ciudad": "",
+        "password": "$2a$10$mCDlVFzPkmwXexRRX2RrpevwvZXewa/PiOVdGXCvQNmQ2B8rc7tHq",
+        "id": 26
     }
 ]
