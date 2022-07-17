@@ -73,6 +73,11 @@
         </div>
         <div class="col-12 col-md-6 termino1">
           <input type="checkbox" name="terms"/> Al registrarme acepto los<a class="termino2" href="">Terminos y Condiciones</a>
+          <% if (locals.errors && errors.terms) { %>
+          <div class="error-login">
+            <p><%= errors.terms.msg %> </p>
+          </div>
+          <% } %>
         </div>
         <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="REGISTRATE" />
       </div>

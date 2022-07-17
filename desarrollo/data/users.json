@@ -256,5 +256,14 @@
         "ciudad": "",
         "password": "$2a$10$mCDlVFzPkmwXexRRX2RrpevwvZXewa/PiOVdGXCvQNmQ2B8rc7tHq",
         "id": 26
+    },
+    {
+        "nombre_apellido": "Tomas",
+        "email": "tomas@gmail.com",
+        "domicilio": "",
+        "ciudad": "",
+        "password": "$2a$10$bBTNmPnSyR9AoWAGB1U0TuQta0LkgBNS7Kcpuq5ToRR5Q9Nb6hHNi",
+        "terms": "agree",
+        "id": 27
     }
 ]
