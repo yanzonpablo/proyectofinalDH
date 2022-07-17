@@ -41,7 +41,7 @@ module.exports = {
         const newUser = {
             ...req.body,
             id: usersDB.getNewId(),
-            // password: bcrypt.hashSync(req.body.password, 10),
+            password: bcrypt.hashSync(req.body.password, 10),
         };
         delete newUser.rePassword;
         const users = usersDB.getAll();
