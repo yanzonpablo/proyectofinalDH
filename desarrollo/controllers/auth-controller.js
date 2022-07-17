@@ -12,7 +12,7 @@ module.exports = {
     login: (req, res) => {
         const { email, password } = req.body;
         const user = usersDB.findByEmail(email);
-            if (user && (password == user.password)) {
+            if (user && bcrypt.compareSync(password == user.password)) {
             req.session.loggedUser = user;
     
             res.redirect("/");
@@ -32,22 +32,23 @@ module.exports = {
             return;
         }
         const userExists = usersDB.findByEmail(req.body.email)
-
         if (userExists) {
             return res.render("register", {
                 errors: {
                     email: {
                         msg: 'Ya existe una cuenta vinculada a ese email'
                     }
-                }
+                },
+                oldData: req.body,
             })
         }
-
         const newUser = {
             ...req.body,
             id: usersDB.getNewId(),
             password: bcrypt.hashSync(req.body.password, 10),
-            imagen: req.file.filename
+            if (imagen) {
+                imagen: req.file.filename
+            }
         };
         delete newUser.rePassword;
         const users = usersDB.getAll();
