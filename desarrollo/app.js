@@ -10,6 +10,7 @@ const session = require("express-session");
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
 const userAuth = require("./middlewares/user-auth");
+const userLogged = require("./middlewares/userLoggedMiddleware");
 
 
 app.use(
@@ -18,6 +19,7 @@ app.use(
   })
 );
 
+app.use(userLogged);
 
 // Conexion al puerto 3010 "localhost"
 app.listen(3010, () => {

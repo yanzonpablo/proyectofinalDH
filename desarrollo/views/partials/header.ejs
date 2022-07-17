@@ -23,6 +23,7 @@
         ><i class="icon fas fa-shopping-cart"></i> Mi carrito</a
         >
       </li>
+      <% if (!locals.isLogged) { %>
       <li>
         <a href="/register" class="nav-links"
           ><i class="icon fas fa-user-plus"></i> Registrate</a
@@ -31,6 +32,12 @@
       <li>
         <a href="/login" class="nav-links"><i class="fas fa-user"></i> Login</a>
       </li>
+      <% } %>
+      <% if (locals.isLogged) { %> 
+      <li>
+        <a href="/user/:id" class="nav-links"><i class="fas fa-user"></i> Usuario </a>
+      </li>
+      <% } %>
     </ul>
   </nav>
   <script>
