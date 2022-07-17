@@ -12,7 +12,8 @@ module.exports = {
     login: (req, res) => {
         const { email, password } = req.body;
         const user = usersDB.findByEmail(email);
-            if (user && bcrypt.compareSync(password == user.password)) {
+            if (user && (password == user.password)) {
+            delete user.password; // Se borra la password por seguridad
             req.session.loggedUser = user;
     
             res.redirect("/");
@@ -56,4 +57,8 @@ module.exports = {
         usersDB.saveAll(users);
         res.redirect("/login");
     },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/');
+    }
 };

@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/users-controller");
+const authMiddleware = require("../middlewares/authMiddleware");
+
 
 // Middlewares
 const upload = require("../middlewares/multer"); // SE ENCUENTRA CON MALA UBICACION DE ARCHIVOS Y NOMBRE
@@ -9,7 +11,7 @@ const upload = require("../middlewares/multer"); // SE ENCUENTRA CON MALA UBICAC
 router.get("/list", usersController.list);
 
 //Detalle de usuario
-router.get("/:id/", usersController.details); //Vista detalle de usuario
+router.get("/:id/", authMiddleware, usersController.details); //Vista detalle de usuario
 
 //Edicion de usuario
 router.get("/edit/:id", usersController.edit); // Vista de edicion de usuario
