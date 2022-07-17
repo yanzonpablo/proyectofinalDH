@@ -31,14 +31,13 @@ module.exports = {
         }
     },
     register: (req, res) => {
-/*         
         const resultValidation = validationResult(req);
         if (!resultValidation.isEmpty()) {
              res.render("register", {
                 errors: resultValidation.mapped(),
             });
             return;
-        } */
+        }
         const newUser = {
             ...req.body,
             id: usersDB.getNewId(),

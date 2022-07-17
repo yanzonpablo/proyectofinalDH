@@ -1,9 +1,10 @@
 const express = require("express");
 
+const { body } = require("express-validator")
+const upload = require("../middlewares/multer");
+
 const authController = require("../controllers/auth-controller");
 const registerValidation = require("../validations/register-validations");
-
-const upload = require("../middlewares/multer");
 
 
 const router = express.Router();
@@ -11,6 +12,6 @@ const router = express.Router();
 router.get("/login", authController.showLogin);
 router.post("/login", authController.login);
 router.get("/register", authController.showRegister);
-router.post("/register", registerValidation, upload.single('imagen'), authController.register);
+router.post("/register", upload.single('imagen'), registerValidation, authController.register);
 
 module.exports = router;
