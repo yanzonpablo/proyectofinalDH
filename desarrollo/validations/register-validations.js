@@ -13,10 +13,11 @@ module.exports = [
         }
         return true;
     }),
-/*     body("terms").custom((terms) => {
-        if (terms != "1") {
+    body("terms").custom((value) => {
+        value == req.body.terms;
+        if (value == undefined) {
             throw new Error("Debe aceptar los términos y condiciones")
         }
-        return true
-    }), */
+        return true;
+    }),
 ]
