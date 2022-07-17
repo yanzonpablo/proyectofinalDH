@@ -10,25 +10,16 @@ module.exports = {
         res.render("login");
     },
     login: (req, res) => {
-        const resultValidation = validationResult(req);
-        if (!resultValidation.isEmpty()) {
-            return res.render("login", {
-                errors: resultValidation.mapped(),
-            });
+        const { email, password } = req.body;
+        const user = usersDB.findByEmail(email);
+        if (user && (password == user.password)) {
+            req.session.loggedUser = user;
+            res.redirect("/");
+            return;
         }
-        else {
-            const { email, password } = req.body;
-            const user = usersDB.findByEmail(email);
-            if (user && (password == user.password)) {
-                req.session.loggedUser = user;
-    
-                res.redirect("/");
-                return;
-            }
             res.render("login", {
                 error: true,
-            });
-        }
+        });
     },
     register: (req, res) => {
         const resultValidation = validationResult(req);

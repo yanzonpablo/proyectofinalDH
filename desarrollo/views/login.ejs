@@ -20,6 +20,11 @@
             <div class="col-12">
               <label for="email" class="form-label">Email:</label>
               <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" />
+              <% if (locals.errors && errors.email) { %>
+                <div class="error-login">
+                  <p><%= errors.email.msg %> </p>
+                </div>
+                <% } %>
             </div>
 
             <div class="col-12">

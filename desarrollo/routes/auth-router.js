@@ -6,7 +6,6 @@ const upload = require("../middlewares/multer");
 const authController = require("../controllers/auth-controller");
 const registerValidation = require("../validations/register-validations");
 
-
 const router = express.Router();
 
 router.get("/login", authController.showLogin);
