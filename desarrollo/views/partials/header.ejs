@@ -35,7 +35,7 @@
       <% } %>
       <% if (locals.isLogged) { %> 
       <li>
-        <a href="/user/:id" class="nav-links"><i class="fas fa-user"></i> Profile </a>
+        <a href="/user/:id" class="nav-links"><i class="fas fa-user"></i> Bienvenido <%= locals.loggedUser.nombre_apellido %>  </a>
       </li>
       <li>
         <a href="/logout" class="nav-links"><i class="fas fa-sign-out-alt"></i> Logout </a>
