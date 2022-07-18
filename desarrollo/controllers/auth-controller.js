@@ -15,6 +15,10 @@ module.exports = {
             if (user && (password == user.password)) {
             delete user.password; // Se borra la password por seguridad
             req.session.loggedUser = user;
+
+            if (req.body.recordame == 'on') {
+                res.cookie('userEmail', req.body.email, { maxAge: 10000})
+            }
     
             res.redirect("/");
             return;
@@ -58,6 +62,7 @@ module.exports = {
         res.redirect("/login");
     },
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
     }

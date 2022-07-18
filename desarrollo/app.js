@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
+const cookies = require("cookie-parser");
 
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
@@ -18,6 +19,7 @@ app.use(
   })
 );
 
+app.use(cookies());
 app.use(userLogged);
 
 // Conexion al puerto 3010 "localhost"
