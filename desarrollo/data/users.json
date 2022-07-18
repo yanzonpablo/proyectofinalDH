@@ -248,5 +248,14 @@
         "ciudad": "San Juan",
         "categoria": "suscriptor",
         "imagen": "/images/users/user25.jpg"
+    },
+    {
+        "nombre_apellido": "Pablo",
+        "email": "pablo@pablo.com",
+        "domicilio": "asd",
+        "ciudad": "dsa",
+        "password": "$2a$10$90m5jLprQgrxD5U5B2urReu/MxzvWqiHKu2c89xX6fRLxG6PjdbmK",
+        "terms": "on",
+        "id": 26
     }
 ]

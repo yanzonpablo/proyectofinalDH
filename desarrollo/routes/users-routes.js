@@ -5,7 +5,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 
 // Middlewares
-const upload = require("../middlewares/multer"); // SE ENCUENTRA CON MALA UBICACION DE ARCHIVOS Y NOMBRE
+const uploadUser = require("../middlewares/multerUser"); // SE ENCUENTRA CON MALA UBICACION DE ARCHIVOS Y NOMBRE
 
 //Lista de usuarios
 router.get("/list", usersController.list);
@@ -15,7 +15,7 @@ router.get("/:id/", authMiddleware, usersController.details); //Vista detalle de
 
 //Edicion de usuario
 router.get("/edit/:id", usersController.edit); // Vista de edicion de usuario
-router.put("/:id", upload.single("imagen"), usersController.update); // PUT de edicion de usuario
+router.put("/:id", uploadUser.single("imagen"), usersController.update); // PUT de edicion de usuario
 
 //Elimina usuario
 router.delete("/:id", usersController.destroy); // Elimina usuario
