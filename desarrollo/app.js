@@ -9,7 +9,6 @@ const session = require("express-session");
 
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
-const userAuth = require("./middlewares/user-auth");
 const userLogged = require("./middlewares/userLoggedMiddleware");
 
 
@@ -27,8 +26,6 @@ app.listen(3010, () => {
 });
 
 app.set("view engine", "ejs"); // Template engine
-
-app.use(userAuth);
 
 app.use(express.static(path.join(__dirname, "public"))); // Uso de archivo de carpeta 'public'
 app.use(express.urlencoded({ extended: false })); // Obtencion de datos de form
