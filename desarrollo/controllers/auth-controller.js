@@ -48,13 +48,15 @@ module.exports = {
             })
         }
         const newUser = {
-            ...req.body,
-            id: usersDB.getNewId(),
-            password: bcrypt.hashSync(req.body.password, 10),
-            if (imagen) {
-                imagen: req.file.filename
-            }
+        ...req.body,
+        id: usersDB.getNewId(),
+        password: bcrypt.hashSync(req.body.password, 10),
         };
+        if (newUser.user = req.file) {
+            newUser.imagen = req.file.filename;
+        } else {
+            newUser.imagen = 'user-default.jpg'
+        }
         delete newUser.rePassword;
         const users = usersDB.getAll();
         users.push(newUser);

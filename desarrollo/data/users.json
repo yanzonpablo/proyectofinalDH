@@ -17,5 +17,15 @@
         "password": "$2a$10$o5U0J7io0V6g3YpfjeKoe.RJ0qA5U6G8W0ZG913mFaLjPH6z5VDNO",
         "terms": "on",
         "id": 2
+    },
+    {
+        "nombre_apellido": "pabnloss",
+        "email": "pabloooo@gmail.com",
+        "domicilio": "",
+        "ciudad": "",
+        "password": "$2a$10$8DRyTXdTGAdTOUXCaQ4G3.0LOAWt2OZFbKu82HW.47w9hL0jQ7/2.",
+        "terms": "on",
+        "id": 3,
+        "imagen": "user-default.jpg"
     }
 ]
