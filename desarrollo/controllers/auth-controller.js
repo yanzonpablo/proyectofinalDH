@@ -12,7 +12,7 @@ module.exports = {
     login: (req, res) => {
         const { email, password } = req.body;
         const user = usersDB.findByEmail(email);
-            if (user && (password == user.password)) {
+            if (user && bcrypt.compareSync(password, user.password)) {
             delete user.password; // Se borra la password por seguridad
             req.session.loggedUser = user;
 
@@ -52,11 +52,11 @@ module.exports = {
         id: usersDB.getNewId(),
         password: bcrypt.hashSync(req.body.password, 10),
         };
-        if (newUser.user = req.file) {
+        if (req.file) {
             newUser.imagen = req.file.filename;
         } else {
             newUser.imagen = 'user-default.jpg'
-        }
+        };
         delete newUser.rePassword;
         const users = usersDB.getAll();
         users.push(newUser);
