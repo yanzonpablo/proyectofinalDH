@@ -38,5 +38,65 @@
         "terms": "on",
         "id": 4,
         "imagen": "user-1658188944371.jpg"
+    },
+    {
+        "nombre_apellido": "Juan",
+        "email": "Juan1@gmail.com",
+        "domicilio": "la paz 1234",
+        "ciudad": "Rufino",
+        "password": "$2a$10$qnMkxjirnA4FKGds3mZuz.cI/M4Ie3rWXKsEMT03To51dSPmw2bh.",
+        "terms": "on",
+        "id": 5,
+        "imagen": "user-1658264341627.jpg"
+    },
+    {
+        "nombre_apellido": "Josesito",
+        "email": "josesito@gmail.com",
+        "domicilio": "La paz 1222",
+        "ciudad": "Funes",
+        "password": "$2a$10$0SYAliBetyU.Pr7RgkMGH.EMbG4I9SMfrF0qESNhv1uPIEDvRDWaG",
+        "terms": "on",
+        "id": 6,
+        "imagen": "user-default.jpg"
+    },
+    {
+        "nombre_apellido": "Julieta",
+        "email": "Julieta55@gmail.com",
+        "domicilio": "Los cardos 22",
+        "ciudad": "Rosario",
+        "password": "$2a$10$UxoRiAZRrWQHL6T.b8nP5Oy1RiZ0pXOcecJNfia0LyDNGhb0IBoF.",
+        "terms": "on",
+        "id": 7,
+        "imagen": "user-1658264469890.jpg"
+    },
+    {
+        "nombre_apellido": "Maria",
+        "email": "maria1@gmail.com",
+        "domicilio": "",
+        "ciudad": "",
+        "password": "$2a$10$4OmOD4xReisuglyS3o5Hq.psUINAE4er9M12BcvguAWEZqXBVgJgq",
+        "terms": "on",
+        "id": 8,
+        "imagen": "user-1658264502363.jpg"
+    },
+    {
+        "nombre_apellido": "Marta",
+        "email": "marta66@hotmail.com",
+        "domicilio": "San Martin 120",
+        "ciudad": "Constitucion",
+        "password": "$2a$10$fkVnCZ2Siji1o4wGNX2bv.INLfK6KR7P9YDybQ19My8EhgE2toEKm",
+        "terms": "on",
+        "id": 9,
+        "imagen": "user-1658264554104.jpg"
+    },
+    {
+        "nombre_apellido": "Emnrique lemmmma",
+        "email": "enrlema33@gmail.com",
+        "domicilio": "San Juan 234",
+        "ciudad": "Capital",
+        "password": "$2a$10$SVXh3Oz6SqmpU6JAH8zu7eUkM/llovsxgkjSwVC6L684/6Wdvc166",
+        "terms": "on",
+        "id": 10,
+        "imagen": "user-1658264622781.jpg"
     }
 ]
