@@ -21,7 +21,7 @@
       <div class="row product-detail">
         <div class="col-12 col-md-6">
           <label for="nombre_apellido" class="form-label">Nombre y Apellido:</label>
-          <input type="text" name="nombre_apellido" class="cajas"/>
+          <input type="text" name="nombre_apellido" class="cajas" value="<%= locals.oldData ? oldData.nombre_apellido : null %>"/>
             <% if (locals.errors && errors.nombre_apellido) { %>
             <div class="error-login">
               <p><%= errors.nombre_apellido.msg %> </p>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-12 col-md-6">
           <label for="email" class="form-label">Email:</label>
-          <input name="email" class="cajas" />
+          <input name="email" class="cajas" value="<%= locals.oldData ? oldData.email : null %>"/>
           <% if (locals.errors && errors.email) { %>
             <div class="error-login">
               <p><%= errors.email.msg %> </p>
@@ -39,19 +39,19 @@
         </div>
         <div class="col-12 col-md-6">
           <label for="domicilio" class="form-label">Domicilio:</label>
-          <input class="cajas" type="text" name="domicilio" maxlength="30" />
+          <input class="cajas" type="text" name="domicilio" maxlength="30" value="<%= locals.oldData ? oldData.domicilio : null %>"/>
         </div>
         <div class="col-12 col-md-6">
           <label for="ciudad" class="form-label">Ciudad:</label>
-          <input class="cajas" type="text" name="ciudad" maxlength="30" />
+          <input class="cajas" type="text" name="ciudad" maxlength="30" value="<%= locals.oldData ? oldData.ciudad : null %>"/>
         </div>
         <div class="col-12">
           <label class="form-label">Imagen de perfil:</label>
-          <input type="file" name="imagen" class="cajas">
+          <input type="file" name="imagen" class="cajas" value="<%= locals.oldData ? oldData.imagen : null %>">
         </div>
         <div class="col-12 col-md-6">
           <label for="password" class="form-label">Contraseña:</label>
-          <input type="password" name="password" class="cajas" maxlength="30" />
+          <input type="password" name="password" class="cajas" maxlength="30"/>
           <% if (locals.errors && errors.password) { %>
             <div class="error-login">
               <p><%= errors.password.msg %> </p>
