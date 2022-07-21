@@ -34,12 +34,13 @@
       </li>
       <% } %>
       <% if (locals.isLogged) { %> 
-      <li>
-        <a href="/user/:id" class="nav-links"><i class="fas fa-user"></i> Bienvenido <%= locals.loggedUser.nombre_apellido %>  </a>
-      </li>
-      <li>
-        <a href="/logout" class="nav-links"><i class="fas fa-sign-out-alt"></i> Logout </a>
-      </li>
+        <div class="dropdown">
+          <button class="dropbtn"><p class="nav-links"><i class="fas fa-user" style="padding:3px;"></i><%= locals.loggedUser.nombre_apellido %></p>
+          </button>
+          <div class="dropdown-content">
+            <a href="/user/:id">Mi perfil</a>
+            <a href="/logout">Cerrar sesión</a>
+          </div>
       <% } %>
     </ul>
   </nav>

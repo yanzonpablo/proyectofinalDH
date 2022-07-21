@@ -14,6 +14,7 @@ body {
 .main-nav {
   list-style-type: none;
   display: none;
+  margin-top: 10px;
 }
 .nav-links,
 .logo {
@@ -21,14 +22,15 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 .main-nav li {
-  text-align: center;
+  align-self: center;
   margin: 15px auto;
+
 }
 .logo {
   display: inline-block;
   font-size: 22px;
-  margin-top: 10px;
   margin-left: 20px;
+  margin-top: 10px;
 }
 .navbar-toggle {
   position: absolute;
@@ -41,6 +43,49 @@ body {
   margin-top: 11px;
 }
 .active {
+  display: block;
+  text-align: center;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  justify-content: right;
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 @media (min-width: 922px) {
