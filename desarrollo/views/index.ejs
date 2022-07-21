@@ -67,7 +67,9 @@
               <div class="w-50 p-8 tablet-w-33 desktop-w-20">
                 <a href="/products/<%=producto.id%>">
                   <article class="product-dest b-1">
-                    <img class="w-100" src="/images/products/<%=producto.imagen%>" alt="<%=producto.imagen%>" />
+                    <div class="img-container-dest">
+                      <img class="w-100 h-100 text-center" src="/images/products/<%=producto.imagen%>" alt="<%=producto.imagen%>" />
+                    </div>
                     <div class="fx fx-wrap bg-blanco bt-2">
                       <p class="ms-5 mt-5 product-tittle text-center trunc-text-1">
                         <%=producto.nombre%>
@@ -97,8 +99,8 @@
                 <a href="/products/<%=producto.id%>">
                   <article class="product b-1 fx fx-wrap">
                     <div class="fx fx-wrap fx-align-center w-30">
-                      <div class="w-100 img-size">
-                        <img class="w-100" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>" />
+                      <div class="w-100 img-container">
+                        <img class="w-100 h-100 text-center" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>" />
                       </div>
                     </div>
                     <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
