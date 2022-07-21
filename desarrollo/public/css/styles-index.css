@@ -477,16 +477,6 @@ a {
 }
 /* QUERY DESKTOP */
 @media (min-width: 900px) {
-  .product-dest img {
-    height: 126px;
-  }
-/*   .product {
-    height: 120px;
-  }
-  .product img {
-    height: 94px;
-  } */
-
   /* Cambios en font-size */
   .heading-style {
     font-size: 26px;
@@ -560,20 +550,24 @@ a {
     width: 50%;
   }
   .img-container-dest {
-    height: 150px;
+    height: 126px;
   }
   @media (min-width: 1200px) {
     .desktop-w-16 {
       width: 16%;
     }
+    .offers-tittle {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
     .offer-container {
       width: 25%;
     }
     .img-container {
-      height: 100px;
+      height: 126px;
     }
-  }
-  @media (min-width: 1200px) {
     .product-dest img {
       height: 190px;
       object-fit: scale-down;
