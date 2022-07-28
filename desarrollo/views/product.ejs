@@ -1,233 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <%- include('./partials/head') %>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-        />
-        <link rel="stylesheet" href="/css/styles-index-desktop.css" />
-        <link rel="stylesheet" href="/css/styles-index-tablets.css" />
-        <link rel="stylesheet" href="/css/product.css" />
-        <title>Detalle de productos</title>
-    </head>
 
-    <body id="body_product" class="bg-gris-oscuro">
-        <header>
-            <%- include('./partials/header') %>
+<head>
+    <%- include('./partials/head') %>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+            id="bootstrap-css">
+        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Detalle de producto</title>
+        <link rel="stylesheet" href="/css/product.css">
+        <link rel="stylesheet" href="/css/slider.css">
+</head>
 
+<body>
+    <header>
+        <%- include('./partials/header') %>
             <title>Detalle de producto</title>
-        </header>
-        <main id="main_product">
-            <section id="section_product_01">
-                <!-- carousel -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="2"
-                            aria-label="Slide 3"
-                        ></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img
-                                src="/images/products/<%=producto.imagen%>"
-                                class="d-block w-100"
-                                alt="..."
-                            />
+    </header>
+
+    <div class="container-lg">
+        <div class="col-lg-12 mw-100">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="col-lg-6">
+                        <div class="pro-img-details fx-rap text-center">
+                            <img style="width: 50%" src="/images/products/<%=producto.imagen%>"
+                                alt="<%=producto.nombre%>">
                         </div>
-                        <div class="carousel-item">
-                            <img
-                                src="/images/products/<%=producto.imagen%>"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="/images/products/<%=producto.imagen%>"
-                                class="d-block w-100"
-                                alt="..."
-                            />
+                        <div class="pro-img-list text-center">
+                            <a href="#">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>"
+                                    alt="<%=producto.nombre%>">
+                            </a>
+                            <a href="#">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>"
+                                    alt="<%=producto.nombre%>">
+                            </a>
+                            <a href="#">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>"
+                                    alt="<%=producto.nombre%>">
+                            </a>
+                            <a href="#">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>"
+                                    alt="<%=producto.nombre%>">
+                            </a>
                         </div>
                     </div>
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev"
-                    >
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next"
-                    >
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!-- <div class="box_imagen border_aux">
-          <img src="./images/6447519cv12d.jpg" alt="01" class="img_product">
-          <div class="album">
-            <div class="circle_album"></div>
-            <div class="circle_album"></div>
-            <div class="circle_album"></div>
-            <div class="circle_album"></div>
-          </div>
-        </div> -->
+                    <div class="col-md-6 descripcion">
+                        <p style="margin-top: 30px" class="pro-d-title">
+                            <%=producto.nombre%>
+                        </p>
+                        <h4 style="margin-top: 30px">Descripción:</h4>
+                        <div>
+                            <span>
+                                <%=producto.descripcion%>
+                            </span>
+                        </div>
+                        <div class="product_meta" style="margin-bottom: 20px; margin-top: 30px">
+                            <span class="posted_in"> <strong>Categoría:</strong> <a rel="tag" href="#">
+                                    <%=producto.categoria%>
+                                </a></span>
 
-                <!-- carousel -->
-                <div class="box_details border_aux">
-                    <div class="box_individual border_aux">
-                        <h1 class="h1_product"><%=producto.nombre%></h1>
-                    </div>
-                    <div class="box_individual border_aux">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half"></i>
-                    </div>
-                    <div class="box_individual border_aux">
-                        <h2 class="h2_title green">$ <%=producto.precio%></h2>
-                    </div>
-                    <div class="box_cards border_aux">
-                        <img src="/images/card_mastercard.png" alt="Mastercard" class="cards" />
-                        <img src="/images/card_visa.png" alt="Visa" class="cards" />
-                        <img src="/images/card_paypal.png" alt="Paypal" class="cards" />
-                        <img src="/images/card_mercado_pago.png" alt="Mercado Pago" class="cards" />
-                    </div>
+                        </div>
+                        <div class="m-bot15" style="margin-bottom: 20px;"> <strong>Precio: </strong> <span
+                                style="text-decoration: line-through" class="tachado">$5434</span>
 
-                    <!-- Papelera. -->
-
-                    <div class="box_individual border_aux">
-                        <form action="#" class="form_product">
-                            <input
-                                type="number"
-                                name="quantity"
-                                id="quantity"
-                                placeholder="Cantidad"
-                                min="1"
-                                max="10"
-                            />
-                        </form>
-                    </div>
-                    <div class="box_individual border_aux">
-                        <button type="submit" class="basket">
-                            <a href="/cart" class="a_product">Agregar al Carro</a>
-                        </button>
-                    </div>
-                    <div class="box_individual border_aux">
-                        <button type="submit" class="buy">
-                            <a href="/pago" class="a_product">Comprar</a>
-                        </button>
+                            <span class="pro-price"><strong style="color: green; font-size: 16px;">$
+                                    <%=producto.precio%></strong></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <input type="quantiy" placeholder="1" style="width: 15%; margin-bottom: 20px;"
+                                class="form-control quantity">
+                        </div>
+                        <p>
+                            <button class="btn btn-round btn-success" type="button"><a href="/cart"
+                                    style="color: black; text-decoration: none;"><i class="fa fa-shopping-cart"></i>
+                                    Agregar al carrito</a></button>
+                        </p>
                     </div>
                 </div>
             </section>
-            <section id="section_product_02">
-                <div class="box_individual border_aux">
-                    <h2 class="h2_title">Descripción</h2>
-                </div>
-                <div class="box_details_02 border_aux">
-                    <p class="p_productD">Su resolución es 4K.</p>
-                    <p class="p_productD">Tecnología HDR para una calidad de imagen mejorada.</p>
-                    <p class="p_productD">Modo de sonido: Dolby Audio.</p>
-                    <p class="p_productD">Manejalo por comando de voz.</p>
-                    <p class="p_productD">Tiene función Screen Share.</p>
-                    <p class="p_productD">
-                        Con Netflix, YouTube, Prime Video, GloboPlay, Google Play Store, TCL App
-                        Store, Google Play Music, Google Play Movies & TV.
-                    </p>
-                    <p class="p_productD">Google Assistant y AI-IN incorporados.</p>
-                    <p class="p_productD">Sistema operativo Android Pie.</p>
-                    <p class="p_productD">Capacidad de almacenamiento de 16GB.</p>
-                    <p class="p_productD">
-                        Conectá tus dispositivos mediante sus 3 puertos HDMI y sus 2 puertos USB.
-                    </p>
-                    <p class="p_productD">
-                        Dimensiones: 1112mm de ancho, 655mm de alto, 79mm de profundidad.
-                    </p>
-                </div>
-            </section>
+        </div>
+        <div>
+            <%- include("./slider") %>
+        </div>
+        <footer>
+            <%- include("./partials/footer") %>
+        </footer>
+</body>
 
-            <!-- Papelera. -->
-
-            <section id="section_others">
-                <div class="box_individual border_aux">
-                    <h2 class="h2_title">Otros Productos</h2>
-                </div>
-                <div class="final">
-                    <i class="fas fa-angle-double-left"></i>
-                    <div class="box_others border_aux">
-                        <img
-                            src="/images/products/test-s22.jpg"
-                            alt="Celular Samsung"
-                            class="img_product border_aux"
-                        />
-                        <p class="p_others black display_none">Galaxy S22 Ultra</p>
-                        <p class="p_others green display_none">$173.400</p>
-                    </div>
-                    <div class="box_others border_aux">
-                        <img
-                            src="/images/products/ps5.jpg"
-                            alt="PS5"
-                            class="img_product border_aux"
-                        />
-                        <p class="p_others black display_none">Play Station 5</p>
-                        <p class="p_others green display_none">$198.599</p>
-                    </div>
-                    <div class="box_others border_aux none_01">
-                        <img
-                            src="/images/products/impresora-epson-multifuncion.jpg"
-                            alt="Celular Samsung"
-                            class="img_product border_aux"
-                        />
-                        <p class="p_others black display_none">Epson xp 2101</p>
-                        <p class="p_others green display_none">$28.330</p>
-                    </div>
-                    <div class="box_others border_aux none_02">
-                        <img
-                            src="/images/products/heladera-samsung-nofrost.png"
-                            alt="Celular Samsung"
-                            class="img_product border_aux"
-                        />
-                        <p class="p_others black display_none">Heladera Samsung no-frost</p>
-                        <p class="p_others green display_none">$180.350</p>
-                    </div>
-                    <i class="fas fa-angle-double-right"></i>
-                </div>
-            </section>
-        </main>
-        <footer><%- include("./partials/footer") %></footer>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-            integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-            crossorigin="anonymous"
-        ></script>
-    </body>
 </html>
