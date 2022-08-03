@@ -39,7 +39,6 @@ module.exports = (sequelize, dataTypes) => {
       },
       imagen: {
         types: dataTypes.STRING,
-        allowNull: false
       },
     };
 
@@ -50,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'updated_at',
         deletedAt: false
     };
-    
+
     const Usuario = sequelize.define(alias, cols, config);
 
     return Usuario;
