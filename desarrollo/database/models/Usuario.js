@@ -42,13 +42,15 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false
       },
     };
+
     let config = {
         tableName: "usuarios",
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
         deletedAt: false
-    }
+    };
+    
     const Usuario = sequelize.define(alias, cols, config);
 
     return Usuario;
