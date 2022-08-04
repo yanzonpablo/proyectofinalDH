@@ -32,12 +32,7 @@ module.exports = (sequelize, dataTypes) => {
       cantidad: {
         types: dataTypes.INTEGER,
         allowNull: false,
-      },
-      estado: {
-        type: dataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: true,
-      },
+      }
     };
     let config = {
       tableName: "productos",

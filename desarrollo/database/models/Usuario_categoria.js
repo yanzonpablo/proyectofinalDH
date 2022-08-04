@@ -15,11 +15,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: true 
-        },
-        estado: {
-            type: dataTypes.BOOLEAN,
-            allowNull: false,
-            defaultValue: true
         }
     };
 
