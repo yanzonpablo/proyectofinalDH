@@ -31,6 +31,8 @@ CREATE TABLE `carrito` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+/*Data for the table `carrito` */
+
 /*Table structure for table `ofertas` */
 
 DROP TABLE IF EXISTS `ofertas`;
@@ -44,6 +46,8 @@ CREATE TABLE `ofertas` (
   `Idproductos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+/*Data for the table `ofertas` */
 
 /*Table structure for table `productos` */
 
@@ -66,6 +70,8 @@ CREATE TABLE `productos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+/*Data for the table `productos` */
+
 /*Table structure for table `productos_carrito` */
 
 DROP TABLE IF EXISTS `productos_carrito`;
@@ -78,6 +84,8 @@ CREATE TABLE `productos_carrito` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+/*Data for the table `productos_carrito` */
+
 /*Table structure for table `productos_categorias` */
 
 DROP TABLE IF EXISTS `productos_categorias`;
@@ -89,6 +97,8 @@ CREATE TABLE `productos_categorias` (
   `imagen` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+/*Data for the table `productos_categorias` */
 
 /*Table structure for table `usuarios` */
 
@@ -110,6 +120,8 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+/*Data for the table `usuarios` */
+
 /*Table structure for table `usuarios_categorias` */
 
 DROP TABLE IF EXISTS `usuarios_categorias`;
@@ -120,6 +132,8 @@ CREATE TABLE `usuarios_categorias` (
   `acceso` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+/*Data for the table `usuarios_categorias` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
