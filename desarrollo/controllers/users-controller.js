@@ -16,7 +16,9 @@ module.exports = {
   },
   details: (req, res) => {
     // Muestra datos usuario registrado
-    res.render("perfil");
+    let id = req.params.id;
+    let userProfile = allUsers.find((usuario) => usuario.id == id);
+    res.render("perfil", { usuario: userProfile });
   },
   edit: (req, res) => {
     // Edita datos de usuario
