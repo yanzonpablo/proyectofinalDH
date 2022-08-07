@@ -105,7 +105,11 @@ img {
     margin-right: 16px;
     font-size: 13px;
     vertical-align: middle;
-
+}
+.seccion-perfil-usuario .lista-datos li>.iconos {
+    margin-right: 13px;
+    font-size: 13px;
+    vertical-align: middle;
 }
 .boton {
     display: flex;

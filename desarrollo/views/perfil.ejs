@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/perfilUsuario.css">
     <title>Perfil Usuario</title>
 </head>
@@ -15,6 +17,9 @@
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
                     <img src="/images/users/<%= usuario.imagen %>" alt="img-usuario">
+                    <button type="button" class="boton-avatar">
+                        <i class="fas fa-plus fa-lg"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -26,11 +31,14 @@
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-signs"></i> <strong>E-mail:</strong> <%= usuario.email %>
+                    <li><i class="iconos fas fa-at"></i><strong>E-mail:</strong>
+                        <%= usuario.email %>
                     </li>
-                    <li><i class="icono fas fa-phone-alt"></i> <strong>Domicilio:</strong> <%= usuario.domicilio %>
+                    <li><i class="icono fas fa-map-marker-alt"></i><strong>Domicilio:</strong>
+                        <%= usuario.domicilio %>
                     </li>
-                    <li><i class="icono fas fa-briefcase"></i> <strong>Ciudad:</strong> <%= usuario.ciudad %>
+                    <li><i class="icono fas fa-map-marker-alt"></i><strong>Ciudad:</strong>
+                        <%= usuario.ciudad %>
                     </li>
                 </ul>
             </div>
