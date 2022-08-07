@@ -24,7 +24,6 @@ body {
 .main-nav li {
   align-self: center;
   margin: 15px auto;
-
 }
 .logo {
   display: inline-block;
@@ -49,10 +48,12 @@ body {
 .dropbtn p {
   margin-left: 1px;
 }
+
 .active {
   display: block;
   text-align: center;
 }
+
 .dropdown {
   float: left;
   overflow: hidden;

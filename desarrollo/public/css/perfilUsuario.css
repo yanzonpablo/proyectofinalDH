@@ -91,6 +91,10 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+img {
+    height: 100%;
+
+}
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
     list-style: none;
