@@ -2,7 +2,7 @@
     {
         "nombre_apellido": "Nico Q.",
         "email": "nicoquartero@gmail.com",
-        "domicilio": "vivo por ahi!!!",
+        "domicilio": "Laprida 2054",
         "ciudad": "Rosario",
         "password": "$2a$10$PNxKe0qETnIOVk4.J6bUTO4oY4l5z1wcZIQzKO920JD2S44Mm2feO",
         "terms": "on",
@@ -12,12 +12,12 @@
     {
         "nombre_apellido": "Pablo Yanzon",
         "email": "yanzon@gmail.com",
-        "domicilio": "",
-        "ciudad": "",
+        "domicilio": "Tucuman 3823",
+        "ciudad": "Rosario",
         "password": "$2a$10$cIgqnfXk./2/CzcTcgWi7eWjx90wmgEUVniOBQC/klwRKUdBmtfNC",
         "terms": "on",
         "id": 2,
-        "imagen": "user-default.jpg"
+        "imagen": "user07.jpg"
     },
     {
         "nombre_apellido": "Enrique Lema",

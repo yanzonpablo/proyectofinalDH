@@ -5,7 +5,7 @@
 }
 body {
     color: #404040;
-    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+      font-family: "Roboto", sans-serif;
 }
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {
@@ -93,7 +93,6 @@ body {
 }
 img {
     height: 100%;
-
 }
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
@@ -106,6 +105,28 @@ img {
     margin-right: 16px;
     font-size: 13px;
     vertical-align: middle;
+
+}
+.boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;;
+}
+.btn {
+    padding: 10px 10px;
+    color: white;
+    font-weight: 500;
+    background-color: #317FFF;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.btn:hover {
+    box-shadow: none;
+    border: 1px solid  #848484;;
+    cursor: pointer;
+    
 }
 /* adaptacion a dispositivos */
 @media (max-width: 750px) {
