@@ -16,7 +16,7 @@ module.exports = {
   },
   details: (req, res) => {
     // Muestra datos usuario registrado
-    res.send("Vista en proceso: user-profile");
+    res.render("perfil");
   },
   edit: (req, res) => {
     // Edita datos de usuario
