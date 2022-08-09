@@ -2,7 +2,8 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.4.20-MariaDB : Database - argentum_db
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -65,7 +66,7 @@ CREATE TABLE `productos` (
   `createdAt` date DEFAULT NULL,
   `updateAt` date DEFAULT NULL,
   `deleteAt` tinyint(1) DEFAULT 0,
-  `idCategorias` int(11) DEFAULT NULL,
+  `idProdCategorias` int(11) DEFAULT NULL,
   `idProductos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
