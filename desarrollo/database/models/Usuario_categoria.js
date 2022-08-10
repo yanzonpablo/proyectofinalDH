@@ -25,6 +25,10 @@ module.exports = (sequelize, dataTypes) => {
 
     const Usuario_categoria = sequelize.define(alias, cols, config);
 
+    Usuario_categoria.hasMany(models.Usuario, {
+        foreignKey: "idUsuariosCategoria",
+        as: "usuariosCategoria"
+    })
 
     return Usuario_categoria;
 

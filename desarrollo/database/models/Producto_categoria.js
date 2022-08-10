@@ -28,6 +28,10 @@ module.exports = (sequelize, dataTypes) => {
 
   const Producto_categoria = sequelize.define(alias, cols, config);
 
+    Producto_categoria.hasMany(models.Producto, {
+      foreignKey: "idProductosCategoria",
+      as: "productosCategoria",
+    });
 
   return Producto_categoria;
 
