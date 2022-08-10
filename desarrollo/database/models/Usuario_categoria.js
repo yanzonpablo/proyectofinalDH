@@ -23,14 +23,9 @@ module.exports = (sequelize, dataTypes) => {
         timesTamp: false
     };
 
-    const UsuarioCategoria = sequelize.define(alias, cols, config);
+    const Usuario_categoria = sequelize.define(alias, cols, config);
 
-    UsuarioCategoria.associate = function (models) {
-      UsuarioCategoria.hasMany(models.Usuarios, {
-        as: "usuarios",
-        foreignKey: "idUsuariosCategoria",
-      });
-    };
-    return UsuarioCategoria;
+
+    return Usuario_categoria;
 
 }

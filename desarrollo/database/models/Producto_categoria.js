@@ -26,7 +26,9 @@ module.exports = (sequelize, dataTypes) => {
     timesTamp: false,
   };
 
-  const ProductoCategoria = sequelize.define(alias, cols, config);
+  const Producto_categoria = sequelize.define(alias, cols, config);
 
-  return ProductoCategoria;
+
+  return Producto_categoria;
+
 };
