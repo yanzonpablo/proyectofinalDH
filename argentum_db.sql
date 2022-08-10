@@ -116,7 +116,7 @@ CREATE TABLE `usuarios` (
   `createdAt` date NOT NULL,
   `UpdateAt` date NOT NULL,
   `deleteAt` tinyint(1) DEFAULT 0,
-  `idUsuariosCategorias` int(11) DEFAULT NULL,
+  `idUsuariosCategoria` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
