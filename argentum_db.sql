@@ -2,7 +2,8 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.4.20-MariaDB : Database - argentum_db
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -56,17 +57,16 @@ DROP TABLE IF EXISTS `productos`;
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `Precio` int(11) NOT NULL,
-  `seccion` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
+  `precio` int(11) NOT NULL,
+  `seccion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `descuento` int(11) DEFAULT NULL,
   `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
-  `imagenes` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `imagen` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   `cantidad` int(11) NOT NULL,
   `createdAt` date DEFAULT NULL,
   `updateAt` date DEFAULT NULL,
-  `deleteAt` tinyint(1) DEFAULT 0,
-  `idCategorias` int(11) DEFAULT NULL,
-  `idProductos` int(11) DEFAULT NULL,
+  `deletedAt` tinyint(1) DEFAULT 0,
+  `idProductosCategoria` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -116,7 +116,7 @@ CREATE TABLE `usuarios` (
   `createdAt` date NOT NULL,
   `UpdateAt` date NOT NULL,
   `deleteAt` tinyint(1) DEFAULT 0,
-  `idCategorias` int(11) DEFAULT NULL,
+  `idUsuariosCategorias` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
