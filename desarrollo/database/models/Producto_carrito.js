@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
     createdAt: "created_at"
     };
 
-    const Producto_carrito = sequelize.define(alias, cols, config);
+    const ProductoCarrito = sequelize.define(alias, cols, config);
 
-    return Producto_carrito;
+    return ProductoCarrito;
 }
