@@ -32,3 +32,12 @@ También se realizaron algunas correcciones correspondientes a observaciones rea
 
 
 **Sprint 5.**
+
+IDEM
+
+**Sprint 6.**
+
+Se pudo completar todas las vistas y realizar la vista pendiente en el sprint 3.
+Se realizaron correcciones en el codigo segun docentes y errores que habia pendientes.
+
+No hubo comunicación entre los integrantes del equipo.
