@@ -27,5 +27,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Carrito = sequelize.define(alias, cols, config);
       
+    Carrito.associate = function (models) {
+      Carrito.hasMany(models.Producto_carritos, {
+        foreignKey: "idCarrito",
+        as: "idCarritop",
+      });
+    };
+
+
     return Carrito;
   }

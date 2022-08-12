@@ -16,5 +16,19 @@ module.exports = (sequelize, dataTypes) => {
 
     const ProductoCarrito = sequelize.define(alias, cols, config);
 
+    ProductoCarrito.associate = function (models) {
+      ProductoCarrito.belongsTo(models.Carritos, {
+        foreignKey: "idCarrito",
+        as: "idCarritoProd",
+      });
+    };
+
+    ProductoCarrito.associate = function (models) {
+      ProductoCarrito.belongsTo(models.Prodcutos, {
+        foreignKey: "idProductos",
+        as: "idProdCarrito",
+      });
+    };
+
     return ProductoCarrito;
 }

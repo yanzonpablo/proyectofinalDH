@@ -29,5 +29,11 @@ module.exports = (sequelize, dataTypes) => {
     
     const Oferta = sequelize.define(alias, cols, config);
 
+    Oferta.associate = function (models) {
+      Oferta.HasMany(models.Productos, {
+        foreignKey: "idProductos",
+        as: "ofertasProductos",
+      });
+    };
     return Oferta;
 }
