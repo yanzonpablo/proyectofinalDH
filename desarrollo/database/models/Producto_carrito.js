@@ -6,29 +6,29 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
-        }
-    };
-    let config = {
+    },
+  };
+  let config = {
     tableName: "productos_carrito",
     timesTamp: true,
-    createdAt: "created_at"
-    };
+    createdAt: "createdAt",
+  };
 
-    const ProductoCarrito = sequelize.define(alias, cols, config);
+  const ProductoCarrito = sequelize.define(alias, cols, config);
 
-    ProductoCarrito.associate = function (models) {
-      ProductoCarrito.belongsTo(models.Carritos, {
-        foreignKey: "idCarrito",
-        as: "idCarritoProd",
-      });
-    };
+  ProductoCarrito.associate = function (models) {
+    ProductoCarrito.belongsTo(models.Carritos, {
+      foreignKey: "idCarrito",
+      as: "idCarritoProd",
+    });
+  };
 
-    ProductoCarrito.associate = function (models) {
-      ProductoCarrito.belongsTo(models.Productos, {
-        foreignKey: "idProductos",
-        as: "idProdCarrito",
-      });
-    };
+  ProductoCarrito.associate = function (models) {
+    ProductoCarrito.belongsTo(models.Productos, {
+      foreignKey: "idProductos",
+      as: "idProdCarrito",
+    });
+  };
 
-    return ProductoCarrito;
-}
+  return ProductoCarrito;
+};

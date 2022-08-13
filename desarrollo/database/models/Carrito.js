@@ -14,26 +14,25 @@ module.exports = (sequelize, dataTypes) => {
     totalPrecio: {
       type: dataTypes.INTEGER,
       allowNull: false,
-    }
+    },
   };
 
-      let config = {
-        tableName: "carrito",
-        timestamps: true,
-        createdAt: "created_at",
-        updatedAt: "updated_at",
-        deletedAt: false,
-      };
+  let config = {
+    tableName: "carrito",
+    timestamps: true,
+    createdAt: "createdAt",
+    updatedAt: "updatedAt",
+    deletedAt: "deletedAt",
+  };
 
-    const Carrito = sequelize.define(alias, cols, config);
-      
-    Carrito.associate = function (models) {
-      Carrito.hasMany(models.Producto_carritos, {
-        foreignKey: "idCarrito",
-        as: "idCarritop",
-      });
-    };
+  const Carrito = sequelize.define(alias, cols, config);
 
+  Carrito.associate = function (models) {
+    Carrito.hasMany(models.Producto_carritos, {
+      foreignKey: "idCarrito",
+      as: "idCarritop",
+    });
+  };
 
-    return Carrito;
-  }
+  return Carrito;
+};
