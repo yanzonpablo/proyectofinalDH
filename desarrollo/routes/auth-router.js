@@ -1,8 +1,6 @@
 const express = require("express");
-
 const { body } = require("express-validator")
 const uploadUser = require("../middlewares/multerUser");
-
 const authController = require("../controllers/auth-controller");
 const registerValidation = require("../validations/register-validations");
 const guestMiddleware = require("../middlewares/guestMiddleware");

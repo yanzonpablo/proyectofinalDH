@@ -20,17 +20,17 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false,
       },
       descuento: {
-        types: dataTypes.INTEGER,
+        type: dataTypes.INTEGER,
       },
       descripcion: {
         type: dataTypes.TEXT("long"),
         allowNull: false,
       },
       imagen: {
-        types: dataTypes.STRING,
+        type: dataTypes.STRING,
       },
       cantidad: {
-        types: dataTypes.INTEGER,
+        type: dataTypes.INTEGER,
         allowNull: false,
       }
     };

@@ -19,18 +19,18 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: "usuarios_categorias",
+        tableName: "usuario_categorias",
         timesTamp: false
     };
 
-    const Usuario_categoria = sequelize.define(alias, cols, config);
+    const Usuario_categorias = sequelize.define(alias, cols, config);
 
-    Usuario_categoria.associate = function (models) {
-        Usuario.hasMany(models.Usuarios, {
-          foreignKey: "idusuarioCategoria",
-          as: "usuarios",
+    Usuario_categorias.associate = function (models) {
+        Usuario_categorias.hasMany(models.Usuarios, {
+          foreignKey: "idUsuarioCategorias",
+          as: "categoriaUsuarios",
         });
     }
-    return Usuario_categoria;
+    return Usuario_categorias;
 
 }

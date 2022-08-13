@@ -17,7 +17,7 @@ router.get("/:id/", authMiddleware, usersController.details); //Vista detalle de
 router.get("/edit/:id", usersController.edit); // Vista de edicion de usuario
 router.put("/:id", uploadUser.single("imagen"), usersController.update); // PUT de edicion de usuario
 
-//Elimina usuario
-router.delete("/:id", usersController.destroy); // Elimina usuario
+// //Elimina usuario
+// router.delete("/:id", usersController.destroy); // Elimina usuario
 
 module.exports = router;
