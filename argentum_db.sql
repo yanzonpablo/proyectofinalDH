@@ -2,8 +2,7 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.4.20-MariaDB : Database - argentum_db
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -100,6 +99,21 @@ CREATE TABLE `productos_categorias` (
 
 /*Data for the table `productos_categorias` */
 
+/*Table structure for table `usuario_categorias` */
+
+DROP TABLE IF EXISTS `usuario_categorias`;
+
+CREATE TABLE `usuario_categorias` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `acceso` tinyint(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+/*Data for the table `usuario_categorias` */
+
+insert  into `usuario_categorias`(`id`,`nombre`,`acceso`) values (1,'Invitado',1),(2,'Suscriptor',1),(3,'Administrador',0);
+
 /*Table structure for table `usuarios` */
 
 DROP TABLE IF EXISTS `usuarios`;
@@ -116,24 +130,15 @@ CREATE TABLE `usuarios` (
   `createdAt` date NOT NULL,
   `UpdateAt` date NOT NULL,
   `deleteAt` tinyint(1) DEFAULT 0,
-  `idUsuariosCategoria` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `idUsuarioCategorias` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idUsuarioCategorias` (`idUsuarioCategorias`),
+  CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`idUsuarioCategorias`) REFERENCES `usuario_categorias` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*Data for the table `usuarios` */
 
-/*Table structure for table `usuarios_categorias` */
-
-DROP TABLE IF EXISTS `usuarios_categorias`;
-
-CREATE TABLE `usuarios_categorias` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `acceso` tinyint(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
-/*Data for the table `usuarios_categorias` */
+insert  into `usuarios`(`id`,`nombre`,`apellido`,`email`,`password`,`domicilio`,`ciudad`,`imagen`,`createdAt`,`UpdateAt`,`deleteAt`,`idUsuarioCategorias`) values (1,'Pablo','Yanzon','yanzonpablo@gmail.com','12345678','Tucuman 3823','Rosario','1','2022-08-12','2022-08-12',0,1),(2,'Nicolas','Quartero','nico@gmail.com','12345678','Laprida 5230','Rosario','2','2022-08-12','2022-08-12',0,1),(3,'Jose','Perez','perez@gmail.com','12345678','San Martin 2233','Rosario','3','2022-08-13','2022-08-13',0,1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
