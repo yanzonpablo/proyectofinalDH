@@ -13,7 +13,7 @@ module.exports = function (sequelize, datatypes) {
       deletedAt: "deletedAt",
     }
   );
-
+  /* 
   cart.associate = (models) => {
     cart.belongsTo(models.Users, {
       foreignKey: "idUsuario",
@@ -26,6 +26,7 @@ module.exports = function (sequelize, datatypes) {
       foreignKey: "idCarrito",
       as: "productsCart",
     });
-  };
+  }; 
+  */
   return cart;
 };

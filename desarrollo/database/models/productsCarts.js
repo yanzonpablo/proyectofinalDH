@@ -8,7 +8,7 @@ module.exports = function (sequelize, datatypes) {
       createdAt: "createdAt",
     }
   );
-
+  /* 
   productCart.associate = (models) => {
     productCart.belongsTo(models.Carts, {
       foreignKey: "idCarrito",
@@ -22,6 +22,6 @@ module.exports = function (sequelize, datatypes) {
       as: "productsCart",
     });
   };
-
+ */
   return productCart;
 };

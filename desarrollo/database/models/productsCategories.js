@@ -12,11 +12,12 @@ module.exports = function (sequelize, datatypes) {
     }
   );
 
-  productCategorie.associate = (models) => {
+  /*   productCategorie.associate = (models) => {
     productCategorie.hasMany(models.Products, {
       foreignKey: "idProductosCategorias",
       as: "products",
     });
   };
+   */
   return productCategorie;
 };

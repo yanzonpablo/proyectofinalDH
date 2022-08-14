@@ -18,7 +18,7 @@ module.exports = function (sequelize, datatypes) {
       deletedAt: "deletedAt",
     }
   );
-
+  /* 
   user.associate = (models) => {
     user.hasMany(models.Carts, {
       foreignKey: "idUsuario",
@@ -31,6 +31,6 @@ module.exports = function (sequelize, datatypes) {
       as: "categorie",
     });
   };
-
+ */
   return user;
 };
