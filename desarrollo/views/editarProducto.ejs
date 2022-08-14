@@ -38,9 +38,9 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="categoria" class="form-label">Categoría:</label>
-              <select class="cajas" name="categoria" id="categoria">
+              <select class="cajas" name="idProductoCategorias" id="idProductoCategorias">
                 <% categories.forEach(categoria=> { %>
-                  <option value="<%=categoria.nombre%>">
+                  <option value="<%=categoria.id%>">
                     <%=categoria.nombre%>
                   </option>
                   <% }) %>
