@@ -2,7 +2,8 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.4.20-MariaDB : Database - argentum_db
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -25,8 +26,8 @@ CREATE TABLE `carrito` (
   `totalCantidad` int(11) NOT NULL,
   `totalPrecio` int(11) NOT NULL,
   `createdAt` date DEFAULT NULL,
-  `UpdateAt` date DEFAULT NULL,
-  `deleteAt` tinyint(1) DEFAULT 0,
+  `updatedAt` date DEFAULT NULL,
+  `deletedAt` tinyint(1) DEFAULT 0,
   `idUsuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -43,7 +44,7 @@ CREATE TABLE `ofertas` (
   `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
   `tipo_oferta` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `Idproductos` int(11) DEFAULT NULL,
+  `idProductos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -57,7 +58,7 @@ CREATE TABLE `producto_carrito` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `createdAt` date DEFAULT NULL,
   `idCarrito` int(11) DEFAULT NULL,
-  `IdProductos` int(11) DEFAULT NULL,
+  `idProductos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
