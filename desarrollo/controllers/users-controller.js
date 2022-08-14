@@ -15,7 +15,7 @@ module.exports = {
   details: (req, res) => {
     // Muestra datos usuario registrado
     const id = req.params.id;
-    db.Usuarios.findByPk(id).then(
+    db.Usuarios.findOne(id).then(
       (userProfile) => {
        res.render("perfil", { usuario: userProfile });
       }
