@@ -24,11 +24,8 @@ router.put(
   uploadProduct.single("imagen_producto"),
   productsController.update
 ); //PUT de edicion de producto
-
-/* TESTING
 //DELETE
 router.delete("/:id", productsController.destroy); //DELETE de producto
-*/
 //DETAILS
 router.get("/:id/", validateProductId, productsController.details); //Vista detalle de producto
 
