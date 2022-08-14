@@ -1,9 +1,8 @@
 const db = require("../database/models");
-const products = require("../database/models/products");
 
 module.exports = {
   index: (req, res) => {
-    db.Products.findAll({ include: ["categorie"] }).then((products) => {
+    db.Products.findAll().then((products) => {
       res.render("products-list", { products });
     });
   },
@@ -16,11 +15,18 @@ module.exports = {
     );
   },
   create: (req, res) => {
-    res.render("cargarProducto", {});
+    db.ProductsCategories.findAll().then((categorie) => {
+      res.render("cargarProducto", { categories: categorie });
+    });
   },
   edit: (req, res) => {
-    db.Products.findByPk(req.params.id).then((product) => {
-      res.render("editarProducto", { productToEdit: product });
+    db.ProductsCategories.findAll().then((categorie) => {
+      db.Products.findByPk(req.params.id).then((product) => {
+        res.render("editarProducto", {
+          productToEdit: product,
+          categories: categorie,
+        });
+      });
     });
   },
   store: (req, res) => {
