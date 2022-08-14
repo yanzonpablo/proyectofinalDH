@@ -9,9 +9,11 @@ module.exports = {
   },
   details: (req, res) => {
     // RESTA HACER DINAMICO EL product.ejs
-    db.Products.findByPk(req.params.id).then((products) => {
-      res.render("product", { products });
-    });
+    db.Products.findByPk(req.params.id, { include: ["categorie"] }).then(
+      (products) => {
+        res.render("product", { producto: products });
+      }
+    );
   },
   create: (req, res) => {
     res.render("cargarProducto", {});
