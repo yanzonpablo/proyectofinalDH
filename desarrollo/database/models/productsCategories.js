@@ -7,17 +7,17 @@ module.exports = function (sequelize, datatypes) {
       imagen: datatypes.STRING,
     },
     {
-      tableName: "productos_categorias",
+      tableName: "producto_categorias",
       timestamps: false,
     }
   );
 
-  /*   productCategorie.associate = (models) => {
+  productCategorie.associate = (models) => {
     productCategorie.hasMany(models.Products, {
-      foreignKey: "idProductosCategorias",
+      foreignKey: "idProductoCategorias",
       as: "products",
     });
   };
-   */
+
   return productCategorie;
 };

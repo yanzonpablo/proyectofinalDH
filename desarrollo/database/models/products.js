@@ -18,19 +18,18 @@ module.exports = function (sequelize, datatypes) {
       deletedAt: "deletedAt",
     }
   );
-  /* 
+
   product.associate = (models) => {
     product.belongsTo(models.ProductsCategories, {
-      foreignKey: "idProductosCategorias",
+      foreignKey: "idProductoCategorias",
       as: "categorie",
     });
-  };
-  product.associate = (models) => {
+    /*     
     product.belongsTo(models.ProductsCarts, {
       foreignKey: "idProductos",
       as: "carts",
-    });
-  }; 
-  */
+    }); */
+  };
+
   return product;
 };

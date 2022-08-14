@@ -8,20 +8,19 @@ module.exports = function (sequelize, datatypes) {
       createdAt: "createdAt",
     }
   );
-  /* 
+
   productCart.associate = (models) => {
     productCart.belongsTo(models.Carts, {
       foreignKey: "idCarrito",
       as: "cart",
     });
-  };
-
-  productCart.associate = (models) => {
+    /* 
     productCart.hasMany(models.Products, {
       foreignKey: "idProductos",
       as: "productsCart",
     });
+     */
   };
- */
+
   return productCart;
 };

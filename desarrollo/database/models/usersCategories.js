@@ -10,13 +10,11 @@ module.exports = function (sequelize, datatypes) {
       timestamps: false,
     }
   );
-  /* 
   userCategorie.associate = (models) => {
     userCategorie.hasMany(models.Users, {
       foreignKey: "idUsuarioCategorias",
       as: "users",
     });
-  }; 
-  */
+  };
   return userCategorie;
 };

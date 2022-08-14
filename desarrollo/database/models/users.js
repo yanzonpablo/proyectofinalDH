@@ -18,19 +18,17 @@ module.exports = function (sequelize, datatypes) {
       deletedAt: "deletedAt",
     }
   );
-  /* 
+  /*   
   user.associate = (models) => {
     user.hasMany(models.Carts, {
       foreignKey: "idUsuario",
       as: "carts",
     });
-  };
-  user.associate = (models) => {
     user.belongsTo(models.UsersCategories, {
       foreignKey: "idUsuarioCategorias",
       as: "categorie",
     });
-  };
- */
+  }; 
+  */
   return user;
 };

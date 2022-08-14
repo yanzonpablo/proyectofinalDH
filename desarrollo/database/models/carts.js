@@ -13,20 +13,17 @@ module.exports = function (sequelize, datatypes) {
       deletedAt: "deletedAt",
     }
   );
-  /* 
   cart.associate = (models) => {
     cart.belongsTo(models.Users, {
       foreignKey: "idUsuario",
       as: "user",
     });
-  };
-
-  cart.associate = (models) => {
+    /* 
     cart.hasMany(models.ProductsCarts, {
       foreignKey: "idCarrito",
       as: "productsCart",
     });
-  }; 
-  */
+     */
+  };
   return cart;
 };

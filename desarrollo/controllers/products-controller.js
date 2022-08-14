@@ -3,7 +3,7 @@ const products = require("../database/models/products");
 
 module.exports = {
   index: (req, res) => {
-    db.Products.findAll().then((products) => {
+    db.Products.findAll({ include: ["categorie"] }).then((products) => {
       res.render("products-list", { products });
     });
   },
@@ -14,7 +14,7 @@ module.exports = {
     });
   },
   create: (req, res) => {
-    res.render("cargarProducto", { categories: allCategories });
+    res.render("cargarProducto", {});
   },
   edit: (req, res) => {
     db.Products.findByPk(req.params.id).then((product) => {
