@@ -19,7 +19,13 @@ module.exports = function (sequelize, datatypes) {
       foreignKey: "idUsuario",
       as: "user",
     });
-    /* Falta relacion con tabla de carrito_compras */
+  };
+
+  cart.associate = (models) => {
+    cart.hasMany(models.ProductsCarts, {
+      foreignKey: "idCarrito",
+      as: "productsCart",
+    });
   };
   return cart;
 };

@@ -24,7 +24,12 @@ module.exports = function (sequelize, datatypes) {
       foreignKey: "idProductosCategorias",
       as: "categorie",
     });
-    /* Falta relacion con tabla de carrito_compras */
+  };
+  productCart.associate = (models) => {
+    productCart.belongsTo(models.ProductsCarts, {
+      foreignKey: "idCarrito",
+      as: "cart",
+    });
   };
   return product;
 };

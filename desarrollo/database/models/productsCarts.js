@@ -1,6 +1,6 @@
 module.exports = function (sequelize, datatypes) {
   const productCart = sequelize.define(
-    "ProductsCart",
+    "ProductsCarts",
     {},
     {
       tableName: "producto_carrito",
@@ -19,7 +19,7 @@ module.exports = function (sequelize, datatypes) {
   productCart.associate = (models) => {
     productCart.hasMany(models.Products, {
       foreignKey: "idProductos",
-      as: "products",
+      as: "productsCart",
     });
   };
 
