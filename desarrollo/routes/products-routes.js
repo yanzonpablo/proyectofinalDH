@@ -8,7 +8,6 @@ const validateProductId = require("../middlewares/validate-product-id");
 
 //LIST
 router.get("/", productsController.index); //Listado de productos
-
 //CREATE
 router.get("/create/", productsController.create); //Vista formulario de creacion
 router.post(
@@ -16,7 +15,6 @@ router.post(
   uploadProduct.single("imagen_producto"),
   productsController.store
 ); //POST de creacion de producto
-
 //EDIT
 router.get("/edit/:id", productsController.edit); //Vista de edicion de producto
 router.put(

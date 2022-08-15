@@ -1,18 +1,17 @@
-const path = require("path");
-const db = require("../models/db");
-const productsFilePath = path.join(__dirname, "../data/products.json"); //Path productos
-const categoriesFilePath = path.join(__dirname, "../data/category.json"); //Path categorias
-const allProducts = db.readJsonDB(productsFilePath);
-const allCategories = db.readJsonDB(categoriesFilePath);
-
+const db = require("../database/models");
 
 module.exports = {
   home: (req, res) => {
-    res.render("index", {
-      productos: allProducts,
-      categorias: allCategories,
+    db.ProductsCategories.findAll().then((categorias) => {
+      db.Products.findAll().then((productos) => {
+        res.render("index", {
+          productos,
+          categorias,
+        });
+      });
     });
   },
+  /* TESTING 
   cart: (req, res) => {
     const busqueda = allProducts.find((art) => {
       return art.id == 14;
@@ -21,6 +20,7 @@ module.exports = {
       art: busqueda,
     });
   },
+  */
   envio: (req, res) => {
     res.render("detalle-envios");
   },
