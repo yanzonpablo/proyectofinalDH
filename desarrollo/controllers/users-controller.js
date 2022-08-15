@@ -28,29 +28,25 @@ module.exports = {
   },
   update: (req, res) => {
     // Actualiza datos de usuario
-    db.Users.update(
-      {
+    db.Users.findByPk(req.params.id).then((user) => {
+      user.set({
         ...req.body,
-      },
-      {
-        where: { id: req.params.id },
+      });
+      if (req.file) {
+        user.imagen = req.file.filename;
       }
-    ).then(() => {
-      res.redirect("/user/list");
+      user.save().then(() => {
+        res.redirect("/user/list");
+      });
     });
-    /* 
-    if (req.file) {
-      const pathAbsolute = path.join(__dirname, "../public", user.imagen);
-      fs.unlinkSync(pathAbsolute);
-      user.imagen = req.file.filename;
-    }
-    usersFS.saveAll(allUsers);
-    res.redirect("/details");
-    */
   },
-  /*
   destroy: (req, res) => {
-    // Borra usuario
+    db.Users.findByPk(req.params.id).then((user) => {
+      user.setUserCategories().then(() => {
+        user.destroy().then(() => {
+          res.redirect("/user/list");
+        });
+      });
+    });
   },
-   */
 };

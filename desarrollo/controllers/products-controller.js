@@ -37,15 +37,16 @@ module.exports = {
     });
   },
   update: (req, res) => {
-    db.Products.update(
-      {
+    db.Products.findByPk(req.params.id).then((product) => {
+      product.set({
         ...req.body,
-      },
-      {
-        where: { id: req.params.id },
+      });
+      if (req.file) {
+        product.imagen = req.file.filename;
       }
-    ).then(() => {
-      res.redirect("/products");
+      product.save().then(() => {
+        res.redirect("/products");
+      });
     });
   },
   destroy: (req, res) => {
