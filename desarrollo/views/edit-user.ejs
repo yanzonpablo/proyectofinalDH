@@ -20,8 +20,12 @@
       </h1>
       <div class="row product-detail">
         <div class="col-12 col-md-6">
-          <label for="nombre" class="form-label">Nombre y Apellido:</label>
-          <input type="text" id="nombre" name="nombre_apellido" class="cajas" value="<%= usuario.nombre_apellido %>" />
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="cajas" value="<%= usuario.nombre %>" />
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="apellido" class="form-label">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" class="cajas" value="<%= usuario.apellido %>" />
         </div>
         <div class="col-12 col-md-6">
           <label for="email" class="form-label">Email:</label>
@@ -29,13 +33,12 @@
         </div>
         <div class="col-12 col-md-6">
           <label for="domicilio" class="form-label">Domicilio:</label>
-          <input class="cajas" type="text" id="domicilio" name="domicilio" required maxlength="30"
+          <input class="cajas" type="text" id="domicilio" name="domicilio" maxlength="30"
             value="<%= usuario.domicilio%>" />
         </div>
         <div class="col-12 col-md-6">
           <label for="ciudad" class="form-label">Ciudad:</label>
-          <input class="cajas" type="text" id="ciudad" name="ciudad" required maxlength="30"
-            value="<%=usuario.ciudad%>" />
+          <input class="cajas" type="text" id="ciudad" name="ciudad" maxlength="30" value="<%=usuario.ciudad%>" />
         </div>
         <div class="col-12">
           <label for="imagen" class="form-label">Imagen de perfil:</label>
@@ -43,18 +46,10 @@
           <input type="file" name="imagen" class="cajas" accept="image/*">
         </div>
         <div class="col-12 col-md-6">
-          <label for="contrasena" class="form-label">Contraseña:</label>
-          <input class="cajas" type="text" id="password" name="password" required maxlength="30" />
-        </div>
-        <div class="col-12 col-md-6">
-          <label for="rep-contrasena" class="form-label">Repetir contraseña:</label>
-          <input class="cajas" type="text" id="rePassword" name="rePassword" required maxlength="30" />
-        </div>
-        <div class="col-12 col-md-6">
           <label for="categoria" class="form-label">Categoría:</label>
-          <select class="cajas" id="categoria" name="categoria">
+          <select class="cajas" id="idUsuarioCategorias" name="idUsuarioCategorias">
             <% categorias.forEach(categoria=> {%>
-              <option value="<%=categoria.nombre%>">
+              <option value="<%=categoria.id%>">
                 <%=categoria.nombre%>
               </option>
               <%}) %>
@@ -62,6 +57,11 @@
         <div>
           <input type="submit" class="col-md-12 btn" value="EDITAR" />
         </div>
+    </form>
+    <form class="container" action="/user/<%= usuario.id %>?_method=DELETE" method="POST"></form>
+    <div>
+      <input type="submit" class="col-md-12 btn" value="BORRAR" />
+    </div>
     </form>
   </main>
   <!-- Comienzo footer -->

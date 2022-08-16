@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const usersDB = require("../models/db-users");
+// const usersDB = require("../models/db-users");
+const db = require("../database/models");
 
 module.exports = {
   showRegister: (req, res) => {
@@ -11,19 +12,18 @@ module.exports = {
   },
   login: (req, res) => {
     const { email, password } = req.body;
-    const user = usersDB.findByEmail(email);
-    if (user && bcrypt.compareSync(password, user.password)) {
-      delete user.password; // Se borra la password por seguridad
-      req.session.loggedUser = user;
-
-      if (req.body.recordame == "on") {
-        res.cookie("userEmail", req.body.email, { maxAge: 10000 });
+    db.Users.findOne({ where: { email: req.body.email } }).then((user) => {
+      if (user && password == user.password) {
+        req.session.loggedUser = user;
+        if (req.body.recordame == "on") {
+          res.cookie("userEmail", req.body.email, { maxAge: 10000 });
+        }
+        res.render("perfil", { usuario: user });
+        return;
       }
-
-      return res.redirect("/");
-    }
-    return res.render("login", {
-      error: true,
+      res.render("login", {
+        error: true,
+      });
     });
   },
   register: (req, res) => {
@@ -35,22 +35,27 @@ module.exports = {
       });
       return;
     }
-    const userExists = usersDB.findByEmail(req.body.email);
-    if (userExists) {
-      return res.render("register", {
-        errors: {
-          email: {
-            msg: "Ya existe una cuenta vinculada a ese email",
-          },
-        },
-        oldData: req.body,
+    db.Users.findOne({ where: { email: req.body.email } })
+      .then((userExists) => {
+        if (userExists) {
+          return res.render("register", {
+            errors: {
+              email: {
+                msg: "Ya existe una cuenta vinculada a ese email",
+              },
+            },
+            oldData: req.body,
+          });
+        }
+      })
+      .then(() => {
+        db.Users.create({
+          ...req.body,
+        }).then(() => {
+          res.redirect("/login");
+        });
       });
-    }
-    const newUser = {
-      ...req.body,
-      id: usersDB.getNewId(),
-      password: bcrypt.hashSync(req.body.password, 10),
-    };
+    /* 
     if (req.file) {
       newUser.imagen = req.file.filename;
     } else {
@@ -60,7 +65,7 @@ module.exports = {
     const users = usersDB.getAll();
     users.push(newUser);
     usersDB.saveAll(users);
-    res.redirect("/login");
+    */
   },
   logout: (req, res) => {
     res.clearCookie("userEmail");

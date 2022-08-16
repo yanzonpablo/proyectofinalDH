@@ -1,9 +1,8 @@
 const { body } = require("express-validator");
 
 module.exports = [
-  body("nombre_apellido")
-    .notEmpty()
-    .withMessage("El campo no puede estar vacío"),
+  body("nombre").notEmpty().withMessage("El campo no puede estar vacío"),
+  body("apellido").notEmpty().withMessage("El campo no puede estar vacío"),
   body("email").isEmail().withMessage("Debe introducir un email valido"),
   body("password")
     .isLength({ min: 8 })

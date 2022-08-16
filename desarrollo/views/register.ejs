@@ -20,30 +20,47 @@
       </h1>
       <div class="row product-detail">
         <div class="col-12 col-md-6">
-          <label for="nombre_apellido" class="form-label">Nombre y Apellido:</label>
-          <input type="text" name="nombre_apellido" class="cajas" value="<%= locals.oldData ? oldData.nombre_apellido : null %>"/>
-            <% if (locals.errors && errors.nombre_apellido) { %>
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" name="nombre" class="cajas" value="<%= locals.oldData ? oldData.nombre : null %>" />
+          <% if (locals.errors && errors.nombre) { %>
             <div class="error-login">
-              <p><%= errors.nombre_apellido.msg %> </p>
+              <p>
+                <%= errors.nombre.msg %>
+              </p>
+            </div>
+            <% } %>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="apellido" class="form-label">Apellido:</label>
+          <input type="text" name="apellido" class="cajas" value="<%= locals.oldData ? oldData.apellido : null %>" />
+          <% if (locals.errors && errors.apellido) { %>
+            <div class="error-login">
+              <p>
+                <%= errors.apellido.msg %>
+              </p>
             </div>
             <% } %>
         </div>
         <div class="col-12 col-md-6">
           <label for="email" class="form-label">Email:</label>
-          <input name="email" class="cajas" value="<%= locals.oldData ? oldData.email : null %>"/>
+          <input name="email" class="cajas" value="<%= locals.oldData ? oldData.email : null %>" />
           <% if (locals.errors && errors.email) { %>
             <div class="error-login">
-              <p><%= errors.email.msg %> </p>
+              <p>
+                <%= errors.email.msg %>
+              </p>
             </div>
             <% } %>
         </div>
         <div class="col-12 col-md-6">
           <label for="domicilio" class="form-label">Domicilio:</label>
-          <input class="cajas" type="text" name="domicilio" maxlength="30" value="<%= locals.oldData ? oldData.domicilio : null %>"/>
+          <input class="cajas" type="text" name="domicilio" maxlength="30"
+            value="<%= locals.oldData ? oldData.domicilio : null %>" />
         </div>
         <div class="col-12 col-md-6">
           <label for="ciudad" class="form-label">Ciudad:</label>
-          <input class="cajas" type="text" name="ciudad" maxlength="30" value="<%= locals.oldData ? oldData.ciudad : null %>"/>
+          <input class="cajas" type="text" name="ciudad" maxlength="30"
+            value="<%= locals.oldData ? oldData.ciudad : null %>" />
         </div>
         <div class="col-12">
           <label class="form-label">Imagen de perfil:</label>
@@ -51,10 +68,12 @@
         </div>
         <div class="col-12 col-md-6">
           <label for="password" class="form-label">Contraseña:</label>
-          <input type="password" name="password" class="cajas" maxlength="30"/>
+          <input type="password" name="password" class="cajas" maxlength="30" />
           <% if (locals.errors && errors.password) { %>
             <div class="error-login">
-              <p><%= errors.password.msg %> </p>
+              <p>
+                <%= errors.password.msg %>
+              </p>
             </div>
             <% } %>
         </div>
@@ -63,21 +82,26 @@
           <input type="password" name="rePassword" class="cajas" maxlength="30" />
           <% if (locals.errors && errors.rePassword) { %>
             <div class="error-login">
-              <p><%= errors.rePassword.msg %> </p>
+              <p>
+                <%= errors.rePassword.msg %>
+              </p>
             </div>
             <% } %>
         </div>
         <div class="col-12 col-md-6 termino1">
-          <input type="checkbox" name="subscribe"/> Quiero recibir vía e-mail ofertas y
+          <input type="checkbox" name="subscribe" /> Quiero recibir vía e-mail ofertas y
           novedades
         </div>
         <div class="col-12 col-md-6 termino1">
-          <input type="checkbox" name="terms"/> Al registrarme acepto los<a class="termino2" href="">Terminos y Condiciones</a>
+          <input type="checkbox" name="terms" /> Al registrarme acepto los<a class="termino2" href="">Terminos y
+            Condiciones</a>
           <% if (locals.errors && errors.terms) { %>
-          <div class="error-login">
-            <p><%= errors.terms.msg %> </p>
-          </div>
-          <% } %>
+            <div class="error-login">
+              <p>
+                <%= errors.terms.msg %>
+              </p>
+            </div>
+            <% } %>
         </div>
         <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="REGISTRATE" />
       </div>
@@ -88,4 +112,5 @@
     <%- include ('./partials/footer-form') %>
   </footer>
 </body>
+
 </html>

@@ -85,7 +85,7 @@ insert  into `producto_categorias`(`id`,`nombre`,`descripcion`,`imagen`) values 
 DROP TABLE IF EXISTS `productos`;
 
 CREATE TABLE `productos` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` text COLLATE utf8_spanish_ci NOT NULL,
   `precio` int(11) NOT NULL,
   `seccion` text COLLATE utf8_spanish_ci NOT NULL,
@@ -133,8 +133,8 @@ CREATE TABLE `usuarios` (
   `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `imagen` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   `createdAt` date NOT NULL,
-  `UpdateAt` date NOT NULL,
-  `deleteAt` tinyint(1) DEFAULT 0,
+  `updatedAt` date NOT NULL,
+  `deletedAt` tinyint(1) DEFAULT 0,
   `idUsuarioCategorias` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idUsuarioCategorias` (`idUsuarioCategorias`)
@@ -142,7 +142,7 @@ CREATE TABLE `usuarios` (
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`id`,`nombre`,`apellido`,`email`,`domicilio`,`ciudad`,`password`,`imagen`,`createdAt`,`UpdateAt`,`deleteAt`,`idUsuarioCategorias`) values (1,'Nico','Quartero','nicoquartero@gmail.com','Laprida 2054','Rosario','$2a$10$PNxKe0qETnIOVk4.J6bUTO4oY4l5z1wcZIQzKO920JD2S44Mm2feO','user-1658188615419.jpg','0000-00-00','0000-00-00',0,NULL),(2,'Pablo','Yanzon','yanzon@gmail.com','Tucuman 3823','Rosario','$2a$10$cIgqnfXk./2/CzcTcgWi7eWjx90wmgEUVniOBQC/klwRKUdBmtfNC','user07.jpg','0000-00-00','0000-00-00',0,NULL),(3,'Enrique','Lema','lema@gmail.com','Entre Rios 2233','Las Rosas','$2a$10$977LVHQfdtBU42kopVJI0.vGtpX.L0AvojjKrafN3Up8b07r9ZHkC','user-default.jpg','0000-00-00','0000-00-00',0,NULL),(4,'Michelle ','Michelle','michelle@gmail.com','La Via 2244','Roldan','$2a$10$LXXdvT.u0ff068evwh2MGecI9G92kDdetssI0fjHD0CxOZINlR46u','user-1658188944371.jpg','0000-00-00','0000-00-00',0,NULL),(5,'Juan','Acosta','Juan1@gmail.com','la paz 1234','Rufino','$2a$10$qnMkxjirnA4FKGds3mZuz.cI/M4Ie3rWXKsEMT03To51dSPmw2bh.','user-1658264341627.jpg','0000-00-00','0000-00-00',0,NULL),(6,'Josesito','Loma','josesito@gmail.com','La paz 1222','Funes','$2a$10$0SYAliBetyU.Pr7RgkMGH.EMbG4I9SMfrF0qESNhv1uPIEDvRDWaG','user-default.jpg','0000-00-00','0000-00-00',0,NULL),(7,'Julieta','Mortis','Julieta55@gmail.com','Los cardos 22','Rosario','$2a$10$UxoRiAZRrWQHL6T.b8nP5Oy1RiZ0pXOcecJNfia0LyDNGhb0IBoF.','user-1658264469890.jpg','0000-00-00','0000-00-00',0,NULL),(8,'Maria','Callejon','maria1@gmail.com','Tucuman 1122','Funes','$2a$10$4OmOD4xReisuglyS3o5Hq.psUINAE4er9M12BcvguAWEZqXBVgJgq','user-1658264502363.jpg','0000-00-00','0000-00-00',0,NULL),(9,'Marta','Lora','marta66@hotmail.com','San Martin 120','Constitucion','$2a$10$fkVnCZ2Siji1o4wGNX2bv.INLfK6KR7P9YDybQ19My8EhgE2toEKm','user-1658264554104.jpg','0000-00-00','0000-00-00',0,NULL),(10,'Emnrique','Sosa','enrlema33@gmail.com','San Juan 234','Capital','$2a$10$SVXh3Oz6SqmpU6JAH8zu7eUkM/llovsxgkjSwVC6L684/6Wdvc166','user-1658264622781.jpg','0000-00-00','0000-00-00',0,NULL);
+insert  into `usuarios`(`id`,`nombre`,`apellido`,`email`,`domicilio`,`ciudad`,`password`,`imagen`,`createdAt`,`updatedAt`,`deletedAt`,`idUsuarioCategorias`) values (1,'Nico','Quartero','nicoquartero@gmail.com','Laprida 2054','Rosario','$2a$10$PNxKe0qETnIOVk4.J6bUTO4oY4l5z1wcZIQzKO920JD2S44Mm2feO','user-1658188615419.jpg','0000-00-00','0000-00-00',0,NULL),(2,'Pablo','Yanzon','yanzon@gmail.com','Tucuman 3823','Rosario','$2a$10$cIgqnfXk./2/CzcTcgWi7eWjx90wmgEUVniOBQC/klwRKUdBmtfNC','user07.jpg','0000-00-00','0000-00-00',0,NULL),(3,'Enrique','Lema','lema@gmail.com','Entre Rios 2233','Las Rosas','$2a$10$977LVHQfdtBU42kopVJI0.vGtpX.L0AvojjKrafN3Up8b07r9ZHkC','user-default.jpg','0000-00-00','0000-00-00',0,NULL),(4,'Michelle ','Michelle','michelle@gmail.com','La Via 2244','Roldan','$2a$10$LXXdvT.u0ff068evwh2MGecI9G92kDdetssI0fjHD0CxOZINlR46u','user-1658188944371.jpg','0000-00-00','0000-00-00',0,NULL),(5,'Juan','Acosta','Juan1@gmail.com','la paz 1234','Rufino','$2a$10$qnMkxjirnA4FKGds3mZuz.cI/M4Ie3rWXKsEMT03To51dSPmw2bh.','user-1658264341627.jpg','0000-00-00','0000-00-00',0,NULL),(6,'Josesito','Loma','josesito@gmail.com','La paz 1222','Funes','$2a$10$0SYAliBetyU.Pr7RgkMGH.EMbG4I9SMfrF0qESNhv1uPIEDvRDWaG','user-default.jpg','0000-00-00','0000-00-00',0,NULL),(7,'Julieta','Mortis','Julieta55@gmail.com','Los cardos 22','Rosario','$2a$10$UxoRiAZRrWQHL6T.b8nP5Oy1RiZ0pXOcecJNfia0LyDNGhb0IBoF.','user-1658264469890.jpg','0000-00-00','0000-00-00',0,NULL),(8,'Maria','Callejon','maria1@gmail.com','Tucuman 1122','Funes','$2a$10$4OmOD4xReisuglyS3o5Hq.psUINAE4er9M12BcvguAWEZqXBVgJgq','user-1658264502363.jpg','0000-00-00','0000-00-00',0,NULL),(9,'Marta','Lora','marta66@hotmail.com','San Martin 120','Constitucion','$2a$10$fkVnCZ2Siji1o4wGNX2bv.INLfK6KR7P9YDybQ19My8EhgE2toEKm','user-1658264554104.jpg','0000-00-00','0000-00-00',0,NULL),(10,'Emnrique','Sosa','enrlema33@gmail.com','San Juan 234','Capital','$2a$10$SVXh3Oz6SqmpU6JAH8zu7eUkM/llovsxgkjSwVC6L684/6Wdvc166','user-1658264622781.jpg','0000-00-00','0000-00-00',0,NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

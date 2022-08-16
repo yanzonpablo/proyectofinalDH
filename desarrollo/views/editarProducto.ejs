@@ -38,9 +38,9 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="categoria" class="form-label">Categoría:</label>
-              <select class="cajas" name="categoria" id="categoria">
+              <select class="cajas" name="idProductoCategorias" id="idProductoCategorias">
                 <% categories.forEach(categoria=> { %>
-                  <option value="<%=categoria.nombre%>">
+                  <option value="<%=categoria.id%>">
                     <%=categoria.nombre%>
                   </option>
                   <% }) %>
@@ -67,7 +67,7 @@
             <div class="col-12" style="text-align: center">
               <img src="/images/products/<%=productToEdit.imagen%>" alt="" style="width: 20%" />
               <label for="imagen" class=""></label>
-              <input class="cajas" type="file" id="imagen_producto" name="imagen_producto" accept="image/*" />
+              <input class="cajas" type="file" id="imagen_producto" name="imagen" accept="image/*" />
             </div>
           </div>
           <div class="col-12">
