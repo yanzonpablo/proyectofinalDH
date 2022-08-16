@@ -17,9 +17,7 @@ module.exports = [
     return true;
   }),
   body("terms").custom((value) => {
-    if (value != undefined) {
-      return true;
-    } else {
+    if (!value) {
       throw new Error("Debe aceptar los términos y condiciones");
     }
   }),
