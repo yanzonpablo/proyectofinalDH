@@ -18,7 +18,7 @@ module.exports = {
         if (req.body.recordame == "on") {
           res.cookie("userEmail", req.body.email, { maxAge: 10000 });
         }
-        res.redirect("/");
+        res.render("perfil", { usuario: user });
         return;
       }
       res.render("login", {
