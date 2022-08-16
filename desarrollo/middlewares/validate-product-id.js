@@ -1,11 +1,11 @@
-const db = require("../models/db-products");
+const db = require("../database/models");
 
 module.exports = (req, res, next) => {
-  const product = db.findOne(req.params.id);
-
-  if (product) {
-    next();
-  } else {
-    res.render("product-not-found");
-  }
+  db.Products.findOne({ where: { id: req.params.id } }).then((product) => {
+    if (product) {
+      next();
+    } else {
+      res.render("product-not-found");
+    }
+  });
 };
