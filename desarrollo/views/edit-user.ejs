@@ -14,7 +14,7 @@
     <%- include('./partials/header-logo') %>
   </header>
   <main>
-    <form class="container" action="/user/<%= usuario.id %>?_method=PUT" method="POST">
+    <form class="container" action="/user/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
       <h1 class="form-label">
         Editar el usuario existente id <%= usuario.id %>
       </h1>
