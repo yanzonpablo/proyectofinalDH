@@ -12,7 +12,9 @@
       <li>
         <a href="/#ofertas" class="nav-links"><i class="icon far fa-grin-tongue"></i> Ofertas</a>
       </li>
-      <li>
+      <li class="notificacion">
+        <a href="/cart" class="notificacion">
+          <span class="burbuja">3</span></a>
         <a href="/cart" class="nav-links"><i class="icon fas fa-shopping-cart"></i> Mi carrito</a>
       </li>
       <% if (!locals.isLogged) { %>
@@ -25,10 +27,7 @@
         <% } %>
           <% if (locals.isLogged) { %>
             <div class="dropdown">
-
               <button class="dropbtn">
-                <a href="#" class="notificacion">
-                <span class="burbuja">3</span></a>
                 <img src="/images/users/<%= locals.loggedUser.imagen %> " alt="<% locals.loggedUser.apellido %>"
                   style="padding:3px;">
                 <p class="nav-links">

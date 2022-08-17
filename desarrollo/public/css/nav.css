@@ -18,13 +18,16 @@ body {
 }
 .burbuja {
   position: absolute;
-  top: 0px;
+  top: -12px;
+  left: 46px;
   font-size: 12px;
-  right: 46px;
   padding: 1px 4px;
   border-radius: 50%;
   background-color: #d93175;
   color: white;
+}
+.notificacion {
+  position: relative;
 }
 
 .nav-links,
@@ -43,7 +46,6 @@ body {
   margin-top: 10px;
 }
 .navbar-toggle {
-  position: absolute;
   top: 32px;
   right: 20px;
   cursor: pointer;
