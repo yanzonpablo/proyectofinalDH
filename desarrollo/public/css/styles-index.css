@@ -352,6 +352,12 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.botton-icon {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 5;
+}
 @keyframes fade {
   from {
     opacity: 0.4;
