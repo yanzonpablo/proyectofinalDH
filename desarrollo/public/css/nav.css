@@ -16,6 +16,17 @@ body {
   display: none;
   margin-top: 10px;
 }
+.burbuja {
+  position: absolute;
+  top: 0px;
+  font-size: 12px;
+  right: 46px;
+  padding: 1px 4px;
+  border-radius: 50%;
+  background-color: #d93175;
+  color: white;
+}
+
 .nav-links,
 .logo {
   text-decoration: none;
@@ -44,6 +55,7 @@ body {
 .dropbtn {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .dropbtn p {
   margin-left: 1px;
