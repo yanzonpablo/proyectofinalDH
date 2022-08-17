@@ -35,8 +35,8 @@ module.exports = {
       });
       return;
     }
-    db.Users.findOne({ where: { email: req.body.email } })
-      .then((userExists) => {
+    db.Users.findOne({ where: { email: req.body.email } }).then(
+      (userExists) => {
         if (userExists) {
           return res.render("register", {
             errors: {
@@ -46,26 +46,15 @@ module.exports = {
             },
             oldData: req.body,
           });
+        } else {
+          db.Users.create({
+            ...req.body,
+          }).then(() => {
+            res.redirect("/login");
+          });
         }
-      })
-      .then(() => {
-        db.Users.create({
-          ...req.body,
-        }).then(() => {
-          res.redirect("/login");
-        });
-      });
-    /* 
-    if (req.file) {
-      newUser.imagen = req.file.filename;
-    } else {
-      newUser.imagen = "user-default.jpg";
-    }
-    delete newUser.rePassword;
-    const users = usersDB.getAll();
-    users.push(newUser);
-    usersDB.saveAll(users);
-    */
+      }
+    );
   },
   logout: (req, res) => {
     res.clearCookie("userEmail");
