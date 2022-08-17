@@ -1,6 +1,5 @@
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-// const usersDB = require("../models/db-users");
 const db = require("../database/models");
 
 module.exports = {
@@ -13,7 +12,7 @@ module.exports = {
   login: (req, res) => {
     const { email, password } = req.body;
     db.Users.findOne({ where: { email: req.body.email } }).then((user) => {
-      if (user && password == user.password) {
+      if (user && bcrypt.compareSync(password, user.password)) {
         req.session.loggedUser = user;
         if (req.body.recordame == "on") {
           res.cookie("userEmail", req.body.email, { maxAge: 10000 });
@@ -49,6 +48,7 @@ module.exports = {
         } else {
           db.Users.create({
             ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
           }).then(() => {
             res.redirect("/login");
           });
