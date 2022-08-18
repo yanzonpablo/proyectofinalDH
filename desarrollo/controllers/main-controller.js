@@ -18,6 +18,17 @@ module.exports = {
     });
   },
 
+  addProductToCart: (req, res) => {
+    let product = {
+      ...req.body
+    };
+    const cart = [];
+    cart.push(product);
+    res.redirect("/products");
+  },
+
+
+
   envio: (req, res) => {
     res.render("detalle-envios");
   },

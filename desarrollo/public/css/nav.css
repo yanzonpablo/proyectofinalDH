@@ -18,7 +18,7 @@ body {
 }
 .burbuja {
   position: absolute;
-  top: -12px;
+  top: -70%;
   left: 46px;
   font-size: 12px;
   padding: 1px 4px;
