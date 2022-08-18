@@ -11,16 +11,13 @@ module.exports = {
       });
     });
   },
-  /* TESTING 
+
   cart: (req, res) => {
-    const busqueda = allProducts.find((art) => {
-      return art.id == 14;
-    });
-    res.render("compras", {
-      art: busqueda,
+    db.Products.findByPk(req.params.id).then((art) => {
+      res.render("compras", { art });
     });
   },
-  */
+
   envio: (req, res) => {
     res.render("detalle-envios");
   },

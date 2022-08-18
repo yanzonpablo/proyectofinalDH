@@ -62,34 +62,6 @@
             </tr>
           </table>
         </article>
-        <article>
-          <table class="table-articulo pb-10 w-80 border-collapse text-center">
-            <tr class="bk-tabla line-bottom">
-              <td class="text-align td-imagen">
-                <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
-              </td>
-              <td class="td-producto">
-                <p class=" text-center ft-weight articulo">
-                  <%= art.nombre %>
-                </p>
-              </td>
-              <td class="td-precio">
-                <p class=" text-center precio">$<%= art.precio %>
-                </p>
-              </td>
-              <td class="td-cantidad">
-                <div class="ds-flex js-cont-center align-items">
-                  <a href="#"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
-                  <p class="ft-size-number pr-10 pl-10 ft-weight numero">1</p>
-                  <a href="#"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
-                </div>
-              </td>
-              <td class="td-basura text-align">
-                <a href="" class=" basurero"><i class="fas fa-trash-alt"></i></a>
-              </td>
-            </tr>
-          </table>
-        </article>
       </div>
       <!-- Inicio resumen -->
       <div class="contenedor2 text-center">
@@ -120,8 +92,10 @@
             </div>
         </table>
         <div class="text-align mb-20">
-          <a href="/envio"><button class="btn-acepta">Aceptar</button></a>
-          <a href="#"><button class="btn-cancela mb-10">Cancelar</button></a>
+          <a href="/envio"><button class="btn-acepta">Confirmar compra</button></a>
+          <a href="/"><button class="btn-cancela mb-10">Cancelar</button></a>
+          <a href="/"><button class="btn-seguirComp mb-20">Seguir comprando</button></a>
+
         </div>
         <!-- Fin resumen -->
       </div>
