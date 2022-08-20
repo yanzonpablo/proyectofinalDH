@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
   <div class="container ">
     <div class="row ">
@@ -31,185 +33,32 @@
           <div class="carousel-inner">
             <div class="item carousel-item active">
               <div class="row">
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/13"><img src="/images/products/lavarropas.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Lavarropas Dream</h4>
-                      <p class="item-price"><strike>$100000.00</strike> <span>$109000.00</span></p>
-                      <div class="star-rating">
+                <% sameCategorie.forEach(e=> {%>
+                  <div class="col-sm-3">
+                    <div class="thumb-wrapper">
+                      <div class="img-box">
+                        <a href="/products/<%=e.id%> "><img src="/images/products/<%=e.imagen%>"
+                            class="img-responsive img-fluid" alt=""></a>
                       </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
+                      <div class="thumb-content">
+                        <h4>
+                          <%= e.nombre %>
+                        </h4>
+                        <p class="item-price">
+                          <% if(e.seccion=="oferta" ){ %>
+                            <strike>
+                              <%= e.precio %>
+                            </strike>
+                            <% } %>
+                              <span>$ <%= Math.trunc(e.precio * ((100 - e.descuento)/100)) %> </span>
+                        </p>
+                        <div class="star-rating">
+                        </div>
+                        <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/22"><img src="/images/products/afeitadora.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Afeitadora Phillips</h4>
-                      <p class="item-price"><strike>$9000</strike> <span>$12003.99</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/17"><img src="/images/products/5dc494aa5972bebeaba40b61993a.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Mixer Atma</h4>
-                      <p class="item-price"><strike>$15000.00</strike> <span>$12000.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/18"><img src="/images/products/ba04c4eb2de1900b0bccd68ac7ec.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Calefactor Tivoli</h4>
-                      <p class="item-price"><strike>$15000.00</strike> <span>$13000.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- hoja 1 -->
-            <div class="item carousel-item">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/2"><img src="/images/products/ps5.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Sony Play Station</h4>
-                      <p class="item-price"><strike>$28900.00</strike> <span>$269000.00</span></p>
-                      <div class="star-rating">
-
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/25"><img src="/images/products/product-1656301674208.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Cafetera </h4>
-                      <p class="item-price"><strike>$10099.00</strike> <span>$8690.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/19"><img src="/images/products/D_NQ_NP_888981-MLA49040495612_022022-O.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Ventilador Tivoli</h4>
-                      <p class="item-price"><strike>$15000.00</strike> <span>$12199.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/4"><img src="/images/products/test-s22.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Samsung Galaxy S-22</h4>
-                      <p class="item-price"><strike>$5599.00</strike> <span>$55869.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item carousel-item">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/14"><img src="/images/products/tablet-lenovo-8505fs.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Lenovo 8505</h4>
-                      <p class="item-price"><strike>$36900.00</strike> <span>$23475.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/21"><img src="/images/products/plancha_atma.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Planchita GA.MA</h4>
-                      <p class="item-price"><strike>$6500.00</strike> <span>$4000.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                     <a href="/products/20"><img src="/images/products/impresora.jpg" class="img-responsive img-fluid" alt=""></a> 
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Impresora Hp-2775</h4>
-                      <p class="item-price"><strike>$25000.00</strike> <span>$1500.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <a href="/products/15"><img src="/images/products/cocinaesco.jpg" class="img-responsive img-fluid" alt=""></a>
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Cocina Escorial</h4>
-                      <p class="item-price"><strike>$48000.00</strike> <span>$34000.00</span></p>
-                      <div class="star-rating">
-                      </div>
-                      <a href="/cart" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                </div>
+                  <% }); %>
               </div>
             </div>
           </div>
@@ -225,4 +74,5 @@
     </div>
   </div>
 </body>
+
 </html>

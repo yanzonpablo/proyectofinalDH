@@ -62,11 +62,15 @@
                                 </a></span>
 
                         </div>
-                        <div class="m-bot15" style="margin-bottom: 20px;"> <strong>Precio: </strong> <span
-                                style="text-decoration: line-through" class="tachado">$5434</span>
-
-                            <span class="pro-price"><strong style="color: green; font-size: 16px;">$
-                                    <%=producto.precio%></strong></span>
+                        <div class="m-bot15" style="margin-bottom: 20px;">
+                            <% if (producto.seccion=="oferta" ) { %>
+                                <strong>Precio: </strong> <span style="text-decoration: line-through" class="tachado">$
+                                    <%= producto.precio %>
+                                </span>
+                                <% } %>
+                                    <span class="pro-price"><strong style="color: green; font-size: 16px;">$
+                                            <%= Math.trunc(producto.precio * ((100 - producto.descuento)/100))%>
+                                        </strong></span>
                         </div>
                         <div class="form-group">
                             <label>Cantidad:</label>

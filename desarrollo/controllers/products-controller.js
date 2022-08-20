@@ -10,7 +10,11 @@ module.exports = {
     // RESTA HACER DINAMICO EL product.ejs
     db.Products.findByPk(req.params.id, { include: ["categorie"] }).then(
       (products) => {
-        res.render("product", { producto: products });
+        db.Products.findAll({
+          where: { idProductoCategorias: products.idProductoCategorias },
+        }).then((sameCategorie) => {
+          res.render("product", { producto: products, sameCategorie });
+        });
       }
     );
   },
