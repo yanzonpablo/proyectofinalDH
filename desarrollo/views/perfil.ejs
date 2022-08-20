@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/perfilUsuario.css">
+    <script>
+        function inputPass() {
+            document.getElementById("inputChangePass").style.display= "block";
+            document.getElementById("btnchangepass").style.display = "none";
+        }
+        function activaOk() {
+            document.getElementById("opcionOk").value;
+            if (opcionOk != "") {
+                document.getElementById("opcionOk").style.display= "block";
+                document.getElementById("opcioncnl").style.display = "block";
+            }
+        }
+            function cancelaPass() {
+                document.getElementById("opcioncnl").style.display = "none";
+                document.getElementById("opcionOk").style.display = "none";
+                document.getElementById("inputChangePass").style.display = "none";
+                document.getElementById("btnchangepass").style.display = "block";
+                
+        }
+    </script>
     <title>Perfil Usuario</title>
 </head>
 
@@ -44,6 +64,16 @@
                     <li><i class="icono fas fa-map-marker-alt"></i><strong>Ciudad:</strong>
                         <%= usuario.ciudad %>
                     </li>
+                    <div class="perfilPass">
+                        <li><button class="btnchangepass" id="btnchangepass" onclick="inputPass()">Cambiar password</button>
+                        </li>
+                        <input type="text" id="inputChangePass" onclick="activaOk()" placeholder="Ingrese contraseña">
+                        <div class="decidepass">
+                        <button class="opcionOk" id="opcionOk">Aceptar</button>
+                        <button class="opcioncnl" id="opcioncnl" onclick="cancelaPass()">Cancelar</button>
+                        </div>
+                    </div>
+                    
                 </ul>
             </div>
         </div>

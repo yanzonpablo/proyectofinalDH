@@ -9,7 +9,7 @@ module.exports = {
       });
     });
   },
-  details: (req, res) => {
+  perfil: (req, res) => {
     // Muestra datos usuario registrado
     db.Users.findOne({ where: { id: req.params.id } }).then((usuario) => {
       res.render("perfil", { usuario });

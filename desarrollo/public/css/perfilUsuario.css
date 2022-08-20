@@ -5,7 +5,7 @@
 }
 body {
     color: #404040;
-      font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {
@@ -62,7 +62,7 @@ body {
     cursor: pointer;
 }
 .seccion-perfil-usuario .perfil-usuario-body {
-    width: 70%;
+    width: 100%;
     position: relative;
     max-width: 750px;
 }
@@ -95,7 +95,7 @@ img {
     height: 100%;
 }
 .seccion-perfil-usuario .lista-datos {
-    width: 50%;
+    width: 90%;
     list-style: none;
 }
 .seccion-perfil-usuario .lista-datos li {
@@ -116,6 +116,71 @@ img {
     justify-content: center;
     margin-top: 20px;;
 }
+.btnchangepass {
+    font-size: 16px; 
+    padding: 3px 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: #317FFF;
+    color: white;
+    box-shadow: 0px 0px 3px rgb(1, 1, 1);
+    cursor: pointer;
+    margin-left: 25px;
+}
+.opcionOk {
+    font-size: 16px; 
+    padding: 3px 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: #317FFF;
+    color: white;
+    box-shadow: 0px 0px 3px rgb(1, 1, 1);
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+.opcioncnl {
+    font-size: 16px; 
+    padding: 3px 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: #317FFF;
+    color: white;
+    box-shadow: 0px 0px 3px rgb(1, 1, 1);
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+.btnchangepass:hover{
+    box-shadow: none;
+}
+.opcionOk:hover{
+    box-shadow: none;
+}
+.opcioncnl:hover{
+    box-shadow: none;
+}
+#inputChangePass {
+    display: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 25px;
+    font-size: 16px;
+    height: 25px;
+    margin-top: 5px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+#inputChangePass:focus {
+    border-color: #317FFF;
+    outline: 0 none;
+
+}
+.perfilPass {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
 .btn {
     padding: 10px 10px;
     color: white;
@@ -130,7 +195,15 @@ img {
     box-shadow: none;
     border: 1px solid  #848484;;
     cursor: pointer;
-    
+}
+.decidepass{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.decidepass {
+    display: flex;
+    flex-wrap: wrap;
 }
 /* adaptacion a dispositivos */
 @media (max-width: 750px) {
@@ -141,4 +214,5 @@ img {
     .seccion-perfil-usuario .perfil-usuario-body {
         width: 95%;
     }
+
 }

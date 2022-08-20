@@ -25,24 +25,24 @@
             <!-- FINALIZA BARRA CARRITO -->
             <h3 class="product-carrito mb-20 pt-20 ml-20">Detalle de envío:</h3>
             <div class="container">
-                <form class="mobile ml-20">
+                <form class="mobile ml-20" method="post">
                     <div>
                         <div class="entre-linea ds-flex js-cont-b fx-wrap">
                             <div>
                                 <input type="text" name="nombre"
-                                    class="media-mobile p-lateral  border-radius height-25 sinborde"
-                                    placeholder="Nombre">
+                                    class="media-mobile p-lateral  border-radius height-25 sinborde">
+                                    <%= datos.nombre %> 
                             </div>
                             <div>
                                 <input type="text" name="apellido" class="p-lateral height-25 sinborde border-radius "
-                                    placeholder="Apellido">
+                                    placeholder="Apellido"><%= datos.apelido %>
                             </div>
                         </div>
                         <div class="entre-linea ds-flex js-cont-b fx-wrap">
                             <div>
                                 <input type="number" name="dni"
                                     class="media-mobile p-lateral  border-radius height-25 sinborde"
-                                    placeholder="D.N.I.">
+                                    placeholder="D.N.I."> 
                             </div>
                             <div>
                                 <input type="number" name="telefono" class="p-lateral border-radius height-25 sinborde "
@@ -53,7 +53,7 @@
                             <div>
                                 <input type="text" name="direccion"
                                     class="media-mobile p-lateral border-radius height-25 sinborde"
-                                    placeholder="Dirección">
+                                    placeholder="Dirección"> <%= datos.domicilio %>
                             </div>
                             <div>
                                 <input type="text" name="direccion2" class="p-lateral border-radius height-25 sinborde "
@@ -64,7 +64,7 @@
                             <div>
                                 <input type="text" name="ciudad"
                                     class="media-mobile p-lateral  border-radius height-25 sinborde"
-                                    placeholder="Ciudad">
+                                    placeholder="Ciudad"> <%= datos.ciudad %>
                             </div>
                             <div>
                                 <input type="number" name="cod-postal"
