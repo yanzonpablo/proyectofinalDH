@@ -5,7 +5,7 @@
   <%- include('./partials/head') %>
     <title>Editar usuario</title>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
-    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles-reg-log.css" />
 </head>
 
 <body>
@@ -14,64 +14,83 @@
     <%- include('./partials/header-logo') %>
   </header>
   <main>
-    <form class="container" action="/user/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-      <h1 class="form-label">
-        Editar el usuario existente id <%= usuario.id %>
-      </h1>
-      <div class="row product-detail">
-        <div class="col-12 col-md-6">
-          <label for="nombre" class="form-label">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" class="cajas" value="<%= usuario.nombre %>" />
-        </div>
-        <div class="col-12 col-md-6">
-          <label for="apellido" class="form-label">Apellido:</label>
-          <input type="text" id="apellido" name="apellido" class="cajas" value="<%= usuario.apellido %>" />
-        </div>
-        <div class="col-12 col-md-6">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" id="email" name="email" class="cajas" value="<%= usuario.email%>" />
-        </div>
-        <div class="col-12 col-md-6">
-          <label for="password" class="form-label">Password:</label>
-          <input type="password" id="password" name="password" class="cajas" />
-        </div>
-        <div class="col-12 col-md-6">
-          <label for="domicilio" class="form-label">Domicilio:</label>
-          <input class="cajas" type="text" id="domicilio" name="domicilio" maxlength="30"
-            value="<%= usuario.domicilio%>" />
-        </div>
-        <div class="col-12 col-md-6">
-          <label for="ciudad" class="form-label">Ciudad:</label>
-          <input class="cajas" type="text" id="ciudad" name="ciudad" maxlength="30" value="<%=usuario.ciudad%>" />
-        </div>
+    <div class="container products-wrapper">
+      <div class="row">
         <div class="col-12">
-          <label for="imagen" class="form-label">Imagen de perfil:</label>
-          <img src="<%=usuario.imagen%>" alt="" style="width: 20%; text-align: center;">
-          <input type="file" name="imagen" class="cajas" accept="image/*">
+          <h1 class="titulo-crear">
+            Editar el usuario:
+          </h1>
         </div>
-        <div class="col-12 col-md-6">
-          <label for="categoria" class="form-label">Categoría:</label>
-          <select class="cajas" id="idUsuarioCategorias" name="idUsuarioCategorias">
-            <% categorias.forEach(categoria=> {%>
-              <option value="<%=categoria.id%>">
-                <%=categoria.nombre%>
-              </option>
-              <%}) %>
-        </div>
-        <div>
-          <input type="submit" class="col-md-12 btn" value="EDITAR" />
-        </div>
-    </form>
-    <form class="container" action="/user/<%= usuario.id %>?_method=DELETE" method="POST"></form>
-    <div>
-      <input type="submit" class="col-md-12 btn" value="BORRAR" />
+      </div>
+      <div class="col-12">
+        <form action="/user/<%= userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <div class="row product-detail">
+            <div class="col-12 col-md-6">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= userToEdit.nombre %>" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="apellido" class="form-label">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" class="cajas" value="<%= userToEdit.apellido %>" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" name="email" class="cajas" value="<%= userToEdit.email%>" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="password" class="form-label">Password:</label>
+              <input type="password" id="password" name="password" class="cajas" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="domicilio" class="form-label">Domicilio:</label>
+              <input class="cajas" type="text" id="domicilio" name="domicilio" maxlength="30"
+                value="<%= userToEdit.domicilio%>" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="ciudad" class="form-label">Ciudad:</label>
+              <input class="cajas" type="text" id="ciudad" name="ciudad" maxlength="30"
+                value="<%=userToEdit.ciudad%>" />
+            </div>
+            <!-- <div class="col-12 col-md-6">
+              <label for="categoria" class="form-label">Categoría:</label>
+              <select class="cajas" id="idUsuarioCategorias" name="idUsuarioCategorias">
+                <%# categorias.forEach(categoria=> {%>
+                  <option value="<%#=categoria.id%>">
+                    <%#=categoria.nombre%>
+                  </option>
+                  <%#}) %>
+            </div> -->
+            <div class="col-12 col-md-6">
+              <label for="imagen" class="form-label">Imagen de perfil:</label>
+              <img src="<%=userToEdit.imagen%>" alt="" style="width: 20%; text-align: center;">
+              <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*">
+            </div>
+          </div>
+          <div class="col-12">
+            <input type="submit" class="btn" value="EDITAR" />
+          </div>
+        </form>
+      </div>
+      <!-- ELIMINAR -->
+      <div class="col-12">
+        <form action="/user/<%= userToEdit.id %>?_method=DELETE" method="POST" class="col-12">
+          <input type="submit" class="btn" value="BORRAR" />
+        </form>
+      </div>
+      <!-- FIN ELIMINAR -->
     </div>
-    </form>
+
   </main>
   <!-- Comienzo footer -->
   <footer>
     <%- include ('./partials/footer-form') %>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

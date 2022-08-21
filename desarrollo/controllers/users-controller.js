@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   list: (req, res) => {
@@ -20,8 +21,10 @@ module.exports = {
     db.UserCategories.findAll().then((categorias) => {
       db.Users.findByPk(req.params.id).then((usuario) => {
         res.render("edit-user", {
-          usuario,
-          categorias,
+          userToEdit: usuario,
+          categorias: categorias,
+          // usuario,
+          // categorias,
         });
       });
     });
@@ -42,12 +45,19 @@ module.exports = {
     });
   },
   destroy: (req, res) => {
-    db.Users.findByPk(req.params.id).then((user) => {
-      user.setUserCategories().then(() => {
-        user.destroy().then(() => {
-          res.redirect("/user/list");
-        });
-      });
-    });
+    db.Users.destroy({
+      where: {
+        id: req.params.id, 
+      },
+    }).then(() => {
+      res.redirect("/user/list"); 
+    })
+    // db.Users.findByPk(req.params.id).then((user) => {
+    //   user.setUserCategories().then(() => {
+    //     user.destroy().then(() => {
+    //       res.redirect("/user/list");
+    //     });
+    //   });
+    // });
   },
 };

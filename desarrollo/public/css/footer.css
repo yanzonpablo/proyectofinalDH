@@ -102,6 +102,21 @@
   background-color: rgba(56, 51, 49, 1);
   color: white;
 }
+
+html{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer{
+  margin-top: auto;
+}
+
 a:link,
 a:visited,
 a:active {

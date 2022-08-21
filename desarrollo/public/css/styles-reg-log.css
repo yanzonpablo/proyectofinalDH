@@ -12,6 +12,16 @@ body {
   background-color: rgba(238, 238, 238, 1);
 }
 
+/* input {
+  display: table-cell;
+}
+
+label {
+  display: block;
+  float: left;
+  width: 120px;
+} */
+
 .form {
   width: 450px;
   padding: 40px;
@@ -23,7 +33,7 @@ body {
 }
 
 .form-delete {
-  width: 97%;
+  width: 100%;
   margin: auto;
   background-color: #eeeeee;
   border-radius: 5px;
