@@ -51,4 +51,6 @@ module.exports = {
   pago: (req, res) => {
     res.render("detalle-pagos");
   },
-};
+  
+  }
+    
