@@ -11,6 +11,31 @@
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/compras.css" />
+    <script>
+      window.onload = function () {
+
+        let btnSube = document.querySelector("#btnSube");
+        let btnBaja = document.querySelector("#btnBaja");
+        let cantProd = document.querySelector("#cantProd");
+        let valor = 1;
+        document.querySelector("#cantProd").innerText = 1;
+
+        btnSube.addEventListener("click", function () {
+          cantProd.innerText = ++ valor;
+        })
+
+        btnBaja.addEventListener("click", function () {
+        cantProd.innerText = -- valor;
+        if (cantProd <0) {
+          Math.sign(0);
+        }
+        })
+
+        }
+    </script>
+    <script>
+
+    </script>
     <title>Carrito de compras</title>
 </head>
 
@@ -51,9 +76,9 @@
               </td>
               <td class="td-cantidad">
                 <div class="ds-flex js-cont-center align-items">
-                  <a href="#"><i class="fas fa-caret-square-left ft-size-less botonsb"></i></a>
-                  <p class="ft-size-number pr-10 pl-10 ft-weight numero">1</p>
-                  <a href="#"><i class="fas fa-caret-square-right ft-size-more botonsb"></i></a>
+                  <a href="#"><i class="fas fa-caret-square-left ft-size-less botonsb" id="btnSube"></i></a>
+                  <p class="ft-size-number pr-10 pl-10 ft-weight numero" id="cantProd">1</p>
+                  <a href="#"><i class="fas fa-caret-square-right ft-size-more botonsb" id="btnBaja"></i></a>
                 </div>
               </td>
               <td class="td-basura text-align">
