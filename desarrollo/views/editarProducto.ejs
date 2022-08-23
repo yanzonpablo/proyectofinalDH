@@ -40,7 +40,7 @@
               <label for="categoria" class="form-label">Categoría:</label>
               <select class="cajas" name="idProductoCategorias" id="idProductoCategorias">
                 <% categories.forEach(categoria=> { %>
-                  <option value="<%=categoria.id%>">
+                  <option value="<%=categoria.id%>" <%= productToEdit.idProductoCategorias == categoria.id ? 'selected' : '' %>>
                     <%=categoria.nombre%>
                   </option>
                   <% }) %>
