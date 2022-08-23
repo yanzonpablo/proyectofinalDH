@@ -282,7 +282,27 @@ main {
 .td-basura{
     width: 10%;
 }
-
+.button{
+    border: none;
+}
+input#cantProd {
+    width: 30px;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: black;
+}
+input#cantProd:focus {
+    border: none;
+}
+input#cantProd:active {
+    border: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
 @media(max-width: 680px) {
 .contenedor {
     display: flex;
@@ -342,6 +362,7 @@ margin-left: 0px;
 .basurero {
     display: none;
 }
+
 .td-precio{
     width: 25%;
 }
