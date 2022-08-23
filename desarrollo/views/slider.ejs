@@ -47,7 +47,7 @@
                         <p class="item-price">
                           <% if(e.seccion=="oferta" ){ %>
                             <strike>
-                              <%= e.precio %>
+                              $ <%= e.precio %>
                             </strike>
                             <% } %>
                               <span>$ <%= Math.trunc(e.precio * ((100 - e.descuento)/100)) %> </span>
