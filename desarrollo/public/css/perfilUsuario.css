@@ -172,6 +172,13 @@ img {
     margin-bottom: 10px;
     width: 35%;
 }
+.editarReg {
+    justify-items: end;
+    text-decoration: none;
+    color: #317FFF;
+    float: right;
+}
+
 #inputChangePass:focus {
     border-color: #317FFF;
     outline: 0 none;
