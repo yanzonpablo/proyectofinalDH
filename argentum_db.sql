@@ -2,8 +2,7 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.4.20-MariaDB : Database - argentum_db
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -29,7 +28,9 @@ CREATE TABLE `carrito` (
   `updatedAt` date DEFAULT NULL,
   `deletedAt` tinyint(1) DEFAULT 0,
   `idUsuario` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idUsuario` (`idUsuario`),
+  CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*Data for the table `carrito` */
@@ -43,7 +44,11 @@ CREATE TABLE `producto_carrito` (
   `createdAt` date DEFAULT NULL,
   `idCarrito` int(11) DEFAULT NULL,
   `idProductos` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `idCarrito` (`idCarrito`),
+  KEY `idProductos` (`idProductos`),
+  CONSTRAINT `producto_carrito_ibfk_1` FOREIGN KEY (`idCarrito`) REFERENCES `carrito` (`id`),
+  CONSTRAINT `producto_carrito_ibfk_2` FOREIGN KEY (`idProductos`) REFERENCES `productos` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*Data for the table `producto_carrito` */
@@ -81,8 +86,10 @@ CREATE TABLE `productos` (
   `updatedAt` date DEFAULT NULL,
   `deletedAt` int(11) DEFAULT NULL,
   `idProductoCategorias` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  PRIMARY KEY (`id`),
+  KEY `idProductoCategorias` (`idProductoCategorias`),
+  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`idProductoCategorias`) REFERENCES `producto_categorias` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*Data for the table `productos` */
 
@@ -115,13 +122,14 @@ CREATE TABLE `usuarios` (
   `domicilio` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `ciudad` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `imagen` varchar(255) COLLATE utf8_spanish_ci DEFAULT "user-default.jpg",
+  `imagen` varchar(255) COLLATE utf8_spanish_ci DEFAULT 'user-default.jpg',
   `createdAt` date NOT NULL,
   `updatedAt` date NOT NULL,
   `deletedAt` tinyint(1) DEFAULT 0,
   `idUsuarioCategorias` int(11) DEFAULT 1,
   PRIMARY KEY (`id`),
-  KEY `idUsuarioCategorias` (`idUsuarioCategorias`)
+  KEY `idUsuarioCategorias` (`idUsuarioCategorias`),
+  CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`idUsuarioCategorias`) REFERENCES `usuario_categorias` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*Data for the table `usuarios` */
