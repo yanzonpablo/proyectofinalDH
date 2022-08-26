@@ -25,12 +25,14 @@ module.exports = {
   },
   edit: (req, res) => {
     db.ProductsCategories.findAll().then((categorie) => {
-      db.Products.findByPk(req.params.id).then((product) => {
-        res.render("editarProducto", {
-          productToEdit: product,
-          categories: categorie,
-        });
-      });
+      db.Products.findByPk(req.params.id, { include: ["categorie"] }).then(
+        (product) => {
+          res.render("editarProducto", {
+            productToEdit: product,
+            categories: categorie,
+          });
+        }
+      );
     });
   },
   store: (req, res) => {
