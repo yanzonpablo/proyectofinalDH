@@ -25,7 +25,6 @@
                 document.getElementById("opcionOk").style.display = "none";
                 document.getElementById("inputChangePass").style.display = "none";
                 document.getElementById("btnchangepass").style.display = "block";
-                
         }
     </script>
     <title>Perfil Usuario</title>
@@ -35,6 +34,7 @@
     <header>
         <%- include('./partials/header-profile') %>
     </header>
+    <!-- <form action="/user/:<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> -->
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
@@ -49,20 +49,20 @@
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
                 <h3 class="titulo"> Nombre y apellido: <%= usuario.nombre%>
-                        <%= usuario.apellido %> %>
+                        <%= usuario.apellido %> %><a href="" class="editarReg"><i class="fas fa-user-edit fa-x1"></i></a>
                 </h3>
-
+                    
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
                     <li><i class="iconos fas fa-at"></i><strong>E-mail:</strong>
-                        <%= usuario.email %>
+                        <%= usuario.email %><a href="" class="editarReg"><i class="fas fa-user-edit"></i> Editar</a>
                     </li>
                     <li><i class="icono fas fa-map-marker-alt"></i><strong>Domicilio:</strong>
-                        <%= usuario.domicilio %>
+                        <%= usuario.domicilio %><a href="" class="editarReg"><i class="fas fa-user-edit"></i> Editar</a>
                     </li>
                     <li><i class="icono fas fa-map-marker-alt"></i><strong>Ciudad:</strong>
-                        <%= usuario.ciudad %>
+                        <%= usuario.ciudad %><a href="" class="editarReg"><i class="fas fa-user-edit"></i> Editar</a>
                     </li>
                     <div class="perfilPass">
                         <li><button class="btnchangepass" id="btnchangepass" onclick="inputPass()">Cambiar password</button>
@@ -78,6 +78,7 @@
             </div>
         </div>
     </section>
+    </form>
     <div class="boton">
         <a href="/"><input type="submit" class="btn" value="Volver"></a>
     </div>

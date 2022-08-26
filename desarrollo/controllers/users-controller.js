@@ -40,7 +40,7 @@ module.exports = {
         user.imagen = req.file.filename;
       }
       user.save().then(() => {
-        res.redirect("/user/list");
+        res.render("/user/list");
       });
     });
   },
