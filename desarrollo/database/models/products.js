@@ -30,6 +30,12 @@ module.exports = function (sequelize, datatypes) {
       as: "carts",
     }); */
   };
+      product.associate = (models) => {
+        product.hasMany(models.imagenes_producto, {
+          foreignKey: "idProductos",
+          as: "imagenesProductos",
+        });
+      };
 
   return product;
 };
