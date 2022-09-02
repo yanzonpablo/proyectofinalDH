@@ -18,24 +18,20 @@ module.exports = function (sequelize, datatypes) {
       deletedAt: "deletedAt",
     }
   );
-
   product.associate = (models) => {
     product.belongsTo(models.ProductsCategories, {
       foreignKey: "idProductoCategorias",
       as: "categorie",
     });
-    /*     
+    /*  
     product.belongsTo(models.ProductsCarts, {
       foreignKey: "idProductos",
       as: "carts",
     }); */
+    product.hasMany(models.ProductsImages, {
+      foreignKey: "idProductos",
+      as: "images",
+    });
   };
-      product.associate = (models) => {
-        product.hasMany(models.imagenes_producto, {
-          foreignKey: "idProductos",
-          as: "imagenesProductos",
-        });
-      };
-
   return product;
 };

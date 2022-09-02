@@ -2,8 +2,7 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.4.20-MariaDB : Database - argentum_db
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -44,6 +43,9 @@ CREATE TABLE `imagenes_productos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `imagen` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   `idProductos` int(11) DEFAULT NULL,
+  `createdAt` date DEFAULT NULL,
+  `updatedAt` date DEFAULT NULL,
+  `deletedAt` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idProductos` (`idProductos`),
   CONSTRAINT `imagenes_productos_ibfk_1` FOREIGN KEY (`idProductos`) REFERENCES `productos` (`id`)

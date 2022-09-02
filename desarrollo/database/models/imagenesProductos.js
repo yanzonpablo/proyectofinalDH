@@ -1,22 +1,22 @@
 module.exports = function (sequelize, datatypes) {
-  const imagenes_producto = sequelize.define(
-        "imagenesProductos",
+  const productImages = sequelize.define(
+        "ProductsImages",
     {
-      id: datatypes.INTEGER,
       imagen: datatypes.STRING,
     },
     {
       tableName: "imagenes_productos",
-      timestamps: false,
-
+      timestamps: true,
+      createdAt: "createdAt",
+      updatedAt: "updatedAt",
+      deletedAt: "deletedAt",
     }
   )
-    imagenes_producto.associate = (models) => {
-      imagenes_producto.hasMany(models.Products, {
+  productImages.associate = (models) => {
+    productImages.belongsTo(models.Products, {
         foreignKey: "idProductos",
-        as: "products",
+        as: "product",
       });
     };
+return productImages;
 }
-
-return imagenes_producto;
