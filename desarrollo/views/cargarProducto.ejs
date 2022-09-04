@@ -28,12 +28,11 @@
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre del producto:</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Playstation 5" class="cajas" required
-                maxlength="30" />
+              <input type="text" id="nombre" name="nombre" placeholder="Playstation 5" class="cajas" maxlength="30" />
             </div>
             <div class="col-12 col-md-6">
               <label for="precio" class="form-label">Precio del producto:</label>
-              <input type="text" id="precio" name="precio" placeholder="10000" class="cajas" required />
+              <input type="text" id="precio" name="precio" placeholder="10000" class="cajas" />
             </div>
             <div class="col-12 col-md-6">
               <label for="categoria" class="form-label">Categoría:</label>
@@ -55,7 +54,7 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="descuento" class="form-label">Descuento:</label>
-              <input type="text" id="descuento" name="descuento" placeholder="10" class="cajas" required />
+              <input type="text" id="descuento" name="descuento" placeholder="10" class="cajas" />
             </div>
             <div class="col-12 col-md-6">
               <label for="imagen" class="form-label">Adjuntar imágenes:</label>
@@ -64,6 +63,9 @@
             <div class="col-12">
               <label for="descripcion" class="form-label">Descripción:</label>
               <textarea name="descripcion" id="descripcion" class="cajas"></textarea>
+            </div>
+            <div class="errores">
+              <ul id="errores"></ul>
             </div>
             <div class="col-12">
               <button type="submit" class="btn">Crear nuevo producto</button>
@@ -83,5 +85,6 @@
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
 </body>
+<script src="/js/create-form.js"></script>
 
 </html>

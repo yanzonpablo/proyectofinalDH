@@ -220,3 +220,8 @@ textarea.form-input {
 .container-error {
   width: 100%;
 }
+
+div.errores {
+  color: red;
+  margin: 0px auto;
+}
