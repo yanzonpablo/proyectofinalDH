@@ -25,7 +25,7 @@ module.exports = {
   },
   edit: (req, res) => {
     db.ProductsCategories.findAll().then((categorie) => {
-      db.Products.findByPk(req.params.id, { include: ["categorie"] }).then(
+      db.Products.findByPk(req.params.id, { include: ["categorie","images"] }).then(
         (product) => {
           res.render("editarProducto", {
             productToEdit: product,
