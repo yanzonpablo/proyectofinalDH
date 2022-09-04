@@ -43,12 +43,16 @@ module.exports = {
     });
   },
   update: (req, res) => {
-    db.Products.findByPk(req.params.id).then((product) => {
+    db.Products.findByPk(req.params.id, { include: ["categorie","images"] }).then((product) => {
       product.set({
         ...req.body,
       });
       if (req.file) {
-        product.imagen = req.file.filename;
+        db.ProductsImages.create({
+          idProductos: req.params.id,
+          imagen: req.file.filename,
+        }).then(()=>{
+        })
       }
       product.save().then(() => {
         res.redirect("/products");
