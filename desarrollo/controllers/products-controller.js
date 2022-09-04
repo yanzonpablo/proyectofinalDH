@@ -36,11 +36,24 @@ module.exports = {
     });
   },
   store: (req, res) => {
-    db.Products.create({
-      ...req.body,
-    }).then(() => {
-      res.redirect("/products");
-    });
+    if (req.file) {
+      db.Products.create({
+        ...req.body,
+      }).then((product) => {
+        db.ProductsImages.create({
+          imagen: req.file.filename,
+          idProductos: product.id
+        }).then(()=>{
+          res.redirect("/products");
+        })
+      });
+    }
+      else {
+        db.Products.create({
+          ...req.body,
+        })
+        res.redirect("/products");
+      }
   },
   update: (req, res) => {
     db.Products.findByPk(req.params.id, { include: ["categorie","images"] }).then((product) => {
