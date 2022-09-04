@@ -19,9 +19,6 @@
         Completá el formulario para formar parte de nuestra comunidad:
       </h1>
       <div class="row product-detail">
-        <div class="errores">
-          <ul></ul>
-        </div>
         <div class="col-12 col-md-6">
           <label for="nombre" class="form-label">Nombre:</label>
           <input type="text" name="nombre" id="nombre" class="cajas"
@@ -109,6 +106,9 @@
             </div>
             <% } %>
         </div>
+        <div class="errores">
+          <ul></ul>
+        </div>
         <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="REGISTRATE" />
       </div>
     </form>
@@ -118,6 +118,6 @@
     <%- include ('./partials/footer-form') %>
   </footer>
 </body>
-<script src="/js/forms.js"></script>
+<script src="/js/register-form.js"></script>
 
 </html>

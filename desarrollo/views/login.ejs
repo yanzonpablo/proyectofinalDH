@@ -13,47 +13,55 @@
   <header>
     <%- include('./partials/header-logo') %>
   </header>
-      <main>
-        <form class="container col-md-6" style="margin-top: 20px;" action="/login" method="POST">
-          <div class="row product-detail" style="text-align: center">
-            <div class="form-label" style="margin-left: 20px;">Iniciar sesión</div>
-            <div class="col-12">
-              <label for="email" class="form-label">Email:</label>
-              <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" />
-              <% if (locals.errors && errors.email) { %>
-                <div class="error-login">
-                  <p><%= errors.email.msg %> </p>
-                </div>
-                <% } %>
+  <main>
+    <form class="container col-md-6" style="margin-top: 20px;" action="/login" method="POST">
+      <div class="row product-detail" style="text-align: center">
+        <div class="form-label" style="margin-left: 20px;">Iniciar sesión</div>
+        <div class="col-12">
+          <label for="email" class="form-label">Email:</label>
+          <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" />
+          <% if (locals.errors && errors.email) { %>
+            <div class="error-login">
+              <p>
+                <%= errors.email.msg %>
+              </p>
             </div>
+            <% } %>
+        </div>
 
-            <div class="col-12">
-              <label for="password" class="form-label">Contraseña:</label>
-              <input class="cajas" type="password" name="password" placeholder="Contraseña" maxlength="30" />
-            </div>
-            <div class="container-error">
-              <p><% if (locals.error) { %>
-                <div class="error-login">Tus credenciales son inválidas</div>
-                <% } %></p>
-            </div>
-            <div class="col-12 remember"><input type="checkbox" name="recordame"/> Recordarme</div>
+        <div class="col-12">
+          <label for="password" class="form-label">Contraseña:</label>
+          <input class="cajas" type="password" id="password" name="password" placeholder="Contraseña" maxlength="30" />
+        </div>
+        <div class="container-error">
+          <p>
+            <% if (locals.error) { %>
+              <div class="error-login">Tus credenciales son inválidas</div>
+              <% } %>
+          </p>
+        </div>
+        <div class="errores">
+          <ul id="errores"></ul>
+        </div>
+        <div class="col-12 remember"><input type="checkbox" name="recordame" /> Recordarme</div>
 
-            <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="Ingresar" />
 
-            <div class="col-12 tengo-cuenta">
-              <a href="/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
-            </div>
-            <!-- <div class="col-12 forget">
+        <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="Ingresar" />
+
+        <div class="col-12 tengo-cuenta">
+          <a href="/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
+        </div>
+        <!-- <div class="col-12 forget">
               <a href="">¿Olvidaste tu Contraseña?</a>
             </div> -->
 
-          </div>
-        </form>
-      </main>
-      <!-- Comienzo footer -->
-      <footer>
-        <%- include ('./partials/footer-form') %>
-      </footer>
+      </div>
+    </form>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer-form') %>
+  </footer>
 </body>
-
+<script src="/js/login-form.js"></script>
 </html>
