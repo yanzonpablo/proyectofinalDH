@@ -7,7 +7,6 @@ module.exports = function (sequelize, datatypes) {
       seccion: datatypes.STRING,
       descuento: datatypes.INTEGER,
       descripcion: datatypes.STRING,
-      imagen: datatypes.STRING,
       cantidad: datatypes.INTEGER,
     },
     {

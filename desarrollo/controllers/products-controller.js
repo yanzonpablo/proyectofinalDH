@@ -2,16 +2,16 @@ const db = require("../database/models");
 
 module.exports = {
   index: (req, res) => {
-    db.Products.findAll().then((products) => {
+    db.Products.findAll({include:["images"]}).then((products) => {
       res.render("products-list", { products });
     });
   },
   details: (req, res) => {
     // RESTA HACER DINAMICO EL product.ejs
-    db.Products.findByPk(req.params.id, { include: ["categorie"] }).then(
+    db.Products.findByPk(req.params.id, { include: ["categorie","images"] }).then(
       (products) => {
         db.Products.findAll({
-          where: { idProductoCategorias: products.idProductoCategorias },
+          where: { idProductoCategorias: products.idProductoCategorias },include: ["images"],
         }).then((sameCategorie) => {
           res.render("product", { producto: products, sameCategorie });
         });
