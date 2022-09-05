@@ -375,6 +375,12 @@ a {
 .img-container-dest {
   height: 150px;
 }
+.hide-banners {
+  display: none;
+}
+.hide-banners-fx {
+  display: none;
+}
 /* .offer-container {
   max-height: 180px;
 }
@@ -479,6 +485,12 @@ a {
   }
   .img-container-dest {
     height: 160px;
+  }
+  .hide-banners {
+    display: block;
+  }
+  .hide-banners-fx {
+    display: flex;
   }
 }
 /* QUERY DESKTOP */
