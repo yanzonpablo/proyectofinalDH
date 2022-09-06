@@ -21,7 +21,7 @@
                         <div class="w-40 mt-8 text-center mobile-hide-subs fx-align-center" >
                             <div>
                                 <p class="w-100 mb-5 font-s25">Recibí nuestras promociones</p>
-                                <form action="">
+                                <form action="/user/sub/<%= locals.loggedUser.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                                     <button class="mb-3 button-news w-100 footer__efecto"
                                         type="submit">Subscribirme</button>
                                 </form>

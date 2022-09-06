@@ -11,7 +11,7 @@ module.exports = {
   },
   login: (req, res) => {
     const { email, password } = req.body;
-    db.Users.findOne({ where: { email: req.body.email } }).then((user) => {
+    db.Users.findOne({ where: { email: email } }).then((user) => {
       if (user && bcrypt.compareSync(password, user.password)) {
         req.session.loggedUser = user;
         if (req.body.recordame == "on") {

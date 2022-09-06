@@ -40,7 +40,18 @@ module.exports = {
         user.imagen = req.file.filename;
       }
       user.save().then(() => {
-        res.render("/user/list");
+        res.render("/user-list");
+      });
+    });
+  },
+  subscribe: (req, res) => {
+    // Actualiza datos de usuario
+    db.Users.findByPk(req.params.id).then((user) => {
+      user.set({
+        idUsuarioCategorias: 2,
+      });
+      user.save().then(() => {
+        res.redirect("/");
       });
     });
   },
