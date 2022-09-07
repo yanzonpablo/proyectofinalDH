@@ -212,11 +212,13 @@ textarea.form-input {
   padding: 6px 12px;
   cursor: pointer;
 }
+
 .error-login {
   color: rgb(238, 20, 20);
   text-align: center;
   font-size: 15px;
 }
+
 .container-error {
   width: 100%;
 }
@@ -227,12 +229,14 @@ div.errores {
 }
 
 .is-valid input,
-.is-valid select {
+.is-valid select,
+.is-valid textarea {
   border-color: #198754;
 }
 
 .is-invalid input,
-.is-invalid select {
+.is-invalid select,
+.is-invalid textarea {
   border-color: red;
 }
 
@@ -240,7 +244,7 @@ div.errores {
   display: none;
 }
 
-.is-invalid .error{
+.is-invalid .error {
   display: block;
   color: red;
 }
