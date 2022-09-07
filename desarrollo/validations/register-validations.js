@@ -1,12 +1,12 @@
 const { body } = require("express-validator");
 
 module.exports = [
-  body("nombre").notEmpty().withMessage("El campo no puede estar vacío"),
-  body("apellido").notEmpty().withMessage("El campo no puede estar vacío"),
+  body("nombre").isLength({ min: 2 }).withMessage("El nombre debe tener al menos dos caracteres"),
+  body("apellido").isLength({ min: 2 }).withMessage("El apellido debe tener al menos dos carácteres"),
   body("email").isEmail().withMessage("Debe introducir un email valido"),
   body("password")
-    .isLength({ min: 8 })
-    .withMessage("La contraseña debe tener al menos 8 caracteres"),
+    .isStrongPassword()
+    .withMessage("La contraseña debe tener al menos 8 caracteres, una letra mayúsculas, una minúscula y un carácter especial"),
   body("rePassword").custom((valor, extra) => {
     if (valor == undefined) {
       throw new Error("Debe confirmar su contraseña");
