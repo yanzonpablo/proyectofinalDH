@@ -16,7 +16,7 @@ body {
   display: none;
   margin-top: 10px;
 }
-.burbuja {
+/* .burbuja {
   position: absolute;
   top: -70%;
   left: 46px;
@@ -25,7 +25,7 @@ body {
   border-radius: 50%;
   background-color: #d93175;
   color: white;
-}
+} */
 .notificacion {
   position: relative;
 }
@@ -150,6 +150,22 @@ body {
   .nav-links:hover {
     color: rgba(255, 255, 255, 1);
   }
+  .navbar-toggle{
+  position: absolute;
+  top: 33px;
+}
+}
+@media (max-width: 921px) {
+  .main-nav > li > a > i {
+    display: none;
+  }
+  .nav-bar {
+    height: 100px;
+  }
+.navbar-toggle{
+  position: absolute;
+  top: 33px;
+}
 }
 @media (max-width: 381px) {
   .main-nav > li > a > i {
@@ -158,4 +174,8 @@ body {
   .nav-bar {
     height: 100px;
   }
+.navbar-toggle{
+  position: absolute;
+  top: 33px;
+}
 }
