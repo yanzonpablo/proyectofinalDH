@@ -14,12 +14,14 @@
     <%- include('./partials/header-logo') %>
   </header>
   <main>
-    <form class="container col-md-6" style="margin-top: 20px;" action="/login" method="POST">
+    <form class="container col-md-6" id="formulario" style="margin-top: 20px;" action="/login" method="POST">
       <div class="row product-detail" style="text-align: center">
         <div class="form-label" style="margin-left: 20px;">Iniciar sesión</div>
         <div class="col-12">
           <label for="email" class="form-label">Email:</label>
-          <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" />
+          <div>
+          <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" /><span class="error"></span>
+          </div>
           <% if (locals.errors && errors.email) { %>
             <div class="error-login">
               <p>
@@ -31,7 +33,9 @@
 
         <div class="col-12">
           <label for="password" class="form-label">Contraseña:</label>
-          <input class="cajas" type="password" id="password" name="password" placeholder="Contraseña" maxlength="30" />
+          <div>
+          <input class="cajas" type="password" id="password" name="password" placeholder="Contraseña" maxlength="30" /><span class="error"></span>
+          </div>
         </div>
         <div class="container-error">
           <p>
