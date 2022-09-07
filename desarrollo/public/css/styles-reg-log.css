@@ -225,3 +225,22 @@ div.errores {
   color: red;
   margin: 0px auto;
 }
+
+.is-valid input,
+.is-valid select {
+  border-color: #198754;
+}
+
+.is-invalid input,
+.is-invalid select {
+  border-color: red;
+}
+
+.error {
+  display: none;
+}
+
+.is-invalid .error{
+  display: block;
+  color: red;
+}

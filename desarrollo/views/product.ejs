@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Detalle de producto</title>
         <link rel="stylesheet" href="/css/product.css">
-        <link rel="stylesheet" href="/css/slider.css">
+
 </head>
 
 <body>
@@ -24,13 +24,13 @@
                 <div class="panel-body">
                     <div class="col-lg-6">
                         <div class="pro-img-details fx-rap text-center">
-                            <img style="width: 50%" src="/images/products/<%=producto.images[0].imagen%>"
+                            <img style="width: 50%;" src="/images/products/<%=producto.images[0].imagen%>"
                                 alt="<%=producto.nombre%>">
                         </div>
-                        <div class="pro-img-list text-center">
+                        <div class="pro-img-list">
                         <% producto.images.forEach(imagen =>{%> 
-                            <a href="#">
-                                <img style="width: 80%" src="/images/products/<%=imagen.imagen%>"
+                            <a href="#" style="width: 50%; text-align: center;">
+                                <img style="width: 120px; height: 120px;" src="/images/products/<%=imagen.imagen%>"
                                 alt="<%=imagen.imagen%>">
                             </a>
                         <%}) %> 

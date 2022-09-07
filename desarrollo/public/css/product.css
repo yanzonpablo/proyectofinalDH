@@ -161,7 +161,7 @@ background:#eee;
 .pro-img-list {
     margin: 10px 0 0 -15px;
     display: flex!important;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 .descripcion {
