@@ -5,7 +5,7 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const errores = document.querySelector("#errores");
 let mensajesErrores = [];
-const regexEmail = "^[w-.]+@([w-]+.)+[w-]{2,4}$";
+const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 window.onload = function () {
   formulario.nombre.focus();
@@ -89,6 +89,19 @@ window.onload = function () {
     }
   });
 };
+
+function validateEmail(){
+	if( validEmail.test(formulario.email.value) ){
+        formulario.email.parentElement.classList.remove("is-invalid");
+        formulario.email.parentElement.classList.add("is-valid");
+        formulario.email.parentElement.querySelector(".error").innerHTML = "";
+
+	}else{
+        formulario.email.parentElement.classList.add("is-invalid");
+        formulario.email.parentElement.classList.remove("is-valid");
+        formulario.email.parentElement.querySelector(".error").innerHTML = "* Ingresá un email válido";
+	}
+} 
 
 function fileValidation() {
   var fileInput = 

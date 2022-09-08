@@ -1,4 +1,5 @@
-const formulario = document.querySelector("#formulario")
+const formulario = document.querySelector("#formulario");
+const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 window.onload = function (){
 
@@ -40,6 +41,19 @@ window.onload = function (){
 
     })
 }
+
+function validateEmail(){
+	if( validEmail.test(formulario.email.value) ){
+        formulario.email.parentElement.classList.remove("is-invalid");
+        formulario.email.parentElement.classList.add("is-valid");
+        formulario.email.parentElement.querySelector(".error").innerHTML = "";
+
+	}else{
+        formulario.email.parentElement.classList.add("is-invalid");
+        formulario.email.parentElement.classList.remove("is-valid");
+        formulario.email.parentElement.querySelector(".error").innerHTML = "* Ingresá un email válido";
+	}
+} 
 
 // const form = document.querySelector("form");
 // const email = document.querySelector("#email");

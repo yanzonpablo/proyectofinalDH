@@ -20,7 +20,7 @@
         <div class="col-12">
           <label for="email" class="form-label">Email:</label>
           <div>
-          <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" /><span class="error"></span>
+          <input class="cajas" id="email" name="email" placeholder="Email" maxlength="50" onchange="return validateEmail()"/><span class="error"></span>
           </div>
           <% if (locals.errors && errors.email) { %>
             <div class="error-login">
