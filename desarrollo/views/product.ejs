@@ -5,7 +5,6 @@
     <%- include('./partials/head') %>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
             id="bootstrap-css">
-        <link rel="stylesheet" href="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Detalle de producto</title>
         <link rel="stylesheet" href="/css/product.css">
@@ -28,6 +27,7 @@
                                 alt="<%=producto.nombre%>">
                         </div>
                         <div class="pro-img-list">
+                        
                         <% producto.images.forEach(imagen =>{%> 
                             <a href="#" style="width: 50%; text-align: center;">
                                 <img style="width: 120px; height: 120px;" src="/images/products/<%=imagen.imagen%>"
