@@ -1,11 +1,5 @@
 const formulario = document.querySelector("#formulario");
-const nombre = document.querySelector("#nombre");
-const apellido = document.querySelector("#apellido");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-const errores = document.querySelector("#errores");
-let mensajesErrores = [];
-const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 window.onload = function () {
   formulario.nombre.focus();
@@ -90,77 +84,35 @@ window.onload = function () {
   });
 };
 
-function validateEmail(){
-	if( validEmail.test(formulario.email.value) ){
-        formulario.email.parentElement.classList.remove("is-invalid");
-        formulario.email.parentElement.classList.add("is-valid");
-        formulario.email.parentElement.querySelector(".error").innerHTML = "";
-
-	}else{
-        formulario.email.parentElement.classList.add("is-invalid");
-        formulario.email.parentElement.classList.remove("is-valid");
-        formulario.email.parentElement.querySelector(".error").innerHTML = "* Ingresá un email válido";
-	}
-} 
+function validateEmail() {
+  if (validEmail.test(formulario.email.value)) {
+    formulario.email.parentElement.classList.remove("is-invalid");
+    formulario.email.parentElement.classList.add("is-valid");
+    formulario.email.parentElement.querySelector(".error").innerHTML = "";
+  } else {
+    formulario.email.parentElement.classList.add("is-invalid");
+    formulario.email.parentElement.classList.remove("is-valid");
+    formulario.email.parentElement.querySelector(".error").innerHTML =
+      "* Ingresá un email válido";
+  }
+}
 
 function fileValidation() {
-  var fileInput = 
-      document.getElementById('imagen');
-    
-  var filePath = fileInput.value;
+  const fileInput = document.getElementById("imagen");
+  const filePath = fileInput.value;
+  const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-  // Allowing file type
-  var allowedExtensions = 
-          /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-    
   if (!allowedExtensions.exec(filePath)) {
-      alert('Ingresá un archivo válido (JPG, JPEG, PNG, GIF)');
-      fileInput.value = '';
-      return false;
-  } 
-  else 
-  {
-  return true;
+    formulario.imagen.parentElement.classList.add("is-invalid");
+    formulario.imagen.parentElement.classList.remove("is-valid");
+    formulario.imagen.parentElement.querySelector(".error").innerHTML =
+      "* Ingresá un archivo válido (JPG, JPEG, PNG, GIF)";
+    fileInput.value = "";
+    return false;
+  } else {
+    formulario.imagen.parentElement.classList.add("is-valid");
+    formulario.imagen.parentElement.classList.remove("is-invalid");
+    formulario.imagen.parentElement.querySelector(".error").innerHTML = "";
+    return true;
+  }
 }
-}
-// window.addEventListener("load", function () {
-//   formulario.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     mensajesErrores = [];
-
-//     if (nombre.value == "") {
-//       mensajesErrores = mensajesErrores.concat("El nombre debe estar completo");
-//     } else if (nombre.value.length < 4) {
-//       mensajesErrores = mensajesErrores.concat(
-//         "El nombre debe tener más de tres caracteres"
-//       );
-//     }
-
-//     if (apellido.value == "") {
-//       mensajesErrores = mensajesErrores.concat(
-//         "El apellido debe estar completo"
-//       );
-//     } else if (apellido.value.length < 4) {
-//       mensajesErrores = mensajesErrores.concat(
-//         "El apellido debe tener más de tres caracteres"
-//       );
-//     }
-
-//     if (email.value == "") {
-//       mensajesErrores = mensajesErrores.concat("Ingresa tu email");
-//     }
-
-//     if (password.value == "") {
-//       mensajesErrores = mensajesErrores.concat("Ingresa tu contraseña");
-//     }
-
-//     if (mensajesErrores.length > 0) {
-//       let ulErrores = document.querySelector(".errores");
-//       for (let i = 0; i < mensajesErrores.length; i++) {
-//         ulErrores.innerHTML += "<li>" + mensajesErrores[i] + "</li>";
-//       }
-//     } else {
-//       form.submit();
-//     }
-//   });
-// });
