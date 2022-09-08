@@ -55,3 +55,24 @@ window.onload = function () {
     }
   });
 };
+
+function fileValidation() {
+  var fileInput = 
+      document.getElementById('imagen');
+    
+  var filePath = fileInput.value;
+
+  // Allowing file type
+  var allowedExtensions = 
+          /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    
+  if (!allowedExtensions.exec(filePath)) {
+      alert('Ingresá un archivo válido (JPG, JPEG, PNG, GIF)');
+      fileInput.value = '';
+      return false;
+  } 
+  else 
+  {
+  return true;
+}
+}

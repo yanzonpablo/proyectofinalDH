@@ -76,7 +76,7 @@
                 <img src="/images/products/<%=imagen.imagen%>" alt="" style="width: 20%" />
                 <% }) %>
                   <label for="imagen" class=""></label>
-                  <input class="cajas" type="file" id="imagen" name="imagen" accept="image/*" />
+                  <input class="cajas" type="file" id="imagen" name="imagen" onchange="return fileValidation()" />
             </div>
           </div>
           <div class="col-12">

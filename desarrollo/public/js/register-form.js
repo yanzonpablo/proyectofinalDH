@@ -21,12 +21,12 @@ window.onload = function () {
       formulario.nombre.parentElement.classList.remove("is-valid");
       formulario.nombre.parentElement.querySelector(".error").innerHTML =
         "* Ingresá tu nombre";
-    } else if (formulario.nombre.value.length < 4) {
-      errores.push("El nombre debe tener más de tres caracteres");
+    } else if (formulario.nombre.value.length < 3) {
+      errores.push("El nombre debe tener más de dos caracteres");
       formulario.nombre.parentElement.classList.add("is-invalid");
       formulario.nombre.parentElement.classList.remove("is-valid");
       formulario.nombre.parentElement.querySelector(".error").innerHTML =
-        "* El nombre debe tener más de tres caracteres";
+        "* El nombre debe tener más de dos caracteres";
     } else {
       formulario.nombre.parentElement.classList.remove("is-invalid");
       formulario.nombre.parentElement.classList.add("is-valid");
@@ -39,12 +39,12 @@ window.onload = function () {
       formulario.apellido.parentElement.classList.remove("is-valid");
       formulario.apellido.parentElement.querySelector(".error").innerHTML =
         "* Ingresá tu apellido";
-    } else if (formulario.apellido.value.length < 4) {
-      errores.push("El apellido debe tener más de tres caracteres");
+    } else if (formulario.apellido.value.length < 3) {
+      errores.push("El apellido debe tener más de dos caracteres");
       formulario.apellido.parentElement.classList.add("is-invalid");
       formulario.apellido.parentElement.classList.remove("is-valid");
       formulario.apellido.parentElement.querySelector(".error").innerHTML =
-        "* El apellido debe tener más de tres caracteres";
+        "* El apellido debe tener más de dos caracteres";
     } else {
       formulario.apellido.parentElement.classList.remove("is-invalid");
       formulario.apellido.parentElement.classList.add("is-valid");
@@ -90,6 +90,26 @@ window.onload = function () {
   });
 };
 
+function fileValidation() {
+  var fileInput = 
+      document.getElementById('imagen');
+    
+  var filePath = fileInput.value;
+
+  // Allowing file type
+  var allowedExtensions = 
+          /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    
+  if (!allowedExtensions.exec(filePath)) {
+      alert('Ingresá un archivo válido (JPG, JPEG, PNG, GIF)');
+      fileInput.value = '';
+      return false;
+  } 
+  else 
+  {
+  return true;
+}
+}
 // window.addEventListener("load", function () {
 //   formulario.addEventListener("submit", function (e) {
 //     e.preventDefault();
