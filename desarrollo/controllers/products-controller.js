@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const { validationResult } = require("express-validator");
 
 module.exports = {
   index: (req, res) => {
@@ -36,6 +37,17 @@ module.exports = {
     });
   },
   store: (req, res) => {
+    const resultValidation = validationResult(req);
+    if (!resultValidation.isEmpty()) {
+      db.ProductsCategories.findAll().then(categorie=>{
+          res.render("cargarProducto", {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+            categories:categorie
+          });
+      })
+      return;
+    }
     if (req.file) {
       db.Products.create({
         ...req.body,
@@ -56,6 +68,20 @@ module.exports = {
       }
   },
   update: (req, res) => {
+    const resultValidation = validationResult(req);
+    if (!resultValidation.isEmpty()) {
+      db.ProductsCategories.findAll().then(categorie=>{
+        db.Products.findByPk(req.params.id,{ include: ["categorie","images"] }).then(product=>{
+          res.render("editarProducto", {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+            productToEdit:product,
+            categories:categorie
+          });
+        })
+      })
+      return;
+    }
     db.Products.findByPk(req.params.id, { include: ["categorie","images"] }).then((product) => {
       product.set({
         ...req.body,
