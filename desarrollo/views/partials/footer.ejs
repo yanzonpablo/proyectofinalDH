@@ -6,7 +6,7 @@
                     <a href="/"><img class="ml-5 logo-rotate w-100 img-logofooter" src="/images/Logo_Argentum_Sin_Texto.png"
                             alt="Logo Argentum"></a>
                 </div>
-                <% if (!locals.isLogged) { %>
+                <% if ((!locals.isLogged) || (locals.loggedUser.idUsuarioCategorias == 2)) { %>
                 <div class= "text-center w-20 mt-8">
                     <a href="https://www.facebook.com/" target="_blank" class="footer__efecto"><i class="bi bi-facebook"></i></a>
                 </div>
@@ -17,7 +17,7 @@
                     <a href="#" target="_blank" class="footer__efecto"><i class="bi bi-envelope"></i></a>
                 </div>
                 <% } %>
-                    <% if (locals.isLogged) { %>
+                    <% if (locals.isLogged && (locals.loggedUser.idUsuarioCategorias != 2)) { %>
                         <div class="w-40 mt-8 text-center mobile-hide-subs fx-align-center" >
                             <div>
                                 <p class="w-100 mb-5 font-s25">Recibí nuestras promociones</p>
