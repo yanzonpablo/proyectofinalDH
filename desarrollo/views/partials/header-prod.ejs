@@ -1,0 +1,59 @@
+<header>
+  <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+    <a href="/" class="logo"><img src="/images/Logo_Argentum.png" width="200px" class="logos" alt="logo-Argentum" /></a>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="/" class="nav-links"><i class="icon fas fa-home"></i> Inicio</a>
+      </li>
+      <li>
+        <a href="/#ofertas" class="nav-links"><i class="icon far fa-grin-tongue"></i> Ofertas</a>
+      </li>
+      <li class="notificacion">
+        <a href="/cart" class="notificacion">
+          <!-- <span class="burbuja"></span></a> -->
+        <a href="/cart" class="nav-links"><i class="icon fas fa-shopping-cart"></i> Mi carrito</a>
+      </li>
+      <% if (!locals.isLogged) { %>
+        <li>
+          <a href="/register" class="nav-links"><i class="icon fas fa-user-plus"></i> Registrate</a>
+        </li>
+        <li>
+          <a href="/login" class="nav-links"><i class="fas fa-user"></i> Login</a>
+        </li>
+        <% } %>
+        <% if (locals.isLogged) { %>
+          <div class="profileLogout">
+            <li>
+            <a href="/user/<%= locals.loggedUser.id %>" class="profile">Mi perfil</a>
+            </li>
+            <li>
+            <a href="/logout" class="logout">Cerrar sesión</a>
+            </li>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <img src="/images/users/<%= locals.loggedUser.imagen %> " alt="<% locals.loggedUser.apellido %>"
+              style="padding:3px;">
+              <p class="nav-links">
+                <%= locals.loggedUser.nombre %>
+              </p>
+            </button>
+
+              <div class="dropdown-content">
+                <a href="/user/<%= locals.loggedUser.id %>">Mi perfil</a>
+                <a href="/logout" class="logout">Cerrar sesión</a>
+              </div>
+            </ul>
+            <% } %>
+  </nav>
+  <script>
+    let mainNav = document.getElementById("js-menu");
+    let navBarToggle = document.getElementById("js-navbar-toggle");
+    navBarToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("active");
+    });
+  </script>
+</header>

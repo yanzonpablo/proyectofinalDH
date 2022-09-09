@@ -178,6 +178,9 @@ background:#eee;
     font-size: 14px;
     font-weight: 300;
 }
+.imgcenter{
+    width: 60%!important;
+}
 @media (max-width: 820px){
 .panel-body {
     display: block;
@@ -221,12 +224,19 @@ display: inline-block;
 .descripcion {
     width: 100%!important;
     text-align: center;
+    margin-top: 10px!important;
+}
+.descripcion>p{
+    margin-top: 0!important;
 }
 .pro-img-details {
     margin: 0 auto!important;
 }
 .form-control {
     margin: 0 auto!important;
+}
+.imgcenter {
+    width: 90%;
 }
 }
 

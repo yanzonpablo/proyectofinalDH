@@ -2,18 +2,17 @@
 <html lang="es">
 
 <head>
-    <%- include('./partials/head') %>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
-            id="bootstrap-css">
+    <%- include('./partials/head-prod') %>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Detalle de producto</title>
         <link rel="stylesheet" href="/css/product.css">
+        <link rel="stylesheet" href="/css/nav-prod.css" />
 
 </head>
 
 <body>
     <header>
-        <%- include('./partials/header') %>
+        <%- include('./partials/header-prod') %>
             <title>Detalle de producto</title>
     </header>
 
@@ -23,7 +22,7 @@
                 <div class="panel-body">
                     <div class="col-lg-6">
                         <div class="pro-img-details fx-rap text-center">
-                            <img style="width: 50%;" src="/images/products/<%=producto.images[0].imagen%>"
+                            <img class="imgcenter" src="/images/products/<%=producto.images[0].imagen%>"
                                 alt="<%=producto.nombre%>">
                         </div>
                         <div class="pro-img-list">
