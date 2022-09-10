@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
+const { Op } = require("sequelize");
 
 module.exports = {
   index: (req, res) => {
@@ -12,7 +13,7 @@ module.exports = {
     db.Products.findByPk(req.params.id, { include: ["categorie","images"] }).then(
       (products) => {
         db.Products.findAll({
-          where: { idProductoCategorias: products.idProductoCategorias },include: ["images"],
+          where: { id: {[Op.not]:req.params.id}, idProductoCategorias: products.idProductoCategorias }, limit: 4,include: ["images"],
         }).then((sameCategorie) => {
           res.render("product", { producto: products, sameCategorie });
         });
