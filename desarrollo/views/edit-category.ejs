@@ -5,7 +5,7 @@
   <%- include('./partials/head') %>
     <title>Editar Categoría</title>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" href="/css/styles-reg-log.css" />
+    <link rel="stylesheet" href="/css/stylesEditCategory.css" />
 </head>
 
 <body>
@@ -23,25 +23,20 @@
         </div>
       </div>
       <div class="col-12">
-        <form action="/category/edit/<%= categorias.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/category/<%= editcategory.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= categorias.nombre %>" />
-            </div>
-            <div class="col-12 col-md-6">
-              <label for="categoria" class="form-label">Categoría:</label>
-              <select class="cajas" id="idCategorias" name="idCategorias">
-                <% categorias.forEach(categoria => {%>
-                  <option value="<%= categoria.id %>" <%= categorias.idCategorias == categoria.id ? 'selected' : '' %>>
-                    <%=categoria.nombre%>
-                  </option>
-                  <%}) %>
+              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= editcategory.nombre %>" />
             </div>
             <div class="col-12 col-md-6">
               <label for="imagen" class="form-label">Imagen de Categoría:</label>
-              <img src="<%= categorias.imagen %>" alt="" style="width: 20%; text-align: center;">
+              <img src="<%= editcategory.imagen %>" alt="" style="width: 20%; text-align: center;">
               <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="descripcion" class="form-label">Descripción:</label>
+              <input type="text" id="nombre" name="descripcion" class="cajas" value="<%= editcategory.descripcion %>" />
             </div>
           </div>
           <div class="col-12">

@@ -6,7 +6,7 @@ const usersRouter = require("./users-routes");
 const mainController = require("../controllers/main-controller");
 const authRouter = require("./auth-router");
 const apiRouter = require("../routes/API/users")
-// const apicategory = require("../routes/API/productsCategory");
+// const apiCategoryRouter = require("../routes/API/productsCategory");
 const productsCategoryRouter = require("./productsCategory-routes");
 
 router.get("/", mainController.home);
@@ -20,7 +20,7 @@ router.use("/user", usersRouter);
 router.use("/category", productsCategoryRouter);
 
 router.use("/api/user", apiRouter);
-// router.use("/api/productsCategory", apicategory);
+// router.use("/api/category", apiCategoryRouter);
 
 
 
