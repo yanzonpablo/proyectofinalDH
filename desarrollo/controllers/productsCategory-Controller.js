@@ -5,39 +5,45 @@ module.exports = {
     // Lista las categorias
     db.ProductsCategories.findAll()
     .then((categories) => {
-      res.render("productsCategory", { categories });
+      res.render("category-list", { categories });
     });
   },
   edit: (req, res) => {
     // Vista edicion de categorias
-    db.ProductsCategories.findAll()
-    .then((categorias) => {
       db.ProductsCategories.findByPk(req.params.id)
-      .then((categories) => {
+      .then((categorie) => {
         res.render("edit-category", {
-          editcategory : categories,
-          categorias: categorias,
-          })
+          editcategory : categorie,
         });
       });
   },
 
   update: (req, res) => {
       // Actualiza edicion de categorias
-    db.ProductsCategories.findByPk(req.params.id)
-    .then((categorias) => {
+      db.ProductsCategories.findByPk(req.params.id)
+      .then((categorias) => {
       categorias.set(
         {...req.body})
-      });
-
-        if (req.file) {
-          categorias.imagen = req.file.filename;
-        }
-
       categorias.save()
-      .then(() => {
-        res.render("productsCategory", categorias);
+        .then(() => {
+          res.redirect("/category/list");
+        });
       });
   },
+  create: (req, res) => {
+      res.render("createCategory");
+  },
+  store: (req, res) => {
+    db.ProductsCategories.findAll()
+    .then((element) => {
+      if(!element.nombre) {
+        db.ProductsCategories.create({...req.body})
+        res.redirect("/category/list");
+      } 
+      // else {
+      //   res.render('createCategory', {duplicate})
+      // }
+    })
+  }
 
 };

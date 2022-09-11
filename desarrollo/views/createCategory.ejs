@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('./partials/head') %>
+    <title>Crear Categoria</title>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
+    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header-form') %>
+  </header>
+  <main>
+    <form class="container" id="formulario" action="/category/" method="POST" enctype="multipart/form-data">
+      <div class="row product-detail">
+        <div class="col-12 col-md-6">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <div>
+            <input type="text" name="nombre" id="nombre" class="cajas"
+              value="<%= locals.oldData ? oldData.nombre : null %>" /><span class="error"></span>
+          </div>
+          <% if (locals.errors && errors.nombre) { %>
+            <div class="error-login">
+              <p>
+                <%= errors.nombre.msg %>
+              </p>
+            </div>
+            <% } %>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="descripcion" class="form-label">Descripción:</label>
+          <input class="cajas" type="text" name="descripcion" id="descripcion" maxlength="30"
+            value="<%= locals.oldData ? oldData.descripcion : null %>" />
+        </div>
+        <div class="col-12">
+          <label class="form-label">Imagen:</label>
+          <div>
+          <input type="file" name="imagen" id="imagen" onchange="return fileValidation()" class="cajas"
+            value="<%= locals.oldData ? oldData.imagen : null %>"><span class="error"></span>
+          </div>
+        </div>
+
+        </div>
+        <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="REGISTRATE" />
+      </div>
+    </form>
+  </main>
+  <!-- Comienzo footer -->
+  <footer>
+    <%- include ('./partials/footer-form') %>
+  </footer>
+</body>
+
+</html>

@@ -9,10 +9,12 @@ const uploadCategoria = require("../middlewares/multerCategory");
 router.get("/list", productsCategoryController.list);
 //Editar categoria
 router.get("/edit/:id", productsCategoryController.edit);
-// Edicion de categoria
+// Actualiza de categoria
 router.put("/:id", uploadCategoria.single("imagen"), productsCategoryController.update); 
 
-
+//Vista formulario de creacion categoria
+router.get("/create/", productsCategoryController.create); 
+router.post("/", uploadCategoria.single("imagen"), productsCategoryController.store); 
 
 
 module.exports = router;
