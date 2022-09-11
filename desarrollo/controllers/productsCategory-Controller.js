@@ -44,6 +44,15 @@ module.exports = {
       //   res.render('createCategory', {duplicate})
       // }
     })
+  },
+  destroy: (req, res) => {
+    db.ProductsCategories.destroy({
+      where: {
+        id: req.params.id
+        }
+      })
+      .then(() => {
+      res.redirect("/category/list")
+    })
   }
-
 };

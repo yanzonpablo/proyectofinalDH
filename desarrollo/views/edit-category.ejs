@@ -35,8 +35,10 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="imagen" class="form-label">Imagen de Categoría:</label>
-              <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 20%; text-align: center;">
+              <div style="text-align: center;">
+              <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 20%;  margin-bottom: 2%; text-align: center;">
               <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*">
+              </div>
             </div>
           </div>
           <div class="col-12">
