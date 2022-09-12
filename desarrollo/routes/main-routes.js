@@ -5,9 +5,8 @@ const productsRouter = require("./products-routes");
 const usersRouter = require("./users-routes");
 const mainController = require("../controllers/main-controller");
 const authRouter = require("./auth-router");
-const apiRouter = require("../routes/API/users")
-// const apiCategoryRouter = require("../routes/API/productsCategory");
 const productsCategoryRouter = require("./productsCategory-routes");
+const apiMainRouter = require("../routes/API/api-main-routes")
 
 router.get("/", mainController.home);
 router.get("/cart/:id", mainController.cart);
@@ -18,9 +17,8 @@ router.use(authRouter);
 router.use("/products", productsRouter);
 router.use("/user", usersRouter);
 router.use("/category", productsCategoryRouter);
-
-router.use("/api/user", apiRouter);
-// router.use("/api/category", apiCategoryRouter);
+// Router de APIs
+router.use("/api/", apiMainRouter);
 
 
 
