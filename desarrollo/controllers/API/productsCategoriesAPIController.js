@@ -2,7 +2,7 @@ const db = require("../../database/models");
 
 module.exports = {
     list: (req, res) => {
-        db.productsCategories.findAll()
+        db.ProductsCategories.findAll()
         .then(categorias => {
         return res.status(200).json({
             categorias: categorias.length, 
@@ -10,5 +10,4 @@ module.exports = {
             status:200 })
         }
     )}
-    
 }
