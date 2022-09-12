@@ -11,6 +11,8 @@ const productsValidation = require("../validations/create-edit-validations");
 
 //LIST
 router.get("/", productsController.index); //Listado de productos
+// BUSCAR PRODUCTO
+router.post("/search", productsController.search);
 //CREATE
 router.get("/create/", productsController.create); //Vista formulario de creacion
 router.post("/", uploadProduct.single("imagen"),productsValidation, productsController.store); //POST de creacion de producto

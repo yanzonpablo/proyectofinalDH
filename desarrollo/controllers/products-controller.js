@@ -108,4 +108,18 @@ module.exports = {
       res.redirect("/products");
     });
   },
+  search: (req, res) =>{
+    db.Products.findAll({
+      where:{
+          name: {[Op.like] : "%" + req.body.search + "%"}
+      }
+    })
+      .then(producto => {
+        if(producto){
+          res.render("/search", { productos: producto })
+        } else {
+          res.redirect("/")
+        }
+      })
+  },
 };
