@@ -5,13 +5,13 @@
   <%- include('./partials/head') %>
     <title>Crear Categoria</title>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
-    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+    <link href="/css/stylesCreateCategory.css" rel="stylesheet" />
 </head>
 
 <body>
   <!-- Inicio Header importado -->
   <header>
-    <%- include('./partials/header-form') %>
+    <%- include('./partials/headerCategory') %>
   </header>
   <main>
     <form class="container" id="formulario" action="/category/" method="POST" enctype="multipart/form-data">
@@ -45,7 +45,7 @@
         </div>
 
         </div>
-        <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="REGISTRATE" />
+        <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="CREAR CATEGORIA" />
       </div>
     </form>
   </main>
