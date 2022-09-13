@@ -112,7 +112,7 @@ module.exports = {
     db.Products.findAll({
       where:{
           nombre: {[Op.like] : "%" + req.body.search + "%"}
-      }
+      },include: ["images"]
     })
       .then(producto => {
         if(producto){
