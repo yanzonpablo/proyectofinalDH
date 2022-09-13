@@ -7,7 +7,7 @@ const authMiddleware = require("../../middlewares/authMiddleware");
 const uploadUser = require("../../middlewares/multerUser");
 
 //Lista de usuarios
-router.get("/list", usersAPIController.list);
+router.get("/", usersAPIController.list);
 
 //Detalle de usuario
 router.get("/:id/", authMiddleware, usersAPIController.perfil); //Vista detalle de usuario
