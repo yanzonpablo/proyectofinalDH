@@ -23,14 +23,15 @@
                 <div class="panel-body">
                     <div class="col-lg-6">
                         <div class="pro-img-details fx-rap text-center">
-                            <img class="imgcenter" src="/images/products/<%=producto.images[0].imagen%>"
+                            <img class="imgcenter" id="main-image" src="/images/products/<%=producto.images[0].imagen%>"
                                 alt="<%=producto.nombre%>">
                         </div>
                         <div class="pro-img-list">
-                        
+                        <% let index = 0; %> 
                         <% producto.images.forEach(imagen =>{%> 
-                            <a href="#" style="width: 50%; text-align: center;">
-                                <img style="width: 120px; height: 120px;" src="/images/products/<%=imagen.imagen%>"
+                            <% index += 1 %> 
+                            <a href="#<%= index %>" style="width: 50%; text-align: center;">
+                                <img style="width: 120px; height: 120px;" src="/images/products/<%=imagen.imagen%>" onclick="setSrc('main-image', this.src)"
                                 alt="<%=imagen.imagen%>">
                             </a>
                         <%}) %> 
@@ -82,6 +83,18 @@
         <footer>
             <%- include("./partials/footer") %>
         </footer>
+        <script type="text/javascript">
+
+            function $(element_id)
+            {
+                return document.getElementById(element_id);
+            }
+            function setSrc(element_id, src)
+            {
+                var element = $(element_id);
+                element.src = src;
+            }
+        </script>
 </body>
 
 </html>
