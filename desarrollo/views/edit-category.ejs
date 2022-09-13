@@ -28,17 +28,30 @@
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
               <input type="text" id="nombre" name="nombre" class="cajas" value="<%= editcategory.nombre %>" />
+              <% if (locals.errors && errors.nombre) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.nombre.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="descripcion" class="form-label">Descripción:</label>
               <input type="text" id="nombre" name="descripcion" class="cajas" value="<%= editcategory.descripcion %>" />
+              <% if (locals.errors && errors.descripcion) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.descripcion.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="imagen" class="form-label">Imagen de Categoría:</label>
               <div style="text-align: center;">
               <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 20%;  margin-bottom: 2%; text-align: center;">
               <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*">
-              </div>
             </div>
           </div>
           <div class="col-12">
