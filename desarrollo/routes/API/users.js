@@ -10,7 +10,7 @@ const uploadUser = require("../../middlewares/multerUser");
 router.get("/", usersAPIController.list);
 
 //Detalle de usuario
-router.get("/:id/", authMiddleware, usersAPIController.perfil); //Vista detalle de usuario
+router.get("/:id/", usersAPIController.perfil); //Vista detalle de usuario
 
 //Crear usuario
 // router.post("/", usersAPIController.create);

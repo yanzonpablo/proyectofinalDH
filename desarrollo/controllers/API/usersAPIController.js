@@ -4,11 +4,15 @@ module.exports = {
   list: (req, res) => {
     // Muestra lista de usuarios registrados
     db.Users.findAndCountAll({
-      attributes: ["id", "nombre", "apellido", "email"],
+      attributes: ["id", "nombre", "apellido", "email"], raw: true, nest:true
     }).then(({ rows, count }) => {
+      const usuarios = rows.map((usuario) => {
+        return {...usuario, 
+        url: 'http://localhost:3010/api/user/' + usuario.id}
+      })
       res.status(200).json({
         count: count,
-        users: rows,
+        users: usuarios,
       });
     });
   },
