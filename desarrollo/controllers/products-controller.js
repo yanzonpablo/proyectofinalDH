@@ -111,12 +111,12 @@ module.exports = {
   search: (req, res) =>{
     db.Products.findAll({
       where:{
-          name: {[Op.like] : "%" + req.body.search + "%"}
+          nombre: {[Op.like] : "%" + req.body.search + "%"}
       }
     })
       .then(producto => {
         if(producto){
-          res.render("/search", { productos: producto })
+          res.render("search", { productos: producto })
         } else {
           res.redirect("/")
         }

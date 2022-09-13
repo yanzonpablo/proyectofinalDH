@@ -15,7 +15,7 @@
   <main>
     <div class="w-80 p-8 search-div m-center mt-8 p-12">
       <p class="w-100 p-search">QUE ESTAS BUSCANDO?</p>
-      <form action="/products/search/<%= productos.nombre %> " method="POST">
+      <form action="/products/search" method="POST">
         <div class="fx fx-justify-b">
           <div class="w-40 div-search-inputs">
             <input class="w-90 search-input" type="text" id="search" name="search" placeholder="Encontra tu producto" />
@@ -32,26 +32,26 @@
     <!-- Comienzo de section // Productos buscado -->
     <div class="div-margin p-30">
       <section class="fx fx-wrap w-100 pb-30">
-        <div class="bg-blanco m-10 fx fx-wrap b-color">
+        <div class="bg-blanco m-10 fx fx-wrap b-color" style="width: 100%;">
           <h2 class="w-100 m-10 text-center heading-style">
             PRODUCTOS BUSCADOS
           </h2>
           <!-- Productos destacados con plantilla dinamica-->
-          <% productos.forEach(producto=> { %>
+          <% productos.forEach(producto => { %>
               <div class="w-50 p-8 tablet-w-33 desktop-w-20">
-                <a href="/products/<%= producto.nombre %>">
+                <a href="/products/<%= producto.id %>">
                   <article class="product-dest b-1">
                     <div class="img-container-dest">
                         <img class="w-100 h-100 text-center"
-                        src="/images/products/<%=producto.imagen%>"
-                        alt="<%=producto.nombre%>" />
+                        src="/images/products/<%= producto.imagen %>"
+                        alt="<%= producto.nombre %>" />
                     </div>
                     <div class="fx fx-wrap bg-blanco bt-2">
                       <p class="ms-5 mt-5 product-tittle text-center trunc-text-1">
-                        <%=producto.nombre%>
+                        <%= producto.nombre %>
                       </p>
                       <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
-                        $ <%=producto.precio%>
+                        $ <%= producto.precio %>
                       </p>
                     </div>
                   </article>
@@ -60,10 +60,15 @@
                 <% }) %>
       </section>
       <!-- Banners -->
-      <!-- <section class="hide-banners-fx fx fx-wrap p-8">
-        <img class="w-50 padding-banner-1" src="/images/test-banner-small.jpg" alt="Banner ofertas 2" />
-        <img class="w-50 padding-banner-2" src="/images/banner-small.jpg" alt="Banner ofertas 1" />
-      </section> -->
+      <section class="hide-banners-fx fx fx-wrap p-8 d-sm-inline-block">
+        <div style="display: flex; width: 100%;">
+        <a href="/">
+        <img class="w-100 padding-banner-1" src="/images/test-banner-small.jpg" alt="Banner ofertas 2" /></a>
+        <a href="/">
+        <img class="w-100 padding-banner-2" src="/images/banner-small.jpg" alt="Banner ofertas 1" />
+        </a>
+        </div>
+      </section>
     </div>
   </main>
   <!-- Comienzo footer -->
@@ -76,24 +81,6 @@
         height="60" />
     </a>
   </div>
-  <script>
-    // Inicio script banners slide
-    let slideIndex = 0;
-    showSlides();
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 5000); // Change image every 2 seconds
-    }
-    // Inicio script products slide
-
-  </script>
 </body>
 
 </html>
