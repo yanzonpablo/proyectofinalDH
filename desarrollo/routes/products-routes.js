@@ -10,7 +10,7 @@ const validateProductId = require("../middlewares/validate-product-id");
 const productsValidation = require("../validations/create-edit-validations");
 
 //LIST
-router.get("/", productsController.index); //Listado de productos
+router.get("/list", productsController.index); //Listado de productos
 // BUSCAR PRODUCTO
 router.post("/search", productsController.search);
 //CREATE

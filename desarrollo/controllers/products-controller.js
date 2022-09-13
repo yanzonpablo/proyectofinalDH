@@ -57,7 +57,7 @@ module.exports = {
           imagen: req.file.filename,
           idProductos: product.id
         }).then(()=>{
-          res.redirect("/products");
+          res.redirect("/products/list");
         })
       });
     }
@@ -65,7 +65,7 @@ module.exports = {
         db.Products.create({
           ...req.body,
         })
-        res.redirect("/products");
+        res.redirect("/products/list");
       }
   },
   update: (req, res) => {
@@ -95,7 +95,7 @@ module.exports = {
         })
       }
       product.save().then(() => {
-        res.redirect("/products");
+        res.redirect("/products/list");
       });
     });
   },
@@ -105,7 +105,7 @@ module.exports = {
         id: req.params.id,
       },
     }).then(() => {
-      res.redirect("/products");
+      res.redirect("/products/list");
     });
   },
   search: (req, res) =>{
