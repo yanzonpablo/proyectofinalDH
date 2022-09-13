@@ -89,6 +89,9 @@ body {
 .w-100 {
   width: 100%;
 }
+.m-auto {
+  margin: 0 auto;
+}
 /* Border */
 .b-1 {
   border: solid 1px rgb(212, 212, 212);
@@ -152,6 +155,12 @@ body {
 .ml-22 {
   margin-left: 22px;
 }
+.ml-70 {
+  margin-left: 70px;
+}
+.mr-70 {
+  margin-right: 70px;
+}
 .ms-5 {
   margin-right: 5px;
   margin-left: 5px;
@@ -168,6 +177,9 @@ body {
 }
 .m-30 {
   margin: 30px;
+}
+.h-80 {
+  height: 80%;
 }
 /* FLEX */
 .fx {
@@ -187,6 +199,15 @@ body {
 }
 .fx-grow {
   flex-grow: 90%;
+}
+.w-75 {
+  width: 90%;
+}
+.h-85 {
+  height: 80%;
+}
+.align-content {
+  align-content: center;
 }
 /* HEAD STYLES */
 .heading-style {
