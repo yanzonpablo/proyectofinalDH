@@ -5,7 +5,7 @@ USE `argentum_db`;
 -- Host: 127.0.0.1    Database: argentum_db
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.18-MariaDB
-
+ 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
