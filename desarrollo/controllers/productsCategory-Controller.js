@@ -1,4 +1,6 @@
 const db = require("../database/models");
+const { validationResult } = require("express-validator");
+
 
 module.exports = {
   list: (req, res) => {
@@ -17,9 +19,19 @@ module.exports = {
         });
       });
   },
-
   update: (req, res) => {
       // Actualiza edicion de categorias
+      const resultValidation = validationResult(req);
+      if (!resultValidation.isEmpty()) {
+          db.ProductsCategories.findByPk(req.params.id).then(categorias=>{
+            res.render("edit-category", {
+              errors: resultValidation.mapped(),
+              oldData: req.body,
+              editcategory: categorias
+            });
+          })
+        return;
+      }
       db.ProductsCategories.findByPk(req.params.id)
       .then((categorias) => {
       categorias.set(
@@ -34,16 +46,23 @@ module.exports = {
       res.render("createCategory");
   },
   store: (req, res) => {
-    db.ProductsCategories.findAll()
-    .then((element) => {
-      if(!element.nombre) {
-        db.ProductsCategories.create({...req.body})
-        res.redirect("/category/list");
-      } 
-      // else {
-      //   res.render('createCategory', {duplicate})
-      // }
-    })
+    const resultValidation = validationResult(req);
+    if (!resultValidation.isEmpty()) {
+          res.render("createCategory", {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
+      return;
+    }
+      db.ProductsCategories.findAll().then((element)=>{
+        if(!element.nombre){
+          db.ProductsCategories.create({
+            imagen: req.file.filename,
+            ...req.body,
+          })
+        }
+        res.redirect("/category/list")
+      })
   },
   destroy: (req, res) => {
     db.ProductsCategories.destroy({

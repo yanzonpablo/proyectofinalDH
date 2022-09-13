@@ -7,6 +7,8 @@ module.exports = {
         db.Products.findAndCountAll({limit:limit, offset: offset*limit,include:["categorie"],attributes: ["id","nombre","descripcion","precio"]})
         .then(({rows,count})=>{
             res.status(200).json({
+                next: req.originalUrl,
+                previous: req.originalUrl,
                 count: count,
                 products: rows
                 //FALTA:CAMBIAR ? PAGE CON NEXT Y PREVIOUS
