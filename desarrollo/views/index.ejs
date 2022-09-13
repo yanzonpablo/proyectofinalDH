@@ -40,7 +40,7 @@
       </form>
     </div>
     <!-- Inicio cuadro con categorias -->
-    <section class="p-8 pb-30 bg-gris-oscuro m-10">
+    <section class="p-7 bg-gris-oscuro ml-70 mr-70">
       <h2 class="heading-style text-center m-10 m-30">CATEGORIAS</h2>
       <div class="fx fx-wrap fx-justify-a m-10">
         <% categorias.forEach(categoria=> { %>
@@ -58,9 +58,9 @@
       </div>
     </section>
     <!-- Comienzo de section // Productos destacados -->
-    <div class="div-margin p-30">
-      <section class="fx fx-wrap w-100 pb-30">
-        <div class="bg-blanco m-10 fx fx-wrap b-color">
+    <div class="div-margin">
+      <section class="fx fx-wrap w-100">
+        <div class="bg-blanco m-15 fx fx-wrap b-color">
           <h2 class="w-100 m-10 text-center heading-style">
             PRODUCTOS DESTACADOS
           </h2>
@@ -101,8 +101,8 @@
         <img class="w-50 padding-banner-2" src="/images/banner-small.jpg" alt="Banner ofertas 1" />
       </section>
       <!-- Comienzo de section // Ofertas con plantilla dinamica-->
-      <section class="fx fx-wrap w-100 p-8 pb-30" id="ofertas">
-        <div class="bg-blanco p-8 m-10 fx fx-wrap b-color">
+      <section class="fx fx-wrap w-100 p-3" id="ofertas">
+        <div class="bg-blanco p-2 m-12 fx fx-wrap b-color">
           <h2 class="w-100 m-10 text-center heading-style">OFERTAS</h2>
           <% productos.forEach(producto=> { %>
             <% if (producto.seccion=="oferta" ) { %>
