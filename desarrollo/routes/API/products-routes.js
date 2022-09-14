@@ -4,6 +4,6 @@ const router = express.Router();
 
 // API products 
 router.get("/",apiProductsController.list);
-// router.get("/:id",apiProductsController.details);
+router.get("/:id",apiProductsController.detail);
 
 module.exports = router;

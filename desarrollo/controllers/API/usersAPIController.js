@@ -8,7 +8,7 @@ module.exports = {
     }).then(({ rows, count }) => {
       const usuarios = rows.map((usuario) => {
         return {...usuario, 
-        url: 'http://localhost:3010/api/user/' + usuario.id}
+        detail: 'http://localhost:3010/api/user/' + usuario.id}
       })
       res.status(200).json({
         count: count,
@@ -16,7 +16,7 @@ module.exports = {
       });
     });
   },
-  perfil: (req, res) => {
+  detail: (req, res) => {
     // Muestra datos usuario registrado
     db.Users.findOne({
       where: { id: req.params.id },
@@ -28,9 +28,9 @@ module.exports = {
         "domicilio",
         "ciudad",
         "imagen",
-      ],
+      ],raw:true,nest:true
     }).then((usuario) => {
-      return res.status(200).json(usuario);
+      res.status(200).json({...usuario, imagen: 'http://localhost:3010/images/users/' + usuario.imagen});
     });
   },
 };
