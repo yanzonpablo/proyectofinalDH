@@ -37,8 +37,17 @@
                   <div class="col-sm-3">
                     <div class="thumb-wrapper">
                       <div class="img-box">
-                        <a href="/products/<%=e.id%> "><img src="/images/products/<%=e.images[0].imagen%>"
-                            class="img-responsive img-fluid" alt=""></a>
+                        <a href="/products/<%=e.id%> ">
+                            <% if(e.images[0]){ %> 
+                              <img class="img-responsive img-fluid"
+                              src="/images/products/<%=e.images[0].imagen%>"
+                              alt="" />
+                              <%} else {%> 
+                              <img class="img-responsive img-fluid"
+                              src="/images/products/prod-default.jpg"
+                              alt="" />
+                              <%} %> 
+                            </a>
                       </div>
                       <div class="thumb-content">
                         <h4>

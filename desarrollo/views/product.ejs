@@ -23,8 +23,15 @@
                 <div class="panel-body">
                     <div class="col-lg-6">
                         <div class="pro-img-details fx-rap text-center">
-                            <img class="imgcenter" id="main-image" src="/images/products/<%=producto.images[0].imagen%>"
-                                alt="<%=producto.nombre%>">
+                            <% if(producto.images[0]){ %> 
+                                <img class="imgcenter" id="main-image"
+                                src="/images/products/<%=producto.images[0].imagen%>"
+                                alt="<%=producto.nombre%>" />
+                                <%} else {%> 
+                                <img class="imgcenter" id="main-image"
+                                src="/images/products/prod-default.jpg"
+                                alt="<%=producto.nombre%>" />
+                                <%} %> 
                         </div>
                         <div class="pro-img-list">
                         <% let index = 0; %> 
