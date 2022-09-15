@@ -31,27 +31,27 @@
               <label name="nombre" class="form-label">Nombre del producto:</label>
               <div>
                 <input class="cajas" type="text" id="nombre_producto" name="nombre" value="<%=productToEdit.nombre%>"
-                  placeholder="Nombre de producto"/><span class="error"></span>
-                  <% if (locals.errors && errors.nombre) { %>
-                    <div class="error-login">
-                      <p>
-                        <%= errors.nombre.msg %>
-                      </p>
-                    </div>
-                    <% } %>
+                  placeholder="Nombre de producto" /><span class="error"></span>
+                <% if (locals.errors && errors.nombre) { %>
+                  <div class="error-login">
+                    <p>
+                      <%= errors.nombre.msg %>
+                    </p>
+                  </div>
+                  <% } %>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <label for="precio" class="form-label">Precio del producto:</label>
               <input class="cajas" id="precio_producto" type="text" name="precio" value="<%=productToEdit.precio%>"
                 placeholder="Precio de producto" />
-                <% if (locals.errors && errors.precio) { %>
-                  <div class="error-login">
-                    <p>
-                      <%= errors.precio.msg %>
-                    </p>
-                  </div>
-                  <% } %>
+              <% if (locals.errors && errors.precio) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.precio.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="categoria" class="form-label">Categoría:</label>
@@ -76,13 +76,13 @@
               <label for="descuento" class="form-label">Descuento:</label>
               <input class="cajas" type="text" id="descuento_producto" name="descuento"
                 value="<%=productToEdit.descuento%>" placeholder="% de descuento para aplicar al producto" />
-                <% if (locals.errors && errors.descuento) { %>
-                  <div class="error-login">
-                    <p>
-                      <%= errors.descuento.msg %>
-                    </p>
-                  </div>
-                  <% } %>
+              <% if (locals.errors && errors.descuento) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.descuento.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="descripcion" class="form-label">Descripción:</label>
@@ -90,13 +90,13 @@
                 <input class="cajas" type="text" id="descripcion_producto" name="descripcion"
                   value="<%=productToEdit.descripcion%>" placeholder="Descripcion del producto" maxlength="100" /><span
                   class="error"></span>
-                  <% if (locals.errors && errors.descripcion) { %>
-                    <div class="error-login">
-                      <p>
-                        <%= errors.descripcion.msg %>
-                      </p>
-                    </div>
-                    <% } %>
+                <% if (locals.errors && errors.descripcion) { %>
+                  <div class="error-login">
+                    <p>
+                      <%= errors.descripcion.msg %>
+                    </p>
+                  </div>
+                  <% } %>
               </div>
             </div>
             <div class="col-12" style="text-align: center">
@@ -107,6 +107,13 @@
                   <div>
                     <input class="cajas" type="file" id="imagen" name="imagen"
                       onchange="return fileValidation()" /><span class="error"></span>
+                    <% if (locals.errors && errors.imagen) { %>
+                      <div class="error-login">
+                        <p>
+                          <%= errors.imagen.msg %>
+                        </p>
+                      </div>
+                      <% } %>
                   </div>
             </div>
           </div>

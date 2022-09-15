@@ -29,14 +29,15 @@
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre del producto:</label>
               <div>
-              <input type="text" id="nombre" name="nombre" placeholder="Playstation 5" class="cajas" maxlength="30" /><span class="error"></span>
-              <% if (locals.errors && errors.nombre) { %>
-                <div class="error-login">
-                  <p>
-                    <%= errors.nombre.msg %>
-                  </p>
-                </div>
-                <% } %>
+                <input type="text" id="nombre" name="nombre" placeholder="Playstation 5" class="cajas"
+                  maxlength="30" /><span class="error"></span>
+                <% if (locals.errors && errors.nombre) { %>
+                  <div class="error-login">
+                    <p>
+                      <%= errors.nombre.msg %>
+                    </p>
+                  </div>
+                  <% } %>
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -83,12 +84,19 @@
               <div>
                 <input type="file" name="imagen" id="imagen" class="cajas" onchange="return fileValidation()" /><span
                   class="error"></span>
+                <% if (locals.errors && errors.imagen) { %>
+                  <div class="error-login">
+                    <p>
+                      <%= errors.imagen.msg %>
+                    </p>
+                  </div>
+                  <% } %>
               </div>
             </div>
             <div class="col-12">
               <label for="descripcion" class="form-label">Descripción:</label>
               <div>
-              <textarea name="descripcion" id="descripcion" class="cajas"></textarea><span class="error"></span>
+                <textarea name="descripcion" id="descripcion" class="cajas"></textarea><span class="error"></span>
               </div>
               <% if (locals.errors && errors.descripcion) { %>
                 <div class="error-login">
