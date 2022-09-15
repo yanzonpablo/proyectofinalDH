@@ -1,8 +1,7 @@
 import React from "react";
 import { Component } from "react";
+import { EXPRESS_HOST } from "../../host";
 import Product from "./Product";
-
-const EXPRESS_HOST = "http://localhost:3010";
 
 export default class ProductsList extends Component {
     constructor(props) {

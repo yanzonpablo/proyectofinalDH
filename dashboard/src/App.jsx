@@ -5,31 +5,72 @@ import ProductsList from "./components/Products/ProductsList";
 import LastProduct from "./components/LastProduct";
 import MiniCard from "./components/MiniCard";
 import Sidebar from "./components/Sidebar";
-
-const miniCards = [
-  {
-    id: "5",
-    title: "Products in Database",
-    value: "35",
-    icon: "fa-film",
-  },
-  {
-    id: "24",
-    title: "Users in Database",
-    color: "success",
-    value: "10",
-    icon: "fa-award",
-  },
-  {
-    id: "32",
-    title: "Categories in Database",
-    color: "warning",
-    value: "6",
-    icon: "fa-user",
-  },
-];
+import { useEffect, useState } from "react";
+import { EXPRESS_HOST } from "./host";
 
 function App() {
+  const [userCount, setUserCount] = useState(0);
+
+  async function fetchUserCount(){
+    const response = await fetch(EXPRESS_HOST + "/api/user");
+    const result = await response.json();
+    const userCount = result.count;
+
+    setUserCount(userCount)
+  }
+
+  useEffect(() =>{
+    fetchUserCount()
+  }, []);
+
+  const [productCount, setProductCount] = useState(0);
+
+  async function fetchProductCount(){
+    const response = await fetch(EXPRESS_HOST + "/api/products");
+    const result = await response.json();
+    const productCount = result.count;
+
+    setProductCount(productCount)
+  }
+
+  useEffect(() =>{
+    fetchProductCount()
+  }, []);
+
+  const [categoryCount, setCategoryCount] = useState(0);
+
+  async function fetchCategoryCount(){
+    const response = await fetch(EXPRESS_HOST + "/api/categories");
+    const result = await response.json();
+    const categoryCount = result.categorias;
+
+    setCategoryCount(categoryCount)
+  }
+
+  useEffect(() =>{
+    fetchCategoryCount()
+  }, []);
+
+  const miniCards = [
+    {
+      title: "Products in Database",
+      value: productCount,
+      icon: "fa-boxes",
+    },
+    {
+      title: "Users in Database",
+      color: "success",
+      value: userCount,
+      icon: "fa-users",
+    },
+    {
+      title: "Categories in Database",
+      color: "warning",
+      value: categoryCount,
+      icon: "fa-chart-pie",
+    },
+  ];
+
   return (
     <div id="wrapper">
       {/* <!-- Sidebar --> */}
@@ -50,7 +91,7 @@ function App() {
             <div className="row">
               {/* <!-- Movies in Data Base --> */}
               {miniCards.map((data) => {
-                return <MiniCard {...data} key={data.id} />;
+                return <MiniCard {...data} key={data.title} />;
               })}
             </div>
             {/* <!-- End movies in Data Base --> */}
