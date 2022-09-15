@@ -1,6 +1,8 @@
 import "./App.css";
 
-import BigCard from "./components/BigCard";
+import CategoriesInDB from "./components/Categories/CategoriesInDB";
+import ProductsList from "./components/Products/ProductsList";
+import LastProduct from "./components/LastProduct";
 import MiniCard from "./components/MiniCard";
 import Sidebar from "./components/Sidebar";
 
@@ -56,12 +58,13 @@ function App() {
             {/* <!-- Content Row Last Movie in Data Base --> */}
             <div className="row">
               {/* <!-- Last Movie in DB --> */}
-              <BigCard />
+              <LastProduct />
               {/* <!-- End content row last movie in Data Base --> */}
 
               {/* <!-- Genres in DB --> */}
-              <BigCard />
+              <CategoriesInDB />
             </div>
+            <ProductsList />
           </div>
           {/* <!--End Content Row Top--> */}
         </div>

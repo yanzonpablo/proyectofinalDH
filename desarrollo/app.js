@@ -12,6 +12,10 @@ const cookies = require("cookie-parser");
 const mainRouter = require("./routes/main-routes");
 const userLogged = require("./middlewares/userLoggedMiddleware");
 
+// Uso de CORS - Cross Origin Resource Sharing
+const cors = require("cors")
+
+app.use(cors("*")) // Dirección del host donde se aceptan los pedidos, en este caso REACT
 
 app.use(
   session({

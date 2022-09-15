@@ -6,7 +6,7 @@ module.exports = {
     list: (req, res) => {
         const limit = 10;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
-        db.Products.findAndCountAll({limit:limit, offset: offset*limit,include:["categorie"],attributes: ["id","nombre","descripcion","precio"],raw: true, nest:true})
+        db.Products.findAndCountAll({limit:limit, offset: offset*limit,include:["categorie"],attributes: ["id","nombre","descripcion","precio","seccion","descuento"],raw: true, nest:true})
         .then(({rows,count})=>{
             const products = rows.map((product)=>{
                 return {detail: 'http://localhost:3010/api/products/' + product.id,...product}
