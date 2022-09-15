@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 import LogoArgentum from "../assets/images/Logo_Argentum.png";
 
@@ -37,26 +39,26 @@ function Sidebar() {
 
       {/* <!-- Nav Item - Pages --> */}
       <li className="nav-item">
-        <a className="nav-link collapsed" href="/">
+        <Link className="nav-link collapsed" to="/products" exact="true">
           <i className="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
+          <span>Products</span>
+        </Link>
       </li>
 
       {/* <!-- Nav Item - Charts --> */}
       <li className="nav-item">
-        <a className="nav-link" href="/">
-          <i className="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span>
-        </a>
+        <Link className="nav-link collapsed" to="/users" exact="true">
+          <i className="fas fa-fw fa-folder"></i>
+          <span>Users</span>
+        </Link>
       </li>
 
       {/* <!-- Nav Item - Tables --> */}
       <li className="nav-item">
-        <a className="nav-link" href="/">
-          <i className="fas fa-fw fa-table"></i>
-          <span>Tables</span>
-        </a>
+        <Link className="nav-link collapsed" to="/categories" exact="true">
+          <i className="fas fa-fw fa-folder"></i>
+          <span>Categories</span>
+        </Link>
       </li>
 
       {/* <!-- Divider --> */}

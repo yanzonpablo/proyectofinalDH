@@ -1,31 +1,31 @@
 import React from "react";
 import { Component } from "react";
 import { EXPRESS_HOST } from "../../host";
-import Product from "./Product";
+import User from "./User";
 
-export default class ProductsList extends Component {
+export default class UsersList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: [],
+            users: [],
         };
     }
 
     async componentDidMount() {
-        const result = await fetch(`${EXPRESS_HOST}/api/products/`);
-        const productResult = await result.json();
-        const newProducts = productResult.products;
+        const result = await fetch(`${EXPRESS_HOST}/api/user/`);
+        const userResult = await result.json();
+        const newUsers = userResult.users;
         this.setState({
-            products: newProducts,
+            users: newUsers,
         });
     }
 
     render() {
         return (
             <React.Fragment>
-                {/*<!-- PRODUCTS LIST -->*/}
+                {/*<!-- USERS LIST -->*/}
                 <h1 className="h3 mb-2 text-gray-800">
-                    All the products in the Database
+                    All the users in the Database
                 </h1>
 
                 {/*<!-- DataTales Example -->*/}
@@ -42,28 +42,24 @@ export default class ProductsList extends Component {
                                     <tr>
                                         <th>Id</th>
                                         <th>Nombre</th>
-                                        <th>Categoria</th>
-                                        <th>Precio</th>
-                                        <th>Sección</th>
-                                        <th>Descuento</th>
+                                        <th>Apellido</th>
+                                        <th>Email</th>
                                         <th>Detalle</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
-                                    <tr>
+                                <tr>
                                         <th>Id</th>
                                         <th>Nombre</th>
-                                        <th>Categoria</th>
-                                        <th>Precio</th>
-                                        <th>Sección</th>
-                                        <th>Descuento</th>
+                                        <th>Apellido</th>
+                                        <th>Email</th>
                                         <th>Detalle</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    {this.state.products.map((product) => {
+                                    {this.state.users.map((user) => {
                                         return (
-                                            <Product {...product} key={product.id} />
+                                            <User {...user} key={user.id} />
                                         );
                                     })}
                                 </tbody>

@@ -1,12 +1,15 @@
 import "./App.css";
 
-import CategoriesInDB from "./components/Categories/CategoriesInDB";
 import ProductsList from "./components/Products/ProductsList";
-import LastProduct from "./components/LastProduct";
+import UsersList from "./components/Users/UsersList";
+import ListCategories from "./components/Categories/ListCategories";
 import MiniCard from "./components/MiniCard";
 import Sidebar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard";
 import { useEffect, useState } from "react";
 import { EXPRESS_HOST } from "./host";
+
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   const [userCount, setUserCount] = useState(0);
@@ -84,28 +87,27 @@ function App() {
           {/* <!-- Content Row Top --> */}
           <div className="container-fluid pt-5">
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+              <h1 className="h3 mb-0 text-gray-800">Resume Dashboard</h1>
             </div>
 
-            {/* <!-- Content Row Movies--> */}
+            {/* <!-- Content Row Products--> */}
             <div className="row">
-              {/* <!-- Movies in Data Base --> */}
+              {/* <!-- Products in Data Base --> */}
               {miniCards.map((data) => {
                 return <MiniCard {...data} key={data.title} />;
               })}
             </div>
-            {/* <!-- End movies in Data Base --> */}
-
-            {/* <!-- Content Row Last Movie in Data Base --> */}
-            <div className="row">
-              {/* <!-- Last Movie in DB --> */}
-              <LastProduct />
-              {/* <!-- End content row last movie in Data Base --> */}
-
-              {/* <!-- Genres in DB --> */}
-              <CategoriesInDB />
-            </div>
-            <ProductsList />
+            {/* <!-- End Products in Data Base --> */}
+             <Switch>
+               <Route
+                path="/"
+                component={Dashboard}
+                exact={true}
+                />
+                <Route path="/products" component={ProductsList} />
+                <Route path="/users" component={UsersList} />
+                <Route path="/categories" component={ListCategories} />
+              </Switch>
           </div>
           {/* <!--End Content Row Top--> */}
         </div>
@@ -115,7 +117,7 @@ function App() {
         <footer className="sticky-footer bg-white">
           <div className="container my-auto">
             <div className="copyright text-center my-auto">
-              <span>Copyright &copy; Dashboard 2021</span>
+              <span>Copyright &copy; Dashboard 2022</span>
             </div>
           </div>
         </footer>
