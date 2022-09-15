@@ -1,6 +1,4 @@
 const db = require("../../database/models");
-const Sequelize = require("sequelize");
-
 
 module.exports = {
     list: (req, res) => {
@@ -17,7 +15,6 @@ module.exports = {
                 count: count,
                 products: products,
                 //FALTA:CAMBIAR ? PAGE CON NEXT Y PREVIOUS
-                //      CountByCategorie
             })
         }).catch(error =>{
             console.error(error)
@@ -33,17 +30,6 @@ module.exports = {
     },
     detail: (req, res) => {
         db.Products.findOne({where: { id: req.params.id },raw:true,nest:true,include: ["categorie","images"]})
-            .then((product) => {res.status(200).json({...product, imagen: 'http://localhost:3010/images/products/' + product.images.imagen})})
-        .cath(error=>{
-            console.error(error)
-            res.status(500).json({
-                meta:{
-                    status:500,
-                    url: req.originalUrl,
-                    errorName: error.name,
-                    errorMsg: error.msg
-                }
-            })
-        });
+            .then((product) => {res.status(200).json({imagen: 'http://localhost:3010/images/products/' + product.images.imagen,...product, })})
     }
 }

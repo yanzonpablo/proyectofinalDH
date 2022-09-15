@@ -2,7 +2,7 @@ import "./App.css";
 
 import ProductsList from "./components/Products/ProductsList";
 import UsersList from "./components/Users/UsersList";
-import ListCategories from "./components/Categories/ListCategories";
+import CategoriesList from "./components/Categories/CategoriesList";
 import MiniCard from "./components/MiniCard";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
@@ -106,7 +106,7 @@ function App() {
                 />
                 <Route path="/products" component={ProductsList} />
                 <Route path="/users" component={UsersList} />
-                <Route path="/categories" component={ListCategories} />
+                <Route path="/categories" component={CategoriesList} />
               </Switch>
           </div>
           {/* <!--End Content Row Top--> */}

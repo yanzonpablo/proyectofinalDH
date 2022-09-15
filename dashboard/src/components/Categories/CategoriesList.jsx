@@ -3,7 +3,7 @@ import { Component } from "react";
 import { EXPRESS_HOST } from "../../host";
 import DetailsCategorie from "./DetailsCategorie";
 
-export default class ListCategories extends Component {
+export default class CategoriesList extends Component {
     constructor(props) {
         super(props);
         this.state = {
