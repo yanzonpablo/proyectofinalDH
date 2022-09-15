@@ -6,19 +6,15 @@
       </span>
       <a href="/" class="logo"><img src="/images/Logo_Argentum.png" width="200px" alt="logo-Argentum" /></a>
       <ul class="main-nav" id="js-menu">
-  
+        <% if (locals.isLogged && (locals.loggedUser.idUsuarioCategorias == 3)) { %>
           <a href="/" class="nav-links"><i class="icon fas fa-home fa-lg" style="margin-top: 15px; color: #d93175;"></i> Ir al Home</a>
           </li>
-   
-        <!-- <% if (!locals.isLogged) { %>
           <li>
-            <a href="/register" class="nav-links"><i class="icon fas fa-user-plus"></i> Registrate</a>
+            <a href="/products/list" class="nav-links"><i class="icon fas fa-user-plus"></i> Listado productos</a>
           </li>
           <li>
-            <a href="/login" class="nav-links"><i class="fas fa-user"></i> Login</a>
+            <a href="/category/list" class="nav-links"><i class="icon fas fa-user-plus"></i> Listado categorias</a>
           </li>
-          <% } %> -->
-          <% if (locals.isLogged) { %>
             <div class="profileLogout">
               <li>
               <a href="/user/<%= locals.loggedUser.id %>" class="profile">Mi perfil</a>
