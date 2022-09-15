@@ -8,19 +8,20 @@ const productsController = require("../controllers/products-controller");
 const uploadProduct = require("../middlewares/multerProduct");
 const validateProductId = require("../middlewares/validate-product-id");
 const productsValidation = require("../validations/create-edit-validations");
+const accessMiddleware = require("../middlewares/accessMiddleware")
 
 //LIST
-router.get("/list", productsController.index); //Listado de productos
+router.get("/list", accessMiddleware, productsController.index); //Listado de productos
 // BUSCAR PRODUCTO
 router.post("/search", productsController.search);
 //CREATE
-router.get("/create/", productsController.create); //Vista formulario de creacion
-router.post("/", uploadProduct.single("imagen"),productsValidation, productsController.store); //POST de creacion de producto
+router.get("/create/",accessMiddleware, productsController.create); //Vista formulario de creacion
+router.post("/", uploadProduct.single("imagen"),accessMiddleware,productsValidation, productsController.store); //POST de creacion de producto
 //EDIT
-router.get("/edit/:id", productsController.edit); //Vista de edicion de producto
-router.put("/:id", uploadProduct.single("imagen"),productsValidation, productsController.update); //PUT de edicion de producto
+router.get("/edit/:id", accessMiddleware, productsController.edit); //Vista de edicion de producto
+router.put("/:id", uploadProduct.single("imagen"),accessMiddleware,productsValidation, productsController.update); //PUT de edicion de producto
 //DELETE
-router.delete("/:id", productsController.destroy); //DELETE de producto
+router.delete("/:id",accessMiddleware, productsController.destroy); //DELETE de producto
 //DETAILS
 router.get("/:id/", validateProductId, productsController.details); //Vista detalle de producto
 

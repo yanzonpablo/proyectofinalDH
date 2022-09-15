@@ -3,24 +3,26 @@ const router = express.Router();
 const productsCategoryController = require("../controllers/productsCategory-controller");
 const createCategoriesValidation = require("../validations/create-category");
 const editCategoriesValidation = require("../validations/edit-category");
+const accessMiddleware = require("../middlewares/accessMiddleware")
+
 
 // Middlewares para imagenes
 const uploadCategoria = require("../middlewares/multerCategory");
 
 // Lista las categorias
-router.get("/list", productsCategoryController.list);
+router.get("/list", accessMiddleware, productsCategoryController.list);
 
 // Editar categoria
-router.get("/edit/:id", productsCategoryController.edit);
+router.get("/edit/:id", accessMiddleware, productsCategoryController.edit);
 
 // Actualiza de categoria
-router.put("/:id", uploadCategoria.single("imagen"),editCategoriesValidation, productsCategoryController.update); 
+router.put("/:id", uploadCategoria.single("imagen"),accessMiddleware,editCategoriesValidation, productsCategoryController.update); 
 
 // Vista formulario de creacion categoria
-router.get("/create/", productsCategoryController.create); 
-router.post("/", uploadCategoria.single("imagen"),createCategoriesValidation, productsCategoryController.store); 
+router.get("/create/", accessMiddleware, productsCategoryController.create); 
+router.post("/", uploadCategoria.single("imagen"),accessMiddleware,createCategoriesValidation, productsCategoryController.store); 
 
 // Borrado de categoria
-router.delete("/:id", productsCategoryController.destroy)
+router.delete("/:id", accessMiddleware,productsCategoryController.destroy)
 
 module.exports = router;
