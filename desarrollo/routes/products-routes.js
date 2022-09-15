@@ -24,4 +24,5 @@ router.delete("/:id", productsController.destroy); //DELETE de producto
 //DETAILS
 router.get("/:id/", validateProductId, productsController.details); //Vista detalle de producto
 
+
 module.exports = router;
