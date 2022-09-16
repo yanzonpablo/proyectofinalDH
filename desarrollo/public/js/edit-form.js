@@ -47,6 +47,38 @@ window.onload = function () {
         "";
     }
 
+    if (formulario.precio.value == "") {
+      errores.push("Ingresá un precio para este producto");
+      formulario.precio.parentElement.classList.add("is-invalid");
+      formulario.precio.parentElement.classList.remove("is-valid");
+      formulario.precio.parentElement.querySelector(".error").innerHTML =
+        "* Ingresá un precio para este producto";
+    } else if (formulario.precio.value <= 0) {
+      errores.push("El precio no puede ser 0 ni menor");
+      formulario.precio.parentElement.classList.add("is-invalid");
+      formulario.precio.parentElement.classList.remove("is-valid");
+      formulario.precio.parentElement.querySelector(".error").innerHTML =
+        "* El precio no puede ser 0 ni menor";
+    } else {
+      formulario.precio.parentElement.classList.remove("is-invalid");
+      formulario.precio.parentElement.classList.add("is-valid");
+      formulario.precio.parentElement.querySelector(".error").innerHTML =
+        "";
+    }
+
+    if (formulario.descuento.value >= 100) {
+      errores.push("El descuento no puede ser del 100% ni mayor");
+      formulario.descuento.parentElement.classList.add("is-invalid");
+      formulario.descuento.parentElement.classList.remove("is-valid");
+      formulario.descuento.parentElement.querySelector(".error").innerHTML =
+        "* El descuento no puede ser del 100% ni mayor";
+    } else {
+      formulario.descuento.parentElement.classList.remove("is-invalid");
+      formulario.descuento.parentElement.classList.add("is-valid");
+      formulario.descuento.parentElement.querySelector(".error").innerHTML =
+        "";
+    }
+
     if (errores.length == 0) {
       formulario.submit();
       console.log("Sin errores");

@@ -29,7 +29,7 @@
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre del producto:</label>
               <div>
-                <input type="text" id="nombre" name="nombre" placeholder="Playstation 5" class="cajas"
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese un nombre para el producto" class="cajas"
                   maxlength="30" value="<%= oldData.nombre ? oldData.nombre : "" %>"/><span class="error"></span>
                 <% if (locals.errors && errors.nombre) { %>
                   <div class="error-login">
@@ -42,7 +42,7 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="precio" class="form-label">Precio del producto:</label>
-              <input type="text" id="precio" name="precio" placeholder="10000" class="cajas" value="<%= oldData.precio ? oldData.precio : "" %>"/>
+              <input type="text" id="precio" name="precio" placeholder="Ingrese precio del producto" class="cajas" value="<%= oldData.precio ? oldData.precio : "" %>"/><span class="error"></span>
               <% if (locals.errors && errors.precio) { %>
                 <div class="error-login">
                   <p>
@@ -70,7 +70,7 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="descuento" class="form-label">Descuento:</label>
-              <input type="text" id="descuento" name="descuento" placeholder="10" class="cajas" value="<%= oldData.descuento ? oldData.descuento : "" %>"/>
+              <input type="text" id="descuento" name="descuento" placeholder="% de descuento" class="cajas" value="<%= oldData.descuento ? oldData.descuento : "" %>"/><span class="error"></span>
               <% if (locals.errors && errors.descuento) { %>
                 <div class="error-login">
                   <p>

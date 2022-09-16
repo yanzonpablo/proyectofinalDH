@@ -23,19 +23,19 @@
         </div>
       </div>
       <div class="col-12">
-        <form action="/user/<%= userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form id="formulario" action="/user/<%= userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= userToEdit.nombre %>" />
+              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= userToEdit.nombre %>" /><span class="error"></span>
             </div>
             <div class="col-12 col-md-6">
               <label for="apellido" class="form-label">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" class="cajas" value="<%= userToEdit.apellido %>" />
+              <input type="text" id="apellido" name="apellido" class="cajas" value="<%= userToEdit.apellido %>" /><span class="error"></span>
             </div>
             <div class="col-12 col-md-6">
               <label for="email" class="form-label">Email:</label>
-              <input type="email" id="email" name="email" class="cajas" value="<%= userToEdit.email%>" />
+              <input type="email" id="email" name="email" class="cajas" value="<%= userToEdit.email%>" /><span class="error"></span>
             </div>
             <div class="col-12 col-md-6">
               <label for="password" class="form-label">Password:</label>
@@ -63,7 +63,7 @@
             <div class="col-12 col-md-6">
               <label for="imagen" class="form-label">Imagen de perfil:</label>
               <img src="<%=userToEdit.imagen%>" alt="" style="width: 20%; text-align: center;">
-              <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*">
+              <input type="file" name="imagen" id="imagen" class="cajas" onchange="return fileValidation()">
             </div>
           </div>
           <div class="col-12">
@@ -91,6 +91,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
+    <script src="/js/edit-form-user.js"></script>
 </body>
-
 </html>

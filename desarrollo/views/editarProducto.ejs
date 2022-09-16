@@ -44,7 +44,7 @@
             <div class="col-12 col-md-6">
               <label for="precio" class="form-label">Precio del producto:</label>
               <input class="cajas" id="precio_producto" type="text" name="precio" value="<%=productToEdit.precio%>"
-                placeholder="Precio de producto" />
+                placeholder="Precio de producto" /><span class="error"></span>
               <% if (locals.errors && errors.precio) { %>
                 <div class="error-login">
                   <p>
@@ -75,7 +75,7 @@
             <div class="col-12 col-md-6">
               <label for="descuento" class="form-label">Descuento:</label>
               <input class="cajas" type="text" id="descuento_producto" name="descuento"
-                value="<%=productToEdit.descuento%>" placeholder="% de descuento para aplicar al producto" />
+                value="<%=productToEdit.descuento%>" placeholder="% de descuento para aplicar al producto" /><span class="error"></span>
               <% if (locals.errors && errors.descuento) { %>
                 <div class="error-login">
                   <p>
