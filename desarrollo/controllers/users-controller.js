@@ -1,5 +1,6 @@
-const db = require("../database/models");
-const bcrypt = require("bcryptjs");
+const db = require("../database/models"); // Require de models de Sequelize
+const bcrypt = require("bcryptjs"); // Cifrado de passwords
+const { validationResult } = require("express-validator"); // Uso de Express-Validator
 
 module.exports = {
   list: (req, res) => {
@@ -29,6 +30,19 @@ module.exports = {
   },
   update: (req, res) => {
     // Actualiza datos de usuario
+    const resultValidation = validationResult(req);
+    if (!resultValidation.isEmpty()) {
+      db.UserCategories.findAll().then((categorias)=>{
+        db.Users.findByPk(req.params.id).then(usuario=>{
+          res.render("edit-user",{
+            errors: resultValidation.mapped(),
+            userToEdit: usuario,
+            categorias
+          })
+        })
+      })
+      return
+    }
     db.Users.findByPk(req.params.id).then((user) => {
       user.set({
         ...req.body,

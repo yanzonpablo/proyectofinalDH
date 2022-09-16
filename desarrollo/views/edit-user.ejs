@@ -28,14 +28,35 @@
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
               <input type="text" id="nombre" name="nombre" class="cajas" value="<%= userToEdit.nombre %>" /><span class="error"></span>
+              <% if (locals.errors && errors.nombre) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.nombre.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="apellido" class="form-label">Apellido:</label>
               <input type="text" id="apellido" name="apellido" class="cajas" value="<%= userToEdit.apellido %>" /><span class="error"></span>
+              <% if (locals.errors && errors.apellido) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.apellido.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="email" class="form-label">Email:</label>
               <input type="email" id="email" name="email" class="cajas" value="<%= userToEdit.email%>" /><span class="error"></span>
+              <% if (locals.errors && errors.email) { %>
+                <div class="error-login">
+                  <p>
+                    <%= errors.email.msg %>
+                  </p>
+                </div>
+                <% } %>
             </div>
             <div class="col-12 col-md-6">
               <label for="password" class="form-label">Password:</label>
@@ -91,6 +112,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
-    <script src="/js/edit-form-user.js"></script>
+    <!-- <script src="/js/edit-form-user.js"></script> -->
 </body>
 </html>
