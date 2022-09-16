@@ -109,17 +109,30 @@ module.exports = {
     });
   },
   search: (req, res) =>{
-    db.Products.findAll({
-      where:{
-          nombre: {[Op.like] : "%" + req.body.search + "%"}
-      },include: ["images"]
-    })
-      .then(producto => {
-        if(producto){
-          res.render("search", { productos: producto })
-        } else {
-          res.redirect("/")
-        }
+    db.ProductsCategories.findAll().then(categorias=>{
+      db.Products.findAll({
+        where:{
+            nombre: {[Op.like] : "%" + req.body.search + "%"}
+        },include: ["images"]
       })
+        .then(producto => {
+          if(producto){
+            res.render("search", { productos: producto,categorias })
+          } else {
+            res.redirect("/")
+          }
+        })
+    })
   },
+  category: (req,res)=>{
+    db.ProductsCategories.findAll().then(categorias=>{
+      db.Products.findAll({
+        where:{
+          idProductoCategorias: req.params.id},
+          include: ["images"]}
+      ).then(producto => {
+        res.render("by-category", {productos: producto, categorias})
+      }
+    )} 
+    )}
 };

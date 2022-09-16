@@ -14,6 +14,8 @@ const accessMiddleware = require("../middlewares/accessMiddleware")
 router.get("/list", accessMiddleware, productsController.index); //Listado de productos
 // BUSCAR PRODUCTO
 router.post("/search", productsController.search);
+// BUSQUEDA POR CATEGORIA
+router.get("/category/:id", productsController.category)
 //CREATE
 router.get("/create/",accessMiddleware, productsController.create); //Vista formulario de creacion
 router.post("/", uploadProduct.single("imagen"),accessMiddleware,productsValidation, productsController.store); //POST de creacion de producto
