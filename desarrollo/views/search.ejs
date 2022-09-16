@@ -13,6 +13,7 @@
     <%- include('./partials/header') %>
   </header>
   <main>
+    <!-- Buscador -->
     <div class="w-80 p-8 search-div m-center mt-8 p-12">
       <p class="w-100 p-search">QUE ESTAS BUSCANDO?</p>
       <form action="/products/search" method="POST">
@@ -29,46 +30,116 @@
         </div>
       </form>
     </div>
-    <!-- Comienzo de section // Productos buscado -->
-    <div class="div-margin p-30">
-      <section class="fx fx-wrap w-100 pb-30">
-        <div class="bg-blanco m-10 fx fx-wrap b-color" style="width: 100%;">
+    <!-- Inicio cuadro con categorias -->
+    <section class="p-7 bg-gris-oscuro ml-70 mr-70">
+      <h2 class="heading-style text-center m-10 m-30">CATEGORIAS</h2>
+      <div class="fx fx-wrap fx-justify-a m-10">
+        <% categorias.forEach(categoria=> { %>
+          <% if (categoria) { %>
+            <div class="w-50 tablet-w-33 category-w desktop-w-16 fx fx-wrap fx-align-center fx-justify-a mb-5">
+              <a href="/products/category/<%=categoria.id%>"><div class="category fx fx-wrap fx-align-center desktop-w-16"
+                style="height: 100px; width: 100px; background-image: url('/images/category/<%= categoria.imagen %>')">
+              </div></a>
+              <p class="caterogy-text w-100">
+                <%=categoria.nombre%>
+              </p>
+            </div>
+            <% } %>
+              <% }) %>
+      </div>
+    </section>
+    <!-- Comienzo de section // Productos destacados -->
+    <div class="div-margin">
+      <section class="fx fx-wrap w-100">
+        <div class="bg-blanco m-15 fx fx-wrap b-color">
           <h2 class="w-100 m-10 text-center heading-style">
             PRODUCTOS BUSCADOS
           </h2>
           <!-- Productos destacados con plantilla dinamica-->
-          <% productos.forEach(producto => { %>
+          <% productos.forEach(producto=> { %>
+            <% if (producto.seccion=="destacado" ) { %>
               <div class="w-50 p-8 tablet-w-33 desktop-w-20">
-                <a href="/products/<%= producto.id %>">
+                <a href="/products/<%=producto.id%>">
                   <article class="product-dest b-1">
                     <div class="img-container-dest">
+                      <% if(producto.images[0]){ %> 
                         <img class="w-100 h-100 text-center"
-                        src="/images/products/<%= producto.images[0].imagen %>"
-                        alt="<%= producto.nombre %>" />
+                        src="/images/products/<%=producto.images[0].imagen%>"
+                        alt="<%=producto.nombre%>" />
+                        <%} else {%> 
+                        <img class="w-100 h-100 text-center"
+                        src="/images/products/prod-default.jpg"
+                        alt="<%=producto.nombre%>" />
+                        <%} %> 
                     </div>
                     <div class="fx fx-wrap bg-blanco bt-2">
                       <p class="ms-5 mt-5 product-tittle text-center trunc-text-1">
-                        <%= producto.nombre %>
+                        <%=producto.nombre%>
                       </p>
                       <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
-                        $ <%= producto.precio %>
+                        $ <%=producto.precio%>
                       </p>
                     </div>
                   </article>
                 </a>
               </div>
+              <% } %>
                 <% }) %>
       </section>
-      <!-- Banners -->
-      <section class="hide-banners-fx fx fx-wrap p-8 d-sm-inline-block">
-        <div style="display: flex; width: 100%;">
-        <a href="/">
-        <img class="w-100 padding-banner-1" src="/images/test-banner-small.jpg" alt="Banner ofertas 2" /></a>
-        <a href="/">
-        <img class="w-100 padding-banner-2" src="/images/banner-small.jpg" alt="Banner ofertas 1" />
-        </a>
-        </div>
+      <!-- Comienzo de section // Ofertas con plantilla dinamica-->
+      <section class="fx fx-wrap w-100 p-3" id="ofertas">
+        <div class="bg-blanco p-2 m-12 fx fx-wrap b-color">
+          <h2 class="w-100 m-10 text-center heading-style">OFERTAS QUE COINCIDEN CON TU BÚSQUEDA</h2>
+          <% productos.forEach(producto=> { %>
+            <% if (producto.seccion=="oferta" ) { %>
+              <div class="fx fx-wrap p-8  offer-container">
+                <a href="/products/<%=producto.id%>">
+                  <article class="product b-1 fx fx-wrap">
+                    <div class="fx fx-wrap fx-align-center w-30">
+                      <div class="w-100 img-container fx fx-align-center">
+                        <% if(producto.images[0]){ %> 
+                          <img class="w-75 m-auto"
+                          src="/images/products/<%=producto.images[0].imagen%>"
+                          alt="<%=producto.nombre%>" />
+                          <%} else {%> 
+                          <img class="w-100 h-100 text-center"
+                          src="/images/products/prod-default.jpg"
+                          alt="<%=producto.nombre%>" />
+                          <%} %> 
+                      </div>
+                    </div>
+                    <div class="w-70 fx fx-wrap bg-blanco bl-2 text-center mt-5">
+                      <p class="ms-5 mb-5 m-center w-100 heading-offers trunc-text-1">
+                        <%= producto.nombre %>
+                      </p>
+                      <p class="ms-5 mb-5 offers-tittle trunc-text-3 trunc-text-2">
+                        <%= producto.descripcion %>
+                      </p>
+                      <div class="fx fx-wrap fx-align-center fx-justify-a w-100 div-offers">
+                        <div>
+                          <p class="ms-5 mb-5 mt-5 w-20 line-through w-100 before">
+                            $ <%= producto.precio %>
+                          </p>
+                          <p class="ms-5 mb-5 mt-5 w-30 price-offers w-100 after">
+                            $ <%= Math.trunc(producto.precio * ((100 - producto.descuento)/100))%>
+                          </p>
+                        </div>
+                        <p class="ms-5 mb-5 mt-5 w-30 discount">
+                          <%= producto.descuento %>% OFF
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <% } %>
+                <% }) %>
       </section>
+              <!-- Banners -->
+              <section class="hide-banners-fx fx fx-wrap p-8">
+                  <img class="w-50 padding-banner-1" src="/images/test-banner-small.jpg" alt="Banner ofertas 2" />
+                  <img class="w-50 padding-banner-2" src="/images/banner-small.jpg" alt="Banner ofertas 1" />
+                </section>
     </div>
   </main>
   <!-- Comienzo footer -->
