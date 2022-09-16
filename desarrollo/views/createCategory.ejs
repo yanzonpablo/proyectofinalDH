@@ -5,7 +5,7 @@
   <%- include('./partials/head') %>
     <title>Crear Categoria</title>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
-    <link href="/css/stylesCreateCategory.css" rel="stylesheet" />
+    <link href="/css/styles-reg-log.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <%- include('./partials/headerCategory') %>
   </header>
   <main>
-    <form class="container" id="formulario" action="/category/" method="POST" enctype="multipart/form-data">
+    <form id="formulario" class="container" action="/category/" method="POST" enctype="multipart/form-data">
       <div class="row product-detail">
         <div class="col-12 col-md-6">
           <label for="nombre" class="form-label">Nombre:</label>
@@ -34,7 +34,7 @@
         <div class="col-12 col-md-6">
           <label for="descripcion" class="form-label">Descripción:</label>
           <input class="cajas" type="text" name="descripcion" id="descripcion" maxlength="30"
-            value="<%= locals.oldData ? oldData.descripcion : null %>" />
+            value="<%= locals.oldData ? oldData.descripcion : null %>" /><span class="error"></span>
             <% if (locals.errors && errors.descripcion) { %>
               <div class="error-login">
                 <p>
@@ -68,5 +68,6 @@
     <%- include ('./partials/footer-form') %>
   </footer>
 </body>
+<script src="/js/create-form-category.js"></script>
 
 </html>

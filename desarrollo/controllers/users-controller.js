@@ -23,8 +23,6 @@ module.exports = {
         res.render("edit-user", {
           userToEdit: usuario,
           categorias: categorias,
-          // usuario,
-          // categorias,
         });
       });
     });
@@ -40,7 +38,7 @@ module.exports = {
         user.imagen = req.file.filename;
       }
       user.save().then(() => {
-        res.render("/user-list");
+        res.redirect("/user/list");
       });
     });
   },

@@ -5,7 +5,7 @@
   <%- include('./partials/head') %>
     <title>Editar Categoría</title>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" href="/css/stylesEditCategory.css" />
+    <link rel="stylesheet" href="/css/styles-reg-log.css" />
 </head>
 
 <body>
@@ -23,11 +23,11 @@
         </div>
       </div>
       <div class="col-12">
-        <form action="/category/<%= editcategory.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form id="formulario" action="/category/<%= editcategory.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= editcategory.nombre %>" />
+              <input type="text" id="nombre" name="nombre" class="cajas" value="<%= editcategory.nombre %>" /><span class="error"></span>
               <% if (locals.errors && errors.nombre) { %>
                 <div class="error-login">
                   <p>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-12 col-md-6">
               <label for="descripcion" class="form-label">Descripción:</label>
-              <input type="text" id="nombre" name="descripcion" class="cajas" value="<%= editcategory.descripcion %>" />
+              <input type="text" id="nombre" name="descripcion" class="cajas" value="<%= editcategory.descripcion %>" /><span class="error"></span>
               <% if (locals.errors && errors.descripcion) { %>
                 <div class="error-login">
                   <p>
@@ -51,7 +51,8 @@
               <label for="imagen" class="form-label">Imagen de Categoría:</label>
               <div style="text-align: center;">
               <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 20%;  margin-bottom: 2%; text-align: center;">
-              <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*">
+              <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*" onchange="return fileValidation()" /><span
+              class="error"></span>
             </div>
           </div>
           <div class="col-12">
@@ -80,5 +81,6 @@
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
 </body>
+<script src="/js/create-form-category.js"></script>
 
 </html>
