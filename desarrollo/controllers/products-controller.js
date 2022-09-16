@@ -22,7 +22,7 @@ module.exports = {
   },
   create: (req, res) => {
     db.ProductsCategories.findAll().then((categorie) => {
-      res.render("cargarProducto", { categories: categorie });
+      res.render("cargarProducto", { categories: categorie ,oldData: req.body});
     });
   },
   edit: (req, res) => {

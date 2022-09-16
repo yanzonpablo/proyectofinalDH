@@ -6,10 +6,13 @@ module.exports = [
     body("precio").custom(value=>{ if((value <= 0) || (value == "0")){throw new Error ("* El precio no puede ser 0 o negativo")}else{return true}}),
     body("descuento").custom(value=>{if((value >= 100) || (value <0)){throw new Error ("* El descuento no puede ser del 100% o mayor")}else{return true}}),
     body("imagen").custom((element,{req}) => {
-      const validImg = [".png",".jpg",".jpeg",".gif"]
+      const validImg = ["image/png","image/jpg","image/jpeg","image/gif"]
       if (req.file) {
         const fileExt = req.file.mimetype;
-        if(!validImg.includes(fileExt)) {
+        console.log(fileExt)
+        if(validImg.includes(fileExt)) {
+          return true
+        }else{
           throw new Error("* La imagén solo puede ser de las siguientes extensiones '.png','.jpg','.jpeg','.gif'");
         }
       }

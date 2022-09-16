@@ -8,6 +8,7 @@
       <li>
         <a href="/" class="nav-links"><i class="icon fas fa-home"></i> Inicio</a>
       </li>
+      <% if (!(locals.isLogged && (locals.loggedUser.idUsuarioCategorias == 3))) { %>
       <li>
         <a href="/#ofertas" class="nav-links"><i class="icon far fa-grin-tongue"></i> Ofertas</a>
       </li>
@@ -16,6 +17,18 @@
           <!-- <span class="burbuja"></span></a> -->
         <a href="/cart" class="nav-links"><i class="icon fas fa-shopping-cart"></i> Mi carrito</a>
       </li>
+      <% } %>
+      <% if (locals.isLogged && (locals.loggedUser.idUsuarioCategorias == 3)) { %>
+        <li>
+          <a href="/products/list" class="nav-links"><i class="icon fas fa-user-plus"></i> Listado productos</a>
+        </li>
+        <li>
+          <a href="/user/list" class="nav-links"><i class="icon fas fa-user-plus"></i> Listado usuarios</a>
+        </li>
+        <li>
+          <a href="/category/list" class="nav-links"><i class="icon fas fa-user-plus"></i> Listado categorias</a>
+        </li>
+        <% } %>
       <% if (!locals.isLogged) { %>
         <li>
           <a href="/register" class="nav-links"><i class="icon fas fa-user-plus"></i> Registrate</a>
