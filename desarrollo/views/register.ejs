@@ -78,11 +78,11 @@
             value="<%= locals.oldData ? oldData.imagen : null %>"><span class="error"></span>
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 campo">
           <label for="password" class="form-label">Contraseña:</label>
           <div>
-            <input type="password" name="password" id="password" class="cajas" maxlength="30" /><span
-              class="error"></span>
+            <input type="password" name="password" id="password" class="cajas" maxlength="30" /><span class="pass-span">Mostrar</span><span
+            class="error"></span>
           </div>
           <% if (locals.errors && errors.password) { %>
             <div class="error-login">
@@ -92,9 +92,9 @@
             </div>
             <% } %>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 campo">
           <label for="rePassword" class="form-label">Confirmar Contraseña:</label>
-          <input type="password" name="rePassword" class="cajas" maxlength="30" />
+          <input type="password" name="rePassword" id="rePassword" class="cajas" maxlength="30" /><span class="pass-span2">Mostrar</span>
           <% if (locals.errors && errors.rePassword) { %>
             <div class="error-login">
               <p>
@@ -130,6 +130,32 @@
     <%- include ('./partials/footer-form') %>
   </footer>
 </body>
+<script>
+    document.querySelector('.pass-span').addEventListener('click',e =>{
+      const passwordInput = document.querySelector('#password');
+      if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar';
+        passwordInput.type = 'text';
+      } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar';
+        passwordInput.type = 'password';
+      }
+    })
+    document.querySelector('.pass-span2').addEventListener('click', e => {
+      const passwordInput = document.querySelector('#rePassword');
+      if (e.target.classList.contains('show')) {
+          e.target.classList.remove('show');
+          e.target.textContent = 'Ocultar';
+          passwordInput.type = 'text';
+      } else {
+          e.target.classList.add('show');
+          e.target.textContent = 'Mostrar';
+          passwordInput.type = 'password';
+      }
+    });
+</script>
 <script src="/js/register-form.js"></script>
 
 </html>

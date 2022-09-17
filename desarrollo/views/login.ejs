@@ -34,7 +34,7 @@
         <div class="col-12">
           <label for="password" class="form-label">Contraseña:</label>
           <div>
-          <input class="cajas" type="password" id="password" name="password" placeholder="Contraseña" maxlength="30" /><span class="error"></span>
+          <input class="cajas" type="password" id="password" name="password" placeholder="Contraseña" maxlength="30" /><span class="pass-span">Mostrar</span><span class="error"></span>
           </div>
         </div>
         <div class="container-error">
@@ -66,6 +66,20 @@
   <footer>
     <%- include ('./partials/footer-form') %>
   </footer>
+  <script>
+        document.querySelector('.pass-span').addEventListener('click',e =>{
+      const passwordInput = document.querySelector('#password');
+      if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar';
+        passwordInput.type = 'text';
+      } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar';
+        passwordInput.type = 'password';
+      }
+    })
+  </script>
+  <script src="/js/login-form.js"></script>
 </body>
-<script src="/js/login-form.js"></script>
 </html>
