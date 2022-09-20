@@ -1,5 +1,6 @@
 const formulario = document.querySelector("#formulario");
 const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+const strongPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
 
 window.onload = function () {
   formulario.nombre.focus();
@@ -39,6 +40,12 @@ window.onload = function () {
       formulario.apellido.parentElement.classList.remove("is-valid");
       formulario.apellido.parentElement.querySelector(".error").innerHTML =
         "* El apellido debe tener más de dos caracteres";
+    } else if (!isNaN(formulario.apellido.value)) {
+      errores.push("El apellido debe contener sólo letras");
+      formulario.apellido.parentElement.classList.add("is-invalid");
+      formulario.apellido.parentElement.classList.remove("is-valid");
+      formulario.apellido.parentElement.querySelector(".error").innerHTML =
+        "* El apellido debe contener sólo letras";
     } else {
       formulario.apellido.parentElement.classList.remove("is-invalid");
       formulario.apellido.parentElement.classList.add("is-valid");
@@ -69,6 +76,30 @@ window.onload = function () {
       formulario.password.parentElement.classList.remove("is-valid");
       formulario.password.parentElement.querySelector(".error").innerHTML =
         "* La contraseña debe tener al menos ocho caracteres";
+    } else if (!(formulario.password.value.match(strongPassword))) {
+      errores.push("Debe contener al menos una letra mayúscula, una minúscula, un número y un carácter especial");
+      formulario.password.parentElement.classList.add("is-invalid");
+      formulario.password.parentElement.classList.remove("is-valid");
+      formulario.password.parentElement.querySelector(".error").innerHTML =
+        "* Debe contener al menos una letra mayúscula, una minúscula, un número y un carácter especial";
+    } else {
+      formulario.password.parentElement.classList.remove("is-invalid");
+      formulario.password.parentElement.classList.add("is-valid");
+      formulario.password.parentElement.querySelector(".error").innerHTML = "";
+    }
+    
+    if (formulario.rePassword.value == "") {
+      errores.push("Ingresa nuevamente tu contraseña");
+      formulario.rePassword.parentElement.classList.add("is-invalid");
+      formulario.rePassword.parentElement.classList.remove("is-valid");
+      formulario.rePassword.parentElement.querySelector(".error").innerHTML =
+        "* Ingresa nuevamente tu contraseña";
+    } else if (formulario.password.value != formulario.rePassword.value) {
+      errores.push("Las contraseñas no coinciden");
+      formulario.rePassword.parentElement.classList.add("is-invalid");
+      formulario.rePassword.parentElement.classList.remove("is-valid");
+      formulario.rePassword.parentElement.querySelector(".error").innerHTML =
+        "* Las contraseñas no coinciden";
     } else {
       formulario.password.parentElement.classList.remove("is-invalid");
       formulario.password.parentElement.classList.add("is-valid");

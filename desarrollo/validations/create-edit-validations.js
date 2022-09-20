@@ -16,5 +16,6 @@ module.exports = [
           throw new Error("* La imagén solo puede ser de las siguientes extensiones '.png','.jpg','.jpeg','.gif'");
         }
       }
+      return true
     })
   ];

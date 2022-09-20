@@ -76,6 +76,13 @@
           <div>
           <input type="file" name="imagen" id="imagen" onchange="return fileValidation()" class="cajas"
             value="<%= locals.oldData ? oldData.imagen : null %>"><span class="error"></span>
+            <% if (locals.errors && errors.imagen) { %>
+              <div class="error-login">
+                <p>
+                  <%= errors.imagen.msg %>
+                </p>
+              </div>
+              <% } %>
           </div>
         </div>
         <div class="col-12 col-md-6 campo">
@@ -94,7 +101,8 @@
         </div>
         <div class="col-12 col-md-6 campo">
           <label for="rePassword" class="form-label">Confirmar Contraseña:</label>
-          <input type="password" name="rePassword" id="rePassword" class="cajas" maxlength="30" /><span class="pass-span2">Mostrar</span>
+          <input type="password" name="rePassword" id="rePassword" class="cajas" maxlength="30" /><span class="pass-span2">Mostrar</span><span
+          class="error"></span>
           <% if (locals.errors && errors.rePassword) { %>
             <div class="error-login">
               <p>
@@ -108,8 +116,8 @@
           novedades
         </div>
         <div class="col-12 col-md-6 termino1">
-          <input type="checkbox" name="terms" /> Al registrarme acepto los<a class="termino2" href="">Terminos y
-            Condiciones</a>
+          <input type="checkbox" name="terms" id="terms"/> Al registrarme acepto los<a class="termino2" href="">Terminos y
+            Condiciones</a><span class="error"></span>
           <% if (locals.errors && errors.terms) { %>
             <div class="error-login">
               <p>
@@ -157,5 +165,4 @@
     });
 </script>
 <script src="/js/register-form.js"></script>
-
 </html>
