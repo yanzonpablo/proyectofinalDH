@@ -7,9 +7,10 @@ const mainController = require("../controllers/main-controller");
 const authRouter = require("./auth-router");
 const productsCategoryRouter = require("./productsCategory-routes");
 const apiMainRouter = require("../routes/API/api-main-routes")
+const cart = require("./cart-routes");
 
 router.get("/", mainController.home);
-router.get("/cart/:id", mainController.cart);
+// router.get("/cart/:id", mainController.cart);
 router.get("/envio", mainController.envio);
 router.post("/envio", mainController.datosEnvio);
 router.get("/pago", mainController.pago);
@@ -20,6 +21,6 @@ router.use("/category", productsCategoryRouter);
 // Router de APIs
 router.use("/api/", apiMainRouter);
 
-
+router.use(cart);
 
 module.exports = router;

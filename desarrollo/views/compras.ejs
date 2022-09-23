@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="/css/compras.css" />
     <script>
       let i = 1;
-    function incrementar() {
+      function incrementar() {
         i++
         document.getElementById('cantProd').value = i;
       }
-      
-    function decrementar() {
+
+      function decrementar() {
         i--
         document.getElementById('cantProd').value = i;
       }
@@ -47,34 +47,40 @@
     <div class="contenedor ">
       <div class="contenedor1">
         <!-- Inicio articulo -->
-        <article id="article">
-          <table class="table-articulo pb-10 w-80 border-collapse text-center" id="tabla">
-            <tr class="bk-tabla line-bottom ">
-              <td class="td-imagen">
-                <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
-              </td>
-              <td class="td-producto">
-                <p class=" text-center ft-weight articulo">
-                  <%= art.nombre %>
-                </p>
-              </td>
-              <td class="td-precio">
-                <p class=" text-center precio">$<%= art.precio %>
-                </p>
-              </td>
-              <td class="td-cantidad">
-                <div class="ds-flex js-cont-center align-items">
-                  <button class="button"onclick="incrementar();" ><i class="fas fa-caret-square-left ft-size-less botonsb" id="btnSube" ></i></button>
-                  <input class="ft-size-number pr-10 pl-10 ft-weight numero" id="cantProd" min="0" type="number" value="1" disabled>
-                  <button class="button" onclick="decrementar()"><i class="fas fa-caret-square-right ft-size-more botonsb" id="btnBaja"></i></button>
-                </div>
-              </td>
-              <td class="td-basura text-align">
-                <a href="" id="basurero" class="basurero" onclick="function basurero()"><i class="fas fa-trash-alt"></i></a>
-              </td>
-            </tr>
-          </table>
-        </article>
+        <form action="/cart/add" method="post">
+          <article id="article">
+            <table class="table-articulo pb-10 w-80 border-collapse text-center" id="tabla">
+              <tr class="bk-tabla line-bottom ">
+                <td class="td-imagen">
+                  <img class="height-width-img" src="/images/products/<%= art.imagen %>" alt="<%= art.nombre %>" />
+                </td>
+                <td class="td-producto">
+                  <p class=" text-center ft-weight articulo">
+                    <%= art.nombre %>
+                  </p>
+                </td>
+                <td class="td-precio">
+                  <p class=" text-center precio">$<%= art.precio %>
+                  </p>
+                </td>
+                <td class="td-cantidad">
+                  <div class="ds-flex js-cont-center align-items">
+                    <button class="button" onclick="incrementar();"><i
+                        class="fas fa-caret-square-left ft-size-less botonsb" id="btnSube"></i></button>
+                    <input class="ft-size-number pr-10 pl-10 ft-weight numero" id="cantProd" min="0" type="number"
+                      value="1" disabled>
+                    <button class="button" onclick="decrementar()"><i
+                        class="fas fa-caret-square-right ft-size-more botonsb" id="btnBaja"></i></button>
+                  </div>
+                </td>
+                <td class="td-basura text-align">
+                  <a href="" id="basurero" class="basurero" onclick="function basurero()"><i
+                      class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+            </table>
+          </article>
+        </form>
       </div>
       <!-- Inicio resumen -->
       <div class="contenedor2 text-center">
