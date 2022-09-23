@@ -7,10 +7,13 @@ const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookies = require("cookie-parser");
-
+const cartMiddleware = require("./middlewares/cartMiddleware")
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
 const userLogged = require("./middlewares/userLoggedMiddleware");
+
+//Middleware de carrito - A nivel aplicacion
+app.use(cartMiddleware);
 
 // Uso de CORS - Cross Origin Resource Sharing
 const cors = require("cors")
@@ -37,7 +40,10 @@ app.use(express.static(path.join(__dirname, "public"))); // Uso de archivo de ca
 app.use(express.urlencoded({ extended: false })); // Obtencion de datos de form
 app.use(methodOverride("_method")); // Uso de PUT and DELETE
 
+
+
 app.use("/", mainRouter); // Routeo principal
+
 
 
 // Implementacion Error 404

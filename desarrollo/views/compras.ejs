@@ -15,12 +15,12 @@
       let i = 1;
       function incrementar() {
         i++
-        document.getElementById('cantProd').value = i;
+        document.getElementById('quantity').value = i;
       }
 
       function decrementar() {
         i--
-        document.getElementById('cantProd').value = i;
+        document.getElementById('quantity').value = i;
       }
 
     </script>
@@ -48,6 +48,7 @@
       <div class="contenedor1">
         <!-- Inicio articulo -->
         <form action="/cart/add" method="post">
+          <input type="hiden" name="hiden" id="<%- art.id %>  ">
           <article id="article">
             <table class="table-articulo pb-10 w-80 border-collapse text-center" id="tabla">
               <tr class="bk-tabla line-bottom ">
@@ -67,9 +68,9 @@
                   <div class="ds-flex js-cont-center align-items">
                     <button class="button" onclick="incrementar();"><i
                         class="fas fa-caret-square-left ft-size-less botonsb" id="btnSube"></i></button>
-                    <input class="ft-size-number pr-10 pl-10 ft-weight numero" id="cantProd" min="0" type="number"
+                    <input class="ft-size-number pr-10 pl-10 ft-weight numero" id="quantity" min="0" type="number"
                       value="1" disabled>
-                    <button class="button" onclick="decrementar()"><i
+                    <button type="submit" class="button" onclick="decrementar()"><i
                         class="fas fa-caret-square-right ft-size-more botonsb" id="btnBaja"></i></button>
                   </div>
                 </td>
@@ -95,7 +96,7 @@
             <div>
               <tr>
                 <td class="w-100 text-left">SUBTOTAL</td>
-                <td class="text-right">$<%= art.precio %>
+                <td class="text-right">$<%= art.precio  %>
                 </td>
               </tr>
               <tr>
