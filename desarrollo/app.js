@@ -7,13 +7,13 @@ const app = express();
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookies = require("cookie-parser");
-const cartMiddleware = require("./middlewares/cartMiddleware")
+// const cartMiddleware = require("./middlewares/cartMiddleware")
 /* Ruteo principal */
 const mainRouter = require("./routes/main-routes");
 const userLogged = require("./middlewares/userLoggedMiddleware");
 
 //Middleware de carrito - A nivel aplicacion
-app.use(cartMiddleware);
+// app.use(cartMiddleware);
 
 // Uso de CORS - Cross Origin Resource Sharing
 const cors = require("cors")
