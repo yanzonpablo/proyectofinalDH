@@ -99,11 +99,15 @@
                   <% } %>
               </div>
             </div>
-            <div class="col-12" style="text-align: center">
+            <div class="col-12">
+              <label for="imagen" class="form-label">Imágenes:</label>
+              <div style="display: flex;">
               <% productToEdit.images.forEach(imagen=>{ %>
-                <img src="/images/products/<%=imagen.imagen%>" alt="" style="width: 20%" />
+                <div class="img-container">
+                <img src="/images/products/<%=imagen.imagen%>" alt="" class="img-form"/>
+                </div>
                 <% }) %>
-                  <label for="imagen" class=""></label>
+              </div>  
                   <div>
                     <input class="cajas" type="file" id="imagen" name="imagen"
                       onchange="return fileValidation()" /><span class="error"></span>

@@ -181,6 +181,19 @@ label {
   background-color: #ffffff;
 }
 
+.img-container {
+  height: 20%;
+  width: 20%;
+  object-position: center;
+  margin: auto;
+}
+
+.img-form {
+  height: 100%;  
+  width: 100%;
+  text-align: center;
+}
+
 .product-detail-img {
   width: 70%;
   display: block;

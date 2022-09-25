@@ -47,10 +47,10 @@
                 </div>
                 <% } %>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12">
               <label for="imagen" class="form-label">Imagen:</label>
               <div style="text-align: center;">
-              <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 20%;  margin-bottom: 2%; text-align: center;">
+              <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 25%;  margin-bottom: 2%; text-align: center;">
               <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*" onchange="return fileValidation()" /><span
               class="error"></span>
               <% if (locals.errors && errors.imagen) { %>

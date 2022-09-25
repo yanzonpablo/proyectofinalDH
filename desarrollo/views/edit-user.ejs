@@ -72,7 +72,7 @@
               <input class="cajas" type="text" id="ciudad" name="ciudad" maxlength="30"
                 value="<%=userToEdit.ciudad%>" />
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12">
               <label for="categoria" class="form-label">Categoría:</label>
               <select class="cajas" id="idUsuarioCategorias" name="idUsuarioCategorias">
                 <% categorias.forEach(categoria=> {%>
@@ -80,10 +80,13 @@
                     <%=categoria.nombre%>
                   </option>
                   <%}) %>
+              </select>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12">
               <label for="imagen" class="form-label">Imagen de perfil:</label>
-              <img src="<%=userToEdit.imagen%>" alt="" style="width: 20%; text-align: center;">
+              <div style="text-align: center;">
+              <img src="/images/users/<%=userToEdit.imagen%>" alt="" style="width: 20%; text-align: center;">
+              </div>
               <input type="file" name="imagen" id="imagen" class="cajas" onchange="return fileValidation()">
               <% if (locals.errors && errors.imagen) { %>
                 <div class="error-login">
