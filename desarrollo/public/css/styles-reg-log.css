@@ -177,6 +177,10 @@ label {
   overflow: hidden;
 }
 
+.bg-white {
+  background-color: #ffffff;
+}
+
 .product-detail-img {
   width: 70%;
   display: block;

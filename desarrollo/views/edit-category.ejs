@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="col-12">
-        <form action="/category/<%= editcategory.id %>?_method=PUT" id="formulario" method="POST" enctype="multipart/form-data">
+        <form id="formulario" action="/category/<%= editcategory.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
           <div class="row product-detail">
             <div class="col-12 col-md-6">
               <label for="nombre" class="form-label">Nombre:</label>
@@ -48,7 +48,7 @@
                 <% } %>
             </div>
             <div class="col-12 col-md-6">
-              <label for="imagen" class="form-label">Imagen de Categoría:</label>
+              <label for="imagen" class="form-label">Imagen:</label>
               <div style="text-align: center;">
               <img src="/images/category/<%= editcategory.imagen %>" alt="" style="width: 20%;  margin-bottom: 2%; text-align: center;">
               <input type="file" name="imagen" id="imagen" class="cajas" accept="image/*" onchange="return fileValidation()" /><span
@@ -62,20 +62,20 @@
                 <% } %>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12 bg-white">
             <input type="submit" class="btn" value="EDITAR" />
           </div>
         </form>
+        <!-- ELIMINAR -->
+        <div class="col-12 bg-white">
+          <form action="/category/<%= editcategory.id %>?_method=DELETE" method="POST" class="form-delete bg-white">
+            <input type="submit" class="btn" value="ELIMINAR" />
+          </form>
+        </div>
+        <!-- FIN ELIMINAR -->
       </div>
-      <!-- ELIMINAR -->
-      <div class="col-12">
-        <form action="/category/<%= editcategory.id %>?_method=DELETE" method="POST" class="col-12">
-          <input type="submit" class="btn" value="BORRAR" />
-        </form>
-      </div>
-      <!-- FIN ELIMINAR -->
     </div>
-
+      
   </main>
   <!-- Comienzo footer -->
   <footer>
