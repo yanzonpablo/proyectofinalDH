@@ -1,0 +1,51 @@
+<head>
+    <%- include('./partials/head') %>
+        <title>Argentum</title>
+        <link rel="stylesheet" href="/css/styles-productsList.css" />
+</head>
+
+<body class="bg-gris-oscuro">
+    <!-- Inicio Header importado -->
+    <header>
+        <%- include('./partials/headerProducts') %>
+    </header>
+    <main>
+        <div class="div-margin p-30">
+            <section class="fx fx-wrap w-100 pb-30">
+                <div class="bg-blanco m-10 fx fx-wrap b-color">
+                    <h2 class="w-100 m-10 text-center heading-style">
+                        TODOS LOS PRODUCTOS
+                    </h2>
+                    <!-- Productos destacados con plantilla dinamica-->
+                    <% products.forEach(producto=> { %>
+                        <div class="w-50 p-8 tablet-w-33 desktop-w-20">
+                            <a href="/products/edit/<%=producto.id%>">
+                                <article class="product b-1 art-size">
+                                    <% if(producto.images[0]){ %> 
+                                        <img class="w-100"
+                                        src="/images/products/<%=producto.images[0].imagen%>"
+                                        alt="<%=producto.nombre%>" />
+                                        <%} else {%> 
+                                        <img class="w-100"
+                                        src="/images/products/prod-default.jpg"
+                                        alt="<%=producto.nombre%>" />
+                                        <%} %> 
+                                    <div class="fx fx-wrap bg-blanco bt-2">
+                                        <p class="ms-5 mt-5 product-tittle text-center trunc-text-1">
+                                            <%=producto.nombre%>
+                                        </p>
+                                        <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
+                                            $ <%=producto.precio%>
+                                        </p>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                        <% }) %>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <%- include("./partials/footer-form") %>
+    </footer>
+</body>

@@ -1,11 +1,20 @@
 <head>
-    <%- include('./partials/head') %>
-        <title>Argentum</title>
-        <link rel="stylesheet" href="/css/styles-productsList.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Argentum</title>
+    <link rel="stylesheet" href="/css/tabla.css" />
 </head>
 
 <body class="bg-gris-oscuro">
-    <!-- Inicio Header importado -->
     <header>
         <%- include('./partials/headerProducts') %>
     </header>
@@ -13,35 +22,51 @@
         <div class="div-margin p-30">
             <section class="fx fx-wrap w-100 pb-30">
                 <div class="bg-blanco m-10 fx fx-wrap b-color">
-                    <h2 class="w-100 m-10 text-center heading-style">
+                    <h2 class="w-100 m-10 text-center heading-style" style="font-weight: 600;">
                         TODOS LOS PRODUCTOS
                     </h2>
-                    <!-- Productos destacados con plantilla dinamica-->
-                    <% products.forEach(producto=> { %>
-                        <div class="w-50 p-8 tablet-w-33 desktop-w-20">
-                            <a href="/products/edit/<%=producto.id%>">
-                                <article class="product b-1 art-size">
-                                    <% if(producto.images[0]){ %> 
-                                        <img class="w-100"
-                                        src="/images/products/<%=producto.images[0].imagen%>"
-                                        alt="<%=producto.nombre%>" />
-                                        <%} else {%> 
-                                        <img class="w-100"
-                                        src="/images/products/prod-default.jpg"
-                                        alt="<%=producto.nombre%>" />
-                                        <%} %> 
-                                    <div class="fx fx-wrap bg-blanco bt-2">
-                                        <p class="ms-5 mt-5 product-tittle text-center trunc-text-1">
-                                            <%=producto.nombre%>
-                                        </p>
-                                        <p class="ms-5 mt-5 mb-5 product-price text-center w-100">
-                                            $ <%=producto.precio%>
-                                        </p>
-                                    </div>
-                                </article>
-                            </a>
-                        </div>
-                        <% }) %>
+                    <table class="table table-responsive table-striped table-hover table-bordered tabla">
+                        <thead>
+                            <tr class="column-color">
+                                <th>Id</th>
+                                <th>Imagen</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Editar</th>
+                                <th>Borrar</th>
+                            </tr>
+                        </thead>
+                        <% products.forEach(producto=> { %>
+                            <tbody>
+                                <tr class="column-data">
+                                    <td>
+                                        <%=producto.id%>
+                                    </td>
+                                    <td>
+                                        <% if(producto.images[0]){ %><img class="image"
+                                                src="/images/products/<%=producto.images[0].imagen%>"
+                                                alt="<%=producto.nombre%>">
+                                    </td>
+                                    <%} else {%>
+                                        <img class="w-100" src="/images/products/prod-default.jpg"
+                                            alt="<%=producto.nombre%>" />
+                                        <%} %>
+                                            <td>
+                                                <%=producto.nombre%>
+                                            </td>
+                                            <td>$ <%=producto.precio%>
+                                            </td>
+                                            <td><%= producto.cantidad %> </td>
+                                            <td><a href="/products/edit/<%=producto.id%>"><i
+                                                        class="edit fas fa-edit fa-lg"></i></a>
+                                            </td>
+                                            <td><a href="/products/edit/<%=producto.id%>"><i class="delete fas fa-trash-alt fa-lg"></i></a>
+                                            </td>
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                    </table>
             </section>
         </div>
     </main>
