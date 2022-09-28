@@ -24,7 +24,15 @@
         <div class="div-margin">
             <section class="fx fx-wrap w-100 pb-30">
                 <div class="bg-blanco m-10 fx fx-wrap b-color">
-                    <h2 class="w-100 m-10 text-center heading-style" style="font-weight: 600;">
+                    <form action="/products/search" method="POST">
+                        <div class="">
+                        <input class="input" type="text" id="search" name="search" placeholder="Buscar producto" />
+                        <button class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        </div>
+                    </form>
+                    <h2 class="w-100 m-10 text-center heading-style">
                         TODOS LOS PRODUCTOS
                     </h2>
                     <table class="table table-responsive table-striped table-hover table-bordered tabla">
@@ -59,7 +67,7 @@
                                             </td>
                                             <td>$ <%=producto.precio%>
                                             </td>
-                                            <td><%= producto.cantidad %></td>
+                                            <td><%= producto.cantidad ? producto.cantidad : "Sin control de stock" %></td>
                                             <td><a href="/products/edit/<%=producto.id%>"><i
                                                         class="edit fas fa-edit fa-lg"></i></a>
                                             </td>
