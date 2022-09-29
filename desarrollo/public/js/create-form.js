@@ -46,6 +46,19 @@ window.onload = function () {
       formulario.descripcion.parentElement.querySelector(".error").innerHTML =
         "";
     }
+    // if(formulario.stock.value < 0) {
+    //   errores.push("El número de stock no debe ser menor a 0");
+    //   formulario.stock.parentElement.classList.add("is-invalid");
+    //   formulario.stock.parentElement.classList.remove("is-invalid");
+    //   formulario.stock.parentElement.querySelector(".error").innerHTML =
+    //   "* El número en el stock debe ser mayor a 0";
+    // } else {
+    //   formulario.stock.parentElement.classList.remove("is-invalid");
+    //   formulario.stock.parentElement.classList.add("is-valid");
+    //   formulario.stock.parentElement.querySelector(".error").innerHTML =
+    //     "0";
+    // }
+
 
     if (formulario.precio.value == "") {
       errores.push("Ingresá un precio para este producto");
