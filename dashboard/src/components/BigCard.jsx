@@ -1,4 +1,4 @@
-export default function BigCard({ title, children }) {
+export default function BigCard({ title,children }) {
   return (
       <div className="col-lg-6 mb-4">
           <div className="card shadow mb-4">
